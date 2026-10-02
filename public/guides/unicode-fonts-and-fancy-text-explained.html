@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unicode Fonts and Fancy Text Explained</title>
+<meta name="description" content="Why fancy text isn&#39;t a font: where bold and script letters live in Unicode, why they count double, and what screen readers and search make of them.">
+<meta name="author" content="Everyday Tools">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://myaddr.app/guides/unicode-fonts-and-fancy-text-explained">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Everyday Tools">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:title" content="Unicode Fonts and Fancy Text Explained">
+<meta property="og:description" content="Why fancy text isn&#39;t a font: where bold and script letters live in Unicode, why they count double, and what screen readers and search make of them.">
+<meta property="og:url" content="https://myaddr.app/guides/unicode-fonts-and-fancy-text-explained">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unicode Fonts and Fancy Text Explained">
+<meta name="twitter:description" content="Why fancy text isn&#39;t a font: where bold and script letters live in Unicode, why they count double, and what screen readers and search make of them.">
+<meta name="theme-color" content="#0A1030">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(d){try{var t=localStorage.getItem("et-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}d.classList.add("js")})(document.documentElement);</script>
+<link rel="stylesheet" href="/assets/style.19238df39b.css">
+<!-- ==== CMP INTEGRATION POINT. Paste a Google-certified CMP snippet that supports IAB TCF v2.3 here. It must load BEFORE the AdSense script below. See docs/OWNER-TODO.md ==== -->
+<!-- ==== ADSENSE INTEGRATION POINT. After approval, paste exactly as the AdSense account shows them:
+  1. <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"> (placeholder; never guess the real id)
+  2. the AdSense loader snippet.
+Then add the CSP origins listed in public/_headers, update public/ads.txt and set adsLive in config/ads.json. ==== -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Unicode fonts and fancy text","description":"Why fancy text isn't a font: where bold and script letters live in Unicode, why they count double, and what screen readers and search make of them.","datePublished":"2026-10-02","dateModified":"2026-10-02","inLanguage":"en-NZ","author":{"@type":"Organization","name":"Everyday Tools"},"publisher":{"@type":"Organization","name":"Everyday Tools"},"mainEntityOfPage":"https://myaddr.app/guides/unicode-fonts-and-fancy-text-explained"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myaddr.app/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://myaddr.app/guides"},{"@type":"ListItem","position":3,"name":"Unicode fonts and fancy text explained","item":"https://myaddr.app/guides/unicode-fonts-and-fancy-text-explained"}]}]}</script>
+<script src="/assets/site.6bff9b46e2.js" defer></script>
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 14.2l2 2 3.8-3.8"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+    <nav class="nav" aria-label="Main"><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/text-tools">Text tools</a></li><li><a href="/guides" aria-current="page">Guides</a></li></ul></nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false"><svg class="ico i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></button>
+      <details class="menu" id="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main (menu)"><ul><li><a href="/nz-calculators">NZ calculators<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/date-and-time-tools">Dates &amp; time<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/printables">Printables<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/text-tools">Text tools<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides" aria-current="page">Guides<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="t-hero doc-hero">
+   <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides">Guides</a></li><li><span aria-current="page">Unicode fonts and fancy text explained</span></li></ol></nav>
+    
+    <h1>Unicode fonts and fancy text <span class="grad-text">explained</span></h1>
+    <div class="intro"><p>Sites that offer “fonts” to copy and paste aren't handing out fonts at all. They swap each letter for a different character that happens to look bold, curly or boxed. This guide explains where those characters come from, why Unicode has them, why a styled name can count as twice its length, and what assistive software and search engines make of the result.</p></div>
+   </div>
+  </section>
+  <div class="wrap">
+  
+  <div class="explain">
+    <article class="prose">
+      
+      
+        <p class="lede">A real font changes how a letter is drawn. Fancy text changes which letter it is, and everything that reads text afterwards notices the difference.</p>
+
+        <h2>Characters, not fonts</h2>
+        <p>Unicode gives every character a number and a name. The capital A you type is U+0041, LATIN CAPITAL LETTER A. Make it bold in a word processor and it is still that character; only the drawing changes, and the bold vanishes when you paste into a box that ignores formatting. The bold-looking 𝐀 produced by a fancy text tool is a different character entirely, U+1D400, MATHEMATICAL BOLD CAPITAL A. It survives a paste because the boldness lives in the character, not in the formatting. That is the whole trick, and the source of every snag that follows.</p>
+
+        <h2>Where the bold and script letters come from</h2>
+        <p>Most styled alphabets sit in one block, Mathematical Alphanumeric Symbols, U+1D400 to U+1D7FF, added in Unicode 3.1. Mathematicians use letter style to carry meaning: a bold v and an italic v can name different things in one formula, so the styles needed to survive in plain text. Unicode's own names list says the block is for mathematical variables where style matters, and that general text should use standard letters with markup (<a href="https://www.unicode.org/Public/18.0.0/ucd/NamesList.txt" rel="noopener">NamesList.txt, Unicode Character Database 18.0.0</a> (Unicode Consortium)).</p>
+        <p>The alphabets have holes. A few styled letters, such as the double-struck ℂℍℚ, were already encoded in Unicode 1.1, in the Letterlike Symbols block, so the newer block leaves reserved slots where they would otherwise go. A careful tool fills each slot with the older character; a careless one leaves a gap or an empty box. The script small l is a later oddity, added in Unicode 4.0.</p>
+        <table class="fit"><thead><tr><th scope="col">Block</th><th scope="col">Range</th><th scope="col">Used for</th></tr></thead><tbody><tr><td>Mathematical Alphanumeric Symbols</td><td>U+1D400 to U+1D7FF</td><td>bold, italic, script, gothic, double-struck, sans-serif, monospace</td></tr><tr><td>Letterlike Symbols</td><td>U+2100 to U+214F</td><td>the letters missing from those alphabets</td></tr><tr><td>Enclosed Alphanumerics</td><td>U+2460 to U+24FF</td><td>circled letters and digits, parenthesised small letters</td></tr><tr><td>Enclosed Alphanumeric Supplement</td><td>U+1F100 to U+1F1FF</td><td>squared, filled and parenthesised capitals</td></tr><tr><td>Halfwidth and Fullwidth Forms</td><td>U+FF00 to U+FFEF</td><td>wide letters</td></tr><tr><td>Phonetic Extensions</td><td>U+1D00 to U+1D7F</td><td>most small capitals and some superscripts</td></tr><tr><td>Combining Diacritical Marks</td><td>U+0300 to U+036F</td><td>strikethrough, underline and slash</td></tr><tr><td>Runic</td><td>U+16A0 to U+16FF</td><td>the rune-like style</td></tr></tbody></table>
+        <p>Ranges come from Blocks.txt in the Unicode Character Database, version 18.0.0 (<a href="https://www.unicode.org/Public/18.0.0/ucd/Blocks.txt" rel="noopener">Blocks.txt, Unicode Character Database 18.0.0</a> (Unicode Consortium)).</p>
+        
+        <h2>Unicode remembers the plain letter</h2>
+        <p>Each styled letter in the database carries a note tying it back to the plain one: U+1D400 is marked as a “font” variant of U+0041 (<a href="https://www.unicode.org/Public/18.0.0/ucd/UnicodeData.txt" rel="noopener">UnicodeData.txt, Unicode Character Database 18.0.0</a> (Unicode Consortium)). Software that applies compatibility normalisation, known as NFKC, folds the styled text back into ordinary letters, so a search or a filter built that way sees the plain name. Software that skips normalisation treats the two as unrelated, so a styled name won't match its plain spelling. You can't tell from outside which approach a given app takes.</p>
+
+        <h2>Why styled names count double</h2>
+        <p>Unicode is divided into planes of 65,536 code points. The first, the Basic Multilingual Plane, holds nearly every everyday letter. The mathematical letters live in the second. UTF-16, a common way of storing text inside programs, fits a first-plane character into one unit but needs two for anything beyond. So “Tui” is three units plain, while 𝐓𝐮𝐢 is 3 characters and 6 units. A length check written in JavaScript, and in many other languages, counts those units, which is how a name that looks short gets refused.</p>
+
+        <h2>Marks, circles and lookalikes</h2>
+        <p>Strikethrough and underline styles use combining marks, characters that draw over or under the one before. T̶u̶i̶ looks like three letters but is 6 characters, and marks are among the first things a name box strips or refuses. Circled, squared and wide letters are their own characters in the enclosed and full-width blocks. Upside-down, mirrored and rune-like styles borrow from other alphabets by shape alone, so a reader or translator meets Cyrillic, Greek or runic letters standing in for Latin ones. A name that mixes alphabets like this can look like an attempt to imitate someone else's, and may be refused for that reason.</p>
+
+        <h2>What screen readers and search make of it</h2>
+        <p>A screen reader may spell styled words letter by letter, read each character's full name, or skip them. Search may or may not normalise. Neither outcome can be fixed by the person writing the text, so styled characters belong in decoration, not in names people search for, links or anything that must be understood.</p>
+
+        <h2>What this guide could not check</h2>
+        <p>Character names, ranges and versions here were read from the Unicode Character Database files for version 18.0.0; the code chart for the block (<a href="https://www.unicode.org/charts/PDF/U1D400.pdf" rel="noopener">Code chart: Mathematical Alphanumeric Symbols, U+1D400 to U+1D7FF</a> (Unicode Consortium)) and the full text of <a href="https://www.unicode.org/versions/Unicode18.0.0/" rel="noopener">The Unicode Standard, Version 18.0</a> (Unicode Consortium) are the places to read further. How each character looks depends on the fonts on a device, and that couldn't be checked on every phone, console and computer. To try the styles yourself, open the <a href="/fancy-text-generator">fancy text and name styler</a>.</p>
+      
+      <p class="updated">Last reviewed: <time datetime="2026-10-02">2 October 2026</time></p>
+    </article>
+    <aside class="aside-card" aria-labelledby="rel-h">
+      <h2 id="rel-h">Related</h2>
+      <ul><li><a href="/fancy-text-generator">Fancy text and name styler <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/name-styler-for-games">Name styler for games <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/fancy-text-for-bios">Fancy text for bios <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides/cleaning-messy-lists-of-text">Guide: cleaning messy lists <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul>
+    </aside>
+  </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+        <p>Free, private tools for everyday jobs, run by an independent publisher in New Zealand.</p>
+        <div class="trust-badges"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Stays in your browser</span><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Sourced and dated</span></div>
+      </div>
+      <nav class="foot-col" aria-labelledby="f-tools"><h2 id="f-tools">Tools</h2><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/text-tools">Text tools</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-learn"><h2 id="f-learn">Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-trust"><h2 id="f-trust">Trust</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
+        <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
+        <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Everyday Tools. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

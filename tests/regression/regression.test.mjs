@@ -10,6 +10,7 @@ import { ROOT, PUBLIC, publicFiles, pages, readJson } from "../helpers.mjs";
 import { addGst, removeGst, gstLines } from "../../src/assets/lib/gst.js";
 import { toBasisPoints } from "../../src/assets/lib/money.js";
 import { takeHome } from "../../src/assets/lib/paye.js";
+import { STYLES, FRAMES, decorate, lengths } from "../../src/assets/lib/fancy.js";
 
 test("public-manifest.json matches public/ exactly", () => {
   const manifest = readJson("public-manifest.json").files;
@@ -63,4 +64,15 @@ test("golden outputs: take-home pay for fixed incomes (a tax data change shows u
   const file = path.join(ROOT, "tests/regression/golden-paye.json");
   if (process.env.UPDATE_GOLDEN === "1") fs.writeFileSync(file, JSON.stringify({ taxYear: tax.taxYear, columns: ["gross", "paye", "studentLoan", "kiwisaver", "net", "employerNet"], rows: golden }, null, 1) + "\n");
   assert.deepEqual(JSON.parse(fs.readFileSync(file, "utf8")).rows, golden);
+});
+
+test("golden outputs: fancy text (a change to any style or frame table shows up as a reviewable diff)", () => {
+  const inputs = ["Night Owl", "Iron Kea 2026", "Kōwhai Studio", "abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "0123456789", "Hello, World! (v2)?"];
+  const styles = {};
+  for (const s of STYLES) styles[s.id] = inputs.map(t => { const o = decorate(t, s.id); const l = lengths(o); return [o, l.codePoints, l.utf16]; });
+  const frames = Object.fromEntries(FRAMES.map(f => [f.id, decorate("Kai", "bold", f.id)]));
+  const golden = { inputs, styles, frames };
+  const file = path.join(ROOT, "tests/regression/golden-fancy.json");
+  if (process.env.UPDATE_GOLDEN === "1") fs.writeFileSync(file, JSON.stringify(golden, null, 1) + "\n");
+  assert.deepEqual(JSON.parse(fs.readFileSync(file, "utf8")), golden);
 });

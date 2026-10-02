@@ -96,3 +96,14 @@ Rules stated in guide copy; no new figures in `data/`.
 | Fact | Source id | Page |
 |---|---|---|
 | 2027 school terms (term 1 starts 28 January to 3 February, ends 9 April; term 2 27 April to 2 July; term 3 19 July to 24 September; term 4 11 October to no later than 17 December); Easter Tuesday a school holiday | moe-school-terms | [School terms and holidays dates](https://www.education.govt.nz/school-terms-and-holidays-dates) (last updated 21 May 2026) |
+
+## Added in Phase 7: Unicode (`data/unicode-blocks.json`, `tests/fixtures/unicode-names.json`)
+www.unicode.org is blocked from the build session. The UCD 18.0.0 files were read on 2 October 2026 from the Unicode Consortium's own repository copy at `https://raw.githubusercontent.com/unicode-org/unicodetools/main/unicodetools/data/ucd/18.0.0/` and cross-checked against Python `unicodedata2` 18.0.0 (zero mismatches in 1,701 names and 1,320 decompositions). Regenerate with `node scripts/make-unicode-fixture.mjs <dir>`.
+
+| Fact | Source id | File |
+|---|---|---|
+| Block ranges (39 blocks the tool draws on; Mathematical Alphanumeric Symbols U+1D400-1D7FF) | unicode-blocks | [Blocks.txt](https://www.unicode.org/Public/18.0.0/ucd/Blocks.txt) |
+| Character names and compatibility decompositions of every output character | unicode-data | [UnicodeData.txt](https://www.unicode.org/Public/18.0.0/ucd/UnicodeData.txt) |
+| Version first encoding U+1D400 (3.1), U+2102 and U+210E (1.1), U+1D4C1 (4.0), U+A7AF (11.0), U+107A5 (14.0) | unicode-derived-age | [DerivedAge.txt](https://www.unicode.org/Public/18.0.0/ucd/DerivedAge.txt) |
+| Block note and the 24 reserved-slot cross-references | unicode-nameslist | [NamesList.txt](https://www.unicode.org/Public/18.0.0/ucd/NamesList.txt) |
+| Further reading only (not opened) | unicode-chart-math, unicode-standard | [U1D400.pdf](https://www.unicode.org/charts/PDF/U1D400.pdf), [Unicode 18.0](https://www.unicode.org/versions/Unicode18.0.0/) |

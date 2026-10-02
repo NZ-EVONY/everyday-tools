@@ -16,6 +16,7 @@ wrangler, playwright-core, axe-core, lighthouse (pinned).
 - `npm test`: build + unit + build-output + content tests
 - `npm run regression` / `npm run test:e2e` / `npm run lighthouse`
 - `npm run report:content`, `npm run report:claims`, `npm run check:links`
+- `npm run check:glyphs`: which fancy-text characters headless Chromium draws as boxes
 - `npm run check:deploy`: pre-deploy gate; `npm run dry-run`: `wrangler deploy --dry-run`
 - `npm run dev`: `wrangler dev --local` (never `--remote`)
 

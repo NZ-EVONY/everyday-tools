@@ -7,7 +7,7 @@ export function proseText(html) {
     .replace(/<script[\s\S]*?<\/script>|<!--[\s\S]*?-->/g, " ")
     .replace(/<nav class="crumbs"[\s\S]*?<\/nav>/g, " ")
     .replace(/<div class="t-meta">[\s\S]*?<\/div>/g, " ")
-    .replace(/<section class="calc"[\s\S]*?<\/section>/g, " ")
+    .replace(/<section class="calc[^"]*"[\s\S]*?<\/section>/g, " ")
     .replace(/<div class="preview"[\s\S]*?<div class="pv-float">[\s\S]*?<\/div>/g, " ")
     .replace(/<aside class="notice"[\s\S]*?<\/aside>/g, " ")
     .replace(/<section class="related"[\s\S]*?<\/section>/g, " ")

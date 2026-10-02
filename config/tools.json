@@ -20,6 +20,9 @@
     { "path": "/remove-duplicate-lines", "name": "Remove duplicate lines", "pillar": "text-tools", "icon": "copy", "blurb": "Keep the first or last copy of each line, in the original order.", "kw": "remove duplicate lines unique dedupe list" },
     { "path": "/remove-blank-lines", "name": "Remove blank lines", "pillar": "text-tools", "icon": "blank", "blurb": "Strip empty and whitespace-only lines from pasted text.", "kw": "remove blank empty lines whitespace" },
     { "path": "/sort-lines-alphabetically", "name": "Sort lines alphabetically", "pillar": "text-tools", "icon": "sort", "blurb": "A to Z, Z to A, numeric or by length, with proper accent handling.", "kw": "sort lines alphabetical order a-z" },
-    { "path": "/add-text-to-start-and-end-of-lines", "name": "Add text to start and end of lines", "pillar": "text-tools", "icon": "brackets", "blurb": "Wrap each line in quotes, commas, bullets or any prefix and suffix.", "kw": "add prefix suffix quotes commas lines wrap" }
+    { "path": "/add-text-to-start-and-end-of-lines", "name": "Add text to start and end of lines", "pillar": "text-tools", "icon": "brackets", "blurb": "Wrap each line in quotes, commas, bullets or any prefix and suffix.", "kw": "add prefix suffix quotes commas lines wrap" },
+    { "path": "/fancy-text-generator", "name": "Fancy text and name styler", "pillar": "text-tools", "icon": "star", "blurb": "See a name in more than thirty Unicode styles with frames and length checks, then copy it.", "kw": "fancy text font generator name styler bold italic script gothic cursive unicode username nickname" },
+    { "path": "/name-styler-for-games", "name": "Name styler for games", "pillar": "text-tools", "icon": "flag", "blurb": "Style a gamer tag or guild name and keep only the styles that fit the name box.", "kw": "gamer tag guild clan alliance character name limit styler game" },
+    { "path": "/fancy-text-for-bios", "name": "Fancy text for bios", "pillar": "text-tools", "icon": "user", "blurb": "Style a display name or bio line, with the accessibility trade-offs spelled out.", "kw": "bio display name profile social fancy text accessibility" }
   ]
 }

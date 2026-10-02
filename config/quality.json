@@ -8,7 +8,13 @@
     "trust": [300, 2500],
     "home": [250, 1200]
   },
+  "pageWords": {
+    "/fancy-text-generator": [700, 900],
+    "/guides/unicode-fonts-and-fancy-text-explained": [700, 1000]
+  },
   "introWords": [60, 120],
+  "fancyPages": ["/fancy-text-generator", "/name-styler-for-games", "/fancy-text-for-bios", "/guides/unicode-fonts-and-fancy-text-explained"],
+  "brandDenylist": ["evony", "fortnite", "roblox", "minecraft", "valorant", "league of legends", "call of duty", "pubg", "free fire", "clash of", "genshin", "world of warcraft", "warcraft", "dota", "counter-strike", "apex legends", "overwatch", "rainbow six", "rocket league", "among us", "mobile legends", "rise of kingdoms", "lords mobile", "steam", "xbox", "playstation", "nintendo", "epic games", "riot games", "blizzard", "activision", "ubisoft", "tencent", "discord", "twitch", "instagram", "tiktok", "facebook", "meta", "whatsapp", "snapchat", "twitter", "youtube", "reddit", "linkedin", "pinterest", "threads", "telegram", "google", "apple", "microsoft", "samsung", "android", "iphone", "windows"],
   "similarity": { "maxJaccard": 0.2, "shingle": 5, "maxRepeatedSentenceWords": 8, "minOpenerDiversity": 0.9 },
   "maxTitle": 60,
   "maxDescription": 155,

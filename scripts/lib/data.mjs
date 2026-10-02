@@ -21,6 +21,7 @@ export function loadData(root) {
     holidays: readJson(root, cfg.holidayFile),
     units: readJson(root, "data/units.json"),
     dst: readJson(root, "data/nz/daylight-saving.json"),
+    unicodeBlocks: readJson(root, "data/unicode-blocks.json"),
   };
 }
 
@@ -40,10 +41,13 @@ export function checkSourceIds(data) {
   walk(data.holidays, "public-holidays");
   if (data.units) walk(data.units, "units");
   if (data.dst) walk(data.dst, "daylight-saving");
+  if (data.unicodeBlocks) walk(data.unicodeBlocks, "unicode-blocks");
   // Money, tax and holiday sources must be NZ government pages. Unit definitions may also come
-  // from standards bodies and legislation abroad (NIST, UK legislation).
+  // from standards bodies and legislation abroad (NIST, UK legislation), and Unicode facts from the
+  // Unicode Consortium.
   for (const s of data.sources) {
-    const ok = /^https:\/\/([a-z0-9-]+\.)*govt\.nz\//.test(s.url) || (s.kind === "units" && /^https:\/\/(www\.)?(nist\.gov|legislation\.gov\.uk)\//.test(s.url));
+    const ok = /^https:\/\/([a-z0-9-]+\.)*govt\.nz\//.test(s.url) || (s.kind === "units" && /^https:\/\/(www\.)?(nist\.gov|legislation\.gov\.uk)\//.test(s.url))
+      || (s.kind === "unicode" && /^https:\/\/www\.unicode\.org\//.test(s.url));
     if (!ok) problems.push(`source ${s.id} is not on an allowed official host: ${s.url}`);
   }
   return problems;

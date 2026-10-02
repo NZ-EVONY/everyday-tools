@@ -33,6 +33,10 @@ date, is listed in `data/sources.json` and `docs/DATA-SOURCES.md`.
 - US National Institute of Standards and Technology (nist.gov), SP 811 Appendix B and the revised unit
   conversion factors page: metric and US unit factors and temperature formulas.
 
+- Unicode Character Database 18.0.0 (Unicode, Inc.; Unicode License v3): character names, decompositions,
+  block ranges and character ages used in `tests/fixtures/unicode-names.json`, `data/unicode-blocks.json` and the
+  fancy text pages. The fixture is derived data for tests and is not shipped to visitors.
+
 The site is independent and is not affiliated with or endorsed by any of these agencies or bodies.
 
 ## Design

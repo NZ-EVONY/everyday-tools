@@ -24,6 +24,13 @@ Items here are NOT VERIFIED. Anything a page would need from this list stays unp
 - **KiwiSaver government contribution conditions.** IRD's page says "There are conditions" beyond age
   and income; the calculator asks the visitor to confirm they meet them rather than listing them all.
 
+## Fancy text (Phase 7)
+- **unicode.org pages not opened.** The code chart PDF (U1D400.pdf) and the Unicode Standard 18.0 text are cited as further reading but couldn't be fetched (blocked by the session's network policy). The URLs follow unicode.org's published patterns; the owner should click each one. Every fact on the pages comes from the UCD data files (read from the Consortium's GitHub mirror) or was checked by code.
+- **Glyph rendering on real devices.** Headless Chromium here drew all 1,324 output characters (`npm run check:glyphs`, control detected), but this machine has GNU Unifont as a last-resort font, so that result is optimistic. Not checked on any phone, console or other OS. The newest characters, likeliest to show as boxes on older devices: U+107A5 𐞥 (14.0, superscript q), U+A7AF ꞯ (11.0, small-caps q), U+218A ↊ and U+218B ↋ (8.0, upside-down 2 and 3), U+A7B0 Ʞ (7.0, upside-down K), U+A798 Ꞙ / U+A799 ꞙ (7.0, Warband F), U+2E38 ⸸ (6.1, turned-dagger frame), and the 6.0 enclosed capitals U+1F130-1F189 (squared, filled circled, filled squared rows).
+- **Filled squared letters may show as colour emoji.** 🅰 🅱 🅾 🅿 (U+1F170, 1F171, 1F17E, 1F17F) are emoji with text presentation by default; some systems draw them as emoji anyway. Not verified on devices.
+- **How screen readers announce styled text.** The pages say readers "may" spell letters out, read character names or skip them. Not tested with a real screen reader.
+- **How any game, app or site counts or filters names.** Deliberately not claimed; the pages tell visitors to paste into the target box first.
+
 ## Cannot be verified from this session
 - Real Cloudflare behaviour (custom domains, `_headers` application at the edge, compression,
   managed `robots.txt`). Checked only with `wrangler dev --local`.

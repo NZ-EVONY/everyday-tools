@@ -58,10 +58,10 @@ export default function layout(page, ctx) {
    </div>
   </section>
   <div class="wrap">
-  <section class="calc" aria-label="${esc(page.toolLabel || page.crumbName || page.h1)}">
+  <section class="calc${page.calcClass ? ` ${page.calcClass}` : ""}" aria-label="${esc(page.toolLabel || page.crumbName || page.h1)}">
     <div class="panel">
       ${page.tool}
-      <noscript><p class="noscript-msg">This calculator needs JavaScript to work out results. Everything below explains the method, so you can still follow it by hand.</p></noscript>
+      <noscript><p class="noscript-msg">${page.noscript || "This calculator needs JavaScript to work out results. Everything below explains the method, so you can still follow it by hand."}</p></noscript>
     </div>
     <div class="results-col">
       ${page.results || ""}

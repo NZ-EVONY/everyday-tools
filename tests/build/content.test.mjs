@@ -19,6 +19,15 @@ test("prose word counts are within the configured range for each page type", () 
   }
 });
 
+test("pages with their own word range stay inside it", () => {
+  for (const [url, [min, max]] of Object.entries(quality.pageWords)) {
+    const p = prose.find(x => x.url === url);
+    assert.ok(p, `${url} is not built`);
+    const n = wordCount(p.text);
+    assert.ok(n >= min && n <= max, `${url} has ${n} words; range ${min}-${max}`);
+  }
+});
+
 test("tool intros are 60-120 words", () => {
   for (const p of content.filter(p => p.intro && (p.type === "tool" || p.type === "landing"))) {
     const n = wordCount(p.intro.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim());
@@ -41,7 +50,7 @@ test("a positive control: the banned-phrase check would catch a planted phrase",
 test("percentages in prose come only from data (wrapped in .dv) or not at all", () => {
   for (const p of prose) {
     const main = (p.html.match(/<main[\s\S]*?<\/main>/) || [""])[0]
-      .replace(/<h1[\s\S]*?<\/h1>/g, "").replace(/<section class="calc"[\s\S]*?<\/section>/g, "").replace(/<aside class="notice"[\s\S]*?<\/aside>/g, "")
+      .replace(/<h1[\s\S]*?<\/h1>/g, "").replace(/<section class="calc[^"]*"[\s\S]*?<\/section>/g, "").replace(/<aside class="notice"[\s\S]*?<\/aside>/g, "")
       .replace(/<span class="dv">[^<]*<\/span>/g, "").replace(/<!--[\s\S]*?-->/g, "");
     const plain = main.replace(/<[^>]+>/g, " ");
     assert.ok(!/\d+(\.\d+)?\s?%/.test(plain), `${p.url}: typed-in percentage: ${plain.match(/.{30}\d+(\.\d+)?\s?%.{10}/)?.[0]}`);
@@ -67,4 +76,35 @@ test("NZ calculator pages declare their sources and claims", () => {
     assert.ok(p.sources.length >= 1, p.path);
     assert.ok(p.claims.length >= 1, p.path);
   }
+});
+
+// The fancy text pages: no game, app or company named in titles, descriptions, headings, the tool
+// UI or the copy, and no claim that any of them accepts a style.
+const fancy = content.filter(p => quality.fancyPages.includes(p.path));
+const word = b => new RegExp(`(^|[^a-z])${b.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}([^a-z]|$)`, "i");
+
+test("fancy text pages exist and name no specific game, app or company", () => {
+  assert.equal(fancy.length, quality.fancyPages.length);
+  for (const p of fancy) {
+    const main = (html(p).match(/<main[\s\S]*?<\/main>/) || [""])[0].replace(/<script[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, " ");
+    const where = { title: p.title, description: p.description, h1: p.h1, main };
+    for (const b of quality.brandDenylist) for (const [k, v] of Object.entries(where)) assert.ok(!word(b).test(v), `${p.path} ${k} names "${b}"`);
+  }
+});
+
+test("fancy text pages claim nowhere that a game, app or site accepts a style", () => {
+  for (const p of fancy) {
+    const t = proseText(html(p)).toLowerCase();
+    assert.ok(!/\b(is|are|will be|always) accepted\b|\bworks (in|on|with) (all|every|any|most)\b|\b(all|every|most) (games|apps|sites) (accept|allow|support)\b|\bguarantee/.test(t), `${p.path}: acceptance claim`);
+  }
+});
+
+test("a positive control: the brand and acceptance checks catch planted text", () => {
+  assert.ok(word("discord").test("Join our Discord server"));
+  assert.ok(!word("meta").test("metadata and metaphor"));
+  assert.ok(/\bworks (in|on|with) (all|every|any|most)\b/.test("it works in all games"));
+});
+
+test("no page says it was written or generated with AI", () => {
+  for (const p of prose) assert.ok(!/\bwritten with ai\b|\bai[- ]assist|\bgenerated (by|with) ai\b|\bchatgpt\b|\bclaude\b|\blanguage model\b/i.test(p.text), p.url);
 });

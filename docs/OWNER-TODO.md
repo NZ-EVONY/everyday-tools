@@ -12,6 +12,10 @@ Things only the owner can do. Claude Code cannot do these.
 - [ ] Print a calendar, a planner and a checklist on your own printer (Chrome, and Firefox or Safari if you use them).
 - [ ] Read the ten guides, starting with the four money guides and the holidays guide, and flag anything that reads wrongly for a New Zealand reader.
 
+- [ ] Fancy text: open `/fancy-text-generator` on your phone and one other device; type a name with a macron and check the rows listed in `docs/UNVERIFIED.md` (superscript q, small-caps q, upside-down 2/3/K, Warband F, squared and filled rows, the turned-dagger frame) for empty boxes or colour emoji.
+- [ ] Fancy text: paste two or three styled names into a real name box you use, to see how it counts them.
+- [ ] Click the two Unicode links that couldn't be opened from the build session (code chart U1D400.pdf, Unicode 18.0 page).
+
 ## Before launch
 - [ ] Decide, with advice, whether the privacy policy needs a more identifiable controller than "an independent publisher" plus `nz@myaddr.app` (NZ Privacy Act 2020 and GDPR/UK GDPR).
 - [ ] Have the privacy policy and terms reviewed; they are templates, not legal advice.

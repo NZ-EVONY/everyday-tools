@@ -228,6 +228,60 @@
       "url": "https://www.education.govt.nz/school-terms-and-holidays-dates",
       "retrieved": "2026-10-03",
       "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "unicode-blocks",
+      "kind": "unicode",
+      "label": "Blocks.txt, Unicode Character Database 18.0.0",
+      "publisher": "Unicode Consortium",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/Blocks.txt",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Read from the Unicode Consortium's own copy in its unicodetools repository on GitHub (raw.githubusercontent.com/unicode-org/unicodetools, unicodetools/data/ucd/18.0.0/), because www.unicode.org was blocked from the build session. Facts read from the file; characters are data, not text."
+    },
+    {
+      "id": "unicode-data",
+      "kind": "unicode",
+      "label": "UnicodeData.txt, Unicode Character Database 18.0.0",
+      "publisher": "Unicode Consortium",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/UnicodeData.txt",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Read from the Unicode Consortium's own copy in its unicodetools repository on GitHub (raw.githubusercontent.com/unicode-org/unicodetools, unicodetools/data/ucd/18.0.0/), because www.unicode.org was blocked from the build session. Facts read from the file; characters are data, not text."
+    },
+    {
+      "id": "unicode-derived-age",
+      "kind": "unicode",
+      "label": "DerivedAge.txt, Unicode Character Database 18.0.0",
+      "publisher": "Unicode Consortium",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/DerivedAge.txt",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Read from the Unicode Consortium's own copy in its unicodetools repository on GitHub (raw.githubusercontent.com/unicode-org/unicodetools, unicodetools/data/ucd/18.0.0/), because www.unicode.org was blocked from the build session. Facts read from the file; characters are data, not text."
+    },
+    {
+      "id": "unicode-nameslist",
+      "kind": "unicode",
+      "label": "NamesList.txt, Unicode Character Database 18.0.0",
+      "publisher": "Unicode Consortium",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/NamesList.txt",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Read from the Unicode Consortium's own copy in its unicodetools repository on GitHub (raw.githubusercontent.com/unicode-org/unicodetools, unicodetools/data/ucd/18.0.0/), because www.unicode.org was blocked from the build session. Facts read from the file; characters are data, not text."
+    },
+    {
+      "id": "unicode-chart-math",
+      "kind": "unicode",
+      "label": "Code chart: Mathematical Alphanumeric Symbols, U+1D400 to U+1D7FF",
+      "publisher": "Unicode Consortium",
+      "url": "https://www.unicode.org/charts/PDF/U1D400.pdf",
+      "retrieved": null,
+      "licenceNote": "Not opened from the build session: www.unicode.org was blocked. Cited as the standard location; see docs/UNVERIFIED.md."
+    },
+    {
+      "id": "unicode-standard",
+      "kind": "unicode",
+      "label": "The Unicode Standard, Version 18.0",
+      "publisher": "Unicode Consortium",
+      "url": "https://www.unicode.org/versions/Unicode18.0.0/",
+      "retrieved": null,
+      "licenceNote": "Not opened from the build session: www.unicode.org was blocked. Cited as the standard location; see docs/UNVERIFIED.md."
     }
   ]
 }
