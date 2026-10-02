@@ -1,0 +1,94 @@
+{
+  "files": [
+    {
+      "path": "404.html",
+      "size": 5001,
+      "sha256": "2224df5555ba41e6066895af6d20222b8525b725ad0aab46884945ac730ab1b8"
+    },
+    {
+      "path": "_headers",
+      "size": 1405,
+      "sha256": "9412bd1ed9cc27586ea1f3493efe5384df068daa482623818b5d4b50a2213961"
+    },
+    {
+      "path": "about.html",
+      "size": 8016,
+      "sha256": "9cbe6a1fb6a755f0af0d964901961b77d563063f52e4b1e651645677da0f2ead"
+    },
+    {
+      "path": "ads.txt",
+      "size": 269,
+      "sha256": "72f528bc6d0f40a70eb530104072ffc21ccc40e56a08778894138b0f4bd91bf0"
+    },
+    {
+      "path": "assets/js/gst.cc582e6ab7.js",
+      "size": 10051,
+      "sha256": "cc582e6ab73c3ec5e73cf3574cfb287ebec559102d0371cc147a9f3238e4a048"
+    },
+    {
+      "path": "assets/site.8cb4641180.js",
+      "size": 1561,
+      "sha256": "8cb4641180d0f5a1a0aaae08186dcce4ce9820c954fddb350e20e89901f98ac8"
+    },
+    {
+      "path": "assets/style.7a2e83dadf.css",
+      "size": 9453,
+      "sha256": "7a2e83dadfd02d7b8683b94b02649b7022dc1ea40c7d85a10fe0cdc504e4165b"
+    },
+    {
+      "path": "contact.html",
+      "size": 7717,
+      "sha256": "b7f36460d36e65ca5bd989d3e84de5c7208fe42f3c541139e70dcc093029ae72"
+    },
+    {
+      "path": "favicon.svg",
+      "size": 222,
+      "sha256": "69bb74852925721f5495b0e8ca8082e9015b12b05eb3c5dcaa864e71d97ed314"
+    },
+    {
+      "path": "gst-calculator.html",
+      "size": 15254,
+      "sha256": "cf7ee3cc5e0a82d45687868dcfcf751c069a724bc4d1ae9d551d977e7aa7835a"
+    },
+    {
+      "path": "guides.html",
+      "size": 7486,
+      "sha256": "e803fcbadae6c69affb6959202ddc661a1372490278ac31f578178b98719144b"
+    },
+    {
+      "path": "index.html",
+      "size": 8170,
+      "sha256": "8fad49e329fc7f9e38c4439d3e346dd8b45690b5bb70f3dddc1ab672f0abc5b4"
+    },
+    {
+      "path": "nz-calculators.html",
+      "size": 8455,
+      "sha256": "41093f2ae250768347c7835e8271eb8aa2f679da429c3912e4309896dbca5092"
+    },
+    {
+      "path": "privacy-policy.html",
+      "size": 10008,
+      "sha256": "c802205b4cf7cd8906d07e33923fbbafa1fa81607e322fc91e9c8e3feb436ea7"
+    },
+    {
+      "path": "robots.txt",
+      "size": 64,
+      "sha256": "188852158ddd3f7be566ffd3852c6d78b1b273cf44fb04980b6b81e7f7abddfa"
+    },
+    {
+      "path": "sitemap.html",
+      "size": 5756,
+      "sha256": "4855b78f2b18d80cfeba24220a5cd0cf1ee164d7089fa000e931f04564fe3170"
+    },
+    {
+      "path": "sitemap.xml",
+      "size": 839,
+      "sha256": "c43080daae5bc85777a3f86006af20ad05663d8ca40c4745fb9eb874148737d2"
+    },
+    {
+      "path": "terms.html",
+      "size": 8126,
+      "sha256": "89e8cc9fbe787394fe05b6905c0f3d45649a2235bf25d757aa5474fe2aefc00c"
+    }
+  ]
+}

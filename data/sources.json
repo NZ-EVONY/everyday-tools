@@ -1,0 +1,125 @@
+{
+  "_comment": "Every official figure in data/ points at one of these by sourceId. retrieved = the date the page was fetched and read for this build (NZ time). Facts only; no text copied.",
+  "sources": [
+    {
+      "id": "ird-tax-rates-individuals",
+      "label": "Tax rates for individuals",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/income-tax/income-tax-for-individuals/tax-codes-and-tax-rates-for-individuals/tax-rates-for-individuals",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-about-tax-codes",
+      "label": "About tax codes",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/income-tax/income-tax-for-individuals/tax-codes-and-tax-rates-for-individuals/about-tax-codes",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-acc-levy-rates",
+      "label": "ACC earners' levy rates",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/income-tax/income-tax-for-individuals/acc-clients-and-carers/acc-earners-levy-rates",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-student-loan-salary",
+      "label": "Repaying my student loan when I earn salary or wages",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/student-loans/living-in-new-zealand-with-a-student-loan/repaying-my-student-loan-when-i-earn-salary-or-wages",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-ir340-apr-2026",
+      "label": "Weekly and fortnightly PAYE deduction tables (IR340, April 2026)",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/-/media/project/ir/home/documents/forms-and-guides/ir300---ir399/ir340/ir340-apr-2026.pdf",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Figures used to test the calculators; the PDF is not redistributed."
+    },
+    {
+      "id": "ird-ir341-apr-2026",
+      "label": "Four-weekly and monthly PAYE deduction tables (IR341, April 2026)",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/-/media/project/ir/home/documents/forms-and-guides/ir300---ir399/ir341/ir341-apr-2026.pdf",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Figures used to test the calculators; the PDF is not redistributed."
+    },
+    {
+      "id": "ird-ks-employee",
+      "label": "Employee contributions to KiwiSaver accounts",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/kiwisaver/kiwisaver-individuals/growing-my-kiwisaver-account/employee-contributions-to-kiwisaver",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-ks-employer",
+      "label": "Employer contributions to KiwiSaver accounts",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/kiwisaver/kiwisaver-individuals/growing-my-kiwisaver-account/employer-contributions-to-kiwisaver",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-ks-government",
+      "label": "Getting the KiwiSaver government contribution",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/kiwisaver/kiwisaver-individuals/growing-my-kiwisaver-account/getting-the-kiwisaver-government-contribution",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-gst-charging",
+      "label": "Charging GST",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/gst/charging-gst",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-gst-registering",
+      "label": "Registering for GST",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/gst/registering-for-gst",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-gst-zero-rated",
+      "label": "Zero-rated supplies",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/gst/charging-gst/zero-rated-supplies",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-gst-exempt",
+      "label": "Exempt supplies",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/gst/charging-gst/exempt-supplies",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-gst-supply-info",
+      "label": "How taxable supply information for GST works",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/gst/tax-invoices-for-gst/how-tax-invoices-for-gst-work",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "mbie-public-holidays",
+      "label": "Public holidays and anniversary dates",
+      "publisher": "Employment New Zealand (MBIE)",
+      "url": "https://www.employment.govt.nz/leave-and-holidays/public-holidays/public-holidays-and-anniversary-dates",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Dates read from the page; no text reproduced."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "_comment": "Tax years the site knows about. Adding a year = add data/nz/tax-YYYY-YY.json and one line here. currentTaxYear is the one calculators use by default.",
+  "currentTaxYear": "2026-27",
+  "taxYears": ["2026-27"],
+  "holidayFile": "data/nz/public-holidays.json"
+}

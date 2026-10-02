@@ -1,0 +1,227 @@
+{
+  "_comment": "NZ public holidays and regional anniversary days by calendar year, from MBIE's table. 'date' is the actual date; 'observedForMonFri' is the date a Monday-to-Friday worker gets the day off (MBIE's observed date; for weekend Anzac Day, Waitangi Day, Christmas, Boxing Day and the New Year days this is the Mondayised date). Regional days: MBIE notes the table may contain errors and to check with the local council.",
+  "sources": [
+    {
+      "id": "mbie-public-holidays",
+      "note": "MBIE / Employment New Zealand, 'Public holidays and anniversary dates', retrieved 2026-10-02"
+    }
+  ],
+  "regions": [
+    {
+      "key": "auckland",
+      "name": "Auckland"
+    },
+    {
+      "key": "taranaki",
+      "name": "Taranaki"
+    },
+    {
+      "key": "hawkes-bay",
+      "name": "Hawke's Bay"
+    },
+    {
+      "key": "wellington",
+      "name": "Wellington"
+    },
+    {
+      "key": "marlborough",
+      "name": "Marlborough"
+    },
+    {
+      "key": "nelson",
+      "name": "Nelson"
+    },
+    {
+      "key": "canterbury",
+      "name": "Canterbury"
+    },
+    {
+      "key": "south-canterbury",
+      "name": "South Canterbury"
+    },
+    {
+      "key": "westland",
+      "name": "Westland"
+    },
+    {
+      "key": "otago",
+      "name": "Otago"
+    },
+    {
+      "key": "southland",
+      "name": "Southland"
+    },
+    {
+      "key": "chatham-islands",
+      "name": "Chatham Islands"
+    }
+  ],
+  "years": {
+    "2026": {
+      "checkedOn": "2026-10-02",
+      "holidays": [
+        {
+          "date": "2026-01-01",
+          "name": "New Year's Day",
+          "scope": "national",
+          "observedForMonFri": "2026-01-01",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-01-02",
+          "name": "Day after New Year's Day",
+          "scope": "national",
+          "observedForMonFri": "2026-01-02",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-02-06",
+          "name": "Waitangi Day",
+          "scope": "national",
+          "observedForMonFri": "2026-02-06",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-04-03",
+          "name": "Good Friday",
+          "scope": "national",
+          "observedForMonFri": "2026-04-03",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-04-06",
+          "name": "Easter Monday",
+          "scope": "national",
+          "observedForMonFri": "2026-04-06",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-04-25",
+          "name": "Anzac Day",
+          "scope": "national",
+          "observedForMonFri": "2026-04-27",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-06-01",
+          "name": "King's Birthday",
+          "scope": "national",
+          "observedForMonFri": "2026-06-01",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-07-10",
+          "name": "Matariki",
+          "scope": "national",
+          "observedForMonFri": "2026-07-10",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-10-26",
+          "name": "Labour Day",
+          "scope": "national",
+          "observedForMonFri": "2026-10-26",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-12-25",
+          "name": "Christmas Day",
+          "scope": "national",
+          "observedForMonFri": "2026-12-25",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-12-26",
+          "name": "Boxing Day",
+          "scope": "national",
+          "observedForMonFri": "2026-12-28",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-01-29",
+          "name": "Auckland Anniversary Day",
+          "scope": "auckland",
+          "observedForMonFri": "2026-01-26",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-03-31",
+          "name": "Taranaki Anniversary Day",
+          "scope": "taranaki",
+          "observedForMonFri": "2026-03-09",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Hawke's Bay Anniversary Day",
+          "scope": "hawkes-bay",
+          "observedForMonFri": "2026-10-23",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-01-22",
+          "name": "Wellington Anniversary Day",
+          "scope": "wellington",
+          "observedForMonFri": "2026-01-19",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-11-01",
+          "name": "Marlborough Anniversary Day",
+          "scope": "marlborough",
+          "observedForMonFri": "2026-11-02",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-02-01",
+          "name": "Nelson Anniversary Day",
+          "scope": "nelson",
+          "observedForMonFri": "2026-02-02",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-12-16",
+          "name": "Canterbury Anniversary Day (Show Day)",
+          "scope": "canterbury",
+          "observedForMonFri": "2026-11-13",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-12-16",
+          "name": "South Canterbury Anniversary Day",
+          "scope": "south-canterbury",
+          "observedForMonFri": "2026-09-28",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-12-01",
+          "name": "Westland Anniversary Day",
+          "scope": "westland",
+          "observedForMonFri": "2026-11-30",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-03-23",
+          "name": "Otago Anniversary Day",
+          "scope": "otago",
+          "observedForMonFri": "2026-03-23",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-01-17",
+          "name": "Southland Anniversary Day",
+          "scope": "southland",
+          "observedForMonFri": "2026-04-07",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2026-11-30",
+          "name": "Chatham Islands Anniversary Day",
+          "scope": "chatham-islands",
+          "observedForMonFri": "2026-11-30",
+          "sourceId": "mbie-public-holidays"
+        }
+      ]
+    }
+  }
+}

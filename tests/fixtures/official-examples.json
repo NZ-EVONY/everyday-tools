@@ -1,0 +1,391 @@
+{
+ "_comment": "Official figures the calculators are tested against. Each row names its source. PAYE columns include the ACC earners' levy (IR340/IR341 say so). Rows labelled 'hand-computed (not from IRD)' are our own arithmetic.",
+ "retrieved": "2026-10-02",
+ "payeTableRows": [
+  {
+   "period": "weekly",
+   "gross": 300,
+   "paye_M": 36.75,
+   "paye_ME": 36.75,
+   "studentLoan": 0.0,
+   "ks": {
+    "3.5": 10.5,
+    "4": 12.0,
+    "6": 18.0,
+    "8": 24.0,
+    "10": 30.0
+   },
+   "cec": 9.45,
+   "source": "IR340 April 2026, Weekly pay periods table, earnings row $300.00"
+  },
+  {
+   "period": "weekly",
+   "gross": 464,
+   "paye_M": 68.32,
+   "paye_ME": 58.32,
+   "studentLoan": 0.0,
+   "ks": {
+    "3.5": 16.24,
+    "4": 18.56,
+    "6": 27.84,
+    "8": 37.12,
+    "10": 46.4
+   },
+   "cec": 14.56,
+   "source": "IR340 April 2026, Weekly pay periods table, earnings row $464.00"
+  },
+  {
+   "period": "weekly",
+   "gross": 465,
+   "paye_M": 68.51,
+   "paye_ME": 58.51,
+   "studentLoan": 0.12,
+   "ks": {
+    "3.5": 16.27,
+    "4": 18.6,
+    "6": 27.9,
+    "8": 37.2,
+    "10": 46.5
+   },
+   "cec": 14.59,
+   "source": "IR340 April 2026, Weekly pay periods table, earnings row $465.00"
+  },
+  {
+   "period": "weekly",
+   "gross": 600,
+   "paye_M": 94.5,
+   "paye_ME": 84.5,
+   "studentLoan": 16.32,
+   "ks": {
+    "3.5": 21.0,
+    "4": 24.0,
+    "6": 36.0,
+    "8": 48.0,
+    "10": 60.0
+   },
+   "cec": 18.8,
+   "source": "IR340 April 2026, Weekly pay periods table, earnings row $600.00"
+  },
+  {
+   "period": "weekly",
+   "gross": 1000,
+   "paye_M": 171.5,
+   "paye_ME": 161.5,
+   "studentLoan": 64.32,
+   "ks": {
+    "3.5": 35.0,
+    "4": 40.0,
+    "6": 60.0,
+    "8": 80.0,
+    "10": 100.0
+   },
+   "cec": 31.33,
+   "source": "IR340 April 2026, Weekly pay periods table, earnings row $1,000.00"
+  },
+  {
+   "period": "weekly",
+   "gross": 1500,
+   "paye_M": 326.64,
+   "paye_ME": 326.64,
+   "studentLoan": 124.32,
+   "ks": {
+    "3.5": 52.5,
+    "4": 60.0,
+    "6": 90.0,
+    "8": 120.0,
+    "10": 150.0
+   },
+   "cec": 47.04,
+   "source": "IR340 April 2026, Weekly pay periods table, earnings row $1,500.00"
+  },
+  {
+   "period": "weekly",
+   "gross": 2000,
+   "paye_M": 500.33,
+   "paye_ME": 500.33,
+   "studentLoan": 184.32,
+   "ks": {
+    "3.5": 70.0,
+    "4": 80.0,
+    "6": 120.0,
+    "8": 160.0,
+    "10": 200.0
+   },
+   "cec": 62.65,
+   "source": "IR340 April 2026, Weekly pay periods table, earnings row $2,000.00"
+  },
+  {
+   "period": "fortnightly",
+   "gross": 928,
+   "paye_M": 136.64,
+   "paye_ME": 116.64,
+   "studentLoan": 0.0,
+   "ks": {
+    "3.5": 32.48,
+    "4": 37.12,
+    "6": 55.68,
+    "8": 74.24,
+    "10": 92.8
+   },
+   "cec": 29.12,
+   "source": "IR340 April 2026, Fortnightly pay periods table, earnings row $928.00"
+  },
+  {
+   "period": "fortnightly",
+   "gross": 1200,
+   "paye_M": 189.0,
+   "paye_ME": 169.0,
+   "studentLoan": 32.64,
+   "ks": {
+    "3.5": 42.0,
+    "4": 48.0,
+    "6": 72.0,
+    "8": 96.0,
+    "10": 120.0
+   },
+   "cec": 37.59,
+   "source": "IR340 April 2026, Fortnightly pay periods table, earnings row $1,200.00"
+  },
+  {
+   "period": "fortnightly",
+   "gross": 2400,
+   "paye_M": 462.78,
+   "paye_ME": 442.78,
+   "studentLoan": 176.64,
+   "ks": {
+    "3.5": 84.0,
+    "4": 96.0,
+    "6": 144.0,
+    "8": 192.0,
+    "10": 240.0
+   },
+   "cec": 75.18,
+   "source": "IR340 April 2026, Fortnightly pay periods table, earnings row $2,400.00"
+  },
+  {
+   "period": "fortnightly",
+   "gross": 3500,
+   "paye_M": 826.92,
+   "paye_ME": 826.92,
+   "studentLoan": 308.64,
+   "ks": {
+    "3.5": 122.5,
+    "4": 140.0,
+    "6": 210.0,
+    "8": 280.0,
+    "10": 350.0
+   },
+   "cec": 109.69,
+   "source": "IR340 April 2026, Fortnightly pay periods table, earnings row $3,500.00"
+  },
+  {
+   "period": "fourWeekly",
+   "gross": 1856,
+   "paye_M": 273.28,
+   "paye_ME": 233.28,
+   "studentLoan": 0.0,
+   "ks": {
+    "3.5": 64.96,
+    "4": 74.24,
+    "6": 111.36,
+    "8": 148.48,
+    "10": 185.6
+   },
+   "cec": 58.24,
+   "source": "IR341 April 2026, Four-Weekly pay periods table, earnings row $1,856.00"
+  },
+  {
+   "period": "fourWeekly",
+   "gross": 2400,
+   "paye_M": 378.0,
+   "paye_ME": 338.0,
+   "studentLoan": 65.28,
+   "ks": {
+    "3.5": 84.0,
+    "4": 96.0,
+    "6": 144.0,
+    "8": 192.0,
+    "10": 240.0
+   },
+   "cec": 75.18,
+   "source": "IR341 April 2026, Four-Weekly pay periods table, earnings row $2,400.00"
+  },
+  {
+   "period": "fourWeekly",
+   "gross": 4800,
+   "paye_M": 925.56,
+   "paye_ME": 885.56,
+   "studentLoan": 353.28,
+   "ks": {
+    "3.5": 168.0,
+    "4": 192.0,
+    "6": 288.0,
+    "8": 384.0,
+    "10": 480.0
+   },
+   "cec": 150.36,
+   "source": "IR341 April 2026, Four-Weekly pay periods table, earnings row $4,800.00"
+  },
+  {
+   "period": "fourWeekly",
+   "gross": 8000,
+   "paye_M": 2001.32,
+   "paye_ME": 2001.32,
+   "studentLoan": 737.28,
+   "ks": {
+    "3.5": 280.0,
+    "4": 320.0,
+    "6": 480.0,
+    "8": 640.0,
+    "10": 800.0
+   },
+   "cec": 250.6,
+   "source": "IR341 April 2026, Four-Weekly pay periods table, earnings row $8,000.00"
+  },
+  {
+   "period": "monthly",
+   "gross": 1500,
+   "paye_M": 197.73,
+   "paye_ME": 197.73,
+   "studentLoan": 0.0,
+   "ks": {
+    "3.5": 52.5,
+    "4": 60.0,
+    "6": 90.0,
+    "8": 120.0,
+    "10": 150.0
+   },
+   "cec": 47.04,
+   "source": "IR341 April 2026, Monthly pay periods table, earnings row $1,500.00"
+  },
+  {
+   "period": "monthly",
+   "gross": 2010,
+   "paye_M": 295.92,
+   "paye_ME": 252.59,
+   "studentLoan": 0.0,
+   "ks": {
+    "3.5": 70.35,
+    "4": 80.4,
+    "6": 120.6,
+    "8": 160.8,
+    "10": 201.0
+   },
+   "cec": 63.0,
+   "source": "IR341 April 2026, Monthly pay periods table, earnings row $2,010.00"
+  },
+  {
+   "period": "monthly",
+   "gross": 2015,
+   "paye_M": 296.87,
+   "paye_ME": 253.54,
+   "studentLoan": 0.52,
+   "ks": {
+    "3.5": 70.52,
+    "4": 80.6,
+    "6": 120.9,
+    "8": 161.2,
+    "10": 201.5
+   },
+   "cec": 63.17,
+   "source": "IR341 April 2026, Monthly pay periods table, earnings row $2,015.00"
+  },
+  {
+   "period": "monthly",
+   "gross": 4500,
+   "paye_M": 780.43,
+   "paye_ME": 737.1,
+   "studentLoan": 298.72,
+   "ks": {
+    "3.5": 157.5,
+    "4": 180.0,
+    "6": 270.0,
+    "8": 360.0,
+    "10": 450.0
+   },
+   "cec": 141.02,
+   "source": "IR341 April 2026, Monthly pay periods table, earnings row $4,500.00"
+  },
+  {
+   "period": "monthly",
+   "gross": 6500,
+   "paye_M": 1415.44,
+   "paye_ME": 1415.44,
+   "studentLoan": 538.72,
+   "ks": {
+    "3.5": 227.5,
+    "4": 260.0,
+    "6": 390.0,
+    "8": 520.0,
+    "10": 650.0
+   },
+   "cec": 203.67,
+   "source": "IR341 April 2026, Monthly pay periods table, earnings row $6,500.00"
+  },
+  {
+   "period": "monthly",
+   "gross": 9000,
+   "paye_M": 2283.92,
+   "paye_ME": 2283.92,
+   "studentLoan": 838.72,
+   "ks": {
+    "3.5": 315.0,
+    "4": 360.0,
+    "6": 540.0,
+    "8": 720.0,
+    "10": 900.0
+   },
+   "cec": 281.93,
+   "source": "IR341 April 2026, Monthly pay periods table, earnings row $9,000.00"
+  }
+ ],
+ "irdExamples": [
+  {
+   "what": "student loan, main job, weekly",
+   "gross": 600,
+   "period": "weekly",
+   "expected": 16.32,
+   "source": "IRD 'Repaying my student loan when I earn salary or wages' worked example"
+  },
+  {
+   "what": "student loan, secondary job, weekly",
+   "gross": 200,
+   "period": "weekly",
+   "expected": 24.0,
+   "secondary": true,
+   "source": "IRD 'Repaying my student loan when I earn salary or wages' worked example"
+  },
+  {
+   "what": "GST removed from $100 including GST",
+   "inclusiveCents": 10000,
+   "expectedGstCents": 1304,
+   "source": "IRD 'Charging GST' example (3/23 of $100 is $13.04)"
+  },
+  {
+   "what": "GST added to $100",
+   "exclusiveCents": 10000,
+   "expectedInclusiveCents": 11500,
+   "source": "IRD 'Charging GST' example ($100 plus GST is $115)"
+  }
+ ],
+ "handComputed": [
+  {
+   "what": "GST removed from $89.99",
+   "inclusiveCents": 8999,
+   "expectedGstCents": 1174,
+   "source": "hand-computed (not from IRD): 8999 × 3 ÷ 23 = 1173.78, rounds to 1174"
+  },
+  {
+   "what": "GST added to $0.03",
+   "exclusiveCents": 3,
+   "expectedGstCents": 0,
+   "source": "hand-computed (not from IRD): 0.45 cents rounds down to 0"
+  },
+  {
+   "what": "GST added to $0.04",
+   "exclusiveCents": 4,
+   "expectedGstCents": 1,
+   "source": "hand-computed (not from IRD): 0.6 cents rounds up to 1"
+  }
+ ]
+}

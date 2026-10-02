@@ -1,0 +1,10 @@
+{
+  "_comment": "GST figures. Not tied to a tax year; checkedOn is when the source pages were last read.",
+  "checkedOn": "2026-10-02",
+  "rate": { "value": 0.15, "sourceId": "ird-gst-charging" },
+  "inclusiveFraction": { "numerator": 3, "denominator": 23, "sourceId": "ird-gst-charging" },
+  "registrationThreshold": { "value": 60000, "period": "12 months", "sourceId": "ird-gst-registering" },
+  "zeroRatedSourceId": "ird-gst-zero-rated",
+  "exemptSourceId": "ird-gst-exempt",
+  "supplyInfoThreshold": { "value": 200, "sourceId": "ird-gst-supply-info" }
+}

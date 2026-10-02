@@ -1,0 +1,15 @@
+{
+  "pillars": [
+    { "key": "nz-calculators", "label": "NZ calculators", "href": "/nz-calculators" },
+    { "key": "date-and-time-tools", "label": "Dates and time", "href": "/date-and-time-tools" },
+    { "key": "printables", "label": "Printables", "href": "/printables" },
+    { "key": "text-tools", "label": "Text tools", "href": "/text-tools" },
+    { "key": "guides", "label": "Guides", "href": "/guides" }
+  ],
+  "legal": [
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" },
+    { "label": "Privacy policy", "href": "/privacy-policy" },
+    { "label": "Terms of use", "href": "/terms" }
+  ]
+}

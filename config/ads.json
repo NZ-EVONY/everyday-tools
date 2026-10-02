@@ -1,0 +1,14 @@
+{
+  "_comment": "Advertising is OFF. Nothing renders while a page type is enabled:false. Placement rules: max 3 slots on long pages; never above the H1, inside a tool card, within 150 px of a control, or sticky; none on trust pages or the 404 page. See docs/OWNER-TODO.md before switching anything on.",
+  "adsLive": false,
+  "ADS_ENABLED_FOR_TEMPLATE_PAGES": false,
+  "pageTypes": {
+    "home": { "enabled": false, "slots": ["mid-content"] },
+    "tool": { "enabled": false, "slots": ["after-explainer-1", "before-faq"] },
+    "landing": { "enabled": false, "slots": ["after-explainer-1", "before-faq"] },
+    "guide": { "enabled": false, "slots": ["after-intro", "mid-content", "before-related"] },
+    "hub": { "enabled": false, "slots": ["mid-content"] },
+    "trust": { "enabled": false, "slots": [] },
+    "error": { "enabled": false, "slots": [] }
+  }
+}

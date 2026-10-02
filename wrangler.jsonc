@@ -1,0 +1,21 @@
+// Cloudflare Workers static assets: no Worker script, no bindings, no vars.
+// The owner deploys (see docs/DEPLOY.md); development only ever runs `wrangler dev --local`
+// and `wrangler deploy --dry-run`.
+//
+// IMPORTANT: adding the custom domains below makes Cloudflare create DNS records for
+// myaddr.app and www.myaddr.app. After the first deploy the owner must confirm that the
+// existing MX / Email Routing records and the nz@myaddr.app forward still work.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "everyday-tools",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./public",
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "myaddr.app", "custom_domain": true },
+    { "pattern": "www.myaddr.app", "custom_domain": true }
+  ]
+}

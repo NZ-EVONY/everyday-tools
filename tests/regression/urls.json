@@ -1,0 +1,14 @@
+{
+ "_comment": "Every URL ever published. Removing one needs a redirect decision (docs/DECISIONS.md).",
+ "urls": [
+  "/",
+  "/about",
+  "/contact",
+  "/gst-calculator",
+  "/guides",
+  "/nz-calculators",
+  "/privacy-policy",
+  "/sitemap",
+  "/terms"
+ ]
+}

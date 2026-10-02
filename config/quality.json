@@ -1,0 +1,17 @@
+{
+  "_comment": "Content bars enforced by tests/build/content.test.mjs and scripts/report-content.mjs. Prose words exclude the tool UI, headings, tables, breadcrumbs and related-link lists.",
+  "words": {
+    "tool": [500, 900],
+    "landing": [500, 900],
+    "guide": [700, 1300],
+    "hub": [250, 1200],
+    "trust": [300, 2500],
+    "home": [250, 1200]
+  },
+  "introWords": [60, 120],
+  "similarity": { "maxJaccard": 0.2, "shingle": 5, "maxRepeatedSentenceWords": 8, "minOpenerDiversity": 0.9 },
+  "maxTitle": 60,
+  "maxDescription": 155,
+  "maxPublicFiles": 1000,
+  "budgets": { "htmlGzip": 61440, "cssGzip": 12288, "jsGzipPerPage": 15360 }
+}

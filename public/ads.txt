@@ -1,0 +1,3 @@
+# ads.txt placeholder: advertising is not switched on yet.
+# After AdSense approval, replace the publisher id with the real one from the AdSense account and remove the leading "# ".
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0  (replace after approval)

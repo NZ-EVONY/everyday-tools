@@ -1,0 +1,27 @@
+# Owner to-do list
+
+Things only the owner can do. Claude Code cannot do these.
+
+## Now (before typing "continue" after Phase 1, if possible)
+- [ ] Run the five searches in `docs/SEARCH-SPOTCHECK.md` by hand (private window, NZ location) and fill in the table.
+- [ ] Look at the pilot pages (home, `/gst-calculator`, `/nz-calculators`, `/guides`, trust pages) and say whether the style and depth are right before the other tools are written.
+- [ ] Confirm the brand "Everyday Tools" (a one-line change in `site.config.json`).
+- [ ] TODO-OWNER: confirm, reword or remove "Written with AI assistance and reviewed by the publisher." on `/about` (`content/pages/about.mjs`).
+- [ ] Check on IRD's student loan page that $24,128 is the threshold for the 2027 tax year (see `docs/UNVERIFIED.md`).
+
+## Before launch
+- [ ] Decide, with advice, whether the privacy policy needs a more identifiable controller than "an independent publisher" plus `nz@myaddr.app` (NZ Privacy Act 2020 and GDPR/UK GDPR).
+- [ ] Have the privacy policy and terms reviewed; they are templates, not legal advice.
+- [ ] On deploy day, re-check five tax figures (a bracket threshold, the ACC rate and cap, the student loan threshold, the KiwiSaver rate options, the GST rate) and the holiday table against the official pages.
+- [ ] Confirm nothing else is deployed on `myaddr.app` (an earlier address-format plan also targeted that domain) before attaching this Worker.
+- [ ] Deploy with `docs/DEPLOY.md` (written in Phase 6), then confirm MX / Email Routing records still exist and a test email to `nz@myaddr.app` arrives.
+- [ ] Cloudflare dashboard: `www` → apex redirect, Always Use HTTPS, Bot Fight Mode off, Rocket Loader off, Email Address Obfuscation off, Web Analytics injection off, check the managed `robots.txt`.
+- [ ] Search Console: Domain property, submit the sitemap, inspect a tool and a guide.
+
+## Advertising (only after pages are live, indexed and read by a human)
+- [ ] Apply for AdSense. Approval needs real content and trust pages and is never guaranteed.
+- [ ] Wire a Google-certified CMP supporting IAB TCF v2.3 at the CMP comment, unhide the "Privacy settings" footer link, set `adsLive: true`, paste the AdSense snippet at the marked point, switch slots on page type by page type, update `ads.txt` and the CSP, re-test CLS, and update the privacy policy's advertising section (it changes automatically with `adsLive`).
+
+## Every year
+- [ ] By March: add `data/nz/tax-YYYY-YY.json` for the new tax year and one line in `config/data.json` (the build warns from 1 March and fails from 1 April).
+- [ ] By September: add next year's holiday table from MBIE (the build warns from 1 September and fails on 1 January).
