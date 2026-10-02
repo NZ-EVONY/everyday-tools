@@ -19,6 +19,7 @@ export function loadData(root) {
     tax: taxYears[cfg.currentTaxYear],
     gst: readJson(root, "data/nz/gst.json"),
     holidays: readJson(root, cfg.holidayFile),
+    units: readJson(root, "data/units.json"),
   };
 }
 
@@ -36,7 +37,13 @@ export function checkSourceIds(data) {
   for (const [y, t] of Object.entries(data.taxYears)) walk(t, `tax-${y}`);
   walk(data.gst, "gst");
   walk(data.holidays, "public-holidays");
-  for (const s of data.sources) if (!/^https:\/\/([a-z0-9-]+\.)*(govt\.nz)\//.test(s.url)) problems.push(`source ${s.id} is not on an official govt.nz host: ${s.url}`);
+  if (data.units) walk(data.units, "units");
+  // Money, tax and holiday sources must be NZ government pages. Unit definitions may also come
+  // from standards bodies and legislation abroad (NIST, UK legislation).
+  for (const s of data.sources) {
+    const ok = /^https:\/\/([a-z0-9-]+\.)*govt\.nz\//.test(s.url) || (s.kind === "units" && /^https:\/\/(www\.)?(nist\.gov|legislation\.gov\.uk)\//.test(s.url));
+    if (!ok) problems.push(`source ${s.id} is not on an allowed official host: ${s.url}`);
+  }
   return problems;
 }
 

@@ -20,6 +20,7 @@ wrangler, playwright-core, axe-core, lighthouse (pinned).
 - `npm run dev`: `wrangler dev --local` (never `--remote`)
 
 ## Conventions
+- The approved look is in `design/` (mockups + screenshots); every page must match it.
 - Never deploy, never touch Cloudflare, never commit to `main`. Work on the build branch.
 - Money, tax and holiday figures live only in `data/` with a `sourceId` into
   `data/sources.json` (official govt.nz pages). Never hard-code a rate in `src/` or `content/`.

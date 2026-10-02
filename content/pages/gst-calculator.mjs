@@ -12,7 +12,8 @@ export default function page(ctx) {
   const b = removeGst(8999, bp);
   const wrong = 11500 - Math.round(11500 * gst.rate.value);
   const right = removeGst(11500, bp);
-  const lines = gstLines([1999, 1999, 1999].map(cents => ({ cents, mode: "remove" })), bp);
+  const lines = gstLines([1999, 1999, 1999], "remove", bp);
+  const ex = [[10000, "add"], [11500, "remove"], [9999, "remove"], [1999, "add"]].map(([c, m]) => [c, m, m === "add" ? addGst(c, bp) : removeGst(c, bp)]);
 
   return {
     path: "/gst-calculator",
@@ -22,7 +23,6 @@ export default function page(ctx) {
     reviewed: "2026-10-02",
     title: `GST Calculator NZ: Add or Remove ${pctText(gst.rate.value)} GST`,
     description: `Add ${pctText(gst.rate.value)} GST to a price or take it out of a GST-inclusive one, with line items and cent-accurate rounding. Free, private, works in your browser.`,
-    h1: "GST calculator",
     appName: "NZ GST calculator",
     appCategory: "FinanceApplication",
     script: "gst",
@@ -35,37 +35,56 @@ export default function page(ctx) {
       { text: "Financial services and donated goods sold by non-profits are exempt", source: gst.exemptSourceId },
       { text: `Taxable supply information on request for supplies over ${dollars(gst.supplyInfoThreshold.value)}`, source: gst.supplyInfoThreshold.sourceId },
     ],
-    intro: `<p>Work out New Zealand GST in either direction: add ${r} to a price that doesn't include it yet, or find the GST hidden inside a price that already does. Type an amount and the answer updates as you go, rounded to the cent. For a quote or an invoice with several items, use the line-item list to see GST for each line and the totals. The rate comes from Inland Revenue's own pages, and the date it was last checked is shown below the calculator.</p>`,
-    tool: `<form class="tool-form" id="gstForm" data-rate-bp="${bp}" data-rate-pct="${pctText(gst.rate.value)}" autocomplete="off" novalidate>
-          <fieldset>
-            <legend>What does your price include?</legend>
-            <div class="seg">
-              <label><input type="radio" name="mode" value="add" checked> Add GST (price excludes GST)</label>
-              <label><input type="radio" name="mode" value="remove"> Remove GST (price includes GST)</label>
-            </div>
-          </fieldset>
-          <div class="field">
-            <label for="gstAmount" id="gstAmountLabel">Price excluding GST ($)</label>
-            <input id="gstAmount" type="text" inputmode="decimal" maxlength="16" placeholder="100.00" aria-describedby="gstAmountError">
-            <p class="error" id="gstAmountError" aria-live="polite"></p>
-          </div>
-          <div class="result" id="gstResult" aria-live="polite"></div>
-          <details class="advanced">
-            <summary>Several amounts (line items)</summary>
-            <p class="hint">Each line uses the choice above. Descriptions are optional and stay on this page.</p>
-            <div class="lines" id="gstLines"></div>
-            <div class="row"><button class="btn secondary small" type="button" id="gstAddLine">Add a line</button></div>
-            <div class="result" id="gstLinesResult" aria-live="polite"></div>
-          </details>
-        </form>`,
+    crumbName: "GST calculator",
+    h1: "GST calculator NZ:",
+    h1Accent: `add or remove ${pctText(gst.rate.value)}`,
+    chips: [`<span class="chip">${ctx.icon("percent")}NZ GST ${r}</span>`, `<span class="chip">Checked ${ctx.longDate(gst.checkedOn)}</span>`],
+    intro: `<p>Work out New Zealand GST on a quote, invoice or receipt: add ${r} to prices that don't include it yet, or find the GST hidden inside prices that already do. Enter one amount or several lines and the totals update as you type, rounded to the cent. The rate comes from Inland Revenue's own pages, with the date it was last checked shown beside the result.</p>`,
+    tool: `<form id="gstForm" data-rate-bp="${bp}" data-rate-pct="${pctText(gst.rate.value)}" autocomplete="off" novalidate>
+      <div class="panel-h"><h2>Your amounts</h2><span class="chip">NZD</span></div>
+      <fieldset>
+        <legend class="sr-only">Do your amounts include GST?</legend>
+        <div class="seg">
+          <label><input type="radio" name="mode" value="add" checked><span>Add GST</span></label>
+          <label><input type="radio" name="mode" value="remove"><span>Remove GST</span></label>
+        </div>
+      </fieldset>
+      <div class="lines-head" aria-hidden="true"><span>Description</span><span id="amtHead">Amount, excl. GST</span><span></span></div>
+      <ol class="lines" id="gstLines"><li class="line"><input class="in desc" type="text" maxlength="60" placeholder="Description (optional)" aria-label="Description, line 1 (optional)"><div class="money"><span aria-hidden="true">$</span><input class="in amt" type="text" inputmode="decimal" maxlength="16" placeholder="0.00" aria-label="Amount, line 1" aria-describedby="gstHint"></div><button class="rm" type="button" aria-label="Remove line 1">${ctx.icon("trash")}</button></li></ol>
+      <template id="gstLineTpl"><li class="line"><input class="in desc" type="text" maxlength="60" placeholder="Description (optional)"><div class="money"><span aria-hidden="true">$</span><input class="in amt" type="text" inputmode="decimal" maxlength="16" placeholder="0.00" aria-describedby="gstHint"></div><button class="rm" type="button">${ctx.icon("trash")}</button></li></template>
+      <p class="hint" id="gstHint" role="alert"></p>
+      <div class="actions no-print">
+        <button type="button" class="btn btn-ghost btn-sm" id="gstAddLine">${ctx.icon("plus")}Add line</button>
+        <button type="button" class="btn btn-ghost btn-sm" id="gstReset">${ctx.icon("reset")}Reset</button>
+      </div>
+    </form>`,
+    results: `<div class="results" aria-label="Results">
+        <div class="res"><div class="k">Price excluding GST<small id="kExcl">What you entered</small></div><div class="v" id="vExcl">$0.00</div></div>
+        <div class="res"><div class="k">GST<small>${r}</small></div><div class="v" id="vGst">$0.00</div></div>
+        <div class="res key"><div class="k">Price including GST<small id="kIncl">Total to pay</small></div><div class="v" id="vIncl">$0.00</div></div>
+      </div>
+      <div class="split" aria-hidden="true">
+        <div class="bar" id="bar"><i></i><i></i></div>
+        <div class="legend"><span>Price before GST</span><span>GST <b id="pct">0.0%</b> of total</span></div>
+      </div>
+      <div class="breakdown" id="gstBreakdown" hidden><table><caption>Each line</caption><thead><tr><th scope="col">Item</th><th scope="col" class="num">Excl.</th><th scope="col" class="num">GST</th><th scope="col" class="num">Incl.</th></tr></thead><tbody></tbody></table></div>
+      <p class="rounding" id="gstRounding" hidden></p>
+      <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="gstCopy">${ctx.icon("copy")}Copy summary</button></div>
+      <p class="sr-only" id="sr" role="status" aria-live="polite"></p>`,
     notice: ctx.taxNotice([gst.rate.sourceId, gst.registrationThreshold.sourceId], { taxYear: false }),
     body: `
         <h2>How the two directions work</h2>
         <p>Adding GST is simple multiplication. If a supplier quotes ${money(a.exclusive)} plus GST, the tax is ${r} of that, ${money(a.gst)}, and the customer pays ${money(a.inclusive)}. The calculator does exactly this, then rounds to the nearest cent.</p>
         <p>Removing GST is where people slip. The GST inside an inclusive price is not ${r} of that price, because the ${r} was charged on the smaller, pre-GST amount. The share that is tax works out to ${frac} of the inclusive price. Inland Revenue uses the same fraction in its own guidance. So a receipt for ${money(b.inclusive)} contains ${money(b.gst)} of GST, and the price before GST was ${money(b.exclusive)}. Dividing the inclusive price by ${(1 + gst.rate.value).toFixed(2)} gives the same answer from the other side.</p>
 
-        <h2>Worked example: a three-item invoice</h2>
-        <p>Here is a small invented example. A café orders three boxes of takeaway cups at ${money(1999)} each, GST included. Rounding the GST on each line separately gives ${money(lines.rows[0].gst)} per box and ${money(lines.totals.gst)} altogether. Working the GST out once on the ${money(lines.totals.inclusive)} total gives ${money(lines.gstOnTotal)}. Neither figure is wrong; the one-cent gap comes purely from rounding three times instead of once. The line-item list shows both so you can match whatever your accounting software does. If the numbers on an invoice are off by a cent or two, rounding is almost always the reason.</p>
+        <h2>Worked examples</h2>
+        <p>These figures come from the same code that runs the calculator above.</p>
+        <div class="example"><table>
+          <caption>Four common cases</caption>
+          <thead class="sr-only"><tr><th scope="col">Case</th><th scope="col">Result</th></tr></thead>
+          <tbody>${ex.map(([c, m, x]) => `<tr><th scope="row">${m === "add" ? "Add GST to" : "Remove GST from"} ${money(c)}</th><td>${money(x.gst)} GST, ${m === "add" ? `${money(x.inclusive)} total` : `${money(x.exclusive)} before GST`}</td></tr>`).join("")}</tbody>
+        </table></div>
+        <p>Now a small invented invoice. A café orders three boxes of takeaway cups at ${money(1999)} each, GST included. Working the GST out once on the ${money(lines.total.inclusive)} total gives ${money(lines.total.gst)}, which is the figure the calculator shows. Rounding each line separately gives ${money(lines.rows[0].gst)} per box and ${money(lines.perLine.gst)} altogether. Neither is wrong; the one-cent gap comes purely from rounding three times instead of once. When you enter several lines, the calculator lists each one and points out any gap like this, so you can match whatever your accounting software does.</p>
         <!--@slot after-explainer-1-->
         <h2>Mistakes that cost money</h2>
         <ul>

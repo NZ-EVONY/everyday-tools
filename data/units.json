@@ -1,0 +1,344 @@
+{
+  "_comment": "Unit conversion factors. 'toBase' converts one unit to the category's base unit (metre, square metre, kilogram, litre, metre per second). 'exact': true where the source gives the value as an exact definition; otherwise it is the source's published (rounded) factor. Temperature and fuel economy use formulas (see src/assets/lib/units.js).",
+  "categories": [
+    {
+      "key": "length",
+      "label": "Length",
+      "base": "m",
+      "units": [
+        {
+          "key": "mm",
+          "label": "millimetres",
+          "toBase": 0.001,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "cm",
+          "label": "centimetres",
+          "toBase": 0.01,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "m",
+          "label": "metres",
+          "toBase": 1,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "km",
+          "label": "kilometres",
+          "toBase": 1000,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "in",
+          "label": "inches",
+          "toBase": 0.0254,
+          "exact": true,
+          "sourceId": "uk-wma-1985-sch1",
+          "note": "1/36 yard; NIST B.8 lists 2.54 cm"
+        },
+        {
+          "key": "ft",
+          "label": "feet",
+          "toBase": 0.3048,
+          "exact": true,
+          "sourceId": "uk-wma-1985-sch1",
+          "note": "1/3 yard"
+        },
+        {
+          "key": "yd",
+          "label": "yards",
+          "toBase": 0.9144,
+          "exact": true,
+          "sourceId": "uk-wma-1985-sch1"
+        },
+        {
+          "key": "mi",
+          "label": "miles",
+          "toBase": 1609.344,
+          "exact": true,
+          "sourceId": "uk-wma-1985-sch1",
+          "note": "1760 yards"
+        }
+      ]
+    },
+    {
+      "key": "area",
+      "label": "Area",
+      "base": "m²",
+      "units": [
+        {
+          "key": "cm2",
+          "label": "square centimetres",
+          "toBase": 0.0001,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "m2",
+          "label": "square metres",
+          "toBase": 1,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "ha",
+          "label": "hectares",
+          "toBase": 10000,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "km2",
+          "label": "square kilometres",
+          "toBase": 1000000,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "sqin",
+          "label": "square inches",
+          "toBase": 0.00064516,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "sqft",
+          "label": "square feet",
+          "toBase": 0.09290304,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "sqyd",
+          "label": "square yards",
+          "toBase": 0.83612736,
+          "exact": true,
+          "sourceId": "uk-wma-1985-sch1",
+          "note": "one yard squared"
+        },
+        {
+          "key": "acre",
+          "label": "acres",
+          "toBase": 4046.8564224,
+          "exact": true,
+          "sourceId": "nist-survey-foot-factors",
+          "note": "4840 square yards (UK Act)"
+        },
+        {
+          "key": "sqmi",
+          "label": "square miles",
+          "toBase": 2589988.110336,
+          "exact": true,
+          "sourceId": "uk-wma-1985-sch1",
+          "note": "640 acres"
+        }
+      ]
+    },
+    {
+      "key": "mass",
+      "label": "Weight",
+      "base": "kg",
+      "units": [
+        {
+          "key": "g",
+          "label": "grams",
+          "toBase": 0.001,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "kg",
+          "label": "kilograms",
+          "toBase": 1,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "t",
+          "label": "tonnes",
+          "toBase": 1000,
+          "exact": true,
+          "sourceId": "uk-wma-1985-sch1",
+          "note": "metric ton = 1000 kilograms"
+        },
+        {
+          "key": "oz",
+          "label": "ounces",
+          "toBase": 0.028349523125,
+          "exact": true,
+          "sourceId": "uk-wma-1985-sch1",
+          "note": "1/16 pound"
+        },
+        {
+          "key": "lb",
+          "label": "pounds",
+          "toBase": 0.45359237,
+          "exact": true,
+          "sourceId": "uk-wma-1985-sch1"
+        },
+        {
+          "key": "st",
+          "label": "stone",
+          "toBase": 6.35029318,
+          "exact": true,
+          "sourceId": "uk-wma-1985-sch1",
+          "note": "14 pounds"
+        }
+      ]
+    },
+    {
+      "key": "volume",
+      "label": "Volume",
+      "base": "L",
+      "units": [
+        {
+          "key": "ml",
+          "label": "millilitres",
+          "toBase": 0.001,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "l",
+          "label": "litres",
+          "toBase": 1,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "tsp_us",
+          "label": "teaspoons (US)",
+          "toBase": 0.004928922,
+          "exact": false,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "tbsp_us",
+          "label": "tablespoons (US)",
+          "toBase": 0.01478676,
+          "exact": false,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "floz_us",
+          "label": "fluid ounces (US)",
+          "toBase": 0.02957353,
+          "exact": false,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "cup_us",
+          "label": "cups (US)",
+          "toBase": 0.2365882,
+          "exact": false,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "gal_us",
+          "label": "gallons (US)",
+          "toBase": 3.785412,
+          "exact": false,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "gal_uk",
+          "label": "gallons (UK, imperial)",
+          "toBase": 4.54609,
+          "exact": true,
+          "sourceId": "uk-wma-1985-sch1"
+        }
+      ]
+    },
+    {
+      "key": "speed",
+      "label": "Speed",
+      "base": "m/s",
+      "units": [
+        {
+          "key": "kmh",
+          "label": "kilometres per hour",
+          "toBase": 0.2777777777777778,
+          "exact": true,
+          "sourceId": "nist-sp811-b8",
+          "note": "1000 m ÷ 3600 s"
+        },
+        {
+          "key": "ms",
+          "label": "metres per second",
+          "toBase": 1,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "mph",
+          "label": "miles per hour",
+          "toBase": 0.44704,
+          "exact": true,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "kn",
+          "label": "knots",
+          "toBase": 0.5144444,
+          "exact": false,
+          "sourceId": "nist-sp811-b8"
+        }
+      ]
+    },
+    {
+      "key": "temperature",
+      "label": "Temperature",
+      "formula": true,
+      "sourceId": "nist-sp811-b9",
+      "units": [
+        {
+          "key": "c",
+          "label": "degrees Celsius"
+        },
+        {
+          "key": "f",
+          "label": "degrees Fahrenheit"
+        },
+        {
+          "key": "k",
+          "label": "kelvin"
+        }
+      ]
+    },
+    {
+      "key": "fuel",
+      "label": "Fuel economy",
+      "formula": true,
+      "sourceId": "nist-sp811-b8",
+      "units": [
+        {
+          "key": "l100",
+          "label": "litres per 100 km"
+        },
+        {
+          "key": "kml",
+          "label": "kilometres per litre"
+        },
+        {
+          "key": "mpg_us",
+          "label": "miles per US gallon",
+          "kmlPer": 0.4251437,
+          "sourceId": "nist-sp811-b8"
+        },
+        {
+          "key": "mpg_uk",
+          "label": "miles per imperial gallon",
+          "kmlPer": 0.3540061899346471,
+          "sourceId": "uk-wma-1985-sch1",
+          "note": "1.609344 km ÷ 4.54609 L"
+        }
+      ]
+    }
+  ]
+}

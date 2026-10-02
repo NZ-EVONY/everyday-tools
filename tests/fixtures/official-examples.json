@@ -1,5 +1,5 @@
 {
- "_comment": "Official figures the calculators are tested against. Each row names its source. PAYE columns include the ACC earners' levy (IR340/IR341 say so). Rows labelled 'hand-computed (not from IRD)' are our own arithmetic.",
+ "_comment": "Official figures the calculators are tested against. Each row names its source. PAYE columns include the ACC earners' levy (IR340/IR341 say so). Rows labelled 'hand-computed (not from IRD)' are our own arithmetic. In payeTableRows, 'cec' is the employer contribution after ESCT at the 10.5% ESCT rate (the first 'Net CEC' column).",
  "retrieved": "2026-10-02",
  "payeTableRows": [
   {
@@ -386,6 +386,74 @@
    "exclusiveCents": 4,
    "expectedGstCents": 1,
    "source": "hand-computed (not from IRD): 0.6 cents rounds up to 1"
+  }
+ ],
+ "secondaryRows": [
+  {
+   "gross": 361.0,
+   "SB": 44.22,
+   "S": 69.49,
+   "SH": 114.61,
+   "ST": 125.44,
+   "SA": 147.1,
+   "studentLoan": 43.32,
+   "period": "weekly",
+   "source": "IR340 April 2026, Weekly Secondary earnings table, row $361.00"
+  },
+  {
+   "gross": 365.0,
+   "SB": 44.71,
+   "S": 70.26,
+   "SH": 115.88,
+   "ST": 126.83,
+   "SA": 148.73,
+   "studentLoan": 43.8,
+   "period": "weekly",
+   "source": "IR340 April 2026, Weekly Secondary earnings table, row $365.00"
+  },
+  {
+   "gross": 999.0,
+   "SB": 122.37,
+   "S": 192.3,
+   "SH": 317.18,
+   "ST": 347.15,
+   "SA": 407.09,
+   "studentLoan": 119.88,
+   "period": "weekly",
+   "source": "IR340 April 2026, Weekly Secondary earnings table, row $999.00"
+  },
+  {
+   "gross": 402.0,
+   "SB": 49.24,
+   "S": 77.38,
+   "SH": 127.63,
+   "ST": 139.69,
+   "SA": 163.81,
+   "studentLoan": 48.24,
+   "period": "fortnightly",
+   "source": "IR340 April 2026, Fortnightly Secondary earnings table, row $402.00"
+  },
+  {
+   "gross": 1500.0,
+   "SB": 183.75,
+   "S": 288.75,
+   "SH": 476.25,
+   "ST": 521.25,
+   "SA": 611.25,
+   "studentLoan": 180.0,
+   "period": "fortnightly",
+   "source": "IR340 April 2026, Fortnightly Secondary earnings table, row $1,500.00"
+  },
+  {
+   "gross": 2500.0,
+   "SB": 306.25,
+   "S": 481.25,
+   "SH": 793.75,
+   "ST": 868.75,
+   "SA": 1018.75,
+   "studentLoan": 300.0,
+   "period": "monthly",
+   "source": "IR341 April 2026, Monthly Secondary earnings table, row $2,500.00"
   }
  ]
 }

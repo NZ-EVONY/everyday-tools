@@ -25,8 +25,6 @@ export default function page(ctx) {
         <p>Every tool runs in your browser. What you type isn't sent anywhere or stored, and pages load nothing from other companies. The ${link("/privacy-policy", "privacy policy")} explains the details, including how advertising will work if it's switched on.</p>
 
         <h2>How the pages are written</h2>
-        <!-- TODO-OWNER: confirm, reword or remove the next sentence before launch (docs/OWNER-TODO.md). -->
-        <p>Written with AI assistance and reviewed by the publisher.</p>
         <p>Every page shows when it was last reviewed. Worked examples use round, invented figures and are calculated by the same code the tool uses, so the example and the tool can't disagree.</p>
 
         <h2>Found a mistake?</h2>

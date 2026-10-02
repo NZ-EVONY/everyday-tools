@@ -13,16 +13,16 @@ export function removeGst(inclusiveCents, rateBp) {
 }
 
 /**
- * Line items: each line is { cents, mode: "add" | "remove" }. GST is worked out and rounded
- * per line, then summed. Also returns the GST worked out once on the summed totals (on the exclusive total when every
- * line adds GST, otherwise on the inclusive total), so the
- * page can show when per-line rounding gives a slightly different answer.
+ * Several amounts entered the same way (all excluding GST, or all including it).
+ * total: GST worked out once on the sum of the lines (the calculator's headline answer).
+ * rows / perLine: GST worked out and rounded on each line, then summed, as some invoicing
+ * software does. roundingDifference = perLine.gst - total.gst (usually 0, sometimes a cent or two).
  */
-export function gstLines(lines, rateBp) {
-  const rows = lines.map(l => (l.mode === "remove" ? removeGst(l.cents, rateBp) : addGst(l.cents, rateBp)));
+export function gstLines(cents, mode, rateBp) {
+  const one = mode === "remove" ? removeGst : addGst;
+  const rows = cents.map(c => one(c, rateBp));
   const sum = k => rows.reduce((a, r) => a + r[k], 0);
-  const totals = { exclusive: sum("exclusive"), gst: sum("gst"), inclusive: sum("inclusive") };
-  const allAdd = lines.length > 0 && lines.every(l => l.mode !== "remove");
-  const onTotal = allAdd ? addGst(totals.exclusive, rateBp).gst : removeGst(totals.inclusive, rateBp).gst;
-  return { rows, totals, gstOnTotal: onTotal, roundingDifference: totals.gst - onTotal };
+  const perLine = { exclusive: sum("exclusive"), gst: sum("gst"), inclusive: sum("inclusive") };
+  const total = one(cents.reduce((a, c) => a + c, 0), rateBp);
+  return { rows, perLine, total, roundingDifference: perLine.gst - total.gst };
 }

@@ -6,6 +6,7 @@
 <title>GST Calculator NZ: Add or Remove 15% GST</title>
 <meta name="description" content="Add 15% GST to a price or take it out of a GST-inclusive one, with line items and cent-accurate rounding. Free, private, works in your browser.">
 <meta name="author" content="Everyday Tools">
+<meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://myaddr.app/gst-calculator">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Everyday Tools">
@@ -16,75 +17,101 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GST Calculator NZ: Add or Remove 15% GST">
 <meta name="twitter:description" content="Add 15% GST to a price or take it out of a GST-inclusive one, with line items and cent-accurate rounding. Free, private, works in your browser.">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#14181a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F6F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#06120E" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<script>(function(d){try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")d.dataset.theme=t}catch(e){}d.classList.add("js")})(document.documentElement);</script>
-<link rel="stylesheet" href="/assets/style.7a2e83dadf.css">
+<script>(function(d){try{var t=localStorage.getItem("et-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}d.classList.add("js")})(document.documentElement);</script>
+<link rel="stylesheet" href="/assets/style.f6125cf1d4.css">
 <!-- ==== CMP INTEGRATION POINT. Paste a Google-certified CMP snippet that supports IAB TCF v2.3 here. It must load BEFORE the AdSense script below. See docs/OWNER-TODO.md ==== -->
 <!-- ==== ADSENSE INTEGRATION POINT. After approval, paste exactly as the AdSense account shows them:
   1. <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"> (placeholder; never guess the real id)
   2. the AdSense loader snippet.
 Then add the CSP origins listed in public/_headers, update public/ads.txt and set adsLive in config/ads.json. ==== -->
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"NZ GST calculator","url":"https://myaddr.app/gst-calculator","description":"Add 15% GST to a price or take it out of a GST-inclusive one, with line items and cent-accurate rounding. Free, private, works in your browser.","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en-NZ","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"NZD"},"publisher":{"@type":"Organization","name":"Everyday Tools"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why isn't the GST in an inclusive price just 15% of it?","acceptedAnswer":{"@type":"Answer","text":"Because the 15% was charged on the price before GST. Once GST is added, the tax is a smaller share of the bigger total: 3/23. For a $115.00 price that is $15.00, not $17.25."}},{"@type":"Question","name":"Can I use this for zero-rated or exempt sales?","acceptedAnswer":{"@type":"Answer","text":"No. Zero-rated supplies carry GST at a rate of zero and exempt supplies carry none, so the standard-rate answer would be wrong. Inland Revenue's pages list which supplies fall into each group."}},{"@type":"Question","name":"Do I have to charge GST?","acceptedAnswer":{"@type":"Answer","text":"Only if you are GST-registered. Inland Revenue says registration is required once your turnover from a taxable activity reaches $60,000 in 12 months (past or expected), or if you add GST to your prices."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myaddr.app/"},{"@type":"ListItem","position":2,"name":"NZ calculators","item":"https://myaddr.app/nz-calculators"},{"@type":"ListItem","position":3,"name":"GST calculator","item":"https://myaddr.app/gst-calculator"}]}]}</script>
-<script src="/assets/site.8cb4641180.js" defer></script>
-<script src="/assets/js/gst.cc582e6ab7.js" defer></script>
+<script src="/assets/site.f521e54d7c.js" defer></script>
+<script src="/assets/js/gst.8c4cb7c4fd.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="masthead">
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5v-2a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 14.2l2 2 3.8-3.8"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.75"/><path d="M12 11v5M12 8h.01"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></symbol><symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="7.2" cy="7.2" r="2.4"/><circle cx="16.8" cy="16.8" r="2.4"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.6-5.9"/><path d="M4 4.5v4.6h4.6"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol><symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 7h15M9.5 7V4.5h5V7M6.5 7l.8 12a1.5 1.5 0 0 0 1.5 1.4h6.4a1.5 1.5 0 0 0 1.5-1.4l.8-12"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="/"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 32 32"><rect x="2" y="2" width="28" height="28" rx="7" fill="currentColor"/><path d="M9 11h14M9 16h9M9 21h11" stroke="var(--brand-ink)" stroke-width="2.6" stroke-linecap="round"/></svg><span>Everyday Tools</span></a>
-    <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navbar"><span class="sr">Menu</span><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-    <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-pressed="false"><span class="sr">Dark theme</span><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 2.5a7.5 7.5 0 0 1 0 15z" fill="currentColor"/></svg></button>
+    <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+    <nav class="nav" aria-label="Main"><ul><li><a href="/nz-calculators" aria-current="page">NZ calculators</a></li><li><a href="/guides">Guides</a></li></ul></nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false"><svg class="ico i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></button>
+      <details class="menu" id="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main (menu)"><ul><li><a href="/nz-calculators" aria-current="page">NZ calculators<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides">Guides<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul></nav>
+      </details>
+    </div>
   </div>
 </header>
-<nav class="navbar" id="navbar" aria-label="Main">
-  <ul class="wrap">
-    <li><a href="/nz-calculators" aria-current="page">NZ calculators</a></li>
-    <li><a href="/guides">Guides</a></li>
-  </ul>
-</nav>
-<main class="wrap main" id="main">
-  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/nz-calculators">NZ calculators</a></li><li><span aria-current="page">GST calculator</span></li></ol></nav>
-  <header class="page-head">
-        <h1>GST calculator</h1>
-        <div class="intro"><p>Work out New Zealand GST in either direction: add <span class="dv">15%</span> to a price that doesn't include it yet, or find the GST hidden inside a price that already does. Type an amount and the answer updates as you go, rounded to the cent. For a quote or an invoice with several items, use the line-item list to see GST for each line and the totals. The rate comes from Inland Revenue's own pages, and the date it was last checked is shown below the calculator.</p></div>
-      </header>
-      <section class="tool-card" aria-label="GST calculator">
-        <form class="tool-form" id="gstForm" data-rate-bp="1500" data-rate-pct="15%" autocomplete="off" novalidate>
-          <fieldset>
-            <legend>What does your price include?</legend>
-            <div class="seg">
-              <label><input type="radio" name="mode" value="add" checked> Add GST (price excludes GST)</label>
-              <label><input type="radio" name="mode" value="remove"> Remove GST (price includes GST)</label>
-            </div>
-          </fieldset>
-          <div class="field">
-            <label for="gstAmount" id="gstAmountLabel">Price excluding GST ($)</label>
-            <input id="gstAmount" type="text" inputmode="decimal" maxlength="16" placeholder="100.00" aria-describedby="gstAmountError">
-            <p class="error" id="gstAmountError" aria-live="polite"></p>
-          </div>
-          <div class="result" id="gstResult" aria-live="polite"></div>
-          <details class="advanced">
-            <summary>Several amounts (line items)</summary>
-            <p class="hint">Each line uses the choice above. Descriptions are optional and stay on this page.</p>
-            <div class="lines" id="gstLines"></div>
-            <div class="row"><button class="btn secondary small" type="button" id="gstAddLine">Add a line</button></div>
-            <div class="result" id="gstLinesResult" aria-live="polite"></div>
-          </details>
-        </form>
-        <noscript><p class="noscript">This calculator needs JavaScript to work out results. Everything on this page explains how it works, so you can still follow the method by hand.</p></noscript>
-      </section>
-      <aside class="notice" aria-label="Source and disclaimer"><p><strong>Rates checked on 2 October 2026.</strong> Source: <a href="https://www.ird.govt.nz/gst/charging-gst" rel="noopener">Charging GST</a> (Inland Revenue); <a href="https://www.ird.govt.nz/gst/registering-for-gst" rel="noopener">Registering for GST</a> (Inland Revenue).</p><p>This is an estimate for general information, not financial or tax advice; check with Inland Revenue or a qualified adviser.</p></aside>
-      <article class="prose">
-        
+<main id="main">
+  <section class="t-hero">
+   <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/nz-calculators">NZ calculators</a></li><li><span aria-current="page">GST calculator</span></li></ol></nav>
+    <div class="t-meta"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-percent"/></svg>NZ GST <span class="dv">15%</span></span><span class="chip">Checked 2 October 2026</span></div>
+    <h1>GST calculator NZ: <span class="grad-text">add or remove 15%</span></h1>
+    <div class="intro"><p>Work out New Zealand GST on a quote, invoice or receipt: add <span class="dv">15%</span> to prices that don't include it yet, or find the GST hidden inside prices that already do. Enter one amount or several lines and the totals update as you type, rounded to the cent. The rate comes from Inland Revenue's own pages, with the date it was last checked shown beside the result.</p></div>
+   </div>
+  </section>
+  <div class="wrap">
+  <section class="calc" aria-label="GST calculator">
+    <div class="panel">
+      <form id="gstForm" data-rate-bp="1500" data-rate-pct="15%" autocomplete="off" novalidate>
+      <div class="panel-h"><h2>Your amounts</h2><span class="chip">NZD</span></div>
+      <fieldset>
+        <legend class="sr-only">Do your amounts include GST?</legend>
+        <div class="seg">
+          <label><input type="radio" name="mode" value="add" checked><span>Add GST</span></label>
+          <label><input type="radio" name="mode" value="remove"><span>Remove GST</span></label>
+        </div>
+      </fieldset>
+      <div class="lines-head" aria-hidden="true"><span>Description</span><span id="amtHead">Amount, excl. GST</span><span></span></div>
+      <ol class="lines" id="gstLines"><li class="line"><input class="in desc" type="text" maxlength="60" placeholder="Description (optional)" aria-label="Description, line 1 (optional)"><div class="money"><span aria-hidden="true">$</span><input class="in amt" type="text" inputmode="decimal" maxlength="16" placeholder="0.00" aria-label="Amount, line 1" aria-describedby="gstHint"></div><button class="rm" type="button" aria-label="Remove line 1"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-trash"/></svg></button></li></ol>
+      <template id="gstLineTpl"><li class="line"><input class="in desc" type="text" maxlength="60" placeholder="Description (optional)"><div class="money"><span aria-hidden="true">$</span><input class="in amt" type="text" inputmode="decimal" maxlength="16" placeholder="0.00" aria-describedby="gstHint"></div><button class="rm" type="button"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-trash"/></svg></button></li></template>
+      <p class="hint" id="gstHint" role="alert"></p>
+      <div class="actions no-print">
+        <button type="button" class="btn btn-ghost btn-sm" id="gstAddLine"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>Add line</button>
+        <button type="button" class="btn btn-ghost btn-sm" id="gstReset"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-reset"/></svg>Reset</button>
+      </div>
+    </form>
+      <noscript><p class="noscript-msg">This calculator needs JavaScript to work out results. Everything below explains the method, so you can still follow it by hand.</p></noscript>
+    </div>
+    <div class="results-col">
+      <div class="results" aria-label="Results">
+        <div class="res"><div class="k">Price excluding GST<small id="kExcl">What you entered</small></div><div class="v" id="vExcl">$0.00</div></div>
+        <div class="res"><div class="k">GST<small><span class="dv">15%</span></small></div><div class="v" id="vGst">$0.00</div></div>
+        <div class="res key"><div class="k">Price including GST<small id="kIncl">Total to pay</small></div><div class="v" id="vIncl">$0.00</div></div>
+      </div>
+      <div class="split" aria-hidden="true">
+        <div class="bar" id="bar"><i></i><i></i></div>
+        <div class="legend"><span>Price before GST</span><span>GST <b id="pct">0.0%</b> of total</span></div>
+      </div>
+      <div class="breakdown" id="gstBreakdown" hidden><table><caption>Each line</caption><thead><tr><th scope="col">Item</th><th scope="col" class="num">Excl.</th><th scope="col" class="num">GST</th><th scope="col" class="num">Incl.</th></tr></thead><tbody></tbody></table></div>
+      <p class="rounding" id="gstRounding" hidden></p>
+      <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="gstCopy"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>Copy summary</button></div>
+      <p class="sr-only" id="sr" role="status" aria-live="polite"></p>
+      <aside class="notice" aria-label="Source and disclaimer"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-info"/></svg><div><p><strong>Rates checked on 2 October 2026.</strong> Source: <a href="https://www.ird.govt.nz/gst/charging-gst" rel="noopener">Charging GST</a> (Inland Revenue); <a href="https://www.ird.govt.nz/gst/registering-for-gst" rel="noopener">Registering for GST</a> (Inland Revenue).</p><p>This is an estimate for general information, not financial or tax advice; check with Inland Revenue or a qualified adviser.</p></div></aside>
+    </div>
+  </section>
+  <div class="explain">
+    <article class="prose">
+      
+      
         <h2>How the two directions work</h2>
         <p>Adding GST is simple multiplication. If a supplier quotes $240.00 plus GST, the tax is <span class="dv">15%</span> of that, $36.00, and the customer pays $276.00. The calculator does exactly this, then rounds to the nearest cent.</p>
         <p>Removing GST is where people slip. The GST inside an inclusive price is not <span class="dv">15%</span> of that price, because the <span class="dv">15%</span> was charged on the smaller, pre-GST amount. The share that is tax works out to 3/23 of the inclusive price. Inland Revenue uses the same fraction in its own guidance. So a receipt for $89.99 contains $11.74 of GST, and the price before GST was $78.25. Dividing the inclusive price by 1.15 gives the same answer from the other side.</p>
 
-        <h2>Worked example: a three-item invoice</h2>
-        <p>Here is a small invented example. A café orders three boxes of takeaway cups at $19.99 each, GST included. Rounding the GST on each line separately gives $2.61 per box and $7.83 altogether. Working the GST out once on the $59.97 total gives $7.82. Neither figure is wrong; the one-cent gap comes purely from rounding three times instead of once. The line-item list shows both so you can match whatever your accounting software does. If the numbers on an invoice are off by a cent or two, rounding is almost always the reason.</p>
+        <h2>Worked examples</h2>
+        <p>These figures come from the same code that runs the calculator above.</p>
+        <div class="example"><table>
+          <caption>Four common cases</caption>
+          <thead class="sr-only"><tr><th scope="col">Case</th><th scope="col">Result</th></tr></thead>
+          <tbody><tr><th scope="row">Add GST to $100.00</th><td>$15.00 GST, $115.00 total</td></tr><tr><th scope="row">Remove GST from $115.00</th><td>$15.00 GST, $100.00 before GST</td></tr><tr><th scope="row">Remove GST from $99.99</th><td>$13.04 GST, $86.95 before GST</td></tr><tr><th scope="row">Add GST to $19.99</th><td>$3.00 GST, $22.99 total</td></tr></tbody>
+        </table></div>
+        <p>Now a small invented invoice. A café orders three boxes of takeaway cups at $19.99 each, GST included. Working the GST out once on the $59.97 total gives $7.82, which is the figure the calculator shows. Rounding each line separately gives $2.61 per box and $7.83 altogether. Neither is wrong; the one-cent gap comes purely from rounding three times instead of once. When you enter several lines, the calculator lists each one and points out any gap like this, so you can match whatever your accounting software does.</p>
         
         <h2>Mistakes that cost money</h2>
         <ul>
@@ -97,29 +124,40 @@ Then add the CSP origins listed in public/_headers, update public/ads.txt and se
         <h2>Limits of this calculator</h2>
         <p>It handles the everyday case: one standard rate applied to ordinary goods and services. It does not deal with land transactions, second-hand goods, imported goods, or the special rules some businesses use. It also can't tell you what records you need to keep, though it helps to know that a GST-registered buyer can ask for taxable supply information on supplies over $200. For anything beyond simple arithmetic, check Inland Revenue's guidance or ask an accountant.</p>
         <p>What you type stays in your browser. Amounts and descriptions are never sent anywhere or saved. Only the add-or-remove choice is remembered, in the page address after the # sign, so a bookmark opens the calculator in the same mode.</p>
-        <p>Working out pay rather than prices? The take-home pay calculator covers PAYE, ACC and KiwiSaver. To understand the tax itself, read the guide to adding and removing GST.</p>
-        
-      <section class="faq" aria-labelledby="faq-title">
-        <h2 id="faq-title">Questions people ask</h2>
-        <details class="faq-item"><summary>Why isn't the GST in an inclusive price just <span class="dv">15%</span> of it?</summary><div class="faq-a"><p>Because the <span class="dv">15%</span> was charged on the price before GST. Once GST is added, the tax is a smaller share of the bigger total: 3/23. For a $115.00 price that is $15.00, not $17.25.</p></div></details>
-        <details class="faq-item"><summary>Can I use this for zero-rated or exempt sales?</summary><div class="faq-a"><p>No. Zero-rated supplies carry GST at a rate of zero and exempt supplies carry none, so the standard-rate answer would be wrong. Inland Revenue's pages list which supplies fall into each group.</p></div></details>
-        <details class="faq-item"><summary>Do I have to charge GST?</summary><div class="faq-a"><p>Only if you are GST-registered. Inland Revenue says registration is required once your turnover from a taxable activity reaches $60,000 in 12 months (past or expected), or if you add GST to your prices.</p></div></details>
+        <p>Working out pay rather than prices? The <a href="/nz-paye-calculator">take-home pay calculator</a> covers PAYE, ACC and KiwiSaver. To understand the tax itself, read the guide to adding and removing GST.</p>
+      
+      <section class="faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Questions people ask</h2>
+        <details><summary>Why isn't the GST in an inclusive price just <span class="dv">15%</span> of it?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Because the <span class="dv">15%</span> was charged on the price before GST. Once GST is added, the tax is a smaller share of the bigger total: 3/23. For a $115.00 price that is $15.00, not $17.25.</p></div></details>
+        <details><summary>Can I use this for zero-rated or exempt sales?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>No. Zero-rated supplies carry GST at a rate of zero and exempt supplies carry none, so the standard-rate answer would be wrong. Inland Revenue's pages list which supplies fall into each group.</p></div></details>
+        <details><summary>Do I have to charge GST?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Only if you are GST-registered. Inland Revenue says registration is required once your turnover from a taxable activity reaches $60,000 in 12 months (past or expected), or if you add GST to your prices.</p></div></details>
       </section>
-        <section class="related" aria-labelledby="related-title">
-        <h2 id="related-title">Related tools and guides</h2>
-        <ul class="related-list"><li><a href="/nz-calculators">All NZ calculators</a></li><li><a href="/guides">All guides</a></li></ul>
-      </section>
-        <p class="updated">Last reviewed: <time datetime="2026-10-02">2 October 2026</time></p>
-      </article>
+      <p class="updated">Last reviewed: <time datetime="2026-10-02">2 October 2026</time></p>
+    </article>
+    <aside class="aside-card" aria-labelledby="rel-h">
+      <h2 id="rel-h">Related</h2>
+      <ul><li><a href="/nz-calculators">All NZ calculators <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/nz-paye-calculator">Take-home pay calculator <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides">All guides <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul>
+    </aside>
+  </div>
+  </div>
 </main>
-<footer class="footer">
+<footer class="site-footer">
   <div class="wrap">
-    <nav aria-label="Tool sections"><ul class="links"><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
-    <nav aria-label="About this site"><ul class="links"><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
-      <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
-      <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
-    <p>Everyday Tools is run by an independent publisher in New Zealand. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
-    <p class="fine">© 2026 Everyday Tools</p>
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+        <p>Free, private tools for everyday jobs, run by an independent publisher in New Zealand.</p>
+        <div class="trust-badges"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Stays in your browser</span><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Sourced and dated</span></div>
+      </div>
+      <nav class="foot-col" aria-labelledby="f-tools"><h2 id="f-tools">Tools</h2><ul><li><a href="/nz-calculators">NZ calculators</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-learn"><h2 id="f-learn">Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-trust"><h2 id="f-trust">Trust</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
+        <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
+        <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Everyday Tools. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
+    </div>
   </div>
 </footer>
 <div class="toast" id="toast" role="status" hidden></div>

@@ -9,14 +9,16 @@ export default function page(ctx) {
     reviewed: "2026-10-02",
     title: "Guides: NZ Tax, Dates, Printing and Text",
     description: "Plain-English guides to GST, PAYE, tax codes, KiwiSaver, public holidays, counting days, printing at home and cleaning up lists of text.",
-    h1: "Guides",
+    h1: "Plain-English",
+    h1Accent: "guides",
+    intro: `<p>The tools on this site give quick answers. These guides explain the ideas behind them, so you can check a result, spot a mistake on a pay slip or invoice, or explain it to someone else.</p>`,
     sources: [], claims: [],
     late: ({ pages }) => {
       const guides = pages.filter(p => p.type === "guide").sort((a, b) => a.h1.localeCompare(b.h1));
-      return { published: guides.length };
+      return { published: guides.length, top: guides.length ? `<div class="guide-list">${guides.map(ctx.guideLink).join("")}</div>` : "" };
     },
     body: `
-        <p>The tools on this site give quick answers. These guides explain the ideas behind them, so you can check a result, spot a mistake on a pay slip or invoice, or explain it to someone else. Each guide teaches one topic with a worked example, links to the official source for any rule it states, and shows when it was last reviewed.</p>
+        <p>Each guide teaches one topic with a worked example, links to the official source for any rule it states, and shows when it was last reviewed.</p>
 
         <h2>Money and tax in New Zealand</h2>
         <p>How PAYE is worked out from the tax brackets, what each tax code means and when to use a secondary code, how KiwiSaver contributions and the government contribution add up, and why removing GST from a price uses a fraction rather than a straight percentage. These guides sit alongside the ${link("/nz-calculators", "NZ calculators")} and use the same official figures.</p>

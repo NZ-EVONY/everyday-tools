@@ -2,18 +2,18 @@
   "files": [
     {
       "path": "404.html",
-      "size": 5001,
-      "sha256": "2224df5555ba41e6066895af6d20222b8525b725ad0aab46884945ac730ab1b8"
+      "size": 7391,
+      "sha256": "c904aa38e52f02a1084d06f595e27383fea1cce372131fe04c0eebfb1e9ae672"
     },
     {
       "path": "_headers",
       "size": 1405,
-      "sha256": "9412bd1ed9cc27586ea1f3493efe5384df068daa482623818b5d4b50a2213961"
+      "sha256": "d5ec91da5b470f06060dde3378732aa70d379cc1711b97d02e6707617618d02b"
     },
     {
       "path": "about.html",
-      "size": 8016,
-      "sha256": "9cbe6a1fb6a755f0af0d964901961b77d563063f52e4b1e651645677da0f2ead"
+      "size": 10324,
+      "sha256": "b9543ee0a8dbe248cf74c23e8a90be7e81f14e2d889de0e9386221ae41505fcf"
     },
     {
       "path": "ads.txt",
@@ -21,54 +21,89 @@
       "sha256": "72f528bc6d0f40a70eb530104072ffc21ccc40e56a08778894138b0f4bd91bf0"
     },
     {
-      "path": "assets/js/gst.cc582e6ab7.js",
-      "size": 10051,
-      "sha256": "cc582e6ab73c3ec5e73cf3574cfb287ebec559102d0371cc147a9f3238e4a048"
+      "path": "assets/js/gst.8c4cb7c4fd.js",
+      "size": 7735,
+      "sha256": "8c4cb7c4fda0aa8a3414dccfd4e4d25dd32dc2cfff98147227e025dd69e3e840"
     },
     {
-      "path": "assets/site.8cb4641180.js",
-      "size": 1561,
-      "sha256": "8cb4641180d0f5a1a0aaae08186dcce4ce9820c954fddb350e20e89901f98ac8"
+      "path": "assets/js/kiwisaver.a3ba3af12f.js",
+      "size": 12940,
+      "sha256": "a3ba3af12f7ad710af373735943e751bca3b3b27413087bc583e6154ac7ffdf9"
     },
     {
-      "path": "assets/style.7a2e83dadf.css",
-      "size": 9453,
-      "sha256": "7a2e83dadfd02d7b8683b94b02649b7022dc1ea40c7d85a10fe0cdc504e4165b"
+      "path": "assets/js/paye.b69957a8c6.js",
+      "size": 11156,
+      "sha256": "b69957a8c67914104c5137e469bd5f67e887e5c7456983a3687bc21d612002e5"
+    },
+    {
+      "path": "assets/js/split.624c7332ff.js",
+      "size": 8369,
+      "sha256": "624c7332ffec9dbb9ce86ddb3dcc3ac62b9c227b34f061e27de63924464950d5"
+    },
+    {
+      "path": "assets/js/units.d488c9fad7.js",
+      "size": 4901,
+      "sha256": "d488c9fad7e7ff995b338a2865a0dc6d3fec8f6f6a61e40cc3264f4a6f8518bc"
+    },
+    {
+      "path": "assets/site.f521e54d7c.js",
+      "size": 3251,
+      "sha256": "f521e54d7c5a2aa60c58f05bb70b329414246b946575b9fdbb75fc76e32bc055"
+    },
+    {
+      "path": "assets/style.f6125cf1d4.css",
+      "size": 41560,
+      "sha256": "f6125cf1d4b38f8719b06aff30f610524296da2f8f7f263febf98858137825fb"
     },
     {
       "path": "contact.html",
-      "size": 7717,
-      "sha256": "b7f36460d36e65ca5bd989d3e84de5c7208fe42f3c541139e70dcc093029ae72"
+      "size": 10107,
+      "sha256": "2231d1d10446c27aa9213cc386ff57ae86a15443b766ecdea74cbdb6e0d989bb"
     },
     {
       "path": "favicon.svg",
-      "size": 222,
-      "sha256": "69bb74852925721f5495b0e8ca8082e9015b12b05eb3c5dcaa864e71d97ed314"
+      "size": 520,
+      "sha256": "35acc48e849aa964d7d023bdf744d29b6891531ee4fd5d1cdf2a9ad911ae6eda"
+    },
+    {
+      "path": "flatmate-rent-splitter.html",
+      "size": 21774,
+      "sha256": "8d7333350a1b16cc21edb99784af004d3bd3a0a6b24b4bf5b6399c8ecafdfb5f"
     },
     {
       "path": "gst-calculator.html",
-      "size": 15254,
-      "sha256": "cf7ee3cc5e0a82d45687868dcfcf751c069a724bc4d1ae9d551d977e7aa7835a"
+      "size": 21978,
+      "sha256": "4b30564bcc86e17b9812b435c2a6f093ff8bd239280419653990dbf0c77e0dec"
     },
     {
       "path": "guides.html",
-      "size": 7486,
-      "sha256": "e803fcbadae6c69affb6959202ddc661a1372490278ac31f578178b98719144b"
+      "size": 9986,
+      "sha256": "5d4a90d6242dbd4dfbb06c23f6578407c300bc885a083a131d78f02240bfb403"
     },
     {
       "path": "index.html",
-      "size": 8170,
-      "sha256": "8fad49e329fc7f9e38c4439d3e346dd8b45690b5bb70f3dddc1ab672f0abc5b4"
+      "size": 27976,
+      "sha256": "c1eb76a20aa95f778dfacb1c892ec4205bd1766fdf963ac34e0e10fe1d78b8e2"
+    },
+    {
+      "path": "kiwisaver-calculator.html",
+      "size": 23203,
+      "sha256": "4495649fe8f503783b83b9411adadaef6b742a35a3a5e2e60665af08cc698ea2"
     },
     {
       "path": "nz-calculators.html",
-      "size": 8455,
-      "sha256": "41093f2ae250768347c7835e8271eb8aa2f679da429c3912e4309896dbca5092"
+      "size": 14766,
+      "sha256": "fa64f9f6b0a05d1bae9f51e0f2bb549d208e101302abf42dc5328bea570cd9fb"
+    },
+    {
+      "path": "nz-paye-calculator.html",
+      "size": 28928,
+      "sha256": "8dea0ce980b82b7dbefbdab95c8438a4f5577cca33e72cc465e894775b7015e9"
     },
     {
       "path": "privacy-policy.html",
-      "size": 10008,
-      "sha256": "c802205b4cf7cd8906d07e33923fbbafa1fa81607e322fc91e9c8e3feb436ea7"
+      "size": 12398,
+      "sha256": "e7dd3b4e6e32a6d5c4e48c3fc74ccc4fc9cb62075cc519c178d36411947dd86c"
     },
     {
       "path": "robots.txt",
@@ -77,18 +112,23 @@
     },
     {
       "path": "sitemap.html",
-      "size": 5756,
-      "sha256": "4855b78f2b18d80cfeba24220a5cd0cf1ee164d7089fa000e931f04564fe3170"
+      "size": 8404,
+      "sha256": "ba7febaf2a3dce4d28995dd8a73c76df978e4dbf26da1729dc760777028ad363"
     },
     {
       "path": "sitemap.xml",
-      "size": 839,
-      "sha256": "c43080daae5bc85777a3f86006af20ad05663d8ca40c4745fb9eb874148737d2"
+      "size": 1205,
+      "sha256": "266f9c28967ad40578a5785e5bd242b850d4feca3c5e6da0648b774bfba264d6"
     },
     {
       "path": "terms.html",
-      "size": 8126,
-      "sha256": "89e8cc9fbe787394fe05b6905c0f3d45649a2235bf25d757aa5474fe2aefc00c"
+      "size": 10516,
+      "sha256": "957e96d4e9c6888a93b624bee99b6c1de6bb926bf90ee5d3b349ed81d37b30e1"
+    },
+    {
+      "path": "unit-converter.html",
+      "size": 27792,
+      "sha256": "ef4a6d7230440401a7132110c1bf7c91a96ae95155b5d52d4a02c35dc0f5403f"
     }
   ]
 }

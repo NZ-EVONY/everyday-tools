@@ -9,21 +9,56 @@
     "sourceId": "ird-tax-rates-individuals",
     "note": "IRD's page shows the table 'From 1 April 2025' as the latest; no different table for 1 April 2026 was published on the page when checked. The IR340/IR341 April 2026 tables were checked against these brackets (tests/fixtures/official-examples.json).",
     "brackets": [
-      { "upTo": 15600, "rate": 0.105 },
-      { "upTo": 53500, "rate": 0.175 },
-      { "upTo": 78100, "rate": 0.30 },
-      { "upTo": 180000, "rate": 0.33 },
-      { "upTo": null, "rate": 0.39 }
+      {
+        "upTo": 15600,
+        "rate": 0.105
+      },
+      {
+        "upTo": 53500,
+        "rate": 0.175
+      },
+      {
+        "upTo": 78100,
+        "rate": 0.3
+      },
+      {
+        "upTo": 180000,
+        "rate": 0.33
+      },
+      {
+        "upTo": null,
+        "rate": 0.39
+      }
     ]
   },
   "secondaryCodes": {
     "sourceId": "ird-tax-rates-individuals",
     "codes": [
-      { "code": "SB", "incomeUpTo": 15600, "rate": 0.105 },
-      { "code": "S", "incomeUpTo": 53500, "rate": 0.175 },
-      { "code": "SH", "incomeUpTo": 78100, "rate": 0.30 },
-      { "code": "ST", "incomeUpTo": 180000, "rate": 0.33 },
-      { "code": "SA", "incomeUpTo": null, "rate": 0.39 }
+      {
+        "code": "SB",
+        "incomeUpTo": 15600,
+        "rate": 0.105
+      },
+      {
+        "code": "S",
+        "incomeUpTo": 53500,
+        "rate": 0.175
+      },
+      {
+        "code": "SH",
+        "incomeUpTo": 78100,
+        "rate": 0.3
+      },
+      {
+        "code": "ST",
+        "incomeUpTo": 180000,
+        "rate": 0.33
+      },
+      {
+        "code": "SA",
+        "incomeUpTo": null,
+        "rate": 0.39
+      }
     ]
   },
   "acc": {
@@ -38,28 +73,77 @@
     "tableSourceId": "ird-ir340-apr-2026",
     "rate": 0.12,
     "annualThreshold": 24128,
-    "periodThresholds": { "weekly": 464, "fortnightly": 928, "fourWeekly": 1856, "monthly": 2010.66 },
+    "periodThresholds": {
+      "weekly": 464,
+      "fortnightly": 928,
+      "fourWeekly": 1856,
+      "monthly": 2010.66
+    },
     "secondaryRate": 0.12,
-    "irdWording": "IRD's page says 'For the 2026 tax year the annual repayment threshold is $24,128'. IRD names tax years by the year they end, so that wording reads as 1 April 2025 to 31 March 2026. The IR340 and IR341 April 2026 tables (for 1 April 2026 to 31 March 2027) start deducting just above $464 weekly, $928 fortnightly, $1,856 four-weekly and $2,010 monthly, i.e. the same $24,128 threshold. Recorded in docs/UNVERIFIED.md for the owner to re-check."
+    "irdWording": "IRD's student loan page says 'For the 2026 tax year the annual repayment threshold is $24,128'. IRD's Payroll calculations and business rules specification for 1 April 2026 to 31 March 2027 (section 2.2) lists the same $24,128 threshold ('2024 onwards') and the same per-period thresholds, and the IR340/IR341 April 2026 tables build them in. Confirmed by the owner for 2026-27.",
+    "specSourceId": "ird-payroll-spec-2026-27"
   },
   "kiwisaver": {
     "sourceId": "ird-ks-employee",
     "employerSourceId": "ird-ks-employer",
     "governmentSourceId": "ird-ks-government",
-    "employeeRates": [0.035, 0.04, 0.06, 0.08, 0.10],
+    "employeeRates": [
+      0.035,
+      0.04,
+      0.06,
+      0.08,
+      0.1
+    ],
     "defaultEmployeeRate": 0.035,
     "employerMinimumRate": 0.035,
-    "government": { "perDollar": 0.25, "maxAnnual": 260.72, "contributionForMax": 1042.86, "incomeLimit": 180000, "minAge": 16, "maxAge": 65, "yearRuns": "1 July to 30 June" }
+    "government": {
+      "perDollar": 0.25,
+      "maxAnnual": 260.72,
+      "contributionForMax": 1042.86,
+      "incomeLimit": 180000,
+      "minAge": 16,
+      "maxAge": 65,
+      "yearRuns": "1 July to 30 June"
+    }
   },
   "esct": {
     "sourceId": "ird-ir341-apr-2026",
     "note": "Bands use the employee's salary or wages plus gross employer contributions for the previous tax year.",
     "bands": [
-      { "upTo": 18720, "rate": 0.105 },
-      { "upTo": 64200, "rate": 0.175 },
-      { "upTo": 93720, "rate": 0.30 },
-      { "upTo": 216000, "rate": 0.33 },
-      { "upTo": null, "rate": 0.39 }
+      {
+        "upTo": 18720,
+        "rate": 0.105
+      },
+      {
+        "upTo": 64200,
+        "rate": 0.175
+      },
+      {
+        "upTo": 93720,
+        "rate": 0.3
+      },
+      {
+        "upTo": 216000,
+        "rate": 0.33
+      },
+      {
+        "upTo": null,
+        "rate": 0.39
+      }
     ]
+  },
+  "ietc": {
+    "sourceId": "ird-ietc",
+    "specSourceId": "ird-payroll-spec-2026-27",
+    "note": "Only for tax code ME: NZ tax residents earning $24,000 to $70,000 who don't receive Working for Families, an income-tested benefit, NZ Super or a Veteran's Pension.",
+    "lower": 24000,
+    "upper": 70000,
+    "abatementStart": 66000,
+    "amount": 520,
+    "abatementRate": 0.13
+  },
+  "paye": {
+    "sourceId": "ird-payroll-spec-2026-27",
+    "method": "Spec sections 5.2-5.4 and 5.6: annualise and drop cents; tax plus ACC; divide by 52 and truncate to cents; convert to the pay period and truncate. Secondary codes: whole dollars times (rate + ACC rate), truncated."
   }
 }

@@ -9,6 +9,7 @@ import { createHash } from "node:crypto";
 import { ROOT, PUBLIC, publicFiles, pages, readJson } from "../helpers.mjs";
 import { addGst, removeGst, gstLines } from "../../src/assets/lib/gst.js";
 import { toBasisPoints } from "../../src/assets/lib/money.js";
+import { takeHome } from "../../src/assets/lib/paye.js";
 
 test("public-manifest.json matches public/ exactly", () => {
   const manifest = readJson("public-manifest.json").files;
@@ -43,9 +44,23 @@ test("golden outputs: GST (a data change shows up as a reviewable diff)", () => 
     gstRateBp: bp,
     add: amounts.map(c => [c, addGst(c, bp).gst]),
     remove: amounts.map(c => [c, removeGst(c, bp).gst]),
-    lines: gstLines([1999, 1999, 1999].map(cents => ({ cents, mode: "remove" })), bp),
+    lines: gstLines([1999, 1999, 1999], "remove", bp),
   };
   const file = path.join(ROOT, "tests/regression/golden.json");
   if (process.env.UPDATE_GOLDEN === "1") fs.writeFileSync(file, JSON.stringify({ gst: golden }, null, 1) + "\n");
   assert.deepEqual(JSON.parse(fs.readFileSync(file, "utf8")).gst, golden);
+});
+
+test("golden outputs: take-home pay for fixed incomes (a tax data change shows up as a reviewable diff)", () => {
+  const cfg = readJson("config/data.json");
+  const tax = readJson(`data/nz/tax-${cfg.currentTaxYear}.json`);
+  const golden = {};
+  for (const annual of [15600, 24128, 45000, 53500, 65000, 78100, 120000, 156641, 180000, 250000]) for (const period of ["weekly", "fortnightly", "monthly"]) {
+    const g = Math.round(annual * 100 / { weekly: 52, fortnightly: 26, monthly: 12 }[period]);
+    const r = takeHome(g, { period, code: "M", studentLoan: true, kiwisaverRate: 0.035 }, tax);
+    golden[`${annual}-${period}`] = [r.gross, r.paye, r.studentLoan, r.kiwisaver, r.net, r.employer.net];
+  }
+  const file = path.join(ROOT, "tests/regression/golden-paye.json");
+  if (process.env.UPDATE_GOLDEN === "1") fs.writeFileSync(file, JSON.stringify({ taxYear: tax.taxYear, columns: ["gross", "paye", "studentLoan", "kiwisaver", "net", "employerNet"], rows: golden }, null, 1) + "\n");
+  assert.deepEqual(JSON.parse(fs.readFileSync(file, "utf8")).rows, golden);
 });

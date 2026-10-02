@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://myaddr.app/about</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/contact</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://myaddr.app/flatmate-rent-splitter</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/gst-calculator</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/guides</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://myaddr.app/kiwisaver-calculator</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/nz-calculators</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://myaddr.app/nz-paye-calculator</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/privacy-policy</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/sitemap</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/terms</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://myaddr.app/unit-converter</loc><lastmod>2026-10-02</lastmod></url>
 </urlset>

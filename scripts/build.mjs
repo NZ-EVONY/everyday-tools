@@ -13,6 +13,8 @@ import { esc } from "../src/templates/partials/util.mjs";
 import { loadData, checkSourceIds, expiryChecks, nzToday } from "./lib/data.mjs";
 import { bundle } from "./lib/bundle.mjs";
 import { formatMoney } from "../src/assets/lib/money.js";
+import { toolGrid, guideLink } from "../src/templates/partials/cards.mjs";
+import { icon } from "../src/templates/icons.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 import { WINDOWS_RESERVED } from "./lib/names.mjs";
@@ -29,6 +31,7 @@ const site = readJson("site.config.json");
 const nav = readJson("config/nav.json");
 const adsCfg = readJson("config/ads.json");
 const quality = readJson("config/quality.json");
+const toolList = readJson("config/tools.json").tools;
 
 // ---------- data and expiry ----------
 
@@ -76,7 +79,7 @@ addAsset("style.css", fs.readFileSync(path.join(SRC, "style.css")));
 addAsset("site.js", fs.readFileSync(path.join(SRC, "site.js")));
 if (fs.existsSync(path.join(SRC, "worker.js"))) addAsset("worker.js", bundle(path.join(SRC, "worker.js")));
 for (const f of fs.readdirSync(path.join(SRC, "js")).filter(f => f.endsWith(".js")).sort()) addAsset(`js/${f}`, bundle(path.join(SRC, "js", f)));
-write("favicon.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect x="2" y="2" width="28" height="28" rx="7" fill="#0b6b61"/><path d="M9 11h14M9 16h9M9 21h11" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>\n`);
+write("favicon.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00B792"/><stop offset="1" stop-color="#F6C544"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#g)"/><g fill="#03221B"><rect x="6" y="6" width="9" height="9" rx="3"/><rect x="17" y="17" width="9" height="9" rx="3"/><rect x="17" y="6" width="9" height="9" rx="3" opacity=".55"/><rect x="6" y="17" width="9" height="9" rx="3" opacity=".55"/></g></svg>\n`);
 
 // ---------- content ----------
 
@@ -110,12 +113,17 @@ const ctx = {
     const yearLine = taxYear
       ? `Rates for the ${tax.taxYear} tax year (${longDate(tax.periodStart)} to ${longDate(tax.periodEnd)}), checked on ${longDate(tax.checkedOn)}.`
       : `Rates checked on ${longDate(data.gst.checkedOn)}.`;
-    return `<aside class="notice" aria-label="Source and disclaimer"><p><strong>${yearLine}</strong> Source: ${links}.</p><p>This is an estimate for general information, not financial or tax advice; check with Inland Revenue or a qualified adviser.</p></aside>`;
+    return `<aside class="notice" aria-label="Source and disclaimer">${icon("info")}<div><p><strong>${yearLine}</strong> Source: ${links}.</p><p>This is an estimate for general information, not financial or tax advice; check with Inland Revenue or a qualified adviser.</p></div></aside>`;
   },
 };
 
 // Pass 1 learns every page's path and status; pass 2 renders with links only to published pages.
 let published = new Set(), titles = new Map();
+const blurb = s => s.replace("{gstRate}", pct(data.gst.rate.value));
+ctx.tools = toolList;
+ctx.icon = icon;
+ctx.guideLink = guideLink;
+ctx.toolGrid = (pillar, isPub) => toolGrid(toolList.filter(t => !pillar || t.pillar === pillar), { isPublished: isPub, blurb });
 const link = (href, label) => (published.has(href.split("#")[0]) ? `<a href="${href}">${label}</a>` : label);
 const render = (m) => m.mod.default({ ...ctx, link, isPublished: p => published.has(p), titleOf: p => titles.get(p) });
 for (const m of modules) {
@@ -131,7 +139,7 @@ for (const m of modules) {
   if (p.status === "draft") { drafts.push(p); continue; }
   if (p.path !== "/" && p.type !== "error") {
     const hub = p.pillar && nav.pillars.find(n => n.key === p.pillar);
-    p.crumbs = p.crumbs || [{ name: "Home", path: "/" }, ...(hub && hub.href !== p.path ? [{ name: hub.label, path: hub.href }] : []), { name: p.h1, path: p.path }];
+    p.crumbs = p.crumbs || [{ name: "Home", path: "/" }, ...(hub && hub.href !== p.path ? [{ name: hub.label, path: hub.href }] : []), { name: p.crumbName || p.h1, path: p.path }];
   }
   pages.push(p);
 }
@@ -228,7 +236,7 @@ if (MAIN) {
   fs.writeFileSync(path.join(ROOT, "reports", "pages.json"), JSON.stringify(pages.map(p => ({
     path: p.path, file: p.file, type: p.type, pillar: p.pillar || null, title: p.title, description: p.description, h1: p.h1,
     noindex: !!p.noindex, reviewed: p.reviewed || null, source: p.source, intro: p.intro || null, sources: p.sources || [], claims: p.claims || [], faq: p.faq || [],
-    nzMoney: p.pillar === "nz-calculators" && p.type === "tool",
+    nzMoney: p.pillar === "nz-calculators" && p.type === "tool" && !!p.notice,
   })), null, 2));
   fs.writeFileSync(path.join(ROOT, "reports", "claims.json"), JSON.stringify([...pages, ...drafts].map(p => ({ path: p.path, status: p.status, source: p.source, claims: p.claims || [] })), null, 2));
 }

@@ -1,38 +1,43 @@
-// GST calculator end to end: both directions, line items, keyboard use, privacy of input.
+// GST calculator end to end: both directions, line items, rounding note, keyboard, privacy of input.
 import test from "node:test";
 import assert from "node:assert/strict";
 import { withBrowser, skip } from "./helpers-browser.mjs";
+
+const amt = (page, i) => page.locator("#gstLines .amt").nth(i);
 
 test("GST calculator: add, remove, validation, line items and fragment", { skip, timeout: 60000 }, async () => {
   await withBrowser(async (browser, base) => {
     const page = await browser.newPage();
     await page.goto(base + "/gst-calculator");
-    await page.fill("#gstAmount", "100");
-    assert.match(await page.innerText("#gstResult"), /\$115\.00 including GST/);
-    assert.match(await page.innerText("#gstResult"), /GST at 15%\s+\$15\.00/);
-    await page.check('input[value="remove"]');
-    await page.fill("#gstAmount", "100");
-    assert.match(await page.innerText("#gstResult"), /\$86\.96 excluding GST/);
-    assert.match(await page.innerText("#gstResult"), /\$13\.04/);
+    await amt(page, 0).fill("100");
+    assert.equal(await page.innerText("#vGst"), "$15.00");
+    assert.equal(await page.innerText("#vIncl"), "$115.00");
+    await page.check('input[value="remove"]', { force: true });
+    assert.equal(await page.innerText("#vGst"), "$13.04");
+    assert.equal(await page.innerText("#vExcl"), "$86.96");
+    assert.equal(await page.textContent("#amtHead"), "Amount, incl. GST");
     assert.equal(new URL(page.url()).hash, "#remove");
-    await page.fill("#gstAmount", "12abc");
-    assert.equal(await page.getAttribute("#gstAmount", "aria-invalid"), "true");
-    assert.match(await page.innerText("#gstAmountError"), /Enter an amount/);
+    await amt(page, 0).fill("12abc");
+    assert.equal(await amt(page, 0).getAttribute("aria-invalid"), "true");
+    assert.match(await page.innerText("#gstHint"), /Enter amounts/);
     assert.ok(!page.url().includes("12abc"), "typed text never goes in the URL");
 
-    await page.click(".advanced summary");
-    const amts = page.locator("#gstLines .line input[inputmode=decimal]");
-    await amts.nth(0).fill("19.99");
-    await amts.nth(1).fill("19.99");
+    await amt(page, 0).fill("19.99");
     await page.click("#gstAddLine");
-    await amts.nth(2).fill("19.99");
-    const lines = await page.innerText("#gstLinesResult");
-    assert.match(lines, /Total\s+\$52\.14\s+\$7\.83\s+\$59\.97/);
-    assert.match(lines, /working it out once on the total gives \$7\.82/);
+    await amt(page, 1).fill("19.99");
+    await page.click("#gstAddLine");
+    await amt(page, 2).fill("19.99");
+    assert.equal(await page.innerText("#vGst"), "$7.82");
+    assert.equal(await page.innerText("#vIncl"), "$59.97");
+    assert.equal(await page.isVisible("#gstBreakdown"), true);
+    assert.match(await page.innerText("#gstRounding"), /Rounding each line separately gives \$7\.83/);
+    await page.click('#gstLines .line:nth-child(2) .rm');
+    assert.equal(await page.locator("#gstLines .line").count(), 2);
+    assert.equal(await page.getAttribute("#gstLines .line:nth-child(2) .amt", "aria-label"), "Amount, line 2");
 
     await page.reload();
     assert.equal(await page.isChecked('input[value="remove"]'), true, "mode restored from fragment");
-    assert.equal(await page.inputValue("#gstAmount"), "", "amounts are not restored");
+    assert.equal(await amt(page, 0).inputValue(), "", "amounts are not restored");
   });
 });
 
@@ -44,8 +49,27 @@ test("GST calculator works with the keyboard only", { skip, timeout: 60000 }, as
     await page.keyboard.press("ArrowRight");
     assert.equal(await page.isChecked('input[value="remove"]'), true);
     await page.keyboard.press("Tab");
-    assert.equal(await page.evaluate(() => document.activeElement.id), "gstAmount");
+    await page.keyboard.press("Tab");
+    assert.ok(await page.evaluate(() => document.activeElement.classList.contains("amt")));
     await page.keyboard.type("230");
-    assert.match(await page.innerText("#gstResult"), /\$200\.00 excluding GST/);
+    assert.equal(await page.innerText("#vExcl"), "$200.00");
+    assert.match(await page.innerText("#sr"), /GST \$30\.00/);
+  });
+});
+
+test("home search filters the tool cards without any network request", { skip, timeout: 60000 }, async () => {
+  await withBrowser(async (browser, base) => {
+    const page = await browser.newPage();
+    await page.goto(base + "/");
+    const before = [];
+    page.on("request", r => before.push(r.url()));
+    await page.fill("#q", "gst");
+    assert.equal(await page.isVisible('a[href="/gst-calculator"]'), true);
+    assert.equal(await page.locator("[data-kw]:not([hidden])").count(), 1);
+    await page.fill("#q", "zzzz");
+    assert.equal(await page.getAttribute("#empty", "data-show"), "true");
+    await page.click("#clear");
+    assert.ok((await page.locator("[data-kw]:not([hidden])").count()) >= 20);
+    assert.deepEqual(before.filter(u => !u.endsWith("/favicon.svg")), [], "searching must not load anything");
   });
 });

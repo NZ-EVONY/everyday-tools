@@ -45,13 +45,16 @@ test("adding then removing GST round-trips for every amount up to $50", () => {
   }
 });
 
-test("line items: totals reconcile and rounding difference is reported", () => {
-  const r = gstLines([1999, 1999, 1999].map(cents => ({ cents, mode: "remove" })), BP);
-  assert.equal(r.totals.exclusive + r.totals.gst, r.totals.inclusive);
-  assert.equal(r.totals.gst, 783);
-  assert.equal(r.gstOnTotal, 782);
+test("line items: GST once on the total, per-line rounding reported alongside", () => {
+  const r = gstLines([1999, 1999, 1999], "remove", BP);
+  assert.equal(r.total.exclusive + r.total.gst, r.total.inclusive);
+  assert.equal(r.total.gst, 782);
+  assert.equal(r.perLine.gst, 783);
   assert.equal(r.roundingDifference, 1);
-  const add = gstLines([995, 1495, 2495].map(cents => ({ cents, mode: "add" })), BP);
-  assert.equal(add.gstOnTotal, addGst(4985, BP).gst);
-  assert.equal(gstLines([], BP).totals.gst, 0);
+  const add = gstLines([995, 1495, 2495], "add", BP);
+  assert.deepEqual(add.total, addGst(4985, BP));
+  assert.equal(add.perLine.gst, 747);
+  assert.equal(add.total.gst, 748);
+  assert.equal(gstLines([], "add", BP).total.gst, 0);
+  assert.equal(gstLines([10000, 15000], "add", BP).total.inclusive, 28750);
 });

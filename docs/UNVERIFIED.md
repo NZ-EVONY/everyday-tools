@@ -4,15 +4,6 @@ Items here are NOT VERIFIED. Anything a page would need from this list stays unp
 (`status: "draft"`) until it is confirmed.
 
 ## Data
-- **Student loan threshold wording.** IRD's page says "For the 2026 tax year the annual repayment
-  threshold is $24,128". IRD names tax years by the year they end, so that reads as 1 April 2025
-  to 31 March 2026. The IR340/IR341 April 2026 tables (for 2026-27) build in the same per-period
-  thresholds ($464 weekly, $928 fortnightly, $1,856 four-weekly, $2,010.66 monthly), and 21
-  sampled table rows match, so `data/nz/tax-2026-27.json` uses $24,128. The owner should confirm
-  on IRD's page that the threshold did not change for the 2027 tax year.
-- **Income tax brackets for 2026-27.** IRD's page shows the table "From 1 April 2025" as current
-  and no separate 1 April 2026 table. Consistent with the IR340 sample rows checked so far
-  (bottom bracket); higher brackets are checked against the tables in Phase 2.
 - **Matariki dates from the Act.** legislation.govt.nz returned a bot-check page (HTTP 202,
   1 byte) to the build session. The 2026 Matariki date (10 July) comes from MBIE's table. Citing
   the Te Kāhui o Matariki Public Holiday Act 2022 schedule is still to do (Phase 3).
@@ -22,12 +13,19 @@ Items here are NOT VERIFIED. Anything a page would need from this list stays unp
 - **MBIE regional anniversary dates.** MBIE itself says its regional table "may contain
   unintentional errors" and to check with local councils. Used as published.
 
+- **US volume units and the knot.** NIST's appendix lists rounded factors for the US gallon, cup,
+  fluid ounce, teaspoon, tablespoon and the knot; the converter uses those and marks them "rounded".
+  Exact definitions (for example the US gallon as 231 cubic inches) weren't found on the pages fetched.
+- **KiwiSaver government contribution conditions.** IRD's page says "There are conditions" beyond age
+  and income; the calculator asks the visitor to confirm they meet them rather than listing them all.
+
 ## Cannot be verified from this session
 - Real Cloudflare behaviour (custom domains, `_headers` application at the edge, compression,
   managed `robots.txt`). Checked only with `wrangler dev --local`.
 - Google indexing, rich results, AdSense review and approval.
 - Real devices, screen readers, other browsers (only Chromium was used), field Core Web Vitals.
 - Printing on real printers and in Firefox/Safari (printables arrive in Phase 3).
+- How the calculators compare with IRD's own online PAYE calculator (not scraped; the owner can compare by hand).
 - Later changes to official pages after 2 October 2026.
 - The owner's search spot-check (`docs/SEARCH-SPOTCHECK.md`); search engines are not scraped.
 

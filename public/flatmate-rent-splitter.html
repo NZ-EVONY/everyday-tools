@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flatmate Rent and Bills Splitter: Split It Fairly</title>
+<meta name="description" content="Split rent and shared bills between flatmates equally, by room size, by income or by days present. Every share adds up to the total, to the cent.">
+<meta name="author" content="Everyday Tools">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://myaddr.app/flatmate-rent-splitter">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Everyday Tools">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:title" content="Flatmate Rent and Bills Splitter: Split It Fairly">
+<meta property="og:description" content="Split rent and shared bills between flatmates equally, by room size, by income or by days present. Every share adds up to the total, to the cent.">
+<meta property="og:url" content="https://myaddr.app/flatmate-rent-splitter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Flatmate Rent and Bills Splitter: Split It Fairly">
+<meta name="twitter:description" content="Split rent and shared bills between flatmates equally, by room size, by income or by days present. Every share adds up to the total, to the cent.">
+<meta name="theme-color" content="#F6F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#06120E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(d){try{var t=localStorage.getItem("et-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}d.classList.add("js")})(document.documentElement);</script>
+<link rel="stylesheet" href="/assets/style.f6125cf1d4.css">
+<!-- ==== CMP INTEGRATION POINT. Paste a Google-certified CMP snippet that supports IAB TCF v2.3 here. It must load BEFORE the AdSense script below. See docs/OWNER-TODO.md ==== -->
+<!-- ==== ADSENSE INTEGRATION POINT. After approval, paste exactly as the AdSense account shows them:
+  1. <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"> (placeholder; never guess the real id)
+  2. the AdSense loader snippet.
+Then add the CSP origins listed in public/_headers, update public/ads.txt and set adsLive in config/ads.json. ==== -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Flatmate rent and bills splitter","url":"https://myaddr.app/flatmate-rent-splitter","description":"Split rent and shared bills between flatmates equally, by room size, by income or by days present. Every share adds up to the total, to the cent.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en-NZ","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"NZD"},"publisher":{"@type":"Organization","name":"Everyday Tools"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who gets the extra cent when the rent doesn't divide evenly?","acceptedAnswer":{"@type":"Answer","text":"Each person first gets the whole cents of their exact share. Any cents left over go, one each, to the people whose exact share had the biggest fraction of a cent left, and on a tie, to whoever is higher in the list. The shares always add up to the total."}},{"@type":"Question","name":"What if one room is much bigger?","acceptedAnswer":{"@type":"Answer","text":"Choose \"Room size\" and enter each bedroom's area. Rent is then shared in proportion to the areas. If shared spaces matter too, split part of the rent equally and part by room."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myaddr.app/"},{"@type":"ListItem","position":2,"name":"NZ calculators","item":"https://myaddr.app/nz-calculators"},{"@type":"ListItem","position":3,"name":"Flatmate rent and bills splitter","item":"https://myaddr.app/flatmate-rent-splitter"}]}]}</script>
+<script src="/assets/site.f521e54d7c.js" defer></script>
+<script src="/assets/js/split.624c7332ff.js" defer></script>
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5v-2a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 14.2l2 2 3.8-3.8"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.8V19a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V9.8"/><path d="M12 13v7M9.5 16h5"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol><symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 7h15M9.5 7V4.5h5V7M6.5 7l.8 12a1.5 1.5 0 0 0 1.5 1.4h6.4a1.5 1.5 0 0 0 1.5-1.4l.8-12"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+    <nav class="nav" aria-label="Main"><ul><li><a href="/nz-calculators" aria-current="page">NZ calculators</a></li><li><a href="/guides">Guides</a></li></ul></nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false"><svg class="ico i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></button>
+      <details class="menu" id="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main (menu)"><ul><li><a href="/nz-calculators" aria-current="page">NZ calculators<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides">Guides<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="t-hero">
+   <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/nz-calculators">NZ calculators</a></li><li><span aria-current="page">Flatmate rent and bills splitter</span></li></ol></nav>
+    <div class="t-meta"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-home"/></svg>Four ways to split</span><span class="chip">Adds up exactly</span></div>
+    <h1>Flatmate rent splitter: <span class="grad-text">fair to the cent</span></h1>
+    <div class="intro"><p>Work out who pays what in a shared house. Enter the rent and any shared bills, add everyone in the flat, and choose how to split: equally, by the size of each room, by income, or by the days each person was there. Every share is rounded to the cent and the shares always add up to exactly the total, so nobody is left covering a stray cent. Copy the summary straight into the flat group chat.</p></div>
+   </div>
+  </section>
+  <div class="wrap">
+  <section class="calc" aria-label="Flatmate rent and bills splitter">
+    <div class="panel">
+      <form id="splitForm" autocomplete="off" novalidate>
+      <div class="panel-h"><h2>Your flat</h2><span class="chip">NZD</span></div>
+      <div class="fields">
+        <div class="field"><label for="rent">Rent</label><div class="money"><span aria-hidden="true">$</span><input class="in" id="rent" type="text" inputmode="decimal" maxlength="14" placeholder="0.00" aria-describedby="splitHint"></div></div>
+        <div class="field"><label for="per">Every amount is per</label><select class="in" id="per"><option value="week" selected>week</option><option value="fortnight">fortnight</option><option value="month">month</option></select></div>
+      </div>
+      <h3 class="field-label">Shared bills (optional)</h3>
+      <ol class="lines" id="bills"><li class="line"><input class="in bname" type="text" maxlength="40" placeholder="Bill (power, internet…)" value="" aria-label="Bill 1 name"><div class="money"><span aria-hidden="true">$</span><input class="in bamt" type="text" inputmode="decimal" maxlength="14" placeholder="0.00" value="" aria-label="Bill 1 amount"></div><button class="rm" type="button" aria-label="Remove bill 1"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-trash"/></svg></button></li></ol>
+      <template id="billTpl"><li class="line"><input class="in bname" type="text" maxlength="40" placeholder="Bill (power, internet…)" value="" aria-label="Bill 0 name"><div class="money"><span aria-hidden="true">$</span><input class="in bamt" type="text" inputmode="decimal" maxlength="14" placeholder="0.00" value="" aria-label="Bill 0 amount"></div><button class="rm" type="button" aria-label="Remove bill 0"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-trash"/></svg></button></li></template>
+      <div class="actions no-print"><button type="button" class="btn btn-ghost btn-sm" id="addBill"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>Add bill</button></div>
+      <fieldset>
+        <legend class="field-label">How to split</legend>
+        <div class="seg four">
+          <label><input type="radio" name="method" value="equal" checked><span>Equally</span></label>
+          <label><input type="radio" name="method" value="room"><span>Room size</span></label>
+          <label><input type="radio" name="method" value="income"><span>Income</span></label>
+          <label><input type="radio" name="method" value="days"><span>Days present</span></label>
+        </div>
+      </fieldset>
+      <label class="check"><input type="checkbox" id="billsEqual" checked> Split bills equally whatever the rent split</label>
+      <div class="lines-head" aria-hidden="true"><span>Flatmate</span><span id="wHead"></span><span></span></div>
+      <ol class="lines" id="people"><li class="line"><input class="in pname" type="text" maxlength="40" placeholder="Name" value="" aria-label="Name, person 1"><input class="in pw" type="text" inputmode="decimal" maxlength="12" value="" aria-label="Weight, person 1"><button class="rm" type="button" aria-label="Remove person 1"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-trash"/></svg></button></li><li class="line"><input class="in pname" type="text" maxlength="40" placeholder="Name" value="" aria-label="Name, person 2"><input class="in pw" type="text" inputmode="decimal" maxlength="12" value="" aria-label="Weight, person 2"><button class="rm" type="button" aria-label="Remove person 2"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-trash"/></svg></button></li><li class="line"><input class="in pname" type="text" maxlength="40" placeholder="Name" value="" aria-label="Name, person 3"><input class="in pw" type="text" inputmode="decimal" maxlength="12" value="" aria-label="Weight, person 3"><button class="rm" type="button" aria-label="Remove person 3"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-trash"/></svg></button></li></ol>
+      <template id="personTpl"><li class="line"><input class="in pname" type="text" maxlength="40" placeholder="Name" value="" aria-label="Name, person 0"><input class="in pw" type="text" inputmode="decimal" maxlength="12" value="" aria-label="Weight, person 0"><button class="rm" type="button" aria-label="Remove person 0"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-trash"/></svg></button></li></template>
+      <p class="hint" id="splitHint" role="alert"></p>
+      <div class="actions no-print"><button type="button" class="btn btn-ghost btn-sm" id="addPerson"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>Add person</button></div>
+    </form>
+      <noscript><p class="noscript-msg">This calculator needs JavaScript to work out results. Everything below explains the method, so you can still follow it by hand.</p></noscript>
+    </div>
+    <div class="results-col">
+      <div class="results">
+        <div class="res"><div class="k">Total to share<small id="perLabel">per week</small></div><div class="v" id="vTotal">$0.00</div></div>
+        <div class="res key"><div class="k">If split equally<small>each, before any weighting</small></div><div class="v" id="vEach">$0.00</div></div>
+      </div>
+      <div class="breakdown"><table id="splitTable"><caption>Who pays what</caption>
+        <thead><tr><th scope="col">Flatmate</th><th scope="col" class="num">Rent</th><th scope="col" class="num">Bills</th><th scope="col" class="num">Total</th></tr></thead>
+        <tbody></tbody>
+        <tfoot><tr class="total"><th scope="row">Total</th><td class="num" id="tRent"></td><td class="num" id="tBills"></td><td class="num" id="tTotal"></td></tr></tfoot></table></div>
+      <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="splitCopy"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>Copy summary</button></div>
+      <p class="sr-only" id="sr" role="status" aria-live="polite"></p>
+      
+    </div>
+  </section>
+  <div class="explain">
+    <article class="prose">
+      
+      
+        <h2>Four ways to split, and when each is fair</h2>
+        <ul>
+          <li><strong>Equally.</strong> Everyone pays the same. Simple, and fair when the rooms are similar and everyone is home about the same amount.</li>
+          <li><strong>By room size.</strong> Enter each bedroom's floor area (or any relative number, such as 3 for a big room and 2 for a small one). Rent is shared in proportion. Useful when one person has the master bedroom with an ensuite.</li>
+          <li><strong>By income.</strong> Each person pays the same share of their income. Some couples and close friends prefer this; it needs everyone to be comfortable sharing what they earn.</li>
+          <li><strong>By days present.</strong> For someone moving in or out partway through, or away for a few weeks. Enter the days each person lived there during the period and both rent and bills are weighted by days.</li>
+        </ul>
+        <p>Bills such as power and internet are often shared equally even when rent isn't, because everyone uses them about the same. Leave "split bills equally" ticked for that, or untick it to split bills the same way as the rent.</p>
+
+        <h2>Worked example</h2>
+        <p>An invented three-bedroom flat pays $2,160.00 rent a month, plus $286.50 for power and $89.99 for internet. Aroha's room is 14 square metres; Ben's and Mere's are 10 each. Split by room size with bills shared equally:</p>
+        <ul><li>Aroha: $889.41 rent + $125.50 bills = <strong>$1,014.91</strong></li><li>Ben: $635.30 rent + $125.50 bills = <strong>$760.80</strong></li><li>Mere: $635.29 rent + $125.49 bills = <strong>$760.78</strong></li></ul>
+        <p>The three totals add up to $2,536.49, exactly the rent plus the bills. Splitting $1,000.00 three ways equally gives $333.34, $333.33, $333.33: someone has to take the extra cent, and the calculator gives it to the first person in the list, so the shares never fall short of the bill. If Mere had moved in with only 10 days of a 28-day period left, splitting the power bill by days present would give Aroha $121.55, Ben $121.54, Mere $43.41.</p>
+        
+        <h2>Common mistakes</h2>
+        <ul>
+          <li><strong>Mixing periods.</strong> Rent is often weekly while power is monthly. Convert everything to the same period first, or the split will be wrong. A monthly bill is roughly 12 ÷ 52 of that amount per week.</li>
+          <li><strong>Rounding each share up.</strong> If everyone rounds up to the nearest dollar, the flat overpays; round down and the account goes short. Keeping the cents avoids both.</li>
+          <li><strong>Forgetting shared spaces.</strong> Weighting by bedroom size only shares out the bedrooms. Kitchens, lounges and bathrooms are used by everyone, so some flats split part of the rent equally and only the rest by room. You can do that by running the calculator twice.</li>
+          <li><strong>Not agreeing first.</strong> The fairest method is the one everyone agreed to before the first bill arrived.</li>
+        </ul>
+
+        <h2>Limits and privacy</h2>
+        <p>This is a calculator, not tenancy advice. It doesn't cover bonds, who is named on the tenancy agreement or what happens when someone leaves; for those questions, start with the government's Tenancy Services website, tenancy.govt.nz. Names, incomes and amounts stay in your browser and are never sent or saved. Only the split method is kept in the page address after the # sign. To add GST to a shared invoice, use the <a href="/gst-calculator">GST calculator</a>.</p>
+      
+      <section class="faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Questions people ask</h2>
+        <details><summary>Who gets the extra cent when the rent doesn't divide evenly?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Each person first gets the whole cents of their exact share. Any cents left over go, one each, to the people whose exact share had the biggest fraction of a cent left, and on a tie, to whoever is higher in the list. The shares always add up to the total.</p></div></details>
+        <details><summary>What if one room is much bigger?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Choose "Room size" and enter each bedroom's area. Rent is then shared in proportion to the areas. If shared spaces matter too, split part of the rent equally and part by room.</p></div></details>
+      </section>
+      <p class="updated">Last reviewed: <time datetime="2026-10-02">2 October 2026</time></p>
+    </article>
+    <aside class="aside-card" aria-labelledby="rel-h">
+      <h2 id="rel-h">Related</h2>
+      <ul><li><a href="/nz-calculators">All NZ calculators <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/nz-paye-calculator">Take-home pay calculator <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul>
+    </aside>
+  </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+        <p>Free, private tools for everyday jobs, run by an independent publisher in New Zealand.</p>
+        <div class="trust-badges"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Stays in your browser</span><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Sourced and dated</span></div>
+      </div>
+      <nav class="foot-col" aria-labelledby="f-tools"><h2 id="f-tools">Tools</h2><ul><li><a href="/nz-calculators">NZ calculators</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-learn"><h2 id="f-learn">Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-trust"><h2 id="f-trust">Trust</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
+        <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
+        <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Everyday Tools. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

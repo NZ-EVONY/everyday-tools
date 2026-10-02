@@ -25,7 +25,7 @@ test("without JavaScript: text, navigation and footer render; tools show the nos
     const page = await ctx.newPage();
     for (const u of ALL_URLS()) {
       await page.goto(base + u);
-      assert.ok(await page.isVisible("nav.navbar"), `${u} nav hidden without JS`);
+      assert.ok(await page.isVisible("nav.nav"), `${u} nav hidden without JS`);
       assert.ok(await page.isVisible("footer"), `${u} footer`);
       assert.ok((await page.innerText("main")).split(/\s+/).length > 30, `${u} main text`);
       if (await page.$(".tool-card")) assert.ok(await page.isVisible(".noscript"), `${u} noscript message`);
@@ -41,7 +41,7 @@ test("axe: no serious or critical issues on any page, light and dark", { skip, t
       const page = await ctx.newPage();
       for (const u of ALL_URLS()) {
         await page.goto(base + u);
-        if (u === "/gst-calculator") { await page.fill("#gstAmount", "115"); await page.click('input[value="remove"]'); await page.click(".advanced summary"); }
+        if (u === "/gst-calculator") { await page.fill("#gstLines .amt", "115"); await page.check('input[value="remove"]', { force: true }); await page.click("#gstAddLine"); await page.locator("#gstLines .amt").nth(1).fill("10"); }
         await page.addScriptTag({ content: AXE });
         const v = await page.evaluate(async () => (await window.axe.run(document, { resultTypes: ["violations"] })).violations.map(v => ({ id: v.id, impact: v.impact, sample: v.nodes[0]?.html.slice(0, 120) })));
         for (const x of v) if (["serious", "critical"].includes(x.impact)) problems.push(`${colorScheme} ${u}: ${x.id} ${x.sample}`);
@@ -64,7 +64,7 @@ test("layout: no horizontal scroll at 360px, CLS stays under 0.02, screenshots s
       for (const u of ALL_URLS()) {
         await page.goto(base + u);
         await page.waitForLoadState("networkidle");
-        if (u === "/gst-calculator") { await page.fill("#gstAmount", "240"); await page.waitForTimeout(100); }
+        if (u === "/gst-calculator") { await page.fill("#gstLines .amt", "240"); await page.waitForTimeout(100); }
         const cls = await page.evaluate(() => window.__cls);
         if (cls > 0.02) problems.push(`${width} ${colorScheme} ${u}: CLS ${cls.toFixed(3)}`);
         const over = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
@@ -85,7 +85,7 @@ test("keyboard: skip link works and the theme toggle persists only the theme", {
     assert.equal(await page.evaluate(() => document.activeElement.className), "skip");
     await page.click("#themeToggle");
     const storage = await page.evaluate(() => ({ ...localStorage }));
-    assert.deepEqual(Object.keys(storage), ["theme"]);
+    assert.deepEqual(Object.keys(storage), ["et-theme"]);
     assert.equal(await page.evaluate(() => document.cookie), "");
     await page.goto(base + "/");
     assert.ok(["dark", "light"].includes(await page.evaluate(() => document.documentElement.dataset.theme)));

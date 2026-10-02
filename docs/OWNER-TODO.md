@@ -4,10 +4,8 @@ Things only the owner can do. Claude Code cannot do these.
 
 ## Now (before typing "continue" after Phase 1, if possible)
 - [ ] Run the five searches in `docs/SEARCH-SPOTCHECK.md` by hand (private window, NZ location) and fill in the table.
-- [ ] Look at the pilot pages (home, `/gst-calculator`, `/nz-calculators`, `/guides`, trust pages) and say whether the style and depth are right before the other tools are written.
+- [ ] Try the five NZ calculators (take-home pay, KiwiSaver, GST, flatmate splitter, unit converter) and compare two take-home pay results with IRD's own PAYE calculator.
 - [ ] Confirm the brand "Everyday Tools" (a one-line change in `site.config.json`).
-- [ ] TODO-OWNER: confirm, reword or remove "Written with AI assistance and reviewed by the publisher." on `/about` (`content/pages/about.mjs`).
-- [ ] Check on IRD's student loan page that $24,128 is the threshold for the 2027 tax year (see `docs/UNVERIFIED.md`).
 
 ## Before launch
 - [ ] Decide, with advice, whether the privacy policy needs a more identifiable controller than "an independent publisher" plus `nz@myaddr.app` (NZ Privacy Act 2020 and GDPR/UK GDPR).

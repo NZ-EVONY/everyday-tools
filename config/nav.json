@@ -1,15 +1,58 @@
 {
   "pillars": [
-    { "key": "nz-calculators", "label": "NZ calculators", "href": "/nz-calculators" },
-    { "key": "date-and-time-tools", "label": "Dates and time", "href": "/date-and-time-tools" },
-    { "key": "printables", "label": "Printables", "href": "/printables" },
-    { "key": "text-tools", "label": "Text tools", "href": "/text-tools" },
-    { "key": "guides", "label": "Guides", "href": "/guides" }
+    {
+      "key": "nz-calculators",
+      "label": "NZ calculators",
+      "href": "/nz-calculators",
+      "short": "NZ calculators"
+    },
+    {
+      "key": "date-and-time-tools",
+      "label": "Dates and time",
+      "href": "/date-and-time-tools",
+      "short": "Dates & time"
+    },
+    {
+      "key": "printables",
+      "label": "Printables",
+      "href": "/printables",
+      "short": "Printables"
+    },
+    {
+      "key": "text-tools",
+      "label": "Text tools",
+      "href": "/text-tools",
+      "short": "Text tools"
+    },
+    {
+      "key": "guides",
+      "label": "Guides",
+      "href": "/guides",
+      "short": "Guides"
+    }
   ],
   "legal": [
-    { "label": "About", "href": "/about" },
-    { "label": "Contact", "href": "/contact" },
-    { "label": "Privacy policy", "href": "/privacy-policy" },
-    { "label": "Terms of use", "href": "/terms" }
-  ]
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    },
+    {
+      "label": "Privacy policy",
+      "href": "/privacy-policy"
+    },
+    {
+      "label": "Terms of use",
+      "href": "/terms"
+    }
+  ],
+  "pillarIntro": {
+    "nz-calculators": "Tax, GST, KiwiSaver and money maths with rates taken from official New Zealand sources.",
+    "date-and-time-tools": "Count days, work out ages and deadlines, and compare time zones without the mental arithmetic.",
+    "printables": "Clean, ink-friendly calendars, planners and checklists. Set them up on screen, print at actual size.",
+    "text-tools": "Tidy pasted lists and messy text in one step, then count what is left."
+  }
 }

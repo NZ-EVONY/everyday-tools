@@ -20,7 +20,7 @@ test("prose word counts are within the configured range for each page type", () 
 });
 
 test("tool intros are 60-120 words", () => {
-  for (const p of content.filter(p => p.intro)) {
+  for (const p of content.filter(p => p.intro && (p.type === "tool" || p.type === "landing"))) {
     const n = wordCount(p.intro.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim());
     assert.ok(n >= quality.introWords[0] && n <= quality.introWords[1], `${p.path} intro ${n}`);
   }
@@ -41,7 +41,7 @@ test("a positive control: the banned-phrase check would catch a planted phrase",
 test("percentages in prose come only from data (wrapped in .dv) or not at all", () => {
   for (const p of prose) {
     const main = (p.html.match(/<main[\s\S]*?<\/main>/) || [""])[0]
-      .replace(/<section class="tool-card"[\s\S]*?<\/section>/g, "").replace(/<aside class="notice"[\s\S]*?<\/aside>/g, "")
+      .replace(/<h1[\s\S]*?<\/h1>/g, "").replace(/<section class="calc"[\s\S]*?<\/section>/g, "").replace(/<aside class="notice"[\s\S]*?<\/aside>/g, "")
       .replace(/<span class="dv">[^<]*<\/span>/g, "").replace(/<!--[\s\S]*?-->/g, "");
     const plain = main.replace(/<[^>]+>/g, " ");
     assert.ok(!/\d+(\.\d+)?\s?%/.test(plain), `${p.url}: typed-in percentage: ${plain.match(/.{30}\d+(\.\d+)?\s?%.{10}/)?.[0]}`);

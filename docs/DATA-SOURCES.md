@@ -18,7 +18,7 @@ were fetched from the build session on **2 October 2026** (NZ time). Source ids 
 | ACC maximum liable earnings, 2026-27 | $156,641 | ird-acc-levy-rates | same; also stated on [About tax codes](https://www.ird.govt.nz/income-tax/income-tax-for-individuals/tax-codes-and-tax-rates-for-individuals/about-tax-codes) |
 | ACC maximum levy, 2026-27 | $2,741.22 | ird-acc-levy-rates | same |
 | Student loan repayment rate | 12% | ird-student-loan-salary | [Repaying my student loan when I earn salary or wages](https://www.ird.govt.nz/student-loans/living-in-new-zealand-with-a-student-loan/repaying-my-student-loan-when-i-earn-salary-or-wages) |
-| Student loan annual threshold | $24,128 | ird-student-loan-salary + ird-ir340-apr-2026 | page says "2026 tax year"; IR340/IR341 April 2026 tables build in the same thresholds (see UNVERIFIED) |
+| Student loan annual threshold | $24,128 | ird-student-loan-salary + ird-payroll-spec-2026-27 | confirmed by IRD's payroll specification 2026-27 and the IR340/IR341 tables |
 | Student loan per-period thresholds | $464 wk / $928 fn / $1,856 4-wk / $2,010.66 mth | ird-student-loan-salary | same |
 | Student loan, secondary income | 12% from the first dollar | ird-student-loan-salary | same |
 | KiwiSaver employee rates | 3.5% (default), 4, 6, 8, 10% | ird-ks-employee | [Employee contributions](https://www.ird.govt.nz/kiwisaver/kiwisaver-individuals/growing-my-kiwisaver-account/employee-contributions-to-kiwisaver) (last updated 1 Apr 2026) |
@@ -52,3 +52,19 @@ marked "hand-computed (not from IRD)".
 
 ## Not official, not a source
 No third-party site was used for any figure.
+
+## Added in Phase 2 (all retrieved 2 October 2026)
+
+| Figure | Value | Source id | Page |
+|---|---|---|---|
+| PAYE calculation method (sections 5.2 to 5.4, 5.6, 5.20.6) | annualise, drop cents, tax + ACC, ÷52, truncate, convert, truncate | ird-payroll-spec-2026-27 | [Payroll calculations and business rules](https://www.ird.govt.nz/digital-service-providers/services-catalogue/returns-and-information/payday-filing/payroll-calculations-and-business-rules) (specification 1 April 2026 to 31 March 2027) |
+| Student loan threshold 2026-27 | $24,128 (section 2.2: "2024 onwards") | ird-payroll-spec-2026-27 | same |
+| Independent earner tax credit | $520 a year for $24,000 to $66,000; reduces by 13c per $1 to $70,000 | ird-ietc + ird-payroll-spec-2026-27 | [IETC](https://www.ird.govt.nz/income-tax/income-tax-for-individuals/individual-tax-credits/independent-earner-tax-credit-ietc) |
+| IETC eligibility | NZ tax resident; not receiving Working for Families, an income-tested benefit, NZ Super or a Veteran's Pension | ird-ietc | same |
+| Yard, foot, inch, mile; acre (4840 sq yd), square mile (640 acres); pound, ounce, stone, tonne; imperial gallon | exact definitions | uk-wma-1985-sch1 | [Weights and Measures Act 1985, Schedule 1](https://www.legislation.gov.uk/ukpga/1985/72/schedule/1) |
+| Metric prefixes, square inch/foot, hectare, mph; US gallon, cup, fl oz, tsp, tbsp, knot (rounded); mpg (US) to km/L | factors | nist-sp811-b8 | [NIST SP 811 Appendix B.8](https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8) |
+| Temperature formulas | °C = (°F − 32)/1.8; K = °C + 273.15 | nist-sp811-b9 | [NIST SP 811 Appendix B.9](https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b9) |
+| Acre (international foot) | 4046.856 422 4 m² | nist-survey-foot-factors | [NIST revised unit conversion factors](https://www.nist.gov/pml/us-surveyfoot/revised-unit-conversion-factors) |
+
+Test fixtures now also hold 6 rows from IRD's secondary-code tables (IR340 weekly and fortnightly,
+IR341 monthly).

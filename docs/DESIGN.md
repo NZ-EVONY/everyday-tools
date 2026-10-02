@@ -1,43 +1,48 @@
 # Design
 
-- One column, text width about 720px, mobile first; the tool sits directly under the H1 and a
-  short intro, above the fold at 360px.
-- System font stack only (no web fonts). Light and dark themes from `prefers-color-scheme`,
-  plus a toggle stored in `localStorage` and applied before first paint by the one inline script.
-- No popups, modals or sticky bars. Native `<details>` for FAQs and the line-item panel.
-- Results are in `aria-live="polite"` regions with a reserved minimum height so nothing shifts.
-- Touch targets at least 44px; visible focus outline; skip link; `prefers-reduced-motion` respected.
+**The approved look is the "Pounamu & Kōwhai" design system in `design/` (`home.html`, `tool-gst.html`,
+`screenshots/`), approved by the owner on 2 October 2026.** Every page follows it. The mockups' CSS is
+now `src/assets/style.css` (unchanged apart from the additions marked at the end of the file), and the
+templates use the mockups' markup: sticky header with pill navigation and a `<details>` menu on small
+screens, gradient hero, tool cards, a tool panel beside a results column, prose with gradient bullets,
+an aside of related links, and the four-column footer.
 
-## Colours and contrast (WCAG 2.2 AA: 4.5:1 text, 3:1 non-text)
+Mockup content was treated as sample copy: the build supplies the real text and figures from `content/`
+and `data/`, so wording that the mockups used but that isn't sourced (for example, example exempt
+supplies) was not carried over.
+
+- System font stack only (no web fonts). Light and dark themes from `prefers-color-scheme`, plus a toggle
+  stored in `localStorage` (`et-theme`) and applied before first paint by the one inline script.
+- No popups or modals. The header is sticky, as in the approved design (see DECISIONS).
+- Results are in reserved, `aria-live` regions; touch targets at least 44px; visible focus rings; skip link;
+  `prefers-reduced-motion` turns off transitions.
+- Icons are the design's line icons; each page includes only the symbols it uses in an inline SVG sprite.
+
+## Colours and contrast (WCAG 2.2 AA: 4.5:1 for text)
 
 | Theme | Pair | Colours | Ratio |
 |---|---|---|---|
-| light | text on page background | `#1b2124` on `#f6f7f5` | 15.15:1 |
-| light | text on card | `#1b2124` on `#ffffff` | 16.28:1 |
-| light | muted text on card | `#56626a` on `#ffffff` | 6.27:1 |
-| light | muted text on background | `#56626a` on `#f6f7f5` | 5.83:1 |
-| light | link on card | `#0a6158` on `#ffffff` | 7.33:1 |
-| light | link on background | `#0a6158` on `#f6f7f5` | 6.82:1 |
-| light | link on source notice | `#0a6158` on `#f1f6f4` | 6.71:1 |
-| light | button text on accent | `#ffffff` on `#0b6b61` | 6.38:1 |
-| light | selected option text | `#1b2124` on `#e7f3f0` | 14.33:1 |
-| light | error text | `#a3261b` on `#ffffff` | 7.37:1 |
-| light | input border | `#7a878d` on `#ffffff` | 3.70:1 |
-| dark | text on background | `#e6ecea` on `#14181a` | 14.93:1 |
-| dark | text on card | `#e6ecea` on `#1c2225` | 13.45:1 |
-| dark | muted text on card | `#a5b2b7` on `#1c2225` | 7.40:1 |
-| dark | link on card | `#73d3c5` on `#1c2225` | 9.08:1 |
-| dark | link on source notice | `#73d3c5` on `#1a2a28` | 8.43:1 |
-| dark | button text on accent | `#0b1a18` on `#4fc1b1` | 8.16:1 |
-| dark | selected option text | `#e6ecea` on `#1d3330` | 11.19:1 |
-| dark | error text | `#ff9c90` on `#1c2225` | 7.98:1 |
-| dark | input border | `#7a878d` on `#1c2225` | 4.35:1 |
+| light | body text on page | `#0B1F1A` on `#F6F5EF` | 15.69:1 |
+| light | secondary text on card | `#34473F` on `#FFFFFF` | 9.91:1 |
+| light | muted text on page | `#52665D` on `#F6F5EF` | 5.63:1 |
+| light | muted text on card | `#52665D` on `#FFFFFF` | 6.15:1 |
+| light | links and accent on page | `#006B58` on `#F6F5EF` | 5.93:1 |
+| light | links and accent on card | `#006B58` on `#FFFFFF` | 6.47:1 |
+| light | dark text on gradient (green end) | `#03221B` on `#00B792` | 6.56:1 |
+| light | dark text on gradient (yellow end) | `#03221B` on `#F6C544` | 10.40:1 |
+| light | error text on card | `#B42318` on `#FFFFFF` | 6.57:1 |
+| dark | body text on page | `#E9F5F0` on `#06120E` | 17.07:1 |
+| dark | muted text on card | `#8DA69D` on `#0E1F19` | 6.57:1 |
+| dark | links and accent on page | `#3FE0B5` on `#06120E` | 11.39:1 |
+| dark | links and accent on card | `#3FE0B5` on `#0E1F19` | 10.21:1 |
+| dark | dark text on gradient (green end) | `#03221B` on `#19D3A8` | 8.75:1 |
+| dark | error text on card | `#FF9B8C` on `#0E1F19` | 8.40:1 |
 
-axe-core reports no serious or critical issues on any page in either theme (Phase 1 e2e run).
+axe-core reports no serious or critical issues on any page in either theme (Phase 2 e2e run).
 
-## Budgets (per page, gzip) and Phase 1 measurements
-| Budget | Limit | Measured (largest page so far) |
+## Budgets (per page, gzip) and Phase 2 measurements
+| Budget | Limit | Measured (largest page) |
 |---|---|---|
-| HTML | 60 KB | 5.4 KB (`/gst-calculator`) |
-| CSS | 12 KB | 2.9 KB (one shared file) |
-| JS | 15 KB | 4.2 KB on `/gst-calculator` (site.js 0.8 + gst.js 3.4) |
+| HTML | 60 KB | 8.5 KB (`/nz-paye-calculator`) |
+| CSS | 12 KB | 9.5 KB (one shared file) |
+| JS | 15 KB | 6.2 KB (`/kiwisaver-calculator`: site.js 1.4 + kiwisaver.js 4.8) |

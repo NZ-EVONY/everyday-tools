@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAYE Calculator NZ 2026-27: Take-Home Pay</title>
+<meta name="description" content="Work out take-home pay in New Zealand for 2026-27: PAYE, ACC levy, student loan and KiwiSaver for any pay period, using Inland Revenue&#39;s own method.">
+<meta name="author" content="Everyday Tools">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://myaddr.app/nz-paye-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Everyday Tools">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:title" content="PAYE Calculator NZ 2026-27: Take-Home Pay">
+<meta property="og:description" content="Work out take-home pay in New Zealand for 2026-27: PAYE, ACC levy, student loan and KiwiSaver for any pay period, using Inland Revenue&#39;s own method.">
+<meta property="og:url" content="https://myaddr.app/nz-paye-calculator">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PAYE Calculator NZ 2026-27: Take-Home Pay">
+<meta name="twitter:description" content="Work out take-home pay in New Zealand for 2026-27: PAYE, ACC levy, student loan and KiwiSaver for any pay period, using Inland Revenue&#39;s own method.">
+<meta name="theme-color" content="#F6F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#06120E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(d){try{var t=localStorage.getItem("et-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}d.classList.add("js")})(document.documentElement);</script>
+<link rel="stylesheet" href="/assets/style.f6125cf1d4.css">
+<!-- ==== CMP INTEGRATION POINT. Paste a Google-certified CMP snippet that supports IAB TCF v2.3 here. It must load BEFORE the AdSense script below. See docs/OWNER-TODO.md ==== -->
+<!-- ==== ADSENSE INTEGRATION POINT. After approval, paste exactly as the AdSense account shows them:
+  1. <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"> (placeholder; never guess the real id)
+  2. the AdSense loader snippet.
+Then add the CSP origins listed in public/_headers, update public/ads.txt and set adsLive in config/ads.json. ==== -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"NZ take-home pay (PAYE) calculator","url":"https://myaddr.app/nz-paye-calculator","description":"Work out take-home pay in New Zealand for 2026-27: PAYE, ACC levy, student loan and KiwiSaver for any pay period, using Inland Revenue's own method.","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en-NZ","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"NZD"},"publisher":{"@type":"Organization","name":"Everyday Tools"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does PAYE include the ACC levy?","acceptedAnswer":{"@type":"Answer","text":"Yes. Employers deduct the ACC earners' levy (1.75% of pay, up to $156,641 a year) together with income tax as one PAYE amount. The calculator shows the split so you can see both."}},{"@type":"Question","name":"Why do weekly and monthly pay give slightly different yearly totals?","acceptedAnswer":{"@type":"Answer","text":"Inland Revenue's method works out a weekly amount, cuts off fractions of a cent, then converts it to other pay periods. Those small cut-offs add up differently over 12 monthly pays than over 52 weekly ones, so yearly totals can differ by a few cents."}},{"@type":"Question","name":"Is KiwiSaver taken before or after tax?","acceptedAnswer":{"@type":"Answer","text":"Your KiwiSaver contribution is a percentage of your gross pay, but it's deducted from your pay after tax has been worked out. It doesn't reduce your PAYE. Your employer's contribution of at least 3.5% is paid on top of your pay, minus employer superannuation contribution tax."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myaddr.app/"},{"@type":"ListItem","position":2,"name":"NZ calculators","item":"https://myaddr.app/nz-calculators"},{"@type":"ListItem","position":3,"name":"Take-home pay calculator","item":"https://myaddr.app/nz-paye-calculator"}]}]}</script>
+<script src="/assets/site.f521e54d7c.js" defer></script>
+<script src="/assets/js/paye.b69957a8c6.js" defer></script>
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5v-2a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 14.2l2 2 3.8-3.8"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.75"/><path d="M12 11v5M12 8h.01"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol><symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h11v3.5"/><path d="M3.5 7.5V17A2.5 2.5 0 0 0 6 19.5h12.5a1 1 0 0 0 1-1V9.5a1 1 0 0 0-1-1H6a2.5 2.5 0 0 1-2.5-1z"/><circle cx="15.8" cy="14" r="1.1"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+    <nav class="nav" aria-label="Main"><ul><li><a href="/nz-calculators" aria-current="page">NZ calculators</a></li><li><a href="/guides">Guides</a></li></ul></nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false"><svg class="ico i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></button>
+      <details class="menu" id="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main (menu)"><ul><li><a href="/nz-calculators" aria-current="page">NZ calculators<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides">Guides<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="t-hero">
+   <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/nz-calculators">NZ calculators</a></li><li><span aria-current="page">Take-home pay calculator</span></li></ol></nav>
+    <div class="t-meta"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-wallet"/></svg>Tax year 2026-27</span><span class="chip">Checked 2 October 2026</span></div>
+    <h1>Take-home pay calculator <span class="grad-text">NZ 2026-27</span></h1>
+    <div class="intro"><p>See what lands in your bank account each payday. Enter your pay before tax, choose how often you're paid, and the calculator works out PAYE (which includes the ACC earners' levy), student loan repayments and KiwiSaver, the same way Inland Revenue's payroll rules do. Every figure updates as you type, per pay period and for the year. It's a quick way to compare job offers, check a pay slip or see what a pay rise is really worth.</p></div>
+   </div>
+  </section>
+  <div class="wrap">
+  <section class="calc" aria-label="Take-home pay calculator">
+    <div class="panel">
+      <form id="payForm" autocomplete="off" novalidate data-tax="{&quot;taxYear&quot;:&quot;2026-27&quot;,&quot;incomeTax&quot;:{&quot;sourceId&quot;:&quot;ird-tax-rates-individuals&quot;,&quot;note&quot;:&quot;IRD&#39;s page shows the table &#39;From 1 April 2025&#39; as the latest; no different table for 1 April 2026 was published on the page when checked. The IR340/IR341 April 2026 tables were checked against these brackets (tests/fixtures/official-examples.json).&quot;,&quot;brackets&quot;:[{&quot;upTo&quot;:15600,&quot;rate&quot;:0.105},{&quot;upTo&quot;:53500,&quot;rate&quot;:0.175},{&quot;upTo&quot;:78100,&quot;rate&quot;:0.3},{&quot;upTo&quot;:180000,&quot;rate&quot;:0.33},{&quot;upTo&quot;:null,&quot;rate&quot;:0.39}]},&quot;secondaryCodes&quot;:{&quot;sourceId&quot;:&quot;ird-tax-rates-individuals&quot;,&quot;codes&quot;:[{&quot;code&quot;:&quot;SB&quot;,&quot;incomeUpTo&quot;:15600,&quot;rate&quot;:0.105},{&quot;code&quot;:&quot;S&quot;,&quot;incomeUpTo&quot;:53500,&quot;rate&quot;:0.175},{&quot;code&quot;:&quot;SH&quot;,&quot;incomeUpTo&quot;:78100,&quot;rate&quot;:0.3},{&quot;code&quot;:&quot;ST&quot;,&quot;incomeUpTo&quot;:180000,&quot;rate&quot;:0.33},{&quot;code&quot;:&quot;SA&quot;,&quot;incomeUpTo&quot;:null,&quot;rate&quot;:0.39}]},&quot;acc&quot;:{&quot;sourceId&quot;:&quot;ird-acc-levy-rates&quot;,&quot;note&quot;:&quot;Rate includes GST. The same IRD page also lists 1 April 2027 to 31 March 2028; that year is not used here.&quot;,&quot;rate&quot;:0.0175,&quot;maxEarnings&quot;:156641,&quot;maxLevy&quot;:2741.22},&quot;studentLoan&quot;:{&quot;sourceId&quot;:&quot;ird-student-loan-salary&quot;,&quot;tableSourceId&quot;:&quot;ird-ir340-apr-2026&quot;,&quot;rate&quot;:0.12,&quot;annualThreshold&quot;:24128,&quot;periodThresholds&quot;:{&quot;weekly&quot;:464,&quot;fortnightly&quot;:928,&quot;fourWeekly&quot;:1856,&quot;monthly&quot;:2010.66},&quot;secondaryRate&quot;:0.12,&quot;irdWording&quot;:&quot;IRD&#39;s student loan page says &#39;For the 2026 tax year the annual repayment threshold is $24,128&#39;. IRD&#39;s Payroll calculations and business rules specification for 1 April 2026 to 31 March 2027 (section 2.2) lists the same $24,128 threshold (&#39;2024 onwards&#39;) and the same per-period thresholds, and the IR340/IR341 April 2026 tables build them in. Confirmed by the owner for 2026-27.&quot;,&quot;specSourceId&quot;:&quot;ird-payroll-spec-2026-27&quot;},&quot;kiwisaver&quot;:{&quot;sourceId&quot;:&quot;ird-ks-employee&quot;,&quot;employerSourceId&quot;:&quot;ird-ks-employer&quot;,&quot;governmentSourceId&quot;:&quot;ird-ks-government&quot;,&quot;employeeRates&quot;:[0.035,0.04,0.06,0.08,0.1],&quot;defaultEmployeeRate&quot;:0.035,&quot;employerMinimumRate&quot;:0.035,&quot;government&quot;:{&quot;perDollar&quot;:0.25,&quot;maxAnnual&quot;:260.72,&quot;contributionForMax&quot;:1042.86,&quot;incomeLimit&quot;:180000,&quot;minAge&quot;:16,&quot;maxAge&quot;:65,&quot;yearRuns&quot;:&quot;1 July to 30 June&quot;}},&quot;esct&quot;:{&quot;sourceId&quot;:&quot;ird-ir341-apr-2026&quot;,&quot;note&quot;:&quot;Bands use the employee&#39;s salary or wages plus gross employer contributions for the previous tax year.&quot;,&quot;bands&quot;:[{&quot;upTo&quot;:18720,&quot;rate&quot;:0.105},{&quot;upTo&quot;:64200,&quot;rate&quot;:0.175},{&quot;upTo&quot;:93720,&quot;rate&quot;:0.3},{&quot;upTo&quot;:216000,&quot;rate&quot;:0.33},{&quot;upTo&quot;:null,&quot;rate&quot;:0.39}]},&quot;ietc&quot;:{&quot;sourceId&quot;:&quot;ird-ietc&quot;,&quot;specSourceId&quot;:&quot;ird-payroll-spec-2026-27&quot;,&quot;note&quot;:&quot;Only for tax code ME: NZ tax residents earning $24,000 to $70,000 who don&#39;t receive Working for Families, an income-tested benefit, NZ Super or a Veteran&#39;s Pension.&quot;,&quot;lower&quot;:24000,&quot;upper&quot;:70000,&quot;abatementStart&quot;:66000,&quot;amount&quot;:520,&quot;abatementRate&quot;:0.13}}">
+      <div class="panel-h"><h2>Your pay</h2><span class="chip">NZD</span></div>
+      <div class="fields">
+        <div class="field">
+          <label for="payAmount">Pay before tax</label>
+          <div class="money"><span aria-hidden="true">$</span><input class="in" id="payAmount" type="text" inputmode="decimal" maxlength="16" placeholder="65,000" aria-describedby="payHint"></div>
+        </div>
+        <div class="field">
+          <label for="per">Per</label>
+          <select class="in" id="per" name="per"><option value="year" selected>year</option><option value="week">week</option><option value="fortnight">fortnight</option><option value="fourWeeks">four weeks</option><option value="month">month</option></select>
+        </div>
+      </div>
+      <p class="hint" id="payHint" role="alert"></p>
+      <fieldset>
+        <legend class="field-label">How often you're paid</legend>
+        <div class="seg four">
+          <label><input type="radio" name="period" value="weekly"><span>Weekly</span></label>
+          <label><input type="radio" name="period" value="fortnightly" checked><span>Fortnightly</span></label>
+          <label><input type="radio" name="period" value="fourWeekly"><span>4-weekly</span></label>
+          <label><input type="radio" name="period" value="monthly"><span>Monthly</span></label>
+        </div>
+      </fieldset>
+      <div class="fields">
+        <div class="field">
+          <label for="code">Tax code</label>
+          <select class="in" id="code" name="code" aria-describedby="codeHelp">
+            <option value="M" selected>M: main job</option>
+            <option value="ME">ME: main job, with independent earner tax credit</option>
+            <option value="SB">SB: total income up to $15,600 (second job)</option><option value="S">S: total income up to $53,500 (second job)</option><option value="SH">SH: total income up to $78,100 (second job)</option><option value="ST">ST: total income up to $180,000 (second job)</option><option value="SA">SA: total income over $180,000 (second job)</option>
+          </select>
+          <span class="muted" id="codeHelp">Not sure? Most people with one job use M.</span>
+        </div>
+        <div class="field">
+          <label for="ks">KiwiSaver</label>
+          <select class="in" id="ks" name="ks"><option value="0">Not a member</option><option value="0.035" selected>3.5% (default)</option><option value="0.04">4%</option><option value="0.06">6%</option><option value="0.08">8%</option><option value="0.1">10%</option></select>
+        </div>
+      </div>
+      <label class="check"><input type="checkbox" name="sl" id="sl"> I have a student loan (SL tax code)</label>
+    </form>
+      <noscript><p class="noscript-msg">This calculator needs JavaScript to work out results. Everything below explains the method, so you can still follow it by hand.</p></noscript>
+    </div>
+    <div class="results-col">
+      <div class="results" aria-label="Results per pay period">
+        <div class="res"><div class="k">Gross pay<small id="rGrossK">Before tax</small></div><div class="v" id="rGross">$0.00</div></div>
+        <div class="res"><div class="k">PAYE<small id="rPayeK">Income tax + ACC levy</small></div><div class="v" id="rPaye">$0.00</div></div>
+        <div class="res" id="rowSl" hidden><div class="k">Student loan<small><span class="dv">12%</span> over the threshold</small></div><div class="v" id="rSl">$0.00</div></div>
+        <div class="res" id="rowKs"><div class="k">KiwiSaver<small id="rKsK">Your contribution</small></div><div class="v" id="rKs">$0.00</div></div>
+        <div class="res key"><div class="k">Take-home pay<small id="rNetK">Per pay period</small></div><div class="v" id="rNet">$0.00</div></div>
+      </div>
+      <div class="breakdown"><table><caption>Per pay period and per year</caption>
+        <thead><tr><th scope="col"></th><th scope="col" class="num" id="tPer">Per fortnight</th><th scope="col" class="num">Per year</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Gross pay</th><td class="num" id="pGross"></td><td class="num" id="aGross"></td></tr>
+          <tr><th scope="row">PAYE incl. ACC</th><td class="num" id="pPaye"></td><td class="num" id="aPaye"></td></tr>
+          <tr><th scope="row">Student loan</th><td class="num" id="pSl"></td><td class="num" id="aSl"></td></tr>
+          <tr><th scope="row">KiwiSaver</th><td class="num" id="pKs"></td><td class="num" id="aKs"></td></tr>
+          <tr class="total"><th scope="row">Take-home pay</th><td class="num" id="pNet"></td><td class="num" id="aNet"></td></tr>
+        </tbody></table></div>
+      <p class="rounding" id="effRate"></p>
+      <p class="rounding" id="employer" hidden><span id="employerText"></span></p>
+      <p class="rounding" id="meNote" hidden>ME is only for New Zealand tax residents earning $24,000 to $70,000 a year who don't get Working for Families, an income-tested benefit, NZ Super or a Veteran's Pension.</p>
+      <p class="rounding" id="secNote" hidden>Secondary codes tax every dollar of this job at one flat rate, because your main job has already used the lower brackets. Pick the code that matches your total income from all jobs.</p>
+      <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="payCopy"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>Copy summary</button></div>
+      <p class="sr-only" id="sr" role="status" aria-live="polite"></p>
+      <aside class="notice" aria-label="Source and disclaimer"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-info"/></svg><div><p><strong>Rates for the 2026-27 tax year (1 April 2026 to 31 March 2027), checked on 2 October 2026.</strong> Source: <a href="https://www.ird.govt.nz/income-tax/income-tax-for-individuals/tax-codes-and-tax-rates-for-individuals/tax-rates-for-individuals" rel="noopener">Tax rates for individuals</a> (Inland Revenue); <a href="https://www.ird.govt.nz/income-tax/income-tax-for-individuals/acc-clients-and-carers/acc-earners-levy-rates" rel="noopener">ACC earners&#39; levy rates</a> (Inland Revenue); <a href="https://www.ird.govt.nz/student-loans/living-in-new-zealand-with-a-student-loan/repaying-my-student-loan-when-i-earn-salary-or-wages" rel="noopener">Repaying my student loan when I earn salary or wages</a> (Inland Revenue); <a href="https://www.ird.govt.nz/kiwisaver/kiwisaver-individuals/growing-my-kiwisaver-account/employee-contributions-to-kiwisaver" rel="noopener">Employee contributions to KiwiSaver accounts</a> (Inland Revenue); <a href="https://www.ird.govt.nz/digital-service-providers/services-catalogue/returns-and-information/payday-filing/payroll-calculations-and-business-rules" rel="noopener">Payroll calculations and business rules specification, 1 April 2026 to 31 March 2027</a> (Inland Revenue).</p><p>This is an estimate for general information, not financial or tax advice; check with Inland Revenue or a qualified adviser.</p></div></aside>
+    </div>
+  </section>
+  <div class="explain">
+    <article class="prose">
+      
+      
+        <h2>How the calculator works it out</h2>
+        <p>New Zealand taxes income in bands. For the 2026-27 tax year the bands are:</p>
+        <table><thead><tr><th scope="col">Annual income</th><th scope="col" class="num">Rate on each dollar in the band</th></tr></thead><tbody><tr><td>$0 to $15,600</td><td class="num"><span class="dv">10.5%</span></td></tr><tr><td>$15,601 to $53,500</td><td class="num"><span class="dv">17.5%</span></td></tr><tr><td>$53,501 to $78,100</td><td class="num"><span class="dv">30%</span></td></tr><tr><td>$78,101 to $180,000</td><td class="num"><span class="dv">33%</span></td></tr><tr><td>$180,001 to and over</td><td class="num"><span class="dv">39%</span></td></tr></tbody></table>
+        <p>Employers don't wait until the end of the year, though. Each payday, payroll software follows Inland Revenue's published method: it multiplies your pay for the period up to a yearly figure and drops the cents, works out the tax on that yearly figure, adds the ACC earners' levy (<span class="dv">1.75%</span> of earnings, up to $156,641 a year), divides by 52, then converts that weekly amount to your pay period, cutting off fractions of a cent at each step. This calculator does exactly the same, which is why it matches the amounts in Inland Revenue's printed PAYE tables to the cent.</p>
+        <p>Student loan repayments are <span class="dv">12%</span> of what you earn above the repayment threshold for each pay period ($928 a fortnight, which is $24,128 a year spread evenly). KiwiSaver is your chosen percentage of gross pay, and your employer must add at least <span class="dv">3.5%</span> on top.</p>
+
+        <h2>Worked example</h2>
+        <p>Take an invented salary of $65,000 a year, paid fortnightly, with KiwiSaver at the default <span class="dv">3.5%</span> and a student loan. Each fortnight's gross pay is $2,500.00. Over a full year that comes to about $11,720.50 of income tax before ACC. The calculator gives:</p>
+        <ul>
+          <li>PAYE of $494.52 a fortnight, of which about $43.75 is the ACC levy</li>
+          <li>a student loan repayment of $188.64</li>
+          <li>a KiwiSaver contribution of $87.50</li>
+          <li>take-home pay of <strong>$1,729.34 a fortnight</strong>, or $44,962.84 over 26 pays</li>
+        </ul>
+        <p>As a check against the official tables: Inland Revenue's weekly table shows $171.50 of PAYE on $1,000.00 a week under code M, and so does this calculator.</p>
+        
+        <h2>Why your pay slip might be different</h2>
+        <ul>
+          <li><strong>A different tax code.</strong> Tailored tax codes, special deduction rates and the non-notified rate change the deduction. The calculator covers M, ME and the secondary codes.</li>
+          <li><strong>Extra pays.</strong> Bonuses, back pay and holiday pay paid as a lump sum are taxed with a separate method, so the payday they arrive on looks different.</li>
+          <li><strong>What counts as pay.</strong> Taxable allowances add to gross pay; salary sacrifice or unpaid leave reduce it.</li>
+          <li><strong>Rounding.</strong> Payroll systems may round your gross pay differently when converting an annual salary into pay periods, which can move the answer by a cent or two.</li>
+          <li><strong>A temporary KiwiSaver rate reduction</strong>, or deductions such as child support, union fees or payroll giving, which this calculator doesn't model.</li>
+        </ul>
+
+        <h2>Choosing a tax code</h2>
+        <p>Use M for your only job or your highest-paying one. ME is the same but includes the independent earner tax credit, worth up to $520 a year if you're a New Zealand tax resident earning between $24,000 and $70,000 and don't get Working for Families, an income-tested benefit or NZ Super. For a second job, pick the secondary code that matches your expected total income from every job: SB, S, SH, ST, SA, from lowest to highest. Add SL if you have a student loan. Inland Revenue's page <a href="https://www.ird.govt.nz/income-tax/income-tax-for-individuals/tax-codes-and-tax-rates-for-individuals/about-tax-codes" rel="noopener">About tax codes</a> (Inland Revenue) explains the full list.</p>
+
+        <h2>Limits</h2>
+        <p>This is an estimate for ordinary salary or wages in the 2026-27 tax year. It doesn't handle lump sums, schedular payments, tailored codes, child support, or the end-of-year square-up when Inland Revenue checks whether the right amount of tax was taken. <a href="/gst-calculator">GST</a> is a separate tax on prices and doesn't come out of wages. What you type stays in your browser: the pay amount is never saved or sent, and only your settings, such as pay frequency and tax code, are kept in the page address after the # sign.</p>
+      
+      <section class="faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Questions people ask</h2>
+        <details><summary>Does PAYE include the ACC levy?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Yes. Employers deduct the ACC earners' levy (<span class="dv">1.75%</span> of pay, up to $156,641 a year) together with income tax as one PAYE amount. The calculator shows the split so you can see both.</p></div></details>
+        <details><summary>Why do weekly and monthly pay give slightly different yearly totals?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Inland Revenue's method works out a weekly amount, cuts off fractions of a cent, then converts it to other pay periods. Those small cut-offs add up differently over 12 monthly pays than over 52 weekly ones, so yearly totals can differ by a few cents.</p></div></details>
+        <details><summary>Is KiwiSaver taken before or after tax?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Your KiwiSaver contribution is a percentage of your gross pay, but it's deducted from your pay after tax has been worked out. It doesn't reduce your PAYE. Your employer's contribution of at least <span class="dv">3.5%</span> is paid on top of your pay, minus employer superannuation contribution tax.</p></div></details>
+      </section>
+      <p class="updated">Last reviewed: <time datetime="2026-10-02">2 October 2026</time></p>
+    </article>
+    <aside class="aside-card" aria-labelledby="rel-h">
+      <h2 id="rel-h">Related</h2>
+      <ul><li><a href="/gst-calculator">GST calculator <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/nz-calculators">All NZ calculators <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides">Guides <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul>
+    </aside>
+  </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+        <p>Free, private tools for everyday jobs, run by an independent publisher in New Zealand.</p>
+        <div class="trust-badges"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Stays in your browser</span><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Sourced and dated</span></div>
+      </div>
+      <nav class="foot-col" aria-labelledby="f-tools"><h2 id="f-tools">Tools</h2><ul><li><a href="/nz-calculators">NZ calculators</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-learn"><h2 id="f-learn">Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-trust"><h2 id="f-trust">Trust</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
+        <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
+        <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Everyday Tools. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

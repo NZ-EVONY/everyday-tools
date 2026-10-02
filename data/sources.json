@@ -120,6 +120,58 @@
       "url": "https://www.employment.govt.nz/leave-and-holidays/public-holidays/public-holidays-and-anniversary-dates",
       "retrieved": "2026-10-02",
       "licenceNote": "Dates read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-payroll-spec-2026-27",
+      "label": "Payroll calculations and business rules specification, 1 April 2026 to 31 March 2027",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/digital-service-providers/services-catalogue/returns-and-information/payday-filing/payroll-calculations-and-business-rules",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Calculation method and figures used; the PDF is not redistributed."
+    },
+    {
+      "id": "ird-ietc",
+      "label": "Independent earner tax credit (IETC)",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/income-tax/income-tax-for-individuals/individual-tax-credits/independent-earner-tax-credit-ietc",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "uk-wma-1985-sch1",
+      "kind": "units",
+      "label": "Weights and Measures Act 1985, Schedule 1 (definitions of imperial units)",
+      "publisher": "UK legislation (legislation.gov.uk)",
+      "url": "https://www.legislation.gov.uk/ukpga/1985/72/schedule/1",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Definitions read from the Act; Crown copyright, Open Government Licence. No text reproduced."
+    },
+    {
+      "id": "nist-sp811-b8",
+      "kind": "units",
+      "label": "NIST Guide to the SI, Appendix B.8: factors for units listed alphabetically",
+      "publisher": "US National Institute of Standards and Technology",
+      "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Factors read from the page; no text reproduced."
+    },
+    {
+      "id": "nist-sp811-b9",
+      "kind": "units",
+      "label": "NIST Guide to the SI, Appendix B.9: factors for units listed by kind of quantity",
+      "publisher": "US National Institute of Standards and Technology",
+      "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b9",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Factors read from the page; no text reproduced."
+    },
+    {
+      "id": "nist-survey-foot-factors",
+      "kind": "units",
+      "label": "Revised unit conversion factors (international foot based)",
+      "publisher": "US National Institute of Standards and Technology",
+      "url": "https://www.nist.gov/pml/us-surveyfoot/revised-unit-conversion-factors",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Factors read from the page; no text reproduced."
     }
   ]
 }

@@ -111,12 +111,16 @@
      "inclusive": 1999
     }
    ],
-   "totals": {
+   "perLine": {
     "exclusive": 5214,
     "gst": 783,
     "inclusive": 5997
    },
-   "gstOnTotal": 782,
+   "total": {
+    "exclusive": 5215,
+    "gst": 782,
+    "inclusive": 5997
+   },
    "roundingDifference": 1
   }
  }

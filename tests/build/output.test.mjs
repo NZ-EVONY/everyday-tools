@@ -40,8 +40,9 @@ test("titles and descriptions are unique", () => {
 test("header, navigation and footer are in the raw HTML, with trust links on every page", () => {
   for (const p of all) {
     const h = html(p);
-    assert.match(h, /<header class="masthead">/);
-    assert.match(h, /<nav class="navbar"/);
+    assert.match(h, /<header class="site-header">/);
+    assert.match(h, /<nav class="nav" aria-label="Main">/);
+    assert.match(h, /<details class="menu"/);
     for (const href of ["/about", "/contact", "/privacy-policy", "/terms"]) assert.ok(h.includes(`href="${href}"`), `${p.path} footer ${href}`);
     assert.match(h, /run by an independent publisher in New Zealand/);
     assert.match(h, /© \d{4} Everyday Tools/);
