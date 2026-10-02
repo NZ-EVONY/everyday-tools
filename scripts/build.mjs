@@ -106,7 +106,7 @@ const ads = {
 const tax = data.tax;
 const ctx = {
   site, nav, assets, esc, longDate, pct, pctText, dollars, money: formatMoney, today: TODAY, year: Number(TODAY.slice(0, 4)),
-  adsLive: !!adsCfg.adsLive, data, tax, gst: data.gst, holidays: data.holidays, src: srcLink, source: id => sourceById[id],
+  adsLive: !!adsCfg.adsLive, dstData: readJson("data/nz/daylight-saving.json"), data, tax, gst: data.gst, holidays: data.holidays, src: srcLink, source: id => sourceById[id],
   // The standard source line and disclaimer for NZ money pages, above the explainer.
   taxNotice(ids, { taxYear = true } = {}) {
     const links = [...new Set(ids)].map(srcLink).join("; ");

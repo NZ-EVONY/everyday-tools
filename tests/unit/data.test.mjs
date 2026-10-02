@@ -32,12 +32,12 @@ test("expiry: tax year ended -> error; from 1 March -> warning", () => {
 });
 
 test("expiry: holiday data must cover the current year; warning from 1 September", () => {
-  assert.match(expiryChecks(real, "2027-01-10").errors.join(), /no entry for 2027/);
-  assert.match(expiryChecks(real, "2026-09-01").warnings.join(), /2027 not added/);
-  assert.equal(expiryChecks(real, "2026-08-31").warnings.length, 0);
-  const withNext = clone(real);
-  withNext.holidays.years["2027"] = { holidays: [] };
-  assert.equal(expiryChecks(withNext, "2026-10-02").warnings.length, 0);
+  const only2026 = clone(real);
+  delete only2026.holidays.years["2027"];
+  assert.match(expiryChecks(only2026, "2027-01-10").errors.join(), /no entry for 2027/);
+  assert.match(expiryChecks(only2026, "2026-09-01").warnings.join(), /2027 not added/);
+  assert.equal(expiryChecks(only2026, "2026-08-31").warnings.length, 0);
+  assert.equal(expiryChecks(real, "2026-10-02").warnings.length, 0, "2027 is present");
 });
 
 test("tax data is internally consistent", () => {

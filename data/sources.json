@@ -172,6 +172,14 @@
       "url": "https://www.nist.gov/pml/us-surveyfoot/revised-unit-conversion-factors",
       "retrieved": "2026-10-02",
       "licenceNote": "Factors read from the page; no text reproduced."
+    },
+    {
+      "id": "govt-daylight-saving",
+      "label": "Daylight saving in NZ",
+      "publisher": "New Zealand Government (govt.nz, Department of Internal Affairs)",
+      "url": "https://www.govt.nz/browse/recreation-and-the-environment/daylight-saving/",
+      "retrieved": "2026-10-02",
+      "licenceNote": "Dates read from the page; no text reproduced."
     }
   ]
 }

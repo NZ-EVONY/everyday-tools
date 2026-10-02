@@ -20,6 +20,7 @@ export function loadData(root) {
     gst: readJson(root, "data/nz/gst.json"),
     holidays: readJson(root, cfg.holidayFile),
     units: readJson(root, "data/units.json"),
+    dst: readJson(root, "data/nz/daylight-saving.json"),
   };
 }
 
@@ -38,6 +39,7 @@ export function checkSourceIds(data) {
   walk(data.gst, "gst");
   walk(data.holidays, "public-holidays");
   if (data.units) walk(data.units, "units");
+  if (data.dst) walk(data.dst, "daylight-saving");
   // Money, tax and holiday sources must be NZ government pages. Unit definitions may also come
   // from standards bodies and legislation abroad (NIST, UK legislation).
   for (const s of data.sources) {

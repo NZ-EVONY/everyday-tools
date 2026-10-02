@@ -12,7 +12,7 @@ test("GST calculator: add, remove, validation, line items and fragment", { skip,
     await amt(page, 0).fill("100");
     assert.equal(await page.innerText("#vGst"), "$15.00");
     assert.equal(await page.innerText("#vIncl"), "$115.00");
-    await page.check('input[value="remove"]', { force: true });
+    await page.click('label:has(> input[value="remove"])');
     assert.equal(await page.innerText("#vGst"), "$13.04");
     assert.equal(await page.innerText("#vExcl"), "$86.96");
     assert.equal(await page.textContent("#amtHead"), "Amount, incl. GST");

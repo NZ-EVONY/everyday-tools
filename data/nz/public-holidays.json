@@ -222,6 +222,173 @@
           "sourceId": "mbie-public-holidays"
         }
       ]
+    },
+    "2027": {
+      "checkedOn": "2026-10-02",
+      "note": "From the second, unlabelled table on MBIE's page. Every date matches the 2027 calendar and MBIE's stated rules; MBIE labels 25 April as 'Saturday', but 25 April 2027 is a Sunday (the Mondayised date, Monday 26 April, is correct). Re-check when MBIE labels the table.",
+      "holidays": [
+        {
+          "date": "2027-01-01",
+          "name": "New Year's Day",
+          "scope": "national",
+          "observedForMonFri": "2027-01-01",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-01-02",
+          "name": "Day after New Year's Day",
+          "scope": "national",
+          "observedForMonFri": "2027-01-04",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-02-06",
+          "name": "Waitangi Day",
+          "scope": "national",
+          "observedForMonFri": "2027-02-08",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-03-26",
+          "name": "Good Friday",
+          "scope": "national",
+          "observedForMonFri": "2027-03-26",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-03-29",
+          "name": "Easter Monday",
+          "scope": "national",
+          "observedForMonFri": "2027-03-29",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-04-25",
+          "name": "Anzac Day",
+          "scope": "national",
+          "observedForMonFri": "2027-04-26",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-06-07",
+          "name": "King's Birthday",
+          "scope": "national",
+          "observedForMonFri": "2027-06-07",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-06-25",
+          "name": "Matariki",
+          "scope": "national",
+          "observedForMonFri": "2027-06-25",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-10-25",
+          "name": "Labour Day",
+          "scope": "national",
+          "observedForMonFri": "2027-10-25",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-12-25",
+          "name": "Christmas Day",
+          "scope": "national",
+          "observedForMonFri": "2027-12-27",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-12-26",
+          "name": "Boxing Day",
+          "scope": "national",
+          "observedForMonFri": "2027-12-28",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-01-29",
+          "name": "Auckland Anniversary Day",
+          "scope": "auckland",
+          "observedForMonFri": "2027-02-01",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-03-31",
+          "name": "Taranaki Anniversary Day",
+          "scope": "taranaki",
+          "observedForMonFri": "2027-03-08",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-11-01",
+          "name": "Hawke's Bay Anniversary Day",
+          "scope": "hawkes-bay",
+          "observedForMonFri": "2027-10-22",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-01-22",
+          "name": "Wellington Anniversary Day",
+          "scope": "wellington",
+          "observedForMonFri": "2027-01-25",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-11-01",
+          "name": "Marlborough Anniversary Day",
+          "scope": "marlborough",
+          "observedForMonFri": "2027-11-01",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-02-01",
+          "name": "Nelson Anniversary Day",
+          "scope": "nelson",
+          "observedForMonFri": "2027-02-01",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-12-16",
+          "name": "Canterbury Anniversary Day (Show Day)",
+          "scope": "canterbury",
+          "observedForMonFri": "2027-11-12",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-12-16",
+          "name": "South Canterbury Anniversary Day",
+          "scope": "south-canterbury",
+          "observedForMonFri": "2027-09-27",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-12-01",
+          "name": "Westland Anniversary Day",
+          "scope": "westland",
+          "observedForMonFri": "2027-11-29",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-03-23",
+          "name": "Otago Anniversary Day",
+          "scope": "otago",
+          "observedForMonFri": "2027-03-22",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-01-17",
+          "name": "Southland Anniversary Day",
+          "scope": "southland",
+          "observedForMonFri": "2027-03-30",
+          "sourceId": "mbie-public-holidays"
+        },
+        {
+          "date": "2027-11-30",
+          "name": "Chatham Islands Anniversary Day",
+          "scope": "chatham-islands",
+          "observedForMonFri": "2027-11-29",
+          "sourceId": "mbie-public-holidays"
+        }
+      ]
     }
   }
 }

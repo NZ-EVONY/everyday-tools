@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Age Calculator: Exact Age in Years, Months and Days</title>
+<meta name="description" content="Work out an exact age in years, months and days on any date, the days until the next birthday, and days alive. Handles 29 February birthdays.">
+<meta name="author" content="Everyday Tools">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://myaddr.app/age-calculator">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Everyday Tools">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:title" content="Age Calculator: Exact Age in Years, Months and Days">
+<meta property="og:description" content="Work out an exact age in years, months and days on any date, the days until the next birthday, and days alive. Handles 29 February birthdays.">
+<meta property="og:url" content="https://myaddr.app/age-calculator">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Age Calculator: Exact Age in Years, Months and Days">
+<meta name="twitter:description" content="Work out an exact age in years, months and days on any date, the days until the next birthday, and days alive. Handles 29 February birthdays.">
+<meta name="theme-color" content="#F6F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#06120E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(d){try{var t=localStorage.getItem("et-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}d.classList.add("js")})(document.documentElement);</script>
+<link rel="stylesheet" href="/assets/style.4106e08172.css">
+<!-- ==== CMP INTEGRATION POINT. Paste a Google-certified CMP snippet that supports IAB TCF v2.3 here. It must load BEFORE the AdSense script below. See docs/OWNER-TODO.md ==== -->
+<!-- ==== ADSENSE INTEGRATION POINT. After approval, paste exactly as the AdSense account shows them:
+  1. <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"> (placeholder; never guess the real id)
+  2. the AdSense loader snippet.
+Then add the CSP origins listed in public/_headers, update public/ads.txt and set adsLive in config/ads.json. ==== -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Age calculator","url":"https://myaddr.app/age-calculator","description":"Work out an exact age in years, months and days on any date, the days until the next birthday, and days alive. Handles 29 February birthdays.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en-NZ","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"NZD"},"publisher":{"@type":"Organization","name":"Everyday Tools"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I work out an age on a past or future date?","acceptedAnswer":{"@type":"Answer","text":"Change the \"Age on\" date. It starts at today but can be any date after the date of birth."}},{"@type":"Question","name":"Why does my age in days not equal years times 365?","acceptedAnswer":{"@type":"Answer","text":"Leap years add a day roughly every four years, and the partial year since the last birthday adds more. The calculator counts actual calendar days."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myaddr.app/"},{"@type":"ListItem","position":2,"name":"Dates and time","item":"https://myaddr.app/date-and-time-tools"},{"@type":"ListItem","position":3,"name":"Age calculator","item":"https://myaddr.app/age-calculator"}]}]}</script>
+<script src="/assets/site.f521e54d7c.js" defer></script>
+<script src="/assets/js/age.5fe70a9d23.js" defer></script>
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5v-2a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 14.2l2 2 3.8-3.8"/></symbol><symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M6.5 3.5h11M6.5 20.5h11"/><path d="M7.5 3.5c0 4.8 4.5 5.7 4.5 8.5s-4.5 3.7-4.5 8.5"/><path d="M16.5 3.5c0 4.8-4.5 5.7-4.5 8.5s4.5 3.7 4.5 8.5"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+    <nav class="nav" aria-label="Main"><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools" aria-current="page">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/guides">Guides</a></li></ul></nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false"><svg class="ico i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></button>
+      <details class="menu" id="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main (menu)"><ul><li><a href="/nz-calculators">NZ calculators<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/date-and-time-tools" aria-current="page">Dates &amp; time<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/printables">Printables<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides">Guides<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="t-hero">
+   <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/date-and-time-tools">Dates and time</a></li><li><span aria-current="page">Age calculator</span></li></ol></nav>
+    <div class="t-meta"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-hourglass"/></svg>29 February handled</span></div>
+    <h1>Age calculator: <span class="grad-text">years, months and days</span></h1>
+    <div class="intro"><p>Find an exact age on any date, not just today. Enter a date of birth and the calculator gives the age in whole years plus months and days, how long until the next birthday and which day of the week it falls on, and the total number of days lived so far. It's handy for forms that ask for age on a particular date, school and sports age groups, or simply settling who is older.</p></div>
+   </div>
+  </section>
+  <div class="wrap">
+  <section class="calc" aria-label="Age calculator">
+    <div class="panel">
+      <form id="ageForm" autocomplete="off" novalidate>
+      <div class="panel-h"><h2>Dates</h2></div>
+      <div class="fields">
+        <div class="field"><label for="aBirth">Date of birth</label><input class="in" id="aBirth" type="date" min="0001-01-01" max="9999-12-31" aria-describedby="aHint"></div>
+        <div class="field"><label for="aOn">Age on</label><input class="in" id="aOn" type="date" min="0001-01-01" max="9999-12-31"></div>
+      </div>
+      <fieldset id="leapRow" hidden>
+        <legend class="field-label">Born on 29 February: in other years, count the birthday on</legend>
+        <div class="seg"><label><input type="radio" name="leap" value="feb28" checked><span>28 February</span></label><label><input type="radio" name="leap" value="mar1"><span>1 March</span></label></div>
+      </fieldset>
+      <p class="hint" id="aHint" role="alert"></p>
+    </form>
+      <noscript><p class="noscript-msg">This calculator needs JavaScript to work out results. Everything below explains the method, so you can still follow it by hand.</p></noscript>
+    </div>
+    <div class="results-col">
+      <div class="results">
+        <div class="res key"><div class="k">Age<small id="vAgeK"></small></div><div class="v" id="vAge">–</div></div>
+        <div class="res"><div class="k">Next birthday<small id="vNextK"></small></div><div class="v long" id="vNext">–</div></div>
+        <div class="res"><div class="k">Days alive<small>including leap days</small></div><div class="v" id="vAlive">–</div></div>
+      </div>
+      <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="aCopy"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>Copy result</button></div>
+      <p class="sr-only" id="sr" role="status" aria-live="polite"></p>
+      
+    </div>
+  </section>
+  <div class="explain">
+    <article class="prose">
+      
+      
+        <h2>How an age is counted</h2>
+        <p>Age in years goes up by one on each birthday, so the calculator first finds the most recent birthday on or before the "age on" date. The months and days are then counted from that birthday: whole calendar months first, then the days left over. If a month would land on a date that doesn't exist, such as the 31st of a 30-day month, it uses the last day of that month, the same rule used when adding months to a date.</p>
+        <p>The days-alive figure is a straight count of calendar days between the two dates, so it includes every leap day that has passed.</p>
+
+        <h2>Worked examples</h2>
+        <ul>
+          <li>Someone born on 15 June 1990 is 36 years, 3 months and 17 days old on 2 October 2026, and has lived 13,258 days. They turn 37 in 256 days.</li>
+          <li>A child born on 3 November 2019 is 6 on 2 October 2026, with 32 days to go until turning 7, useful for sports or school groups that set age by a cut-off date.</li>
+          <li>Someone born on 29 February 2008 is 18 on 28 February 2026 if birthdays in ordinary years are counted on 28 February, or 17 if they're counted on 1 March.</li>
+        </ul>
+        
+        <h2>The 29 February question</h2>
+        <p>People born on a leap day have a real birthday only once every four years, so in other years they pick a day to celebrate. Some choose 28 February, which keeps the birthday in the same month; others choose 1 March, the day after 28 February. The answer can matter for official purposes such as the date someone becomes old enough to do something, and different countries and organisations have their own rules. The calculator lets you choose, and shows the choice only when the date of birth is 29 February. For anything with legal weight, check the rule that applies to you rather than relying on this tool.</p>
+
+        <h2>Mistakes to avoid</h2>
+        <ul>
+          <li><strong>Subtracting years only.</strong> 2026 minus 1990 is 36, but someone born late in the year might still be 35. The birthday has to have passed.</li>
+          <li><strong>Using today's date when a form asks for age on a set date</strong>, such as 1 January for an age group or the date of an event. Change the "age on" date.</li>
+          <li><strong>Treating months as equal lengths.</strong> "Six months old" means six calendar months, not 180 days.</li>
+        </ul>
+        <p>The dates you enter stay in your browser and aren't saved or added to the page address. To count the days between any two dates, use the <a href="/days-between-dates">days between dates calculator</a>; to see a date in another time zone, try the <a href="/time-zone-converter">time zone converter</a>.</p>
+      
+      <section class="faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Questions people ask</h2>
+        <details><summary>How do I work out an age on a past or future date?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Change the "Age on" date. It starts at today but can be any date after the date of birth.</p></div></details>
+        <details><summary>Why does my age in days not equal years times 365?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Leap years add a day roughly every four years, and the partial year since the last birthday adds more. The calculator counts actual calendar days.</p></div></details>
+      </section>
+      <p class="updated">Last reviewed: <time datetime="2026-10-02">2 October 2026</time></p>
+    </article>
+    <aside class="aside-card" aria-labelledby="rel-h">
+      <h2 id="rel-h">Related</h2>
+      <ul><li><a href="/days-between-dates">Days between dates <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/countdown-timer">Countdown timer <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/date-and-time-tools">All date and time tools <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul>
+    </aside>
+  </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+        <p>Free, private tools for everyday jobs, run by an independent publisher in New Zealand.</p>
+        <div class="trust-badges"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Stays in your browser</span><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Sourced and dated</span></div>
+      </div>
+      <nav class="foot-col" aria-labelledby="f-tools"><h2 id="f-tools">Tools</h2><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-learn"><h2 id="f-learn">Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-trust"><h2 id="f-trust">Trust</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
+        <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
+        <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Everyday Tools. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

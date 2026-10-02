@@ -4,12 +4,14 @@ Items here are NOT VERIFIED. Anything a page would need from this list stays unp
 (`status: "draft"`) until it is confirmed.
 
 ## Data
-- **Matariki dates from the Act.** legislation.govt.nz returned a bot-check page (HTTP 202,
-  1 byte) to the build session. The 2026 Matariki date (10 July) comes from MBIE's table. Citing
-  the Te Kāhui o Matariki Public Holiday Act 2022 schedule is still to do (Phase 3).
-- **2027 public holidays.** MBIE's page shows a second, unlabelled table that looks like 2027,
-  but it gives Anzac Day 2027 as "Saturday 25 April" (25 April 2027 is a Sunday). Not added
-  until it can be confirmed; the build warns that 2027 is missing.
+- **Matariki dates from the Act.** legislation.govt.nz serves a JavaScript bot check (AWS WAF) to
+  the build session, and the headless browser can't pass this session's TLS proxy without
+  disabling certificate checks (not allowed). The Matariki dates (10 July 2026, 25 June 2027) come
+  from MBIE's table, which cites the Act. The owner should compare them with the Act's schedule.
+- **2027 public holidays.** Taken from MBIE's second table, which has no year heading. All dates
+  match 2027 and MBIE's own rules (checked by code), but MBIE labels 25 April as "Saturday"
+  (25 April 2027 is a Sunday; the Mondayised Monday 26 April is correct). Re-check once MBIE
+  labels the table.
 - **MBIE regional anniversary dates.** MBIE itself says its regional table "may contain
   unintentional errors" and to check with local councils. Used as published.
 
@@ -24,7 +26,9 @@ Items here are NOT VERIFIED. Anything a page would need from this list stays unp
   managed `robots.txt`). Checked only with `wrangler dev --local`.
 - Google indexing, rich results, AdSense review and approval.
 - Real devices, screen readers, other browsers (only Chromium was used), field Core Web Vitals.
-- Printing on real printers and in Firefox/Safari (printables arrive in Phase 3).
+- Printing on real printers and in Firefox and Safari. Page size and page count were checked only
+  with Chromium's PDF output (`page.pdf` with preferCSSPageSize). Firefox supports named pages from
+  version 110; Safari's support for `page` is limited, so it relies on the CSSOM @page fallback.
 - How the calculators compare with IRD's own online PAYE calculator (not scraped; the owner can compare by hand).
 - Later changes to official pages after 2 October 2026.
 - The owner's search spot-check (`docs/SEARCH-SPOTCHECK.md`); search engines are not scraped.

@@ -32,7 +32,7 @@ test("flatmate splitter: shares add to the cent, by room and by days", { skip, t
     assert.equal(await page.textContent("#tTotal"), "$1,000.00");
     const cells = await page.$$eval("#splitTable tbody tr td:last-child", tds => tds.map(t => t.textContent));
     assert.deepEqual(cells, ["$333.34", "$333.33", "$333.33"]);
-    await page.check('input[name="method"][value="room"]', { force: true });
+    await page.click('label:has(> input[name="method"][value="room"])');
     const w = page.locator("#people .pw");
     await w.nth(0).fill("14"); await w.nth(1).fill("10"); await w.nth(2).fill("10");
     const rent = await page.$$eval("#splitTable tbody tr td:nth-child(2)", tds => tds.map(t => t.textContent));

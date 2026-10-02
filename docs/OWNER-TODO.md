@@ -7,6 +7,9 @@ Things only the owner can do. Claude Code cannot do these.
 - [ ] Try the five NZ calculators (take-home pay, KiwiSaver, GST, flatmate splitter, unit converter) and compare two take-home pay results with IRD's own PAYE calculator.
 - [ ] Confirm the brand "Everyday Tools" (a one-line change in `site.config.json`).
 
+- [ ] Compare the 2026 and 2027 Matariki dates (10 July 2026, 25 June 2027) with the schedule in the Te Kāhui o Matariki Public Holiday Act 2022, and check MBIE's 2027 table has a year label (see `docs/UNVERIFIED.md`).
+- [ ] Print a calendar, a planner and a checklist on your own printer (Chrome, and Firefox or Safari if you use them).
+
 ## Before launch
 - [ ] Decide, with advice, whether the privacy policy needs a more identifiable controller than "an independent publisher" plus `nz@myaddr.app` (NZ Privacy Act 2020 and GDPR/UK GDPR).
 - [ ] Have the privacy policy and terms reviewed; they are templates, not legal advice.

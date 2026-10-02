@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time Zone Converter NZ: NZ Time to Anywhere</title>
+<meta name="description" content="Convert New Zealand time to Australia, the Pacific, the UK, the US and anywhere else, with daylight saving handled for both places.">
+<meta name="author" content="Everyday Tools">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://myaddr.app/time-zone-converter">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Everyday Tools">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:title" content="Time Zone Converter NZ: NZ Time to Anywhere">
+<meta property="og:description" content="Convert New Zealand time to Australia, the Pacific, the UK, the US and anywhere else, with daylight saving handled for both places.">
+<meta property="og:url" content="https://myaddr.app/time-zone-converter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Time Zone Converter NZ: NZ Time to Anywhere">
+<meta name="twitter:description" content="Convert New Zealand time to Australia, the Pacific, the UK, the US and anywhere else, with daylight saving handled for both places.">
+<meta name="theme-color" content="#F6F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#06120E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(d){try{var t=localStorage.getItem("et-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}d.classList.add("js")})(document.documentElement);</script>
+<link rel="stylesheet" href="/assets/style.4106e08172.css">
+<!-- ==== CMP INTEGRATION POINT. Paste a Google-certified CMP snippet that supports IAB TCF v2.3 here. It must load BEFORE the AdSense script below. See docs/OWNER-TODO.md ==== -->
+<!-- ==== ADSENSE INTEGRATION POINT. After approval, paste exactly as the AdSense account shows them:
+  1. <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"> (placeholder; never guess the real id)
+  2. the AdSense loader snippet.
+Then add the CSP origins listed in public/_headers, update public/ads.txt and set adsLive in config/ads.json. ==== -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Time zone converter","url":"https://myaddr.app/time-zone-converter","description":"Convert New Zealand time to Australia, the Pacific, the UK, the US and anywhere else, with daylight saving handled for both places.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en-NZ","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"NZD"},"publisher":{"@type":"Organization","name":"Everyday Tools"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When does daylight saving start and end in New Zealand?","acceptedAnswer":{"@type":"Answer","text":"It starts at 2am on the last Sunday in September and ends at 3am on the first Sunday in April, according to the New Zealand Government's daylight saving page."}},{"@type":"Question","name":"Why does the time difference to Australia change during the year?","acceptedAnswer":{"@type":"Answer","text":"New Zealand and Australia change their clocks on different dates, and not every Australian state changes at all. In the time-zone data, Sydney is ${syd[0]} in January and ${syd[1]} in July, while Brisbane is ${bne[0]} in January and ${bne[1]} in July. The converter applies each place's own rules for the date you choose."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myaddr.app/"},{"@type":"ListItem","position":2,"name":"Dates and time","item":"https://myaddr.app/date-and-time-tools"},{"@type":"ListItem","position":3,"name":"Time zone converter","item":"https://myaddr.app/time-zone-converter"}]}]}</script>
+<script src="/assets/site.f521e54d7c.js" defer></script>
+<script src="/assets/js/timezones.4cb3f572ca.js" defer></script>
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5v-2a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 14.2l2 2 3.8-3.8"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.75"/><path d="M3.5 12h17M12 3.3c3 3.2 3 14.2 0 17.4M12 3.3c-3 3.2-3 14.2 0 17.4"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.75"/><path d="M12 11v5M12 8h.01"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></symbol><symbol id="i-sort" viewBox="0 0 24 24"><path d="M7 4.5v15M7 19.5l-3-3M7 19.5l3-3"/><path d="M14.5 6h6M14.5 11h4.5M14.5 16h3"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+    <nav class="nav" aria-label="Main"><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools" aria-current="page">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/guides">Guides</a></li></ul></nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false"><svg class="ico i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></button>
+      <details class="menu" id="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main (menu)"><ul><li><a href="/nz-calculators">NZ calculators<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/date-and-time-tools" aria-current="page">Dates &amp; time<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/printables">Printables<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides">Guides<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="t-hero">
+   <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/date-and-time-tools">Dates and time</a></li><li><span aria-current="page">Time zone converter</span></li></ol></nav>
+    <div class="t-meta"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Daylight saving aware</span></div>
+    <h1>Time zone converter: <span class="grad-text">NZ and the world</span></h1>
+    <div class="intro"><p>See what time it is somewhere else when it's a given time in New Zealand, or the other way round. Pick a date and time, the zone it's in and the zone you want, and the converter shows both local times with their offsets from UTC. Daylight saving is handled for both places, including the nights the clocks change. Quick buttons cover Australia, the Pacific Islands, the UK, the US and Asia.</p></div>
+   </div>
+  </section>
+  <div class="wrap">
+  <section class="calc" aria-label="Time zone converter">
+    <div class="panel">
+      <form id="tzForm" autocomplete="off" novalidate data-zones='["Pacific/Auckland","Pacific/Chatham","Australia/Sydney","Australia/Brisbane","Australia/Perth","Pacific/Fiji","Pacific/Rarotonga","Pacific/Tongatapu","Europe/London","America/Los_Angeles","America/New_York","Asia/Tokyo","Asia/Singapore","UTC","Asia/Shanghai","Asia/Kolkata","Europe/Paris","Europe/Berlin","America/Chicago","America/Denver","America/Vancouver","Pacific/Honolulu","Pacific/Apia","Pacific/Port_Moresby"]'>
+      <div class="panel-h"><h2>Convert a time</h2></div>
+      <div class="fields">
+        <div class="field"><label for="tzDate">Date</label><input class="in" id="tzDate" type="date" min="1970-01-01" max="2100-12-31"></div>
+        <div class="field"><label for="tzTime">Time</label><input class="in" id="tzTime" type="time"></div>
+      </div>
+      <datalist id="tzZones"></datalist>
+      <div class="fields">
+        <div class="field"><label for="tzFrom">From time zone</label><input class="in" id="tzFrom" list="tzZones" value="Pacific/Auckland" maxlength="40" aria-describedby="tzHint"></div>
+        <div class="field"><label for="tzTo">To time zone</label><input class="in" id="tzTo" list="tzZones" value="Australia/Sydney" maxlength="40"></div>
+      </div>
+      <p class="hint" id="tzHint" role="alert"></p>
+      <div class="quick js-only" role="group" aria-label="Quick destinations"><span class="muted">Quick:</span><button type="button" class="btn btn-ghost btn-sm" data-zone="Australia/Sydney">Sydney</button><button type="button" class="btn btn-ghost btn-sm" data-zone="Australia/Brisbane">Brisbane</button><button type="button" class="btn btn-ghost btn-sm" data-zone="Australia/Perth">Perth</button><button type="button" class="btn btn-ghost btn-sm" data-zone="Pacific/Fiji">Fiji</button><button type="button" class="btn btn-ghost btn-sm" data-zone="Pacific/Rarotonga">Rarotonga</button><button type="button" class="btn btn-ghost btn-sm" data-zone="Pacific/Tongatapu">Nuku'alofa</button><button type="button" class="btn btn-ghost btn-sm" data-zone="Europe/London">London</button><button type="button" class="btn btn-ghost btn-sm" data-zone="America/Los_Angeles">Los Angeles</button><button type="button" class="btn btn-ghost btn-sm" data-zone="America/New_York">New York</button><button type="button" class="btn btn-ghost btn-sm" data-zone="Asia/Tokyo">Tokyo</button><button type="button" class="btn btn-ghost btn-sm" data-zone="Asia/Singapore">Singapore</button><button type="button" class="btn btn-ghost btn-sm" data-zone="UTC">UTC</button></div>
+      <div class="actions no-print"><button type="button" class="btn btn-ghost btn-sm" id="tzSwap"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-sort"/></svg>Swap zones</button></div>
+    </form>
+      <noscript><p class="noscript-msg">This calculator needs JavaScript to work out results. Everything below explains the method, so you can still follow it by hand.</p></noscript>
+    </div>
+    <div class="results-col">
+      <div class="results">
+        <div class="res"><div class="k">From<small id="vFromK">Pacific/Auckland (UTC+13)</small></div><div class="v long" id="vFrom">–</div></div>
+        <div class="res key"><div class="k">To<small id="vToK">Australia/Sydney (UTC+10)</small></div><div class="v long" id="vTo">–</div></div>
+        <div class="res"><div class="k">Difference</div><div class="v" id="vDiff">–</div></div>
+      </div>
+      <p class="rounding" id="tzNote" hidden></p>
+      <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="tzCopy"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>Copy result</button></div>
+      <p class="sr-only" id="sr" role="status" aria-live="polite"></p>
+      <aside class="notice" aria-label="Source"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-info"/></svg><div><p><strong>New Zealand daylight saving starts at 2am on the last Sunday in September and ends at 3am on the first Sunday in April.</strong> Source: <a href="https://www.govt.nz/browse/recreation-and-the-environment/daylight-saving/" rel="noopener">Daylight saving in NZ</a> (New Zealand Government (govt.nz, Department of Internal Affairs)), checked 2 October 2026. Other countries' rules come from your browser's built-in time-zone data.</p></div></aside>
+    </div>
+  </section>
+  <div class="explain">
+    <article class="prose">
+      
+      
+        <h2>How it works</h2>
+        <p>Every modern browser carries a copy of the international time-zone database, which records each region's offset from UTC and its daylight saving history. The converter asks your browser what offset applies in the first zone at the date and time you entered, turns that into a single moment, then asks what the clock reads at that moment in the second zone. Nothing is downloaded and nothing you enter leaves the page. Because the rules come from your browser, keep it up to date: if a country changes its daylight saving rules, browsers learn about it through updates.</p>
+
+        <h2>New Zealand's two offsets</h2>
+        <p>According to the government's daylight saving page, clocks in New Zealand go forward an hour at 2am on the last Sunday in September and back at 3am on the first Sunday in April. The next change dates it lists are 27 September 2026 (forward) and 4 April 2027 (back). That means the gap to other places changes during the year, and it changes twice when the other place has its own daylight saving on different dates.</p>
+        <ul>
+          <li>9am on 15 November 2026 in Auckland (UTC+13) is Sat, 14 Nov 2026, 8:00 pm in London and Sun, 15 Nov 2026, 7:00 am in Sydney.</li>
+          <li>9am on 15 June 2026 in Auckland (UTC+12) is Sun, 14 Jun 2026, 10:00 pm in London and Mon, 15 Jun 2026, 7:00 am in Sydney.</li>
+        </ul>
+        <p>These examples are worked out with the same code the converter uses, by your build machine's copy of the time-zone data.</p>
+        
+        <h2>The nights the clocks change</h2>
+        <p>When daylight saving starts, the hour from 2am to 3am doesn't happen, so a time like 2:30am that night doesn't exist. The converter tells you and moves forward to a real time. When daylight saving ends, the hour before 3am happens twice, so 2:30am that night is ambiguous; the converter uses the first one and says so. If you're scheduling something at those hours, pick a different time.</p>
+
+        <h2>Mistakes to avoid</h2>
+        <ul>
+          <li><strong>Assuming a fixed difference.</strong> "Sydney is two hours behind" is only true for part of the year.</li>
+          <li><strong>Forgetting the date line.</strong> Morning in New Zealand is often the previous day in the Americas. Read the date in the result, not just the time.</li>
+          <li><strong>Using abbreviations.</strong> Short names like CST or IST mean different things in different countries. Pick the place by city name instead.</li>
+          <li><strong>The Chatham Islands</strong> are 45 minutes ahead of mainland New Zealand; choose Pacific/Chatham for them.</li>
+        </ul>
+        <p>Only the two zones you pick are kept in the page address after the # sign, never the time you type. To count down to an event in any zone, use the <a href="/countdown-timer">countdown timer</a>.</p>
+      
+      <section class="faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Questions people ask</h2>
+        <details><summary>When does daylight saving start and end in New Zealand?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>It starts at 2am on the last Sunday in September and ends at 3am on the first Sunday in April, according to the New Zealand Government's daylight saving page.</p></div></details>
+        <details><summary>Why does the time difference to Australia change during the year?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>New Zealand and Australia change their clocks on different dates, and not every Australian state changes at all. In the time-zone data, Sydney is ${syd[0]} in January and ${syd[1]} in July, while Brisbane is ${bne[0]} in January and ${bne[1]} in July. The converter applies each place's own rules for the date you choose.</p></div></details>
+      </section>
+      <p class="updated">Last reviewed: <time datetime="2026-10-02">2 October 2026</time></p>
+    </article>
+    <aside class="aside-card" aria-labelledby="rel-h">
+      <h2 id="rel-h">Related</h2>
+      <ul><li><a href="/countdown-timer">Countdown timer <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/working-days-calculator">Working days calculator <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/date-and-time-tools">All date and time tools <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul>
+    </aside>
+  </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+        <p>Free, private tools for everyday jobs, run by an independent publisher in New Zealand.</p>
+        <div class="trust-badges"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Stays in your browser</span><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Sourced and dated</span></div>
+      </div>
+      <nav class="foot-col" aria-labelledby="f-tools"><h2 id="f-tools">Tools</h2><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-learn"><h2 id="f-learn">Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-trust"><h2 id="f-trust">Trust</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
+        <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
+        <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Everyday Tools. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

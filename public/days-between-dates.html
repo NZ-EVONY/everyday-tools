@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Days Between Dates Calculator: Count Days and Weeks</title>
+<meta name="description" content="Count the days between two dates, with or without the end date, plus weeks and calendar months. Handles leap years. Free and private.">
+<meta name="author" content="Everyday Tools">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://myaddr.app/days-between-dates">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Everyday Tools">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:title" content="Days Between Dates Calculator: Count Days and Weeks">
+<meta property="og:description" content="Count the days between two dates, with or without the end date, plus weeks and calendar months. Handles leap years. Free and private.">
+<meta property="og:url" content="https://myaddr.app/days-between-dates">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Days Between Dates Calculator: Count Days and Weeks">
+<meta name="twitter:description" content="Count the days between two dates, with or without the end date, plus weeks and calendar months. Handles leap years. Free and private.">
+<meta name="theme-color" content="#F6F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#06120E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(d){try{var t=localStorage.getItem("et-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}d.classList.add("js")})(document.documentElement);</script>
+<link rel="stylesheet" href="/assets/style.4106e08172.css">
+<!-- ==== CMP INTEGRATION POINT. Paste a Google-certified CMP snippet that supports IAB TCF v2.3 here. It must load BEFORE the AdSense script below. See docs/OWNER-TODO.md ==== -->
+<!-- ==== ADSENSE INTEGRATION POINT. After approval, paste exactly as the AdSense account shows them:
+  1. <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"> (placeholder; never guess the real id)
+  2. the AdSense loader snippet.
+Then add the CSP origins listed in public/_headers, update public/ads.txt and set adsLive in config/ads.json. ==== -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Days between dates calculator","url":"https://myaddr.app/days-between-dates","description":"Count the days between two dates, with or without the end date, plus weeks and calendar months. Handles leap years. Free and private.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en-NZ","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"NZD"},"publisher":{"@type":"Organization","name":"Everyday Tools"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the calculator include the end date?","acceptedAnswer":{"@type":"Answer","text":"By default it counts the gap: the end date is counted and the start date isn't. Tick \"count both\" to include the start date as well, which adds one day."}},{"@type":"Question","name":"How many days are there in a year?","acceptedAnswer":{"@type":"Answer","text":"365, or 366 in a leap year. A year is a leap year if it divides by 4, except century years, which must also divide by 400."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myaddr.app/"},{"@type":"ListItem","position":2,"name":"Dates and time","item":"https://myaddr.app/date-and-time-tools"},{"@type":"ListItem","position":3,"name":"Days between dates","item":"https://myaddr.app/days-between-dates"}]}]}</script>
+<script src="/assets/site.f521e54d7c.js" defer></script>
+<script src="/assets/js/days.afaecf5f0c.js" defer></script>
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17.2h.01M12 17.2h.01"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5v-2a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 14.2l2 2 3.8-3.8"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></symbol><symbol id="i-range" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17M8 15h8"/><path d="m14 13 2 2-2 2"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+    <nav class="nav" aria-label="Main"><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools" aria-current="page">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/guides">Guides</a></li></ul></nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false"><svg class="ico i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></button>
+      <details class="menu" id="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main (menu)"><ul><li><a href="/nz-calculators">NZ calculators<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/date-and-time-tools" aria-current="page">Dates &amp; time<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/printables">Printables<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides">Guides<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="t-hero">
+   <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/date-and-time-tools">Dates and time</a></li><li><span aria-current="page">Days between dates</span></li></ol></nav>
+    <div class="t-meta"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-range"/></svg>Leap years handled</span></div>
+    <h1>Days between <span class="grad-text">two dates</span></h1>
+    <div class="intro"><p>Count how many days lie between two dates: until a holiday, since a start date, or across a contract or notice period. Pick the two dates and the answer appears at once, along with the same gap in weeks and in calendar months and days. A single switch decides whether the end date counts too, which is the question that trips most people up. Leap years are handled automatically.</p></div>
+   </div>
+  </section>
+  <div class="wrap">
+  <section class="calc" aria-label="Days between dates">
+    <div class="panel">
+      <form id="daysForm" autocomplete="off" novalidate>
+      <div class="panel-h"><h2>Your dates</h2></div>
+      <div class="fields">
+        <div class="field"><label for="dFrom">Start date</label><input class="in" id="dFrom" type="date" min="0001-01-01" max="9999-12-31" aria-describedby="dHint"></div>
+        <div class="field"><label for="dTo">End date</label><input class="in" id="dTo" type="date" min="0001-01-01" max="9999-12-31"></div>
+      </div>
+      <label class="check"><input type="checkbox" id="dIncl"> Count both the start and end dates (inclusive)</label>
+      <p class="hint" id="dHint" role="alert"></p>
+      <div class="actions no-print"><button type="button" class="btn btn-ghost btn-sm" id="dToday"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-cal"/></svg>Start from today</button></div>
+    </form>
+      <noscript><p class="noscript-msg">This calculator needs JavaScript to work out results. Everything below explains the method, so you can still follow it by hand.</p></noscript>
+    </div>
+    <div class="results-col">
+      <div class="results">
+        <div class="res key"><div class="k">Days<small id="vDaysK">not counting the start date</small></div><div class="v" id="vDays">–</div></div>
+        <div class="res"><div class="k">In weeks</div><div class="v long" id="vWeeks">–</div></div>
+        <div class="res"><div class="k">In calendar terms</div><div class="v long" id="vCal">–</div></div>
+      </div>
+      <p class="rounding" id="vRange"></p>
+      <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="dCopy"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>Copy result</button></div>
+      <p class="sr-only" id="sr" role="status" aria-live="polite"></p>
+      
+    </div>
+  </section>
+  <div class="explain">
+    <article class="prose">
+      
+      
+        <h2>Inclusive or exclusive?</h2>
+        <p>Ask "how many days from Monday to Friday?" and some people say four, others five. Both are right; they're answering different questions. Counting the gap between the dates (exclusive) gives four: that's how many nights pass, or how many times you'd turn the page on a calendar. Counting every day touched (inclusive) gives five: that's how many days you'd be at a conference that runs Monday to Friday.</p>
+        <p>By default the calculator gives the gap, so the start date isn't counted and the end date is. Tick the box to count both. Leases, hire periods, event lengths and "days present" usually want the inclusive count; time until something and time since something usually want the gap. If a contract or law sets a deadline, read how it defines the count, because some phrase it as "clear days", which leaves out both the first and the last day.</p>
+
+        <h2>Worked examples</h2>
+        <ul>
+          <li>From 2 October to Christmas Day 2026 is 84 days, or 85 counting both days.</li>
+          <li>February 2028 has 29 days because 2028 is a leap year, so 1 February to 1 March 2028 is 29 days; the same dates in 2027 give 28.</li>
+          <li>From 31 January to 1 March 2026 is 1 month and 1 day in calendar terms: one month after 31 January lands on the last day of February, and the extra day takes you to 1 March.</li>
+        </ul>
+        <p>All three come from the same code as the calculator.</p>
+        
+        <h2>How it counts</h2>
+        <p>Each date is turned into a plain count of days on the calendar, then one is subtracted from the other. Times of day and time zones play no part, so a daylight saving change in between can't add or lose a day. The weeks figure is simply the day count divided by seven with the remainder shown as days. The calendar figure counts whole months first, using the rule that a month after the 31st lands on the last day of a shorter month, then shows the days left over. Because months differ in length, the same number of days can be a different number of months depending on where it falls in the year.</p>
+        <p>Years run from 1 to 9999, using the Gregorian calendar throughout. That rule applies leap years every four years, except century years that can't be divided by 400 (so 1900 and 2100 aren't leap years and 2000 was). Historical records from before a country switched to the Gregorian calendar may use the older Julian calendar, so very old dates may not match them.</p>
+
+        <h2>Common mistakes</h2>
+        <ul>
+          <li><strong>Counting on your fingers across a month end.</strong> It's easy to assume 30 days in every month. Over a few months that drifts by days.</li>
+          <li><strong>Forgetting leap years</strong> when a range crosses the end of February.</li>
+          <li><strong>Mixing up working days and calendar days.</strong> This tool counts every day. For Monday-to-Friday days with public holidays taken out, use the <a href="/working-days-calculator">working days calculator</a>.</li>
+        </ul>
+        <p>Your dates stay in your browser and aren't saved. Only the inclusive setting is remembered in the page address after the # sign. To find the date a set number of days away, use <a href="/add-subtract-days">add or subtract days</a>.</p>
+      
+      <section class="faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Questions people ask</h2>
+        <details><summary>Does the calculator include the end date?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>By default it counts the gap: the end date is counted and the start date isn't. Tick "count both" to include the start date as well, which adds one day.</p></div></details>
+        <details><summary>How many days are there in a year?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>365, or 366 in a leap year. A year is a leap year if it divides by 4, except century years, which must also divide by 400.</p></div></details>
+      </section>
+      <p class="updated">Last reviewed: <time datetime="2026-10-02">2 October 2026</time></p>
+    </article>
+    <aside class="aside-card" aria-labelledby="rel-h">
+      <h2 id="rel-h">Related</h2>
+      <ul><li><a href="/working-days-calculator">Working days calculator <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/add-subtract-days">Add or subtract days <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/date-and-time-tools">All date and time tools <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul>
+    </aside>
+  </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+        <p>Free, private tools for everyday jobs, run by an independent publisher in New Zealand.</p>
+        <div class="trust-badges"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Stays in your browser</span><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Sourced and dated</span></div>
+      </div>
+      <nav class="foot-col" aria-labelledby="f-tools"><h2 id="f-tools">Tools</h2><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-learn"><h2 id="f-learn">Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-trust"><h2 id="f-trust">Trust</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
+        <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
+        <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Everyday Tools. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

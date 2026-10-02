@@ -41,7 +41,7 @@ test("axe: no serious or critical issues on any page, light and dark", { skip, t
       const page = await ctx.newPage();
       for (const u of ALL_URLS()) {
         await page.goto(base + u);
-        if (u === "/gst-calculator") { await page.fill("#gstLines .amt", "115"); await page.check('input[value="remove"]', { force: true }); await page.click("#gstAddLine"); await page.locator("#gstLines .amt").nth(1).fill("10"); }
+        if (u === "/gst-calculator") { await page.fill("#gstLines .amt", "115"); await page.click('label:has(> input[value="remove"])'); await page.click("#gstAddLine"); await page.locator("#gstLines .amt").nth(1).fill("10"); }
         await page.addScriptTag({ content: AXE });
         const v = await page.evaluate(async () => (await window.axe.run(document, { resultTypes: ["violations"] })).violations.map(v => ({ id: v.id, impact: v.impact, sample: v.nodes[0]?.html.slice(0, 120) })));
         for (const x of v) if (["serious", "critical"].includes(x.impact)) problems.push(`${colorScheme} ${u}: ${x.id} ${x.sample}`);

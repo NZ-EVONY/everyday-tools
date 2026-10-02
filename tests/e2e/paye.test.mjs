@@ -8,7 +8,7 @@ test("take-home pay: weekly $1,000 matches IR340 (M, student loan, KiwiSaver 3.5
     const page = await browser.newPage();
     await page.goto(base + "/nz-paye-calculator");
     await page.selectOption("#per", "week");
-    await page.check('input[name="period"][value="weekly"]', { force: true });
+    await page.click('label:has(> input[name="period"][value="weekly"])');
     await page.fill("#payAmount", "1000");
     await page.check("#sl");
     assert.equal(await page.textContent("#rGross"), "$1,000.00");

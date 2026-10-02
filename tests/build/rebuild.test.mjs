@@ -23,6 +23,10 @@ test("build fails after the tax year ends, and when the current year's holidays 
     const taxGone = build(dir, { ET_TODAY: "2027-04-01" });
     assert.notEqual(taxGone.status, 0);
     assert.match(taxGone.stderr, /Tax data for 2026-27 ended/);
+    const hf = path.join(dir, "data/nz/public-holidays.json");
+    const h = JSON.parse(fs.readFileSync(hf, "utf8"));
+    delete h.years["2027"];
+    fs.writeFileSync(hf, JSON.stringify(h));
     const noHolidays = build(dir, { ET_TODAY: "2027-01-15" });
     assert.notEqual(noHolidays.status, 0);
     assert.match(noHolidays.stderr, /no entry for 2027/);

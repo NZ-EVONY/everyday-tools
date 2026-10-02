@@ -48,3 +48,21 @@ One line per default chosen during the build (owner can overrule any of them).
 - Results in the unit converter show 6 significant figures.
 - Settings that go in the URL fragment: GST add/remove; PAYE per/period/code/KiwiSaver/SL; splitter method; unit category and units. Typed amounts, names and descriptions never do.
 - Prose word counts and similarity now also exclude the card grids, the meta chips and the related-links aside (shared navigation, not page copy).
+
+## Phase 3
+- 2027 public holidays added from MBIE's second, unlabelled table: every date matches 2027 and MBIE's stated rules; MBIE's "Saturday 25 April" label is wrong for 2027 (Sunday), the Mondayised date is right. Logged in UNVERIFIED for the owner to re-check.
+- Matariki dates come from MBIE's table (which cites the Te Kāhui o Matariki Public Holiday Act 2022). legislation.govt.nz couldn't be read from this session (a JavaScript bot check, and the headless browser can't pass the session's TLS proxy without disabling verification, which isn't allowed).
+- NZ daylight saving rules and 2026-2029 change dates from govt.nz (DIA). The UTC offsets (+12/+13) aren't stated on that page, so the site gets offsets from the browser's time-zone data, and tests check that data against DIA's change dates.
+- Date arithmetic uses whole calendar days (UTC day numbers); Gregorian calendar for years 1-9999.
+- Days between: the default is the gap (start date not counted); a switch adds one day for an inclusive count.
+- Adding months or years keeps the day of the month if it exists, otherwise the last day of the month; "months between" counts with the same rule.
+- 29 February birthdays: the visitor chooses 28 February or 1 March (default 28 February); the page says to check any legal rule.
+- Working days: Monday to Friday minus national holidays and the chosen region's anniversary, each on MBIE's Monday-to-Friday observed date. Years without data are flagged; weekends-only counting only if the visitor ticks the box. Ranges are limited to ten years.
+- Time zones: IANA zones from `Intl.supportedValuesOf("timeZone")` with a short fallback list; spring-forward gaps move to the next valid time and autumn overlaps use the first (daylight) instant, both explained on screen.
+- Countdown: date, time and zone go in the fragment so a countdown can be shared; the optional label is typed text and never goes in the URL. Updates every second (every minute with reduced motion) and pauses while the tab is hidden.
+- Printables use named @page rules (A4/Letter, portrait/landscape, 10 mm or 0.4 in margins) plus a CSSOM @page fallback; print CSS hides everything but the sheet. Holidays are marked on the actual date and on the Mon-Fri day off when different.
+- Timetable print font scales with the number of rows so up to 48 rows fit one page on any paper; timetables are capped at 48 rows.
+- Checklist strips leading "-", "*", "•" and "[ ]" from pasted lines; up to 200 items; typed text never goes in the URL.
+- "100%" print-scale advice is written "100 per cent" in prose so the typed-percentage test stays strict.
+- Results that are long text (dates, times) use a smaller, wrapping style, and placeholders reserve their space, keeping CLS under 0.02.
+- E2E tests click the visible label of the design's segmented controls instead of force-checking hidden radios.

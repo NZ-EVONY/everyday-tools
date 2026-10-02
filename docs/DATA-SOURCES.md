@@ -68,3 +68,12 @@ No third-party site was used for any figure.
 
 Test fixtures now also hold 6 rows from IRD's secondary-code tables (IR340 weekly and fortnightly,
 IR341 monthly).
+
+## Added in Phase 3 (retrieved 2 October 2026)
+
+| Figure | Value | Source id | Page |
+|---|---|---|---|
+| 2027 national holidays (11) and regional anniversary days (12), with Mon-Fri observed dates | see `data/nz/public-holidays.json` | mbie-public-holidays | [Public holidays and anniversary dates](https://www.employment.govt.nz/leave-and-holidays/public-holidays/public-holidays-and-anniversary-dates) (second table, unlabelled; see UNVERIFIED) |
+| Mondayisation rules (Waitangi, Anzac; Christmas, Boxing Day, New Year days) | as described on the page | mbie-public-holidays | same |
+| NZ daylight saving rule | starts 2am last Sunday in September; ends 3am first Sunday in April | govt-daylight-saving | [Daylight saving in NZ](https://www.govt.nz/browse/recreation-and-the-environment/daylight-saving/) (last updated 11 August 2026) |
+| Change dates 2026-2029 | 27 Sep 2026 / 4 Apr 2027 / 26 Sep 2027 / 2 Apr 2028 / 24 Sep 2028 / 1 Apr 2029 | govt-daylight-saving | same |

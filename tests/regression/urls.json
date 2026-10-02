@@ -3,16 +3,27 @@
  "urls": [
   "/",
   "/about",
+  "/add-subtract-days",
+  "/age-calculator",
   "/contact",
+  "/countdown-timer",
+  "/date-and-time-tools",
+  "/days-between-dates",
   "/flatmate-rent-splitter",
   "/gst-calculator",
   "/guides",
   "/kiwisaver-calculator",
   "/nz-calculators",
   "/nz-paye-calculator",
+  "/printable-calendar",
+  "/printable-checklist",
+  "/printables",
   "/privacy-policy",
   "/sitemap",
   "/terms",
-  "/unit-converter"
+  "/time-zone-converter",
+  "/unit-converter",
+  "/weekly-planner-and-timetable",
+  "/working-days-calculator"
  ]
 }
