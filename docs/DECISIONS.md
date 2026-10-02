@@ -90,3 +90,12 @@ One line per default chosen during the build (owner can overrule any of them).
 - Source links read "label (publisher)", so the Employment New Zealand and DIA publisher names no longer contain brackets ("Employment New Zealand, MBIE"), which avoids nested brackets.
 - Copy-edit found the time-zone page's Australia FAQ showing raw `${...}` placeholders (a plain string instead of a template). Fixed, and a build test now fails on any `${`, `undefined`, `NaN` or `[object Object]` in page text or JSON-LD.
 - Guide copy avoids "Inland Revenue's page X (Inland Revenue)" repetition: it says "The page X", and the link supplies the publisher.
+
+## Phase 6
+- `npm run lighthouse` now defaults to the eight URLs in the brief (with `/guides/working-days-and-public-holidays-in-nz` as the guide).
+- The printing guide was refocused on the New Zealand year (A4, the 2027 holidays with their Monday-to-Friday days off, school terms) rather than generic print advice. School term dates come from the Ministry of Education page (source `moe-school-terms`) and are typed into the guide with that source, not held in `data/`, because no tool uses them.
+- Guides whose worked examples depend on 2027 holiday data become `draft` if that year is missing, instead of crashing the build. The expiry test exercises this path.
+- The PAYE guide's second example (a main job plus a second job on a secondary code, both with a student loan) uses the same library functions as the calculator; the secondary code is picked from the data by total income.
+- `/guides` hub: the "still growing" line was replaced now that all ten guides are published.
+- Cloudflare facts were re-read on 3 October 2026 and are unchanged. Also noted in DEPLOY.md: a Custom Domain can't be created on a hostname with an existing CNAME record.
+

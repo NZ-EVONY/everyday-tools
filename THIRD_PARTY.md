@@ -22,7 +22,10 @@ date, is listed in `data/sources.json` and `docs/DATA-SOURCES.md`.
 - Inland Revenue (ird.govt.nz): income tax rates, secondary tax codes, ACC earners' levy as
   published by IRD, student loan repayment threshold, KiwiSaver rates and government
   contribution, ESCT bands (IR341), GST rate, registration threshold and related guidance.
-- Employment New Zealand / MBIE (employment.govt.nz): public holiday and anniversary dates.
+- Employment New Zealand / MBIE (employment.govt.nz): public holiday and anniversary dates, and the
+  rules for weekend holidays and public holiday entitlements quoted in the holidays guide.
+- Department of Internal Affairs (govt.nz): New Zealand daylight saving dates and the Time Act summary.
+- Ministry of Education (education.govt.nz): 2027 school term dates in the printing guide.
 - Inland Revenue's Payroll calculations and business rules specification (1 April 2026 to 31 March
   2027): the PAYE, student loan, IETC and ESCT calculation method. Used as a method; not redistributed.
 - UK Weights and Measures Act 1985, Schedule 1 (legislation.gov.uk, Crown copyright, Open Government

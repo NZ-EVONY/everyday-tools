@@ -1,6 +1,6 @@
 # Status
 
-**Phase 5 (guides and content QA): done, waiting for the owner's "continue".** Next: Phase 6 (polish, Lighthouse and axe, `DEPLOY.md`, `FINAL-REPORT.md`; still no deploy).
+**All six phases done. Nothing deployed.** The owner deploys with `docs/DEPLOY.md`; results and open items are in `docs/FINAL-REPORT.md`.
 
 ## Built
 - Phase 1 foundation (build, data, expiry checks, trust pages, tests), restyled in Phase 2 to the
@@ -14,8 +14,8 @@
 - Hubs `/nz-calculators`, `/date-and-time-tools`, `/printables`, `/text-tools` and `/guides`, home with tool search, `/sitemap`, 404.
 - Tool registry `config/tools.json` for all 20 planned tools (unpublished ones show "Coming soon").
 
-## Not started
-Phase 6: polish, `DEPLOY.md`, `FINAL-REPORT.md`.
+## Phase 6
+Lighthouse 100/100/100/100 on the eight listed URLs (plus three changed pages), axe clean, CLS under 0.02, budgets met; `DEPLOY.md`, `FINAL-REPORT.md`. The PAYE guide gained a second-job and student loan example; the printing guide now covers the New Zealand year (A4, 2027 holidays, school terms); `/sort-lines-alphabetically` was expanded.
 
 ## Open questions for the owner
 See `docs/OWNER-TODO.md` ("Now") and `docs/UNVERIFIED.md`.

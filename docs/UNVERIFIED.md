@@ -7,11 +7,14 @@ Items here are NOT VERIFIED. Anything a page would need from this list stays unp
 - **Matariki dates from the Act.** legislation.govt.nz serves a JavaScript bot check (AWS WAF) to
   the build session, and the headless browser can't pass this session's TLS proxy without
   disabling certificate checks (not allowed). The Matariki dates (10 July 2026, 25 June 2027) come
-  from MBIE's table, which cites the Act. The owner should compare them with the Act's schedule.
+  from MBIE's table, which cites the Act. The Ministry of Education's term-dates page (read 3 October
+  2026) lists the same two Matariki dates. The owner should still compare them with the Act's schedule.
 - **2027 public holidays.** Taken from MBIE's second table, which has no year heading. All dates
   match 2027 and MBIE's own rules (checked by code), but MBIE labels 25 April as "Saturday"
   (25 April 2027 is a Sunday; the Mondayised Monday 26 April is correct). Re-check once MBIE
-  labels the table.
+  labels the table. Independent support: the Ministry of Education's 2027 term dates list Waitangi
+  Day observed on Monday 8 February, Good Friday 26 March, Easter Monday 29 March, King's Birthday
+  7 June, Matariki 25 June and Labour Day 25 October 2027, all matching.
 - **MBIE regional anniversary dates.** MBIE itself says its regional table "may contain
   unintentional errors" and to check with local councils. Used as published.
 
@@ -34,7 +37,10 @@ Items here are NOT VERIFIED. Anything a page would need from this list stays unp
 - Later changes to official pages after 2 October 2026.
 - The owner's search spot-check (`docs/SEARCH-SPOTCHECK.md`); search engines are not scraped.
 
-## Phase 5 guide notes
+## Phase 5 and 6 guide notes
+- 2027 school term dates in the printing guide are typed into the guide from the Ministry of Education
+  page (read 3 October 2026), not held in `data/`. Schools set their own first and last days within
+  the Ministry's range; the guide says so. Review when the 2028 calendar is printed.
 - The Chatham Islands changing clocks on the mainland's dates is from the time-zone database, not an official page (the guide says so).
 - The printing guide's paper weights (about 80 gsm for copy paper, 120 to 160 gsm for sturdier sheets) and the unprintable edge "of a few millimetres" are general guidance, not from a source.
 - The Employment Leave Act date (August 2028) is time-sensitive; the holidays guide needs a review before then.

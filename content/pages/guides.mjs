@@ -34,6 +34,6 @@ export default function page(ctx) {
 
         <h2>How guides are kept accurate</h2>
         <p>Rules and rates in guides come from official pages and are dated. When a rate changes at the start of a tax year, the guide is reviewed along with the calculators. If you spot something out of date, the ${link("/contact", "contact page")} explains how to report it.</p>
-        <p>Guides are published one at a time as each is written and checked, so this section is still growing.</p>`,
+        <p>New guides are added only when they can be checked against an official source or worked through with the tools themselves.</p>`,
   };
 }

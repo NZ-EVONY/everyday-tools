@@ -130,6 +130,12 @@ Then add the CSP origins listed in public/_headers, update public/ads.txt and se
           <li><strong>Reverse the order</strong> doesn't compare anything; it flips the list upside down, which is handy for logs where the newest line is at the bottom.</li>
         </ul>
 
+        <h2>Worked example: a class list by surname</h2>
+        <p>Sorting compares whole lines from the first character, so a list of full names sorts by first name: <code>Mere Tane</code>, <code>Ana Brown</code>, <code>Liam Ngata</code>, <code>Sofia Ahn</code> becomes <code>Ana Brown</code>, <code>Liam Ngata</code>, <code>Mere Tane</code>, <code>Sofia Ahn</code>. To order by surname, put the surname first. Write the list as "Surname, First name", either by hand or with a formula in a spreadsheet, and the same sort gives <code>Ahn, Sofia</code>, <code>Brown, Ana</code>, <code>Ngata, Liam</code>, <code>Tane, Mere</code>. For a class or team list that's printed and pinned up, that's usually the order people look for.</p>
+
+        <h2>Sorting one column of a spreadsheet</h2>
+        <p>Copying a single column out of a spreadsheet, sorting it here and pasting it back will scramble your data, because the other columns stay where they were. This tool is for lists that stand alone: names, tags, keywords, file names. If each line belongs to a row of other information, sort inside the spreadsheet so whole rows move together. Pasting a whole row works too, but the sort then uses whatever is in the first column.</p>
+
         <h2>Mistakes to avoid</h2>
         <ul>
           <li><strong>Leading spaces.</strong> A space sorts before letters, so " zebra" with a space jumps to the top. Turn on "Trim spaces" first.</li>

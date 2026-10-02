@@ -2,7 +2,8 @@
 
 Things only the owner can do. Claude Code cannot do these.
 
-## Now (before typing "continue" after Phase 1, if possible)
+## Now (before deploying)
+- [ ] Work through the ten checks at the end of `docs/FINAL-REPORT.md`.
 - [ ] Run the five searches in `docs/SEARCH-SPOTCHECK.md` by hand (private window, NZ location) and fill in the table.
 - [ ] Try the five NZ calculators (take-home pay, KiwiSaver, GST, flatmate splitter, unit converter) and compare two take-home pay results with IRD's own PAYE calculator.
 - [ ] Confirm the brand "Everyday Tools" (a one-line change in `site.config.json`).
@@ -16,7 +17,7 @@ Things only the owner can do. Claude Code cannot do these.
 - [ ] Have the privacy policy and terms reviewed; they are templates, not legal advice.
 - [ ] On deploy day, re-check five tax figures (a bracket threshold, the ACC rate and cap, the student loan threshold, the KiwiSaver rate options, the GST rate) and the holiday table against the official pages.
 - [ ] Confirm nothing else is deployed on `myaddr.app` (an earlier address-format plan also targeted that domain) before attaching this Worker.
-- [ ] Deploy with `docs/DEPLOY.md` (written in Phase 6), then confirm MX / Email Routing records still exist and a test email to `nz@myaddr.app` arrives.
+- [ ] Deploy with `docs/DEPLOY.md`, then confirm MX / Email Routing records still exist and a test email to `nz@myaddr.app` arrives.
 - [ ] Cloudflare dashboard: `www` → apex redirect, Always Use HTTPS, Bot Fight Mode off, Rocket Loader off, Email Address Obfuscation off, Web Analytics injection off, check the managed `robots.txt`.
 - [ ] Search Console: Domain property, submit the sitemap, inspect a tool and a guide.
 

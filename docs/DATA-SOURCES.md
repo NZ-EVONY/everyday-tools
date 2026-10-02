@@ -90,3 +90,9 @@ Rules stated in guide copy; no new figures in `data/`.
 | Limits on holidays claimed; working a public holiday; Employment Leave Act from August 2028 | emp-holiday-rights | [Public holidays rights for employees](https://www.employment.govt.nz/leave-and-holidays/public-holidays/public-holidays-rights-for-employees) |
 | Time Act 1974 (NZST UTC+12, Chatham Islands +45 min), pay at a clock change, 2007 review | govt-dst-legislation | [Governing legislation](https://www.govt.nz/browse/recreation-and-the-environment/daylight-saving/governing-legislation/) |
 
+
+## Added in Phase 6 (retrieved 3 October 2026)
+
+| Fact | Source id | Page |
+|---|---|---|
+| 2027 school terms (term 1 starts 28 January to 3 February, ends 9 April; term 2 27 April to 2 July; term 3 19 July to 24 September; term 4 11 October to no later than 17 December); Easter Tuesday a school holiday | moe-school-terms | [School terms and holidays dates](https://www.education.govt.nz/school-terms-and-holidays-dates) (last updated 21 May 2026) |

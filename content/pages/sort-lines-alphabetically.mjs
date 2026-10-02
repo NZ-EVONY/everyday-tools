@@ -8,6 +8,10 @@ export default function page(ctx) {
   const places = ["Whangārei", "Wellington", "Ōamaru", "Otorohanga", "Arrowtown", "ōpōtiki"];
   const plain = files.slice().sort();
   const az = sortLines(files, "az"), nat = sortLines(files, "natural"), pl = sortLines(places, "az");
+  const kids = ["Mere Tane", "Ana Brown", "Liam Ngata", "Sofia Ahn"];
+  const byFirst = sortLines(kids, "az");
+  const flipped = kids.map(n => { const i = n.lastIndexOf(" "); return `${n.slice(i + 1)}, ${n.slice(0, i)}`; });
+  const bySur = sortLines(flipped, "az");
   const list = a => a.map(x => `<code>${x}</code>`).join(", ");
   return {
     path: "/sort-lines-alphabetically",
@@ -43,6 +47,12 @@ export default function page(ctx) {
           <li><strong>Shortest first</strong> and <strong>longest first</strong> count characters as you see them, so an emoji or an accented letter counts once. Lines of the same length keep their original order.</li>
           <li><strong>Reverse the order</strong> doesn't compare anything; it flips the list upside down, which is handy for logs where the newest line is at the bottom.</li>
         </ul>
+
+        <h2>Worked example: a class list by surname</h2>
+        <p>Sorting compares whole lines from the first character, so a list of full names sorts by first name: ${list(kids)} becomes ${list(byFirst)}. To order by surname, put the surname first. Write the list as "Surname, First name", either by hand or with a formula in a spreadsheet, and the same sort gives ${list(bySur)}. For a class or team list that's printed and pinned up, that's usually the order people look for.</p>
+
+        <h2>Sorting one column of a spreadsheet</h2>
+        <p>Copying a single column out of a spreadsheet, sorting it here and pasting it back will scramble your data, because the other columns stay where they were. This tool is for lists that stand alone: names, tags, keywords, file names. If each line belongs to a row of other information, sort inside the spreadsheet so whole rows move together. Pasting a whole row works too, but the sort then uses whatever is in the first column.</p>
 
         <h2>Mistakes to avoid</h2>
         <ul>

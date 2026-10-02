@@ -14,13 +14,14 @@ export default function page(ctx) {
     return `<tr><td>${esc(r.name)}</td>${d.map(h => `<td>${h ? longDate(h.observedForMonFri) : "not listed"}</td>`).join("")}</tr>`;
   }).join("");
   const mat = years.map(y => nat(y).find(h => /Matariki/.test(h.name)));
+  const ready = !!holidays.years["2027"]; // worked examples use 2027 dates; without its data the page stays draft
   const xmas = workingDays("2027-12-20", "2028-01-07", holidays, {});
   const dec = workingDays("2027-12-20", "2027-12-31", holidays);
   const akl = workingDays("2027-01-25", "2027-02-12", holidays, { region: "auckland" });
   const wgtn = workingDays("2027-01-25", "2027-02-12", holidays, { region: "wellington" });
   return {
     path: "/guides/working-days-and-public-holidays-in-nz",
-    type: "guide", pillar: "guides", topic: "Public holidays", status: "published", reviewed: "2026-10-03", published: "2026-10-03",
+    type: "guide", pillar: "guides", topic: "Public holidays", status: ready ? "published" : "draft", reviewed: "2026-10-03", published: "2026-10-03",
     title: "Working Days and Public Holidays in NZ: How They Count",
     description: "How New Zealand public holidays affect working-day counts: Mondayisation, regional anniversary days, Matariki, and holidays that fall on a weekend.",
     crumbName: "Working days and public holidays",

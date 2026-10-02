@@ -167,8 +167,8 @@
     },
     {
       "path": "guides.html",
-      "size": 12901,
-      "sha256": "03aa21bea0184d035e54afec3fb3e48a7df38ca823d22c184902160dd7c95118"
+      "size": 12923,
+      "sha256": "4aa82180bbeee93fcf3166c4749a08921cc1c323f6249b10066a806c94722400"
     },
     {
       "path": "guides/cleaning-messy-lists-of-text.html",
@@ -182,8 +182,8 @@
     },
     {
       "path": "guides/how-nz-paye-is-worked-out.html",
-      "size": 18598,
-      "sha256": "be72b7539bbd928ea07b6474c4f08bacd8d1517aa2adf26bfddd0e0d11ea7d2f"
+      "size": 20527,
+      "sha256": "2ca40a073041ba60937e791ea62b2973b041568d70cbc5b0d44ee479b73577d5"
     },
     {
       "path": "guides/how-to-count-days-between-two-dates.html",
@@ -207,8 +207,8 @@
     },
     {
       "path": "guides/printing-calendars-and-planners-at-home.html",
-      "size": 16086,
-      "sha256": "3e7cadb982305684c688b8f59bc3e177e23ce31dfe450befc5cb6318b596c336"
+      "size": 17011,
+      "sha256": "88aea019d3145f7679a48d5353953c573b067faf6e80a20f0db8fc60399163bf"
     },
     {
       "path": "guides/splitting-rent-and-bills-between-flatmates.html",
@@ -287,8 +287,8 @@
     },
     {
       "path": "sort-lines-alphabetically.html",
-      "size": 21794,
-      "sha256": "6cd3963ff5afde6deef55e2cf56d542460d6f527a25013f375679efe8be38f77"
+      "size": 23022,
+      "sha256": "3dee3b9e5a016f9ec891e0115699f1e8192d39e604e7a371d21c25d88b393126"
     },
     {
       "path": "terms.html",

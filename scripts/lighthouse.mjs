@@ -11,8 +11,8 @@ import { createServer } from "./serve.mjs";
 import { findChrome } from "./chrome.mjs";
 
 const [dir = "public", label = "current", ...paths] = process.argv.slice(2);
-// Defaults: the pages built so far from the eight listed in the brief, plus the pilot hubs.
-const urls = paths.length ? paths : ["/", "/gst-calculator", "/nz-calculators", "/guides", "/privacy-policy"];
+// Defaults: the eight URLs listed in the brief (one guide).
+const urls = paths.length ? paths : ["/", "/nz-paye-calculator", "/kiwisaver-calculator", "/working-days-calculator", "/printable-calendar", "/text-cleaner", "/guides/working-days-and-public-holidays-in-nz", "/privacy-policy"];
 const chrome = findChrome();
 if (!chrome) { console.error("NOT VERIFIED: no Chrome/Chromium found. Set CHROME_PATH."); process.exit(2); }
 

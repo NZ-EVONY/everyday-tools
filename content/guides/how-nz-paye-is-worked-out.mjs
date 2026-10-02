@@ -12,6 +12,10 @@ export default function page(ctx) {
   const monthly = payeMain(Math.round(salary * 100 / 12), "monthly", tax);
   const w = takeHome(Math.round(salary * 100 / 52), { period: "weekly" }, tax);
   const m = takeHome(Math.round(salary * 100 / 12), { period: "monthly" }, tax);
+  const second = 300, total = salary + second * 52;
+  const code = tax.secondaryCodes.codes.find(c => c.incomeUpTo === null || total <= c.incomeUpTo);
+  const j1 = takeHome(Math.round(salary * 100 / 52), { period: "weekly", studentLoan: true }, tax);
+  const j2 = takeHome(second * 100, { period: "weekly", code: code.code, studentLoan: true }, tax);
   const rows = layers.map(l => `<tr><td>${dollars(l.lo === 0 ? 0 : l.lo + 1)} to ${l.hi && l.hi < salary ? dollars(l.hi) : dollars(salary)}</td><td class="num">${pct(l.rate)}</td><td class="num">${money(Math.round(l.tax * 100))}</td></tr>`).join("");
   return {
     path: "/guides/how-nz-paye-is-worked-out",
@@ -22,15 +26,17 @@ export default function page(ctx) {
     reviewed: "2026-10-03",
     published: "2026-10-03",
     title: `How NZ PAYE Is Worked Out (${tax.taxYear})`,
-    description: "A step-by-step look at how New Zealand employers work out PAYE each payday: tax brackets, the ACC levy, and why pay periods round the way they do.",
+    description: "How NZ employers work out PAYE each payday: tax brackets, the ACC levy, rounding by pay period, and a second job with a student loan.",
     crumbName: "How NZ PAYE is worked out",
     h1: "How NZ PAYE",
     h1Accent: "is worked out",
-    sources: ["ird-tax-rates-individuals", "ird-acc-levy-rates", "ird-payroll-spec-2026-27", "ird-ir340-apr-2026"].map(ctx.source),
+    sources: ["ird-tax-rates-individuals", "ird-acc-levy-rates", "ird-payroll-spec-2026-27", "ird-ir340-apr-2026", "ird-student-loan-salary"].map(ctx.source),
     claims: [
       { text: "Income tax brackets for the year", source: tax.incomeTax.sourceId },
       { text: `ACC earners' levy ${pctText(tax.acc.rate)} to ${dollars(tax.acc.maxEarnings)}`, source: tax.acc.sourceId },
       { text: "Payroll method: annualise, truncate, ÷52, convert", source: tax.paye.sourceId },
+      { text: "Secondary code chosen by expected total income; flat rate plus ACC on whole dollars", source: tax.secondaryCodes.sourceId },
+      { text: "Student loan: 12% over the period threshold on main income; 12% of all secondary income", source: tax.paye.sourceId },
     ],
     notice: ctx.taxNotice([tax.incomeTax.sourceId, tax.acc.sourceId, tax.paye.sourceId]),
     intro: `<p>PAYE stands for "pay as you earn": your employer takes income tax and the ACC earners' levy out of each pay and passes it to Inland Revenue, so you don't face one large bill at the end of the year. This guide explains the bands, how a yearly tax bill is turned into a payday deduction, and why the numbers on a pay slip sometimes look a few cents off.</p>`,
@@ -63,6 +69,16 @@ export default function page(ctx) {
           <tr><th scope="row">Take-home pay</th><td class="num">${money(w.net)}</td><td class="num">${money(m.net)}</td></tr>
         </tbody></table>
         <p>Student loan repayments and KiwiSaver come out after this and are worked out separately; both are percentages of gross pay rather than of what's left after tax.</p>
+        <h2>Worked example: a second job and a student loan</h2>
+        <p>Now suppose the same person also works a weekend job paying ${dollars(second)} a week, and has a student loan. Their expected income from both jobs is about ${dollars(total)} a year, so the second job uses the secondary code that covers that total: ${code.code}${code.incomeUpTo ? `, for total income up to ${dollars(code.incomeUpTo)}` : ""}. A secondary code doesn't use the bands at all. Every whole dollar is taxed at one flat rate, ${pct(code.rate)} for ${code.code}, plus the ACC levy, because the main job has already used the lower bands.</p>
+        <p>The student loan works differently on each job too. On the main job, ${pct(tax.studentLoan.rate)} is taken from pay above the weekly threshold of ${money(Math.round(tax.studentLoan.periodThresholds.weekly * 100))}. On the second job there's no threshold: ${pct(tax.studentLoan.secondaryRate)} comes off every dollar, because the threshold has already been used by the main job. Add SL to both tax codes so each employer knows to deduct it.</p>
+        <table><thead><tr><th scope="col">Each week</th><th scope="col" class="num">Main job (M SL)</th><th scope="col" class="num">Second job (${code.code} SL)</th></tr></thead><tbody>
+          <tr><th scope="row">Gross pay</th><td class="num">${money(j1.gross)}</td><td class="num">${money(j2.gross)}</td></tr>
+          <tr><th scope="row">PAYE (tax and ACC)</th><td class="num">${money(j1.paye)}</td><td class="num">${money(j2.paye)}</td></tr>
+          <tr><th scope="row">Student loan</th><td class="num">${money(j1.studentLoan)}</td><td class="num">${money(j2.studentLoan)}</td></tr>
+          <tr><th scope="row">Take-home pay</th><td class="num">${money(j1.net)}</td><td class="num">${money(j2.net)}</td></tr>
+        </tbody></table>
+        <p>The second job keeps ${money(j2.net)} of its ${money(j2.gross)}, which can feel harsh, but it's simply the top slice of an income of ${dollars(total)} being taxed at the rate that slice would attract anyway. If the code is right, the year should square up close to zero. If you'll earn less in total than the code assumes, a lower secondary code or a tailored code from Inland Revenue avoids paying too much during the year.</p>
         <!--@slot mid-content-->
         <h2>Why a pay slip can differ</h2>
         <ul>

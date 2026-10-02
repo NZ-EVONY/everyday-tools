@@ -12,7 +12,7 @@ npm test            # build + unit + build-output + content tests
 npm run serve       # preview public/ at http://localhost:8788
 ```
 Other commands are listed in `CLAUDE.md`. Deployment is done by the owner only, following
-`docs/DEPLOY.md` (written in the final phase).
+`docs/DEPLOY.md`. The final state of the build is in `docs/FINAL-REPORT.md`.
 
 ## Where things are
 - `content/`: page modules (text and structure). `data/`: official figures with sources.
