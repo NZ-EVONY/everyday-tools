@@ -8,7 +8,7 @@
 
   // Theme: the saved choice is applied before first paint by the inline script in <head>.
   const themeBtn = $("#themeToggle");
-  const isDark = () => (root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches);
+  const isDark = () => root.dataset.theme !== "light"; // dark is the default for everyone; the system setting is not followed
   const sync = () => themeBtn?.setAttribute("aria-pressed", String(isDark()));
   themeBtn?.addEventListener("click", () => {
     root.dataset.theme = isDark() ? "light" : "dark";

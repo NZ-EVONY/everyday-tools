@@ -33,11 +33,20 @@ test("without JavaScript: text, navigation and footer render; tools show the nos
   });
 });
 
-test("axe: no serious or critical issues on any page, light and dark", { skip, timeout: 300000 }, async () => {
+// Dark is the default for everyone; light is used only when the header toggle has set data-theme="light"
+// (saved as et-theme). The system colour scheme is not followed, so these tests choose the theme via the saved value.
+const THEMES = ["dark", "light"];
+const withTheme = async (browser, theme, opts = {}) => {
+  const ctx = await browser.newContext(opts);
+  await ctx.addInitScript(th => { try { localStorage.setItem("et-theme", th); } catch (e) {} }, theme);
+  return ctx;
+};
+
+test("axe: no serious or critical issues on any page, dark (default) and light (toggle)", { skip, timeout: 300000 }, async () => {
   await withBrowser(async (browser, base) => {
     const problems = [];
-    for (const colorScheme of ["light", "dark"]) {
-      const ctx = await browser.newContext({ bypassCSP: true, colorScheme });
+    for (const colorScheme of THEMES) {
+      const ctx = await withTheme(browser, colorScheme, { bypassCSP: true });
       const page = await ctx.newPage();
       for (const u of ALL_URLS()) {
         await page.goto(base + u);
@@ -57,8 +66,8 @@ test("layout: no horizontal scroll at 360px, CLS stays under 0.02, screenshots s
     const out = path.join(ROOT, "reports/screens");
     fs.mkdirSync(out, { recursive: true });
     const problems = [];
-    for (const width of [360, 1280]) for (const colorScheme of ["light", "dark"]) {
-      const ctx = await browser.newContext({ viewport: { width, height: 800 }, colorScheme });
+    for (const width of [360, 1280]) for (const colorScheme of THEMES) {
+      const ctx = await withTheme(browser, colorScheme, { viewport: { width, height: 800 } });
       const page = await ctx.newPage();
       await page.addInitScript(() => { window.__cls = 0; new PerformanceObserver(l => { for (const e of l.getEntries()) if (!e.hadRecentInput) window.__cls += e.value; }).observe({ type: "layout-shift", buffered: true }); });
       for (const u of ALL_URLS()) {
@@ -87,8 +96,27 @@ test("keyboard: skip link works and the theme toggle persists only the theme", {
     const storage = await page.evaluate(() => ({ ...localStorage }));
     assert.deepEqual(Object.keys(storage), ["et-theme"]);
     assert.equal(await page.evaluate(() => document.cookie), "");
+    assert.equal(await page.evaluate(() => document.documentElement.dataset.theme), "light", "first click on the default dark theme switches to light");
     await page.goto(base + "/");
-    assert.ok(["dark", "light"].includes(await page.evaluate(() => document.documentElement.dataset.theme)));
+    assert.equal(await page.evaluate(() => document.documentElement.dataset.theme), "light", "the saved choice is applied on the next page");
+    await page.click("#themeToggle");
+    assert.equal(await page.evaluate(() => localStorage.getItem("et-theme")), "dark");
+  });
+});
+
+test("dark is the default for everyone: a light system setting does not change it, and the toggle starts as dark", { skip }, async () => {
+  await withBrowser(async (browser, base) => {
+    for (const colorScheme of ["light", "dark", "no-preference"]) {
+      const ctx = await browser.newContext({ colorScheme });
+      const page = await ctx.newPage();
+      for (const u of ["/", "/gst-calculator", "/no-such-page"]) {
+        await page.goto(base + u);
+        assert.notEqual(await page.evaluate(() => document.documentElement.dataset.theme), "light", `${colorScheme} ${u}`);
+        assert.equal(await page.evaluate(() => getComputedStyle(document.body).backgroundColor), "rgb(14, 23, 53)", `${colorScheme} ${u}: page background is #0E1735`);
+        assert.equal(await page.getAttribute("#themeToggle", "aria-pressed"), "true");
+      }
+      await ctx.close();
+    }
   });
 });
 

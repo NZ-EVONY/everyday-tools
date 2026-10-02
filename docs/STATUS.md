@@ -19,3 +19,5 @@ Lighthouse 100/100/100/100 on the eight listed URLs (plus three changed pages), 
 
 ## Open questions for the owner
 See `docs/OWNER-TODO.md` ("Now") and `docs/UNVERIFIED.md`.
+
+- 2026-10-03: Letterpile palette and dark-by-default theme applied (see DECISIONS). npm test, regression, e2e (axe, dark and light), Lighthouse 100 x4, check:contrast and check:deploy pass locally; deployed to the `everyday-tools` Worker.

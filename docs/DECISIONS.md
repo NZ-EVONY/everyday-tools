@@ -99,3 +99,5 @@ One line per default chosen during the build (owner can overrule any of them).
 - `/guides` hub: the "still growing" line was replaced now that all ten guides are published.
 - Cloudflare facts were re-read on 3 October 2026 and are unchanged. Also noted in DEPLOY.md: a Custom Domain can't be created on a hostname with an existing CNAME record.
 
+
+- 2026-10-03: Recoloured the whole site to the Letterpile "Night Edition" palette at the owner's request (colours and theme only; no content, URL, title or tool-logic change). Teal and yellow became navy, electric blue and violet; dark is now the default for everyone and the system colour scheme is no longer followed; light shows only after the header toggle sets `data-theme="light"` (saved as `et-theme`, same key as before). One `theme-color` (`#0A1030`). Yellow `#FFDD55` remains only as the dark focus ring and no-JavaScript warning background. This replaces the "Pounamu & Kōwhai" look approved on 2 October 2026; `design/` mockups are kept as history. Added `npm run check:contrast`. The CLAUDE.md rule "never deploy" was overridden by the owner's explicit request to deploy this change.

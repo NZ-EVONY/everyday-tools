@@ -19,6 +19,7 @@
     "serve": "node scripts/serve.mjs public 8788",
     "dev": "wrangler dev --local",
     "dry-run": "wrangler deploy --dry-run --outdir .wrangler-dry",
+    "check:contrast": "node scripts/check-contrast.mjs",
     "check:deploy": "node scripts/check-deploy.mjs",
     "build:ads-preview": "node scripts/build.mjs --ads-preview",
     "measure:text": "node scripts/build.mjs && node scripts/measure-text.mjs"

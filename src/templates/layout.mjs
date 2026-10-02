@@ -98,7 +98,7 @@ ${footer({ nav: ctx.nav, site, year: ctx.year, isPublished: ctx.isPublished })}`
 <title>${esc(page.title)}</title>
 <meta name="description" content="${esc(page.description)}">
 <meta name="author" content="${esc(site.authorName)}">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark">
 <link rel="canonical" href="${canonical}">
 ${page.noindex ? `<meta name="robots" content="noindex">\n` : ""}<meta property="og:type" content="${page.type === "guide" ? "article" : "website"}">
 <meta property="og:site_name" content="${esc(site.brand)}">
@@ -109,8 +109,7 @@ ${page.noindex ? `<meta name="robots" content="noindex">\n` : ""}<meta property=
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${esc(page.title)}">
 <meta name="twitter:description" content="${esc(page.description)}">
-<meta name="theme-color" content="${site.themeColorLight}" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="${site.themeColorDark}" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="${site.themeColorDark}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <script>${HEAD_SCRIPT}</script>
 <link rel="stylesheet" href="${assets["style.css"]}">

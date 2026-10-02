@@ -123,6 +123,17 @@ test("no unrendered template placeholders or broken values in page text", () => 
   }
 });
 
+test("dark is the default theme: one dark theme-color, no prefers-color-scheme, light only via data-theme", () => {
+  const css = fs.readFileSync(path.join(PUBLIC, "assets", fs.readdirSync(path.join(PUBLIC, "assets")).find(f => /^style.*\.css$/.test(f))), "utf8");
+  assert.ok(!css.includes("prefers-color-scheme"), "CSS must not follow the system colour scheme");
+  assert.ok(css.includes("#0E1735") && css.includes("#0A1030"), "Letterpile dark palette present");
+  for (const p of all.filter(p => p.type !== "error")) {
+    const h = html(p);
+    assert.deepEqual(h.match(/<meta name="theme-color"[^>]*>/g), ['<meta name="theme-color" content="#0A1030">'], p.path);
+    assert.ok(!h.includes("prefers-color-scheme"), p.path);
+  }
+});
+
 test("no inline styles, exactly one inline script, and it is the theme script", () => {
   for (const p of all) {
     const h = html(p);

@@ -11,8 +11,8 @@ Mockup content was treated as sample copy: the build supplies the real text and 
 and `data/`, so wording that the mockups used but that isn't sourced (for example, example exempt
 supplies) was not carried over.
 
-- System font stack only (no web fonts). Light and dark themes from `prefers-color-scheme`, plus a toggle
-  stored in `localStorage` (`et-theme`) and applied before first paint by the one inline script.
+- System font stack only (no web fonts). Dark by default for everyone, and light only through the header toggle
+  (stored in `localStorage` as `et-theme`, applied before first paint by the one inline script).
 - No popups or modals. The header is sticky, as in the approved design (see DECISIONS).
 - Results are in reserved, `aria-live` regions; touch targets at least 44px; visible focus rings; skip link;
   `prefers-reduced-motion` turns off transitions.
@@ -20,23 +20,32 @@ supplies) was not carried over.
 
 ## Colours and contrast (WCAG 2.2 AA: 4.5:1 for text)
 
-| Theme | Pair | Colours | Ratio |
+**Recoloured on 3 October 2026 to the Letterpile "Night Edition" palette.** The original "Pounamu & Kōwhai" teal/yellow tokens were replaced by navy, electric blue and violet. Dark is the default for everyone (the system colour scheme is not followed); light shows only when the header toggle sets `data-theme="light"` (saved as `et-theme`). One `theme-color`, `#0A1030`. Yellow (`#FFDD55`) is now only the dark-theme focus ring and the no-JavaScript warning background. `npm run check:contrast` recomputes every pair below from the tokens in `style.css`.
+
+| Token | Dark (default) | Light | Use |
 |---|---|---|---|
-| light | body text on page | `#0B1F1A` on `#F6F5EF` | 15.69:1 |
-| light | secondary text on card | `#34473F` on `#FFFFFF` | 9.91:1 |
-| light | muted text on page | `#52665D` on `#F6F5EF` | 5.63:1 |
-| light | muted text on card | `#52665D` on `#FFFFFF` | 6.15:1 |
-| light | links and accent on page | `#006B58` on `#F6F5EF` | 5.93:1 |
-| light | links and accent on card | `#006B58` on `#FFFFFF` | 6.47:1 |
-| light | dark text on gradient (green end) | `#03221B` on `#00B792` | 6.56:1 |
-| light | dark text on gradient (yellow end) | `#03221B` on `#F6C544` | 10.40:1 |
-| light | error text on card | `#B42318` on `#FFFFFF` | 6.57:1 |
-| dark | body text on page | `#E9F5F0` on `#06120E` | 17.07:1 |
-| dark | muted text on card | `#8DA69D` on `#0E1F19` | 6.57:1 |
-| dark | links and accent on page | `#3FE0B5` on `#06120E` | 11.39:1 |
-| dark | links and accent on card | `#3FE0B5` on `#0E1F19` | 10.21:1 |
-| dark | dark text on gradient (green end) | `#03221B` on `#19D3A8` | 8.75:1 |
-| dark | error text on card | `#FF9B8C` on `#0E1F19` | 8.40:1 |
+| `--bg` / `--bg-2` | `#0E1735` / `#0A1030` | `#F3F5FF` / `#E8ECFF` | page / footer, segmented controls, code blocks |
+| `--surface` / `--surface-2` | `#161F4A` / `#1D2960` | `#FFFFFF` / `#F0F3FF` | cards / inputs, quiet panels |
+| `--ink` / `--ink-2` / `--ink-3` | `#F2F5FF` / `#CBD5F7` / `#AEBBE6` | `#0A1030` / `#2B3668` / `#4A557F` | body / secondary / muted text |
+| `--accent` (links) | `#7FB0FF` | `#1F4FD8` | links, icons, chips |
+| `--accent-2` / `--violet` | `#4D8DFF` / `#9A7BFF` | same | chart and legend colours |
+| `--grad` | `#4D8DFF` to `#9A7BFF` | same | primary button, key result, icon hover, bullets |
+| `--on-grad` | `#0A1030` | same | text on the gradient (5.8:1 to 5.9:1) |
+| `--line` / `--line-2` / `--field` | `#2D3E86` / `#4559AD` / `#7F92E6` | `#CBD3F5` / `#A7B3E6` / `#6A76A8` | borders / input borders (3:1 needed) |
+| `--focus` | `#FFDD55` | `#1D3FD1` | focus ring |
+| `--error` | `#FF9A8A` | `#B3261E` | error text and borders |
+
+| Pair | Dark | Light |
+|---|---|---|
+| body text on page | 16.17:1 | 17.10:1 |
+| secondary text on card | 10.84:1 | 11.47:1 |
+| muted text on card | 8.31:1 | 7.25:1 |
+| muted text on quiet panel | 7.18:1 | 6.55:1 |
+| links on page / card | 8.01:1 / 7.19:1 | 6.10:1 / 6.63:1 |
+| error text on card | 7.71:1 | 6.54:1 |
+| navy text on gradient (blue / middle / violet) | 5.82 / 5.95 / 5.89:1 | same |
+| input border on card (non-text, 3:1) | 5.38:1 | 4.40:1 |
+| focus ring on page | 13.19:1 | 7.20:1 |
 
 axe-core reports no serious or critical issues on any page in either theme (Phase 2 e2e run).
 

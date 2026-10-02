@@ -79,7 +79,7 @@ addAsset("style.css", fs.readFileSync(path.join(SRC, "style.css")));
 addAsset("site.js", fs.readFileSync(path.join(SRC, "site.js")));
 if (fs.existsSync(path.join(SRC, "worker.js"))) addAsset("worker.js", bundle(path.join(SRC, "worker.js")));
 for (const f of fs.readdirSync(path.join(SRC, "js")).filter(f => f.endsWith(".js")).sort()) addAsset(`js/${f}`, bundle(path.join(SRC, "js", f)));
-write("favicon.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00B792"/><stop offset="1" stop-color="#F6C544"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#g)"/><g fill="#03221B"><rect x="6" y="6" width="9" height="9" rx="3"/><rect x="17" y="17" width="9" height="9" rx="3"/><rect x="17" y="6" width="9" height="9" rx="3" opacity=".55"/><rect x="6" y="17" width="9" height="9" rx="3" opacity=".55"/></g></svg>\n`);
+write("favicon.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4D8DFF"/><stop offset="1" stop-color="#9A7BFF"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#g)"/><g fill="#0A1030"><rect x="6" y="6" width="9" height="9" rx="3"/><rect x="17" y="17" width="9" height="9" rx="3"/><rect x="17" y="6" width="9" height="9" rx="3" opacity=".55"/><rect x="6" y="17" width="9" height="9" rx="3" opacity=".55"/></g></svg>\n`);
 
 // ---------- content ----------
 
