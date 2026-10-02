@@ -9,6 +9,7 @@ Things only the owner can do. Claude Code cannot do these.
 
 - [ ] Compare the 2026 and 2027 Matariki dates (10 July 2026, 25 June 2027) with the schedule in the Te Kāhui o Matariki Public Holiday Act 2022, and check MBIE's 2027 table has a year label (see `docs/UNVERIFIED.md`).
 - [ ] Print a calendar, a planner and a checklist on your own printer (Chrome, and Firefox or Safari if you use them).
+- [ ] Read the ten guides, starting with the four money guides and the holidays guide, and flag anything that reads wrongly for a New Zealand reader.
 
 ## Before launch
 - [ ] Decide, with advice, whether the privacy policy needs a more identifiable controller than "an independent publisher" plus `nz@myaddr.app` (NZ Privacy Act 2020 and GDPR/UK GDPR).
@@ -25,4 +26,5 @@ Things only the owner can do. Claude Code cannot do these.
 
 ## Every year
 - [ ] By March: add `data/nz/tax-YYYY-YY.json` for the new tax year and one line in `config/data.json` (the build warns from 1 March and fails from 1 April).
+- [ ] Before August 2028: review the holidays guide and working days copy for the Employment Leave Act, which Employment New Zealand says replaces the Holidays Act then.
 - [ ] By September: add next year's holiday table from MBIE (the build warns from 1 September and fails on 1 January).

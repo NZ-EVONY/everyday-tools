@@ -116,7 +116,7 @@
     {
       "id": "mbie-public-holidays",
       "label": "Public holidays and anniversary dates",
-      "publisher": "Employment New Zealand (MBIE)",
+      "publisher": "Employment New Zealand, MBIE",
       "url": "https://www.employment.govt.nz/leave-and-holidays/public-holidays/public-holidays-and-anniversary-dates",
       "retrieved": "2026-10-02",
       "licenceNote": "Dates read from the page; no text reproduced."
@@ -180,6 +180,46 @@
       "url": "https://www.govt.nz/browse/recreation-and-the-environment/daylight-saving/",
       "retrieved": "2026-10-02",
       "licenceNote": "Dates read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-what-tax-code",
+      "label": "What tax code should I use?",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/income-tax/income-tax-for-individuals/tax-codes-and-tax-rates-for-individuals/what-tax-code-should-i-use",
+      "retrieved": "2026-10-03",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "ird-secondary-codes",
+      "label": "Secondary tax codes",
+      "publisher": "Inland Revenue",
+      "url": "https://www.ird.govt.nz/income-tax/income-tax-for-individuals/tax-codes-and-tax-rates-for-individuals/secondary-tax-codes",
+      "retrieved": "2026-10-03",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "emp-weekend-holidays",
+      "label": "When a public holiday falls on a weekend",
+      "publisher": "Employment New Zealand, MBIE",
+      "url": "https://www.employment.govt.nz/leave-and-holidays/public-holidays/when-a-public-holiday-falls-on-a-weekend",
+      "retrieved": "2026-10-03",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "emp-holiday-rights",
+      "label": "Public holidays rights for employees",
+      "publisher": "Employment New Zealand, MBIE",
+      "url": "https://www.employment.govt.nz/leave-and-holidays/public-holidays/public-holidays-rights-for-employees",
+      "retrieved": "2026-10-03",
+      "licenceNote": "Facts read from the page; no text reproduced."
+    },
+    {
+      "id": "govt-dst-legislation",
+      "label": "Daylight saving: governing legislation",
+      "publisher": "Department of Internal Affairs, govt.nz",
+      "url": "https://www.govt.nz/browse/recreation-and-the-environment/daylight-saving/governing-legislation/",
+      "retrieved": "2026-10-03",
+      "licenceNote": "Facts read from the page; no text reproduced."
     }
   ]
 }

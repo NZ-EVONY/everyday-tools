@@ -64,6 +64,7 @@ export default function page(ctx) {
       { href: "/time-zone-converter", label: "Time zone converter" },
       { href: "/days-between-dates", label: "Days between dates" },
       { href: "/date-and-time-tools", label: "All date and time tools" },
+      { href: "/guides/new-zealand-time-zones-and-daylight-saving", label: "Guide: NZ time zones and daylight saving" },
     ],
   };
 }

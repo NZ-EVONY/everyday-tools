@@ -64,6 +64,7 @@ export default function page(ctx) {
       { href: "/text-cleaner", label: "Text cleaner (all options)" },
       { href: "/remove-blank-lines", label: "Remove blank lines" },
       { href: "/sort-lines-alphabetically", label: "Sort lines alphabetically" },
+      { href: "/guides/cleaning-messy-lists-of-text", label: "Guide: cleaning messy lists" },
     ],
   };
 }

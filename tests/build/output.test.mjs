@@ -116,6 +116,13 @@ test("_headers: rule limits, security headers, CSP with the inline script's hash
   for (const d of ["default-src 'self'", "style-src 'self'", "connect-src 'self'", "frame-ancestors 'none'", "object-src 'none'", "base-uri 'none'"]) assert.ok(csp.includes(d), d);
 });
 
+test("no unrendered template placeholders or broken values in page text", () => {
+  for (const p of all) {
+    const h = html(p).replace(/<script(?! type="application\/ld\+json")[\s\S]*?<\/script>/g, "").replace(/<svg[\s\S]*?<\/svg>/g, "");
+    for (const bad of ["${", "undefined", "NaN", "[object Object]"]) assert.ok(!h.includes(bad), `${p.path} contains ${bad}`);
+  }
+});
+
 test("no inline styles, exactly one inline script, and it is the theme script", () => {
   for (const p of all) {
     const h = html(p);

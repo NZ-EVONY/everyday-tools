@@ -80,6 +80,7 @@ export default function page(ctx) {
       { href: "/printable-calendar", label: "Printable calendar" },
       { href: "/printable-checklist", label: "Printable checklist" },
       { href: "/printables", label: "All printables" },
+      { href: "/guides/printing-calendars-and-planners-at-home", label: "Guide: printing at home" },
     ],
   };
 }

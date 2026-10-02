@@ -59,6 +59,7 @@ export default function page(ctx) {
       { href: "/text-cleaner", label: "Text cleaner (all options)" },
       { href: "/remove-duplicate-lines", label: "Remove duplicate lines" },
       { href: "/add-text-to-start-and-end-of-lines", label: "Add text to start and end of lines" },
+      { href: "/guides/cleaning-messy-lists-of-text", label: "Guide: cleaning messy lists" },
     ],
   };
 }

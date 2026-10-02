@@ -96,6 +96,7 @@ export default function page(ctx) {
     related: [
       { href: "/nz-paye-calculator", label: "Take-home pay calculator" },
       { href: "/nz-calculators", label: "All NZ calculators" },
+      { href: "/guides/kiwisaver-contributions-explained", label: "KiwiSaver contributions explained" },
     ],
   };
 }

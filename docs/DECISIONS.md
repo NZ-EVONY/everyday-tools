@@ -79,3 +79,14 @@ One line per default chosen during the build (owner can overrule any of them).
 - Counter: characters are graphemes via `Intl.Segmenter` (fallback: code points); a word is a run of letters/digits that may contain an apostrophe, hyphen or full stop; reading 200 and speaking 130 words a minute are stated as working assumptions and are editable.
 - Typed text, prefixes, suffixes and separators never go in the URL; only on/off switches and choices that differ from the page's preset do.
 - Long text results (dates, times) are stacked under their label and short result sentences reserve their space, so no page shifts by more than 0.005 at 360 or 1280 px.
+
+## Phase 5
+- Guides live in `content/guides/` with type `guide` and pillar `guides`; the `/guides` hub lists them automatically. Each has an H1, a one-paragraph summary (`p.lede`), descriptive H2s, a worked example or table, related links and a visible "Last reviewed" date. The money guides (PAYE, tax codes, KiwiSaver, GST) carry the standard source line and disclaimer.
+- Every number in a guide's examples is computed at build time with the same library code as the tools (PAYE, KiwiSaver, GST lines, splitter, dates, time zones, text engine), so a guide can't disagree with its tool.
+- The GST guide keeps the brief's slug (`...-15-percent`), but its copy takes the rate from `data/nz/gst.json`.
+- Rules stated in the holidays and time-zone guides come from Employment New Zealand and govt.nz pages read on 3 October 2026 (three sources added). Pay rules are mentioned only as context; the site doesn't calculate holiday pay.
+- Time-zone offsets in the guide table come from the build machine's time-zone database, like the converter; the Chatham Islands following the mainland's change dates is stated as what the database shows.
+- Each tool's Related list now includes its guide, and the hubs link to their guides in the prose. The link check reports 0 broken links and 0 orphans.
+- Source links read "label (publisher)", so the Employment New Zealand and DIA publisher names no longer contain brackets ("Employment New Zealand, MBIE"), which avoids nested brackets.
+- Copy-edit found the time-zone page's Australia FAQ showing raw `${...}` placeholders (a plain string instead of a template). Fixed, and a build test now fails on any `${`, `undefined`, `NaN` or `[object Object]` in page text or JSON-LD.
+- Guide copy avoids "Inland Revenue's page X (Inland Revenue)" repetition: it says "The page X", and the link supplies the publisher.

@@ -76,6 +76,7 @@ export default function page(ctx) {
       { href: "/days-between-dates", label: "Days between dates" },
       { href: "/working-days-calculator", label: "Working days calculator" },
       { href: "/date-and-time-tools", label: "All date and time tools" },
+      { href: "/guides/how-to-count-days-between-two-dates", label: "Guide: counting days between dates" },
     ],
   };
 }

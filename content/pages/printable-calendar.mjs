@@ -84,6 +84,7 @@ export default function page(ctx) {
       { href: "/weekly-planner-and-timetable", label: "Weekly planner and timetable" },
       { href: "/working-days-calculator", label: "Working days calculator" },
       { href: "/printables", label: "All printables" },
+      { href: "/guides/printing-calendars-and-planners-at-home", label: "Guide: printing at home" },
     ],
   };
 }

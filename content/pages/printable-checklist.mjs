@@ -69,6 +69,7 @@ export default function page(ctx) {
       { href: "/weekly-planner-and-timetable", label: "Weekly planner and timetable" },
       { href: "/printable-calendar", label: "Printable calendar" },
       { href: "/printables", label: "All printables" },
+      { href: "/guides/printing-calendars-and-planners-at-home", label: "Guide: printing at home" },
     ],
   };
 }

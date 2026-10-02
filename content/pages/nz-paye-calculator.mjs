@@ -132,7 +132,7 @@ export default function page(ctx) {
         </ul>
 
         <h2>Choosing a tax code</h2>
-        <p>Use M for your only job or your highest-paying one. ME is the same but includes the independent earner tax credit, worth up to ${dollars(tax.ietc.amount)} a year if you're a New Zealand tax resident earning between ${dollars(tax.ietc.lower)} and ${dollars(tax.ietc.upper)} and don't get Working for Families, an income-tested benefit or NZ Super. For a second job, pick the secondary code that matches your expected total income from every job: ${sec.map(c => c.code).join(", ")}, from lowest to highest. Add SL if you have a student loan. Inland Revenue's page ${src("ird-about-tax-codes")} explains the full list.</p>
+        <p>Use M for your only job or your highest-paying one. ME is the same but includes the independent earner tax credit, worth up to ${dollars(tax.ietc.amount)} a year if you're a New Zealand tax resident earning between ${dollars(tax.ietc.lower)} and ${dollars(tax.ietc.upper)} and don't get Working for Families, an income-tested benefit or NZ Super. For a second job, pick the secondary code that matches your expected total income from every job: ${sec.map(c => c.code).join(", ")}, from lowest to highest. Add SL if you have a student loan. The page ${src("ird-about-tax-codes")} explains the full list.</p>
 
         <h2>Limits</h2>
         <p>This is an estimate for ordinary salary or wages in the ${tax.taxYear} tax year. It doesn't handle lump sums, schedular payments, tailored codes, child support, or the end-of-year square-up when Inland Revenue checks whether the right amount of tax was taken. ${link("/gst-calculator", "GST")} is a separate tax on prices and doesn't come out of wages. What you type stays in your browser: the pay amount is never saved or sent, and only your settings, such as pay frequency and tax code, are kept in the page address after the # sign.</p>`,
@@ -145,6 +145,8 @@ export default function page(ctx) {
       { href: "/gst-calculator", label: "GST calculator" },
       { href: "/nz-calculators", label: "All NZ calculators" },
       { href: "/guides", label: "Guides" },
+      { href: "/guides/how-nz-paye-is-worked-out", label: "How NZ PAYE is worked out" },
+      { href: "/guides/nz-tax-codes-explained", label: "NZ tax codes explained" },
     ],
   };
 }

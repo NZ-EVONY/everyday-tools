@@ -79,12 +79,13 @@ export default function page(ctx) {
         <p>Only the two zones you pick are kept in the page address after the # sign, never the time you type. To count down to an event in any zone, use the ${link("/countdown-timer", "countdown timer")}.</p>`,
     faq: [
       { q: "When does daylight saving start and end in New Zealand?", a: `<p>It starts at ${dst.rule.starts} and ends at ${dst.rule.ends}, according to the New Zealand Government's daylight saving page.</p>` },
-      { q: "Why does the time difference to Australia change during the year?", a: "<p>New Zealand and Australia change their clocks on different dates, and not every Australian state changes at all. In the time-zone data, Sydney is ${syd[0]} in January and ${syd[1]} in July, while Brisbane is ${bne[0]} in January and ${bne[1]} in July. The converter applies each place's own rules for the date you choose.</p>" },
+      { q: "Why does the time difference to Australia change during the year?", a: `<p>New Zealand and Australia change their clocks on different dates, and not every Australian state changes at all. In the time-zone data, Sydney is ${syd[0]} in January and ${syd[1]} in July, while Brisbane is ${bne[0]} in January and ${bne[1]} in July. The converter applies each place's own rules for the date you choose.</p>` },
     ],
     related: [
       { href: "/countdown-timer", label: "Countdown timer" },
       { href: "/working-days-calculator", label: "Working days calculator" },
       { href: "/date-and-time-tools", label: "All date and time tools" },
+      { href: "/guides/new-zealand-time-zones-and-daylight-saving", label: "Guide: NZ time zones and daylight saving" },
     ],
   };
 }

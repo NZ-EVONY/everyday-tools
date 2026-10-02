@@ -66,6 +66,7 @@ export default function page(ctx) {
       { href: "/sort-lines-alphabetically", label: "Sort lines alphabetically" },
       { href: "/word-and-character-counter", label: "Word and character counter" },
       { href: "/text-tools", label: "All text tools" },
+      { href: "/guides/cleaning-messy-lists-of-text", label: "Guide: cleaning messy lists" },
     ],
   };
 }

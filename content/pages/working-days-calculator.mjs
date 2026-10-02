@@ -85,6 +85,7 @@ export default function page(ctx) {
       { href: "/days-between-dates", label: "Days between dates" },
       { href: "/printable-calendar", label: "Printable calendar" },
       { href: "/date-and-time-tools", label: "All date and time tools" },
+      { href: "/guides/working-days-and-public-holidays-in-nz", label: "Guide: working days and public holidays" },
     ],
   };
 }

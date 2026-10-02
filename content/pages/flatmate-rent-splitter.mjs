@@ -95,6 +95,7 @@ export default function page(ctx) {
     related: [
       { href: "/nz-calculators", label: "All NZ calculators" },
       { href: "/nz-paye-calculator", label: "Take-home pay calculator" },
+      { href: "/guides/splitting-rent-and-bills-between-flatmates", label: "Guide: splitting rent and bills" },
     ],
   };
 }

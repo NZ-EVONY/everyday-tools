@@ -24,6 +24,6 @@ export default function page(ctx) {
         <p>The designs use thin black lines and light grey shading, so they print well in black and white and use little ink. If your printer has a draft or economy mode, it's usually fine for planners and checklists.</p>
 
         <h2>Privacy</h2>
-        <p>What you type into a printable, such as checklist items or a timetable title, stays in your browser and isn't saved or sent. Layout choices are kept in the page address after the # sign, so you can bookmark a setup and print it again next week. To work out dates before printing, try the ${link("/date-and-time-tools", "date and time tools")}.</p>`,
+        <p>What you type into a printable, such as checklist items or a timetable title, stays in your browser and isn't saved or sent. Layout choices are kept in the page address after the # sign, so you can bookmark a setup and print it again next week. To work out dates before printing, try the ${link("/date-and-time-tools", "date and time tools")}. If a page won't fit or the back of a sheet comes out upside down, the guide to ${link("/guides/printing-calendars-and-planners-at-home", "printing calendars and planners at home")} covers the settings that fix it.</p>`,
   };
 }

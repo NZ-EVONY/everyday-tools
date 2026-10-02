@@ -24,6 +24,6 @@ export default function page(ctx) {
         <p>Date arithmetic is done in whole calendar days, so daylight saving and time zones never shift a day count. Leap years follow the Gregorian rules. Time-zone tools use the time-zone database built into your browser, so nothing is looked up online. Where a result depends on a choice, such as whether a range is inclusive or what a 29 February birthday counts as in other years, the tool asks rather than assuming, and its page explains the difference.</p>
 
         <h2>Privacy</h2>
-        <p>Everything runs in your browser. Dates and times you type aren't sent anywhere or saved; at most, settings such as the time zones you picked are kept in the page address after the # sign so a bookmark opens the tool the same way. For printing a month or a year with holidays marked, see the ${link("/printables", "printables")}.</p>`,
+        <p>Everything runs in your browser. Dates and times you type aren't sent anywhere or saved; at most, settings such as the time zones you picked are kept in the page address after the # sign so a bookmark opens the tool the same way. For printing a month or a year with holidays marked, see the ${link("/printables", "printables")}. For the reasoning behind the answers, read the guides on ${link("/guides/how-to-count-days-between-two-dates", "counting days between two dates")}, ${link("/guides/working-days-and-public-holidays-in-nz", "working days and public holidays")} and ${link("/guides/new-zealand-time-zones-and-daylight-saving", "time zones and daylight saving")}.</p>`,
   };
 }

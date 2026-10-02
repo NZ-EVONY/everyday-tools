@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cleaning Messy Lists of Text: Duplicates, Sorting, Spaces</title>
+<meta name="description" content="Why duplicate lines survive, why sorting gives 1, 10, 2, what hidden spaces and line endings do, and how to turn a pasted list into CSV or a query.">
+<meta name="author" content="Everyday Tools">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://myaddr.app/guides/cleaning-messy-lists-of-text">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Everyday Tools">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:title" content="Cleaning Messy Lists of Text: Duplicates, Sorting, Spaces">
+<meta property="og:description" content="Why duplicate lines survive, why sorting gives 1, 10, 2, what hidden spaces and line endings do, and how to turn a pasted list into CSV or a query.">
+<meta property="og:url" content="https://myaddr.app/guides/cleaning-messy-lists-of-text">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cleaning Messy Lists of Text: Duplicates, Sorting, Spaces">
+<meta name="twitter:description" content="Why duplicate lines survive, why sorting gives 1, 10, 2, what hidden spaces and line endings do, and how to turn a pasted list into CSV or a query.">
+<meta name="theme-color" content="#F6F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#06120E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(d){try{var t=localStorage.getItem("et-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}d.classList.add("js")})(document.documentElement);</script>
+<link rel="stylesheet" href="/assets/style.ff5854ba61.css">
+<!-- ==== CMP INTEGRATION POINT. Paste a Google-certified CMP snippet that supports IAB TCF v2.3 here. It must load BEFORE the AdSense script below. See docs/OWNER-TODO.md ==== -->
+<!-- ==== ADSENSE INTEGRATION POINT. After approval, paste exactly as the AdSense account shows them:
+  1. <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"> (placeholder; never guess the real id)
+  2. the AdSense loader snippet.
+Then add the CSP origins listed in public/_headers, update public/ads.txt and set adsLive in config/ads.json. ==== -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Cleaning messy lists","description":"Why duplicate lines survive, why sorting gives 1, 10, 2, what hidden spaces and line endings do, and how to turn a pasted list into CSV or a query.","datePublished":"2026-10-03","dateModified":"2026-10-03","inLanguage":"en-NZ","author":{"@type":"Organization","name":"Everyday Tools"},"publisher":{"@type":"Organization","name":"Everyday Tools"},"mainEntityOfPage":"https://myaddr.app/guides/cleaning-messy-lists-of-text"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myaddr.app/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://myaddr.app/guides"},{"@type":"ListItem","position":3,"name":"Cleaning messy lists of text","item":"https://myaddr.app/guides/cleaning-messy-lists-of-text"}]}]}</script>
+<script src="/assets/site.f521e54d7c.js" defer></script>
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 14.2l2 2 3.8-3.8"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+    <nav class="nav" aria-label="Main"><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/text-tools">Text tools</a></li><li><a href="/guides" aria-current="page">Guides</a></li></ul></nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false"><svg class="ico i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></button>
+      <details class="menu" id="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main (menu)"><ul><li><a href="/nz-calculators">NZ calculators<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/date-and-time-tools">Dates &amp; time<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/printables">Printables<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/text-tools">Text tools<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides" aria-current="page">Guides<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="t-hero doc-hero">
+   <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides">Guides</a></li><li><span aria-current="page">Cleaning messy lists of text</span></li></ol></nav>
+    
+    <h1>Cleaning messy lists <span class="grad-text">of text</span></h1>
+    <div class="intro"><p>Lists copied out of spreadsheets, emails, PDFs and web pages rarely arrive clean. There are stray spaces, blank lines, repeats that don't look like repeats, and numbers that sort in a strange order. This guide explains what's usually hiding in a messy list, why the obvious fixes sometimes don't work, and the order of steps that turns a pasted jumble into something you can use in a spreadsheet, a mail merge or a database query.</p></div>
+   </div>
+  </section>
+  <div class="wrap">
+  
+  <div class="explain">
+    <article class="prose">
+      
+      
+        <p class="lede">Normalise line endings, trim spaces, drop blank lines, then remove duplicates, then sort, then add any wrapping. Doing it in that order avoids most of the surprises.</p>
+
+        <h2>What's hiding in a pasted list</h2>
+        <p>Text that looks tidy on screen can carry characters you can't see. The usual suspects are spaces at the start or end of a line, tabs where you expected spaces, and non-breaking spaces copied from web pages and word processors, which look identical to ordinary spaces but aren't the same character. Lists exported from Windows programs often end each line with two invisible characters, a carriage return and a line feed, where most other systems use just the line feed. And a list pasted from a PDF may break lines in the middle of an entry, wherever the original page ran out of width.</p>
+        <p>None of this matters when you're reading the list. It matters as soon as a computer compares lines, because to a computer "Tūī Road" with a trailing space and "Tūī Road" without one are different.</p>
+
+        <h2>Why some duplicates survive</h2>
+        <p>Here's a short address list (dots stand in for spaces so you can see them):</p>
+        <table><thead><tr><th scope="col">Pasted line</th></tr></thead><tbody><tr><td><code>Kererū·Street</code></td></tr><tr><td><code>kererū·street·</code></td></tr><tr><td><code>Tūī·Road</code></td></tr><tr><td><code>··Tūī·Road</code></td></tr><tr><td><code>Kōwhai·Ave</code></td></tr></tbody></table>
+        <p>A strict duplicate check, matching letter for letter, finds no repeats and keeps all 5 lines, because each one differs from its near-twin by a capital letter or a space. Trim the spaces and ignore capitals, and only 3 lines remain. Which is right depends on the job. For street names, "Kererū Street" and "kererū street" are clearly the same place. For case-sensitive codes or passwords, they aren't. Decide what counts as the same before you remove anything, and keep the original until you've checked the result.</p>
+        
+        <h2>Why sorting gives 1, 10, 2</h2>
+        <p>Ordinary alphabetical sorting compares text one character at a time. "1" comes before "2", so "photo 10" lands before "photo 2", just as "ba" comes before "c". The result looks wrong to a person:</p>
+        <table><thead><tr><th scope="col">Alphabetical</th><th scope="col">Natural</th></tr></thead><tbody><tr><td>photo 1.jpg</td><td>photo 1.jpg</td></tr><tr><td>photo 10.jpg</td><td>photo 2.jpg</td></tr><tr><td>photo 2.jpg</td><td>photo 3.jpg</td></tr><tr><td>photo 21.jpg</td><td>photo 10.jpg</td></tr><tr><td>photo 3.jpg</td><td>photo 21.jpg</td></tr></tbody></table>
+        <p>Natural sorting reads runs of digits as whole numbers, so 2 comes before 10. It's what you want for file names, invoice numbers and street addresses. Another fix, common in spreadsheets, is padding numbers with leading zeros (002, 010), which makes alphabetical and number order agree. Accents can cause a similar surprise; a good sort keeps "Kōwhai" with the other words starting with K rather than pushing it to the end.</p>
+
+        <h2>Line endings and blank lines</h2>
+        <p>The carriage-return characters from Windows files are the reason a list can look fine yet refuse to match, or show odd symbols when opened in another program. Converting all line endings to one style before anything else fixes this. Blank lines come in two kinds: truly empty ones, and ones holding a space or a tab, which look empty but aren't. If "remove blank lines" leaves gaps behind, those gaps contain whitespace; removing whitespace-only lines as well clears them.</p>
+        
+        <h2>The order matters</h2>
+        <p>The steps affect each other, so the sequence changes the result. Trim before removing duplicates, or entries that differ only by a trailing space survive. Remove blank lines before sorting, or a block of empties collects at the top. Add quotes and commas last, so they aren't counted as part of an entry when comparing or sorting. The <a href="/text-cleaner">text cleaner</a> always works in this order, which is why it can do several jobs in one pass.</p>
+
+        <h2>From a list to a query or a CSV row</h2>
+        <p>A common job is turning a column of IDs into something a database query can use. Starting from IDs copied out of a spreadsheet, with Windows line endings, a blank line and a repeat, trimming, removing the blank and the duplicate, wrapping each line in single quotes and joining with commas gives:</p>
+        <table><thead><tr><th scope="col">Result</th></tr></thead><tbody><tr><td><code>&#39;A-1043&#39;, &#39;A-0977&#39;, &#39;A-2210&#39;</code></td></tr></tbody></table>
+        <p>That's ready to drop inside the brackets of an <code>IN ( )</code> clause. Going the other way, a comma-separated row can be split into one entry per line: "Aroha, Ben ,Mere,, Sione" becomes 4 clean lines once the spaces are trimmed and the empty entry between the two commas is dropped. If an entry might itself contain a comma, such as "Smith, J", a plain split will break it in two; for anything like that, use a spreadsheet's import tool, which understands quoted fields.</p>
+
+        <h2>Good habits</h2>
+        <ul>
+          <li>Keep a copy of the original before cleaning, so you can start again.</li>
+          <li>Count the lines before and after, and make sure the difference makes sense.</li>
+          <li>Check a few entries by eye, especially ones with accents or macrons.</li>
+          <li>Don't paste passwords or other private data into online tools that send text to a server; the tools here work entirely in your browser.</li>
+        </ul>
+        <p>For single jobs there are quicker pages: <a href="/remove-duplicate-lines">remove duplicate lines</a>, <a href="/remove-blank-lines">remove blank lines</a>, <a href="/sort-lines-alphabetically">sort lines</a> and <a href="/add-text-to-start-and-end-of-lines">add text to each line</a>. To check length limits afterwards, use the <a href="/word-and-character-counter">word and character counter</a>.</p>
+      
+      <p class="updated">Last reviewed: <time datetime="2026-10-03">3 October 2026</time></p>
+    </article>
+    <aside class="aside-card" aria-labelledby="rel-h">
+      <h2 id="rel-h">Related</h2>
+      <ul><li><a href="/text-cleaner">Text cleaner <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/remove-duplicate-lines">Remove duplicate lines <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/text-tools">All text tools <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul>
+    </aside>
+  </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+        <p>Free, private tools for everyday jobs, run by an independent publisher in New Zealand.</p>
+        <div class="trust-badges"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Stays in your browser</span><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Sourced and dated</span></div>
+      </div>
+      <nav class="foot-col" aria-labelledby="f-tools"><h2 id="f-tools">Tools</h2><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/text-tools">Text tools</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-learn"><h2 id="f-learn">Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-trust"><h2 id="f-trust">Trust</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
+        <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
+        <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Everyday Tools. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

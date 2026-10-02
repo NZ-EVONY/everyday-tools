@@ -1,6 +1,6 @@
 # Status
 
-**Phase 4 (text tools): done, waiting for the owner's "continue".** Next: Phase 5 (guides, internal linking, content QA).
+**Phase 5 (guides and content QA): done, waiting for the owner's "continue".** Next: Phase 6 (polish, Lighthouse and axe, `DEPLOY.md`, `FINAL-REPORT.md`; still no deploy).
 
 ## Built
 - Phase 1 foundation (build, data, expiry checks, trust pages, tests), restyled in Phase 2 to the
@@ -10,11 +10,12 @@
 - Date and time tools: days between dates, age, add or subtract days, working days (MBIE holidays 2026 and 2027), time zone converter, countdown timer.
 - Printables: calendar (month, 12 pages, year on one page), weekly planner and timetable, checklist; A4 and US Letter, PDF-tested.
 - Text tools: text cleaner, four landings (remove duplicate lines, remove blank lines, sort lines alphabetically, add text to start and end of lines), word and character counter; Web Worker for large input.
+- Ten guides under `/guides/` (PAYE, tax codes, KiwiSaver, GST, flatmates, working days and holidays, counting days, time zones, printing, cleaning text), each linked from its tools and hub.
 - Hubs `/nz-calculators`, `/date-and-time-tools`, `/printables`, `/text-tools` and `/guides`, home with tool search, `/sitemap`, 404.
 - Tool registry `config/tools.json` for all 20 planned tools (unpublished ones show "Coming soon").
 
 ## Not started
-Phase 5: the 10 guides. Phase 6: polish, `DEPLOY.md`, `FINAL-REPORT.md`.
+Phase 6: polish, `DEPLOY.md`, `FINAL-REPORT.md`.
 
 ## Open questions for the owner
 See `docs/OWNER-TODO.md` ("Now") and `docs/UNVERIFIED.md`.

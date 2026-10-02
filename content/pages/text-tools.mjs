@@ -23,6 +23,6 @@ export default function page(ctx) {
         <p>Each tool accepts up to two million characters. Anything over 200,000 characters is processed in a background thread of your browser, so the page stays responsive. Results update as you change options, and the original text stays in the input box until you clear it or choose to use the result as the new input.</p>
 
         <h2>Private by design</h2>
-        <p>Nothing you paste leaves your device. There's no upload, no account and no history. Option switches are kept in the page address after the # sign so a bookmark reopens a tool set up the same way, but your text, and any prefix, suffix or separator you type, never goes there. For printing a cleaned-up list with tick boxes, try the ${link("/printable-checklist", "printable checklist")}.</p>`,
+        <p>Nothing you paste leaves your device. There's no upload, no account and no history. Option switches are kept in the page address after the # sign so a bookmark reopens a tool set up the same way, but your text, and any prefix, suffix or separator you type, never goes there. For printing a cleaned-up list with tick boxes, try the ${link("/printable-checklist", "printable checklist")}. The guide to ${link("/guides/cleaning-messy-lists-of-text", "cleaning messy lists of text")} explains why some duplicates survive and why numbers can sort as 1, 10, 2.</p>`,
   };
 }

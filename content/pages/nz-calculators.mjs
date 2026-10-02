@@ -26,6 +26,6 @@ export default function page(ctx) {
         <p>Results are estimates for general information. Real pay slips can differ because of tailored tax codes, one-off payments, or an employer's payroll rounding. Each calculator explains why its answer might not match yours, and links to the official source so you can check. For decisions about your own tax or KiwiSaver, talk to Inland Revenue, your provider or a qualified adviser.</p>
 
         <h2>Learn the rules behind the numbers</h2>
-        <p>If you want to understand the tax as well as get an answer, the ${link("/guides", "guides")} explain how GST, PAYE, tax codes and KiwiSaver work, with examples. A GST-registered business that charges ${dollars(gst.registrationThreshold.value)} or more a year will find the GST guide especially useful.</p>`,
+        <p>If you want to understand the tax as well as get an answer, the guides explain how ${link("/guides/gst-in-new-zealand-adding-and-removing-15-percent", "GST")}, ${link("/guides/how-nz-paye-is-worked-out", "PAYE")}, ${link("/guides/nz-tax-codes-explained", "tax codes")} and ${link("/guides/kiwisaver-contributions-explained", "KiwiSaver")} work, with examples. For sharing a house, see ${link("/guides/splitting-rent-and-bills-between-flatmates", "splitting rent and bills")}. A GST-registered business that charges ${dollars(gst.registrationThreshold.value)} or more a year will find the GST guide especially useful.</p>`,
   };
 }

@@ -77,3 +77,16 @@ IR341 monthly).
 | Mondayisation rules (Waitangi, Anzac; Christmas, Boxing Day, New Year days) | as described on the page | mbie-public-holidays | same |
 | NZ daylight saving rule | starts 2am last Sunday in September; ends 3am first Sunday in April | govt-daylight-saving | [Daylight saving in NZ](https://www.govt.nz/browse/recreation-and-the-environment/daylight-saving/) (last updated 11 August 2026) |
 | Change dates 2026-2029 | 27 Sep 2026 / 4 Apr 2027 / 26 Sep 2027 / 2 Apr 2028 / 24 Sep 2028 / 1 Apr 2029 | govt-daylight-saving | same |
+
+## Added in Phase 5 (retrieved 3 October 2026)
+
+Rules stated in guide copy; no new figures in `data/`.
+
+| Fact | Source id | Page |
+|---|---|---|
+| Which tax code to use; SL; WT, CAE, NSW, EDW | ird-what-tax-code | [What tax code should I use](https://www.ird.govt.nz/income-tax/income-tax-for-individuals/tax-codes-and-tax-rates-for-individuals/what-tax-code-should-i-use) |
+| Secondary codes and the IR330 declaration | ird-secondary-codes | [Secondary tax codes](https://www.ird.govt.nz/income-tax/income-tax-for-individuals/tax-codes-and-tax-rates-for-individuals/secondary-tax-codes) |
+| Weekend holidays and Mondayisation | emp-weekend-holidays | [When a public holiday falls on a weekend](https://www.employment.govt.nz/leave-and-holidays/public-holidays/when-a-public-holiday-falls-on-a-weekend) |
+| Limits on holidays claimed; working a public holiday; Employment Leave Act from August 2028 | emp-holiday-rights | [Public holidays rights for employees](https://www.employment.govt.nz/leave-and-holidays/public-holidays/public-holidays-rights-for-employees) |
+| Time Act 1974 (NZST UTC+12, Chatham Islands +45 min), pay at a clock change, 2007 review | govt-dst-legislation | [Governing legislation](https://www.govt.nz/browse/recreation-and-the-environment/daylight-saving/governing-legislation/) |
+
