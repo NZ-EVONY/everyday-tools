@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Text Tools: Clean, Sort, Dedupe and Count Text</title>
+<meta name="description" content="Free text tools: remove duplicate or blank lines, sort lists, add text to every line, clean up pasted text, and count words and characters.">
+<meta name="author" content="Everyday Tools">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://myaddr.app/text-tools">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Everyday Tools">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:title" content="Text Tools: Clean, Sort, Dedupe and Count Text">
+<meta property="og:description" content="Free text tools: remove duplicate or blank lines, sort lists, add text to every line, clean up pasted text, and count words and characters.">
+<meta property="og:url" content="https://myaddr.app/text-tools">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Text Tools: Clean, Sort, Dedupe and Count Text">
+<meta name="twitter:description" content="Free text tools: remove duplicate or blank lines, sort lists, add text to every line, clean up pasted text, and count words and characters.">
+<meta name="theme-color" content="#F6F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#06120E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(d){try{var t=localStorage.getItem("et-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}d.classList.add("js")})(document.documentElement);</script>
+<link rel="stylesheet" href="/assets/style.ff5854ba61.css">
+<!-- ==== CMP INTEGRATION POINT. Paste a Google-certified CMP snippet that supports IAB TCF v2.3 here. It must load BEFORE the AdSense script below. See docs/OWNER-TODO.md ==== -->
+<!-- ==== ADSENSE INTEGRATION POINT. After approval, paste exactly as the AdSense account shows them:
+  1. <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"> (placeholder; never guess the real id)
+  2. the AdSense loader snippet.
+Then add the CSP origins listed in public/_headers, update public/ads.txt and set adsLive in config/ads.json. ==== -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myaddr.app/"},{"@type":"ListItem","position":2,"name":"Text","item":"https://myaddr.app/text-tools"}]}]}</script>
+<script src="/assets/site.f521e54d7c.js" defer></script>
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-blank" viewBox="0 0 24 24"><path d="M4 6h16M4 18h16"/><path d="M8 12h8" stroke-dasharray="1.5 3"/></symbol><symbol id="i-brackets" viewBox="0 0 24 24"><path d="M8 4.5H5.5v15H8M16 4.5h2.5v15H16"/><path d="M10 9.5h4M10 14.5h4"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5v-2a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 14.2l2 2 3.8-3.8"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></symbol><symbol id="i-sort" viewBox="0 0 24 24"><path d="M7 4.5v15M7 19.5l-3-3M7 19.5l3-3"/><path d="M14.5 6h6M14.5 11h4.5M14.5 16h3"/></symbol><symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M11 3.5 12.9 9l5.6 1.9-5.6 1.9L11 18.3 9.1 12.8 3.5 10.9 9.1 9z"/><path d="M19 15.5l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol><symbol id="i-type" viewBox="0 0 24 24"><path d="M4.5 7.5v-2h15v2M12 5.5v13M9 18.5h6"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+    <nav class="nav" aria-label="Main"><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/text-tools" aria-current="page">Text tools</a></li><li><a href="/guides">Guides</a></li></ul></nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false"><svg class="ico i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></button>
+      <details class="menu" id="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main (menu)"><ul><li><a href="/nz-calculators">NZ calculators<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/date-and-time-tools">Dates &amp; time<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/printables">Printables<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/text-tools" aria-current="page">Text tools<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides">Guides<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="t-hero doc-hero">
+   <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Text</span></li></ol></nav>
+    
+    <h1>Text <span class="grad-text">tools</span></h1>
+    <div class="intro"><p>Tools for the small text jobs that eat time: tidying a list pasted from a spreadsheet, removing repeated email addresses, putting names in order, wrapping values in quotes for a database query, and checking a word count.</p></div>
+   </div>
+  </section>
+  <div class="wrap">
+  <section class="hub-tools" aria-labelledby="hub-tools-h"><h2 class="sec-title" id="hub-tools-h">The tools</h2><ul class="grid"><li data-kw="text cleaner trim, dedupe, sort and reshape lines of text in one pass. text cleaner clean lines trim sort duplicates whitespace"><article class="card"><div class="ic"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-sparkles"/></svg></div><h3><a href="/text-cleaner">Text cleaner</a></h3><p>Trim, dedupe, sort and reshape lines of text in one pass.</p><div class="foot"><span class="chip">Free</span><span class="go" aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></div></article></li><li data-kw="word and character counter words, characters, sentences and reading time as you type. word counter character count reading time sentences"><article class="card"><div class="ic"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-type"/></svg></div><h3><a href="/word-and-character-counter">Word and character counter</a></h3><p>Words, characters, sentences and reading time as you type.</p><div class="foot"><span class="chip">Free</span><span class="go" aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></div></article></li><li data-kw="remove duplicate lines keep the first or last copy of each line, in the original order. remove duplicate lines unique dedupe list"><article class="card"><div class="ic"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg></div><h3><a href="/remove-duplicate-lines">Remove duplicate lines</a></h3><p>Keep the first or last copy of each line, in the original order.</p><div class="foot"><span class="chip">Free</span><span class="go" aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></div></article></li><li data-kw="remove blank lines strip empty and whitespace-only lines from pasted text. remove blank empty lines whitespace"><article class="card"><div class="ic"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-blank"/></svg></div><h3><a href="/remove-blank-lines">Remove blank lines</a></h3><p>Strip empty and whitespace-only lines from pasted text.</p><div class="foot"><span class="chip">Free</span><span class="go" aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></div></article></li><li data-kw="sort lines alphabetically a to z, z to a, numeric or by length, with proper accent handling. sort lines alphabetical order a-z"><article class="card"><div class="ic"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-sort"/></svg></div><h3><a href="/sort-lines-alphabetically">Sort lines alphabetically</a></h3><p>A to Z, Z to A, numeric or by length, with proper accent handling.</p><div class="foot"><span class="chip">Free</span><span class="go" aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></div></article></li><li data-kw="add text to start and end of lines wrap each line in quotes, commas, bullets or any prefix and suffix. add prefix suffix quotes commas lines wrap"><article class="card"><div class="ic"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-brackets"/></svg></div><h3><a href="/add-text-to-start-and-end-of-lines">Add text to start and end of lines</a></h3><p>Wrap each line in quotes, commas, bullets or any prefix and suffix.</p><div class="foot"><span class="chip">Free</span><span class="go" aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></div></article></li></ul></section>
+  <div class="explain single">
+    <article class="prose">
+      
+      
+        <h2>One engine, several doors</h2>
+        <p>The <a href="/text-cleaner">text cleaner</a> does everything in one pass: trims spaces, collapses double spaces, removes blank and duplicate lines, sorts, adds a prefix and suffix to every line, and splits or joins lines. The four single-job pages open the same cleaner with one job already switched on, and explain that job in detail: <a href="/remove-duplicate-lines">remove duplicate lines</a> (case, stray spaces, keeping the first or last copy), <a href="/remove-blank-lines">remove blank lines</a> (empty versus whitespace-only lines, line-ending quirks), <a href="/sort-lines-alphabetically">sort lines alphabetically</a> (natural number order, macrons and accents), and <a href="/add-text-to-start-and-end-of-lines">add text to the start and end of lines</a> (quotes for SQL and CSV, bullets, escaping pitfalls). Start with whichever matches your job; every option is still there underneath.</p>
+        <p>The <a href="/word-and-character-counter">word and character counter</a> is separate. It counts words, characters with and without spaces, sentences, paragraphs and lines, and estimates reading and speaking time at speeds you can change.</p>
+
+        <h2>Built for big pastes</h2>
+        <p>Each tool accepts up to two million characters. Anything over 200,000 characters is processed in a background thread of your browser, so the page stays responsive. Results update as you change options, and the original text stays in the input box until you clear it or choose to use the result as the new input.</p>
+
+        <h2>Private by design</h2>
+        <p>Nothing you paste leaves your device. There's no upload, no account and no history. Option switches are kept in the page address after the # sign so a bookmark reopens a tool set up the same way, but your text, and any prefix, suffix or separator you type, never goes there. For printing a cleaned-up list with tick boxes, try the <a href="/printable-checklist">printable checklist</a>.</p>
+      
+      <p class="updated">Last reviewed: <time datetime="2026-10-02">2 October 2026</time></p>
+    </article>
+    
+  </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+        <p>Free, private tools for everyday jobs, run by an independent publisher in New Zealand.</p>
+        <div class="trust-badges"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Stays in your browser</span><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Sourced and dated</span></div>
+      </div>
+      <nav class="foot-col" aria-labelledby="f-tools"><h2 id="f-tools">Tools</h2><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/text-tools">Text tools</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-learn"><h2 id="f-learn">Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-trust"><h2 id="f-trust">Trust</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
+        <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
+        <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Everyday Tools. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

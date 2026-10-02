@@ -39,7 +39,7 @@ export default function page(ctx) {
         <div class="res"><div class="k">In weeks</div><div class="v long" id="vWeeks">–</div></div>
         <div class="res"><div class="k">In calendar terms</div><div class="v long" id="vCal">–</div></div>
       </div>
-      <p class="rounding" id="vRange"></p>
+      <p class="rounding reserve" id="vRange"></p>
       <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="dCopy">${icon("copy")}Copy result</button></div>
       <p class="sr-only" id="sr" role="status" aria-live="polite"></p>`,
     body: `

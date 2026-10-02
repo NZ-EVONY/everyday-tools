@@ -4,6 +4,7 @@
   "/",
   "/about",
   "/add-subtract-days",
+  "/add-text-to-start-and-end-of-lines",
   "/age-calculator",
   "/contact",
   "/countdown-timer",
@@ -19,11 +20,17 @@
   "/printable-checklist",
   "/printables",
   "/privacy-policy",
+  "/remove-blank-lines",
+  "/remove-duplicate-lines",
   "/sitemap",
+  "/sort-lines-alphabetically",
   "/terms",
+  "/text-cleaner",
+  "/text-tools",
   "/time-zone-converter",
   "/unit-converter",
   "/weekly-planner-and-timetable",
+  "/word-and-character-counter",
   "/working-days-calculator"
  ]
 }

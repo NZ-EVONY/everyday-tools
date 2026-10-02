@@ -66,3 +66,16 @@ One line per default chosen during the build (owner can overrule any of them).
 - "100%" print-scale advice is written "100 per cent" in prose so the typed-percentage test stays strict.
 - Results that are long text (dates, times) use a smaller, wrapping style, and placeholders reserve their space, keeping CLS under 0.02.
 - E2E tests click the visible label of the design's segmented controls instead of force-checking hidden radios.
+
+## Phase 4
+- One text engine (`src/assets/lib/textclean.js`) with a fixed order: line endings, split, trim, collapse, blank lines, duplicates, sort, prefix/suffix, join, output line ending. The order is listed on /text-cleaner and tested.
+- The four landings open the same engine with one preset each and their own examples, edge cases and mistakes; overlap with any other page is at most 0.031 (limit 0.2) and no 8-word sentence repeats.
+- Duplicates compare lines in Unicode NFC form, so composed and decomposed accents match; "match case" is on by default and "ignore surrounding spaces" is on by default.
+- Sorting uses `Intl.Collator("en-NZ")`, so macrons and accents sort with their base letters; natural order uses the collator's numeric option. Sorting is stable.
+- Blank-line removal offers "empty only" and "empty and whitespace-only"; whitespace-only is the landing's default.
+- Prefix/suffix skip blank lines unless "add it to blank lines too" is ticked. `\t` in split/join means a tab.
+- Input cap 2,000,000 characters; over 200,000 characters the work runs in a Web Worker (`src/assets/worker.js`, bundled from the same libraries) with a main-thread fallback if Workers are unavailable or fail. Only the newest job's result is shown.
+- Text boxes wrap long lines (`pre-wrap`): the browser lays out an 800,000-character textarea in about half the time compared with no wrapping.
+- Counter: characters are graphemes via `Intl.Segmenter` (fallback: code points); a word is a run of letters/digits that may contain an apostrophe, hyphen or full stop; reading 200 and speaking 130 words a minute are stated as working assumptions and are editable.
+- Typed text, prefixes, suffixes and separators never go in the URL; only on/off switches and choices that differ from the page's preset do.
+- Long text results (dates, times) are stacked under their label and short result sentences reserve their space, so no page shifts by more than 0.005 at 360 or 1280 px.

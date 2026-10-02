@@ -540,3 +540,16 @@ fieldset{margin-top:var(--s-4)}
 .calc .quick{margin-top:var(--s-3)}
 .calc .quick .btn{min-height:40px}
 @media (min-width:960px){.res .v.long{min-height:2.5em;display:flex;align-items:center;justify-content:flex-end}}
+/* text tools */
+.ta{height:auto;min-height:220px;padding:12px 14px;font:500 .95rem/1.5 var(--mono);resize:vertical;white-space:pre-wrap;overflow-wrap:anywhere;overflow:auto}
+#ctOut{background:var(--surface)}
+details.opt{border:1px solid var(--line);border-radius:var(--r-md);padding:4px 14px;margin-top:var(--s-3);background:var(--surface-2)}
+details.opt summary{cursor:pointer;font-weight:650;min-height:44px;display:flex;align-items:center}
+details.opt[open]{padding-bottom:12px}
+details.opt .field{margin-top:var(--s-2)}
+.counts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-3)}
+.counts .res{flex-direction:column;align-items:flex-start;gap:4px}
+/* long results sit under their label, so filling them in can't change the label's width */
+.res:has(.v.long){flex-direction:column;align-items:stretch;gap:6px}
+.res .v.long{text-align:left;justify-content:flex-start;min-height:0}
+.rounding.reserve{min-height:3.2em}

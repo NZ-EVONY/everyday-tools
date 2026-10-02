@@ -44,5 +44,5 @@ axe-core reports no serious or critical issues on any page in either theme (Phas
 | Budget | Limit | Measured (largest page) |
 |---|---|---|
 | HTML | 60 KB | 8.5 KB (`/nz-paye-calculator`) |
-| CSS | 12 KB | 10.7 KB (one shared file, after Phase 3) |
-| JS | 15 KB | 6.2 KB (`/kiwisaver-calculator`: site.js 1.4 + kiwisaver.js 4.8) |
+| CSS | 12 KB | 10.9 KB (one shared file, after Phase 4) |
+| JS | 15 KB | 6.2 KB (`/kiwisaver-calculator`: site.js 1.4 + kiwisaver.js 4.8); the text Worker (2.6 KB) loads only for input over 200,000 characters |

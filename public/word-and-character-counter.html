@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word and Character Counter: Words, Characters, Time</title>
+<meta name="description" content="Count words, characters with and without spaces, sentences, paragraphs and lines, with reading and speaking time. Emoji and macrons count correctly.">
+<meta name="author" content="Everyday Tools">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://myaddr.app/word-and-character-counter">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Everyday Tools">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:title" content="Word and Character Counter: Words, Characters, Time">
+<meta property="og:description" content="Count words, characters with and without spaces, sentences, paragraphs and lines, with reading and speaking time. Emoji and macrons count correctly.">
+<meta property="og:url" content="https://myaddr.app/word-and-character-counter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Word and Character Counter: Words, Characters, Time">
+<meta name="twitter:description" content="Count words, characters with and without spaces, sentences, paragraphs and lines, with reading and speaking time. Emoji and macrons count correctly.">
+<meta name="theme-color" content="#F6F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#06120E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(d){try{var t=localStorage.getItem("et-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}d.classList.add("js")})(document.documentElement);</script>
+<link rel="stylesheet" href="/assets/style.ff5854ba61.css">
+<!-- ==== CMP INTEGRATION POINT. Paste a Google-certified CMP snippet that supports IAB TCF v2.3 here. It must load BEFORE the AdSense script below. See docs/OWNER-TODO.md ==== -->
+<!-- ==== ADSENSE INTEGRATION POINT. After approval, paste exactly as the AdSense account shows them:
+  1. <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"> (placeholder; never guess the real id)
+  2. the AdSense loader snippet.
+Then add the CSP origins listed in public/_headers, update public/ads.txt and set adsLive in config/ads.json. ==== -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Word and character counter","url":"https://myaddr.app/word-and-character-counter","description":"Count words, characters with and without spaces, sentences, paragraphs and lines, with reading and speaking time. Emoji and macrons count correctly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en-NZ","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"NZD"},"publisher":{"@type":"Organization","name":"Everyday Tools"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the counter include spaces?","acceptedAnswer":{"@type":"Answer","text":"Both figures are shown: characters including spaces and line breaks, and characters without any whitespace."}},{"@type":"Question","name":"Why does another site give a different word count?","acceptedAnswer":{"@type":"Answer","text":"Tools disagree on things like hyphenated words, numbers, web addresses and symbols. This counter treats a hyphenated word as one word and ignores punctuation standing on its own."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myaddr.app/"},{"@type":"ListItem","position":2,"name":"Text tools","item":"https://myaddr.app/text-tools"},{"@type":"ListItem","position":3,"name":"Word and character counter","item":"https://myaddr.app/word-and-character-counter"}]}]}</script>
+<script src="/assets/site.f521e54d7c.js" defer></script>
+<script src="/assets/js/counter.c97c71e859.js" defer></script>
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5v-2a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 14.2l2 2 3.8-3.8"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></symbol><symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.6-5.9"/><path d="M4 4.5v4.6h4.6"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol><symbol id="i-type" viewBox="0 0 24 24"><path d="M4.5 7.5v-2h15v2M12 5.5v13M9 18.5h6"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+    <nav class="nav" aria-label="Main"><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/text-tools" aria-current="page">Text tools</a></li><li><a href="/guides">Guides</a></li></ul></nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false"><svg class="ico i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></button>
+      <details class="menu" id="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main (menu)"><ul><li><a href="/nz-calculators">NZ calculators<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/date-and-time-tools">Dates &amp; time<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/printables">Printables<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/text-tools" aria-current="page">Text tools<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides">Guides<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="t-hero">
+   <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/text-tools">Text tools</a></li><li><span aria-current="page">Word and character counter</span></li></ol></nav>
+    <div class="t-meta"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-type"/></svg>Emoji and macrons counted once</span></div>
+    <h1>Word and character <span class="grad-text">counter</span></h1>
+    <div class="intro"><p>Paste or type text to count its words, characters (with and without spaces), sentences, paragraphs and lines, and to estimate how long it takes to read or say out loud. Counts update as you type. It's useful for essays with a word limit, social posts and text messages with character limits, speeches, and forms that cap how much you can write. Emoji, macrons and accents are counted the way people see them.</p></div>
+   </div>
+  </section>
+  <div class="wrap">
+  <section class="calc" aria-label="Word and character counter">
+    <div class="panel">
+      <form id="countForm" autocomplete="off" novalidate data-worker="/assets/worker.d1650740b1.js">
+      <div class="panel-h"><h2>Your text</h2></div>
+      <label class="sr-only" for="cnIn">Your text</label>
+      <textarea class="in ta" id="cnIn" rows="12" maxlength="2000000" placeholder="Start typing or paste your text"></textarea>
+      <div class="fields">
+        <div class="field"><label for="cnRead">Reading speed (words a minute)</label><input class="in" id="cnRead" type="text" inputmode="numeric" maxlength="4" value="200"></div>
+        <div class="field"><label for="cnSpeak">Speaking speed (words a minute)</label><input class="in" id="cnSpeak" type="text" inputmode="numeric" maxlength="4" value="130"></div>
+      </div>
+      <div class="actions no-print"><button type="button" class="btn btn-ghost btn-sm" id="cnClear"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-reset"/></svg>Clear</button></div>
+    </form>
+      <noscript><p class="noscript-msg">This calculator needs JavaScript to work out results. Everything below explains the method, so you can still follow it by hand.</p></noscript>
+    </div>
+    <div class="results-col">
+      <div class="results">
+        <div class="res key"><div class="k">Words</div><div class="v" id="vWords">0</div></div>
+      </div>
+      <div class="counts">
+        <div class="res"><div class="k">Characters</div><div class="v" id="vChars">0</div></div>
+        <div class="res"><div class="k">Without spaces</div><div class="v" id="vNoSp">0</div></div>
+        <div class="res"><div class="k">Sentences</div><div class="v" id="vSent">0</div></div>
+        <div class="res"><div class="k">Paragraphs</div><div class="v" id="vPara">0</div></div>
+        <div class="res"><div class="k">Lines</div><div class="v" id="vLines">0</div></div>
+        <div class="res"><div class="k">Reading time<small id="vReadK"></small></div><div class="v" id="vRead">0 sec</div></div>
+        <div class="res"><div class="k">Speaking time<small id="vSpeakK"></small></div><div class="v" id="vSpeak">0 sec</div></div>
+      </div>
+      <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="cnCopy"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>Copy counts</button></div>
+      <p class="sr-only" id="sr" role="status" aria-live="polite"></p>
+      
+    </div>
+  </section>
+  <div class="explain">
+    <article class="prose">
+      
+      
+        <h2>What counts as a word</h2>
+        <p>A word here is a run of letters or numbers. An apostrophe, hyphen or full stop inside a word keeps it together, so "don't", "well-known" and "2026-27" each count as one word, while punctuation around words is ignored. Macrons and accents are part of the letter, so "Ōtautahi" is one word, not two. This is close to how word processors count, though every program has its own edge cases with things like web addresses, so a count may differ by a few words from another tool.</p>
+
+        <h2>What counts as a character</h2>
+        <p>Computers store some characters as several pieces: an emoji with a skin tone, a flag, or a letter with a separate accent mark. Counting the pieces would make "🙂" or "é" count as two or more. This counter counts what you see on screen, one per visible character, using your browser's text segmentation. If your browser can't do that, it falls back to counting Unicode code points, which still counts most letters correctly. Note that some sites with character limits count differently, so leave a little room.</p>
+
+        <h2>Worked example</h2>
+        <p>For this short message:</p>
+        <pre class="formula">Kia ora! Don&#39;t forget: the 2026-27 tax year started on 1 April.<br><br>See you at Ōtautahi&#39;s café 🙂</pre>
+        <p>the counter finds 17 words, 93 characters (75 without spaces), 3 sentences and 2 paragraphs. The smiling face counts as one character, and "Don't", "2026-27" and "Ōtautahi's" are one word each.</p>
+        
+        <h2>Reading and speaking time</h2>
+        <p>The times are estimates: word count divided by a speed in words per minute. The starting values of 200 words a minute for reading and 130 for speaking are rough working assumptions, not measured averages. People vary a lot, and technical or unfamiliar text slows everyone down. Change either number to match yourself; time a minute of your normal reading or speaking and count the words. At the starting values, a 1,500-word essay takes about 7 min 30 sec to read and 11 min 32 sec to say.</p>
+
+        <h2>Common mistakes</h2>
+        <ul>
+          <li><strong>Counting the title and references.</strong> Many word limits exclude them. Paste only the part that counts.</li>
+          <li><strong>Confusing characters with bytes.</strong> Some systems limit bytes, where a macron or emoji takes more than one. This tool counts characters.</li>
+          <li><strong>Assuming lines are sentences.</strong> A line ends where you pressed Enter; a sentence ends with a full stop, question mark or exclamation mark.</li>
+        </ul>
+        <p>Your text stays in your browser and isn't saved or sent anywhere. Very long texts (over 200,000 characters) are counted in the background so typing stays smooth. To tidy text before counting, use the <a href="/text-cleaner">text cleaner</a>.</p>
+      
+      <section class="faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Questions people ask</h2>
+        <details><summary>Does the counter include spaces?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Both figures are shown: characters including spaces and line breaks, and characters without any whitespace.</p></div></details>
+        <details><summary>Why does another site give a different word count?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Tools disagree on things like hyphenated words, numbers, web addresses and symbols. This counter treats a hyphenated word as one word and ignores punctuation standing on its own.</p></div></details>
+      </section>
+      <p class="updated">Last reviewed: <time datetime="2026-10-02">2 October 2026</time></p>
+    </article>
+    <aside class="aside-card" aria-labelledby="rel-h">
+      <h2 id="rel-h">Related</h2>
+      <ul><li><a href="/text-cleaner">Text cleaner <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/remove-blank-lines">Remove blank lines <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/text-tools">All text tools <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul>
+    </aside>
+  </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+        <p>Free, private tools for everyday jobs, run by an independent publisher in New Zealand.</p>
+        <div class="trust-badges"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Stays in your browser</span><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Sourced and dated</span></div>
+      </div>
+      <nav class="foot-col" aria-labelledby="f-tools"><h2 id="f-tools">Tools</h2><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/text-tools">Text tools</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-learn"><h2 id="f-learn">Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-trust"><h2 id="f-trust">Trust</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
+        <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
+        <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Everyday Tools. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

@@ -29,6 +29,7 @@ Items here are NOT VERIFIED. Anything a page would need from this list stays unp
 - Printing on real printers and in Firefox and Safari. Page size and page count were checked only
   with Chromium's PDF output (`page.pdf` with preferCSSPageSize). Firefox supports named pages from
   version 110; Safari's support for `page` is limited, so it relies on the CSSOM @page fallback.
+- Text tool behaviour in Firefox and Safari (Intl.Segmenter availability and textarea performance differ by browser); timings were measured only in headless Chromium on the build machine.
 - How the calculators compare with IRD's own online PAYE calculator (not scraped; the owner can compare by hand).
 - Later changes to official pages after 2 October 2026.
 - The owner's search spot-check (`docs/SEARCH-SPOTCHECK.md`); search engines are not scraped.

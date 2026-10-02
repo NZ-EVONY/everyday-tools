@@ -41,7 +41,7 @@ export default function page(ctx) {
     results: `<div class="results">
         <div class="res key"><div class="k">Result</div><div class="v long" id="vResult">–</div></div>
       </div>
-      <p class="rounding" id="vSentence"></p>
+      <p class="rounding reserve" id="vSentence"></p>
       <p class="rounding" id="adClamp" hidden>The start date's day doesn't exist in that month, so the result is the last day of the month.</p>
       <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="adCopy">${icon("copy")}Copy result</button></div>
       <p class="sr-only" id="sr" role="status" aria-live="polite"></p>`,

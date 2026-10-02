@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Text Cleaner: Trim, Dedupe, Sort and Tidy Lines</title>
+<meta name="description" content="Clean up a list in one pass: trim spaces, remove blank and duplicate lines, sort, add text to every line, split or join. Private, in your browser.">
+<meta name="author" content="Everyday Tools">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://myaddr.app/text-cleaner">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Everyday Tools">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:title" content="Text Cleaner: Trim, Dedupe, Sort and Tidy Lines">
+<meta property="og:description" content="Clean up a list in one pass: trim spaces, remove blank and duplicate lines, sort, add text to every line, split or join. Private, in your browser.">
+<meta property="og:url" content="https://myaddr.app/text-cleaner">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Text Cleaner: Trim, Dedupe, Sort and Tidy Lines">
+<meta name="twitter:description" content="Clean up a list in one pass: trim spaces, remove blank and duplicate lines, sort, add text to every line, split or join. Private, in your browser.">
+<meta name="theme-color" content="#F6F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#06120E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(d){try{var t=localStorage.getItem("et-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}d.classList.add("js")})(document.documentElement);</script>
+<link rel="stylesheet" href="/assets/style.ff5854ba61.css">
+<!-- ==== CMP INTEGRATION POINT. Paste a Google-certified CMP snippet that supports IAB TCF v2.3 here. It must load BEFORE the AdSense script below. See docs/OWNER-TODO.md ==== -->
+<!-- ==== ADSENSE INTEGRATION POINT. After approval, paste exactly as the AdSense account shows them:
+  1. <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"> (placeholder; never guess the real id)
+  2. the AdSense loader snippet.
+Then add the CSP origins listed in public/_headers, update public/ads.txt and set adsLive in config/ads.json. ==== -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Text cleaner","url":"https://myaddr.app/text-cleaner","description":"Clean up a list in one pass: trim spaces, remove blank and duplicate lines, sort, add text to every line, split or join. Private, in your browser.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en-NZ","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"NZD"},"publisher":{"@type":"Organization","name":"Everyday Tools"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the cleaner change the text inside a line?","acceptedAnswer":{"@type":"Answer","text":"Only if you ask: trimming touches the ends of lines, and collapsing turns runs of spaces or tabs into one space. Letters, punctuation and case are never changed."}},{"@type":"Question","name":"Can I undo a step?","acceptedAnswer":{"@type":"Answer","text":"Your original text stays in the input box, so turning an option off brings the result back. \"Use result as input\" replaces the original, so copy it first if you need it."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myaddr.app/"},{"@type":"ListItem","position":2,"name":"Text tools","item":"https://myaddr.app/text-tools"},{"@type":"ListItem","position":3,"name":"Text cleaner","item":"https://myaddr.app/text-cleaner"}]}]}</script>
+<script src="/assets/site.f521e54d7c.js" defer></script>
+<script src="/assets/js/cleaner.73474504f3.js" defer></script>
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5v-2a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 14.2l2 2 3.8-3.8"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></symbol><symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.6-5.9"/><path d="M4 4.5v4.6h4.6"/></symbol><symbol id="i-sort" viewBox="0 0 24 24"><path d="M7 4.5v15M7 19.5l-3-3M7 19.5l3-3"/><path d="M14.5 6h6M14.5 11h4.5M14.5 16h3"/></symbol><symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M11 3.5 12.9 9l5.6 1.9-5.6 1.9L11 18.3 9.1 12.8 3.5 10.9 9.1 9z"/><path d="M19 15.5l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+    <nav class="nav" aria-label="Main"><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/text-tools" aria-current="page">Text tools</a></li><li><a href="/guides">Guides</a></li></ul></nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false"><svg class="ico i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></button>
+      <details class="menu" id="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main (menu)"><ul><li><a href="/nz-calculators">NZ calculators<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/date-and-time-tools">Dates &amp; time<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/printables">Printables<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/text-tools" aria-current="page">Text tools<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides">Guides<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="t-hero">
+   <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/text-tools">Text tools</a></li><li><span aria-current="page">Text cleaner</span></li></ol></nav>
+    <div class="t-meta"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-sparkles"/></svg>Up to 2 million characters</span></div>
+    <h1>Text cleaner: <span class="grad-text">tidy any list in one pass</span></h1>
+    <div class="intro"><p>Paste a messy list and tidy it in one go: trim stray spaces, squash double spaces, drop blank lines, remove duplicates, sort it properly, wrap every line in quotes or bullets, or split and join it. Every option can be combined, and the result updates as you change them. It copes with huge pastes from spreadsheets, emails and PDFs, and nothing you paste ever leaves your browser.</p></div>
+   </div>
+  </section>
+  <div class="wrap">
+  <section class="calc" aria-label="Text cleaner">
+    <div class="panel">
+      <form id="cleanForm" autocomplete="off" novalidate data-worker="/assets/worker.d1650740b1.js" data-preset="{&quot;trim&quot;:false,&quot;collapse&quot;:false,&quot;blanks&quot;:&quot;keep&quot;,&quot;dedupe&quot;:false,&quot;dedupeCase&quot;:true,&quot;dedupeTrim&quot;:true,&quot;keep&quot;:&quot;first&quot;,&quot;sort&quot;:&quot;none&quot;,&quot;sortCase&quot;:false,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;affixBlank&quot;:false,&quot;split&quot;:&quot;&quot;,&quot;join&quot;:&quot;&quot;,&quot;eol&quot;:&quot;lf&quot;}">
+      <div class="panel-h"><h2>Your text</h2><span class="chip" id="inCount">0 lines</span></div>
+      <label class="sr-only" for="ctIn">Your text</label>
+      <textarea class="in ta" id="ctIn" rows="10" maxlength="2000000" spellcheck="false" placeholder="Paste your text here, one item per line" aria-describedby="ctHint"></textarea>
+      <p class="hint" id="ctHint" role="alert"></p>
+      <details class="opt" open><summary>Tidy spaces and blank lines</summary>
+        <label class="check"><input type="checkbox" id="oTrim"> Trim spaces at the start and end of each line</label>
+        <label class="check"><input type="checkbox" id="oCollapse"> Collapse repeated spaces and tabs into one space</label>
+        <div class="field"><label for="oBlanks">Blank lines</label><select class="in" id="oBlanks"><option value="keep" selected>Keep them</option><option value="empty">Remove empty lines</option><option value="whitespace">Remove empty and whitespace-only lines</option></select></div>
+      </details>
+      <details class="opt" open><summary>Remove duplicates</summary>
+        <label class="check"><input type="checkbox" id="oDedupe"> Remove duplicate lines</label>
+        <label class="check"><input type="checkbox" id="oDedupeCase" checked> Match case ("Apple" and "apple" are different)</label>
+        <label class="check"><input type="checkbox" id="oDedupeTrim" checked> Ignore spaces at the start and end when comparing</label>
+        <div class="field"><label for="oKeep">When a line repeats, keep</label><select class="in" id="oKeep"><option value="first" selected>the first copy</option><option value="last">the last copy</option></select></div>
+      </details>
+      <details class="opt"><summary>Sort</summary>
+        <div class="field"><label for="oSort">Order</label><select class="in" id="oSort"><option value="none" selected>Keep the original order</option><option value="az">A to Z</option><option value="za">Z to A</option><option value="natural">Natural (2 before 10)</option><option value="natural-desc">Natural, descending</option><option value="length">Shortest first</option><option value="length-desc">Longest first</option><option value="reverse">Reverse the order</option></select></div>
+        <label class="check"><input type="checkbox" id="oSortCase"> Upper case before lower case when letters tie</label>
+      </details>
+      <details class="opt"><summary>Add text to each line</summary>
+        <div class="fields">
+          <div class="field"><label for="oPrefix">At the start</label><input class="in" id="oPrefix" type="text" maxlength="100" value=""></div>
+          <div class="field"><label for="oSuffix">At the end</label><input class="in" id="oSuffix" type="text" maxlength="100" value=""></div>
+        </div>
+        <label class="check"><input type="checkbox" id="oAffixBlank"> Add it to blank lines too</label>
+      </details>
+      <details class="opt"><summary>Split, join and line endings</summary>
+        <div class="fields">
+          <div class="field"><label for="oSplit">Split lines at</label><input class="in" id="oSplit" type="text" maxlength="10" placeholder="e.g. , or \t" value=""></div>
+          <div class="field"><label for="oJoin">Join all lines with</label><input class="in" id="oJoin" type="text" maxlength="10" placeholder="leave blank to keep lines" value=""></div>
+          <div class="field"><label for="oEol">Line endings</label><select class="in" id="oEol"><option value="lf" selected>LF (Mac, Linux, web)</option><option value="crlf">CRLF (Windows)</option></select></div>
+        </div>
+      </details>
+      <div class="actions no-print"><button type="button" class="btn btn-ghost btn-sm" id="ctReset"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-reset"/></svg>Clear</button><button type="button" class="btn btn-ghost btn-sm" id="ctSample"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Try an example</button></div>
+    </form>
+      <noscript><p class="noscript-msg">This calculator needs JavaScript to work out results. Everything below explains the method, so you can still follow it by hand.</p></noscript>
+    </div>
+    <div class="results-col">
+      <div class="results">
+        <div class="res key"><div class="k">Lines out<small id="rIn">0 lines in</small></div><div class="v" id="rOut">0</div></div>
+        <div class="res"><div class="k">Removed<small id="rRemovedK">blank and duplicate lines</small></div><div class="v" id="rRemoved">0</div></div>
+      </div>
+      <label class="field-label" for="ctOut">Result</label>
+      <textarea class="in ta" id="ctOut" rows="10" readonly spellcheck="false"></textarea>
+      <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="ctCopy"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>Copy result</button><button type="button" class="btn btn-ghost btn-sm" id="ctUse"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-sort"/></svg>Use result as input</button></div>
+      <p class="rounding" id="ctWorker" hidden></p>
+      <p class="sr-only" id="sr" role="status" aria-live="polite"></p>
+      
+    </div>
+  </section>
+  <div class="explain">
+    <article class="prose">
+      
+      
+        <h2>The order things happen in</h2>
+        <p>When several options are on, the order changes the result, so the cleaner always works through them in the same sequence:</p>
+        <ol>
+          <li>Line endings are normalised, so Windows (CRLF), old Mac (CR) and Unix (LF) breaks all count as one kind of line break.</li>
+          <li>If you gave a separator, each line is split at it.</li>
+          <li>Spaces are trimmed from the start and end of each line.</li>
+          <li>Runs of spaces and tabs inside a line become one space.</li>
+          <li>Blank lines are removed.</li>
+          <li>Duplicate lines are removed.</li>
+          <li>Lines are sorted or reversed.</li>
+          <li>Your text is added to the start and end of each line.</li>
+          <li>Lines are joined into one, if you asked.</li>
+        </ol>
+        <p>Because trimming comes before duplicate removal, "&nbsp;Wellington" and "Wellington&nbsp;" become the same line before duplicates are checked. Because prefixes come last, a sort isn't thrown off by the quotes or bullets you add.</p>
+
+        <h2>A worked example</h2>
+        <p>This list of cities has stray spaces, two blank-looking lines and repeats that differ in case:</p>
+        <pre class="formula">  Wellington<br>auckland<br><br>Wellington  <br>Christchurch<br>   <br>Auckland<br>Dunedin</pre>
+        <p>With trim, "remove empty and whitespace-only lines", duplicates ignoring case, and A to Z sorting, the cleaner returns 4 lines and reports 2 blank and 2 duplicate lines removed:</p>
+        <pre class="formula">auckland<br>Christchurch<br>Dunedin<br>Wellington</pre>
+        <p>Notice that the first spelling of each city is kept. That's what "keep the first copy" means; choose "the last copy" to keep later versions instead.</p>
+        
+        <h2>Pages for single jobs</h2>
+        <p>If you only need one thing done, these pages open the same cleaner with the right options already set, and explain the details of that job: <a href="/remove-duplicate-lines">removing duplicate lines</a>, <a href="/remove-blank-lines">removing blank lines</a>, <a href="/sort-lines-alphabetically">sorting lines alphabetically</a>, and <a href="/add-text-to-start-and-end-of-lines">adding text to the start and end of lines</a>. To count words and characters instead, use the <a href="/word-and-character-counter">word and character counter</a>.</p>
+
+        <h2>Where messy lists come from</h2>
+        <p>Columns copied out of a spreadsheet often carry trailing spaces and empty cells. Lists pasted from an email pick up blank lines between every item. Text copied from a PDF can have tabs, double spaces and lines broken in odd places. Exports from different systems repeat the same entries with different capitals. Each of these is one or two switches here, and the counts at the top of the results show how many lines each run removed, so you can see the effect before copying.</p>
+
+        <h2>Limits and privacy</h2>
+        <p>The cleaner accepts up to 2,000,000 characters, which is around a million very short lines. Text over 200,000 characters is processed in a background thread of your browser, so the page stays responsive while it works. Everything happens on your device: your text, prefixes and separators aren't sent anywhere, saved, or added to the page address. Only your on/off choices are kept after the # sign, so a bookmark reopens the cleaner set up the same way. Copy the result before you close the tab.</p>
+      
+      <section class="faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Questions people ask</h2>
+        <details><summary>Does the cleaner change the text inside a line?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Only if you ask: trimming touches the ends of lines, and collapsing turns runs of spaces or tabs into one space. Letters, punctuation and case are never changed.</p></div></details>
+        <details><summary>Can I undo a step?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Your original text stays in the input box, so turning an option off brings the result back. "Use result as input" replaces the original, so copy it first if you need it.</p></div></details>
+      </section>
+      <p class="updated">Last reviewed: <time datetime="2026-10-02">2 October 2026</time></p>
+    </article>
+    <aside class="aside-card" aria-labelledby="rel-h">
+      <h2 id="rel-h">Related</h2>
+      <ul><li><a href="/remove-duplicate-lines">Remove duplicate lines <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/sort-lines-alphabetically">Sort lines alphabetically <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/word-and-character-counter">Word and character counter <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/text-tools">All text tools <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul>
+    </aside>
+  </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+        <p>Free, private tools for everyday jobs, run by an independent publisher in New Zealand.</p>
+        <div class="trust-badges"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Stays in your browser</span><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Sourced and dated</span></div>
+      </div>
+      <nav class="foot-col" aria-labelledby="f-tools"><h2 id="f-tools">Tools</h2><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/text-tools">Text tools</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-learn"><h2 id="f-learn">Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-trust"><h2 id="f-trust">Trust</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
+        <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
+        <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Everyday Tools. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

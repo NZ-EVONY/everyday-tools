@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sort Lines Alphabetically: A to Z, Natural or by Length</title>
+<meta name="description" content="Sort a list alphabetically, Z to A, with numbers in natural order (2 before 10), or by length. Accents and macrons sort with their letters.">
+<meta name="author" content="Everyday Tools">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://myaddr.app/sort-lines-alphabetically">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Everyday Tools">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:title" content="Sort Lines Alphabetically: A to Z, Natural or by Length">
+<meta property="og:description" content="Sort a list alphabetically, Z to A, with numbers in natural order (2 before 10), or by length. Accents and macrons sort with their letters.">
+<meta property="og:url" content="https://myaddr.app/sort-lines-alphabetically">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sort Lines Alphabetically: A to Z, Natural or by Length">
+<meta name="twitter:description" content="Sort a list alphabetically, Z to A, with numbers in natural order (2 before 10), or by length. Accents and macrons sort with their letters.">
+<meta name="theme-color" content="#F6F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#06120E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(d){try{var t=localStorage.getItem("et-theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}d.classList.add("js")})(document.documentElement);</script>
+<link rel="stylesheet" href="/assets/style.ff5854ba61.css">
+<!-- ==== CMP INTEGRATION POINT. Paste a Google-certified CMP snippet that supports IAB TCF v2.3 here. It must load BEFORE the AdSense script below. See docs/OWNER-TODO.md ==== -->
+<!-- ==== ADSENSE INTEGRATION POINT. After approval, paste exactly as the AdSense account shows them:
+  1. <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"> (placeholder; never guess the real id)
+  2. the AdSense loader snippet.
+Then add the CSP origins listed in public/_headers, update public/ads.txt and set adsLive in config/ads.json. ==== -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Sort lines alphabetically","url":"https://myaddr.app/sort-lines-alphabetically","description":"Sort a list alphabetically, Z to A, with numbers in natural order (2 before 10), or by length. Accents and macrons sort with their letters.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en-NZ","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"NZD"},"publisher":{"@type":"Organization","name":"Everyday Tools"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does 10 come before 2?","acceptedAnswer":{"@type":"Answer","text":"Alphabetical order compares one character at a time, and \"1\" comes before \"2\". Choose \"Natural (2 before 10)\" to compare whole numbers by value."}},{"@type":"Question","name":"Is the sort case-sensitive?","acceptedAnswer":{"@type":"Answer","text":"Not by default: \"apple\" and \"Apple\" are treated as the same word and keep their original order. Tick \"upper case before lower case\" to break ties by case."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://myaddr.app/"},{"@type":"ListItem","position":2,"name":"Text tools","item":"https://myaddr.app/text-tools"},{"@type":"ListItem","position":3,"name":"Sort lines alphabetically","item":"https://myaddr.app/sort-lines-alphabetically"}]}]}</script>
+<script src="/assets/site.f521e54d7c.js" defer></script>
+<script src="/assets/js/cleaner.73474504f3.js" defer></script>
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 8.5v-2a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 14.2l2 2 3.8-3.8"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></symbol><symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.6-5.9"/><path d="M4 4.5v4.6h4.6"/></symbol><symbol id="i-sort" viewBox="0 0 24 24"><path d="M7 4.5v15M7 19.5l-3-3M7 19.5l3-3"/><path d="M14.5 6h6M14.5 11h4.5M14.5 16h3"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+    <nav class="nav" aria-label="Main"><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/text-tools" aria-current="page">Text tools</a></li><li><a href="/guides">Guides</a></li></ul></nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Dark theme" aria-pressed="false"><svg class="ico i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ico i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg></button>
+      <details class="menu" id="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main (menu)"><ul><li><a href="/nz-calculators">NZ calculators<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/date-and-time-tools">Dates &amp; time<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/printables">Printables<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/text-tools" aria-current="page">Text tools<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/guides">Guides<svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="t-hero">
+   <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/text-tools">Text tools</a></li><li><span aria-current="page">Sort lines alphabetically</span></li></ol></nav>
+    <div class="t-meta"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-sort"/></svg>Macrons sorted properly</span></div>
+    <h1>Sort lines <span class="grad-text">alphabetically</span></h1>
+    <div class="intro"><p>Put any list in order: A to Z, Z to A, with numbers in their natural order so that 2 comes before 10, by length, or simply reversed. Letters with macrons and accents sort alongside their plain versions, so Ōamaru files with the O names rather than at the end. Equal lines keep their original order, so sorting twice never shuffles them. Paste, choose an order, copy the result.</p></div>
+   </div>
+  </section>
+  <div class="wrap">
+  <section class="calc" aria-label="Sort lines alphabetically">
+    <div class="panel">
+      <form id="cleanForm" autocomplete="off" novalidate data-worker="/assets/worker.d1650740b1.js" data-preset="{&quot;trim&quot;:false,&quot;collapse&quot;:false,&quot;blanks&quot;:&quot;keep&quot;,&quot;dedupe&quot;:false,&quot;dedupeCase&quot;:true,&quot;dedupeTrim&quot;:true,&quot;keep&quot;:&quot;first&quot;,&quot;sort&quot;:&quot;az&quot;,&quot;sortCase&quot;:false,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;affixBlank&quot;:false,&quot;split&quot;:&quot;&quot;,&quot;join&quot;:&quot;&quot;,&quot;eol&quot;:&quot;lf&quot;}">
+      <div class="panel-h"><h2>Your list</h2><span class="chip" id="inCount">0 lines</span></div>
+      <label class="sr-only" for="ctIn">Your list</label>
+      <textarea class="in ta" id="ctIn" rows="10" maxlength="2000000" spellcheck="false" placeholder="Paste the lines you want sorted" aria-describedby="ctHint"></textarea>
+      <p class="hint" id="ctHint" role="alert"></p>
+      <details class="opt"><summary>Tidy spaces and blank lines</summary>
+        <label class="check"><input type="checkbox" id="oTrim"> Trim spaces at the start and end of each line</label>
+        <label class="check"><input type="checkbox" id="oCollapse"> Collapse repeated spaces and tabs into one space</label>
+        <div class="field"><label for="oBlanks">Blank lines</label><select class="in" id="oBlanks"><option value="keep" selected>Keep them</option><option value="empty">Remove empty lines</option><option value="whitespace">Remove empty and whitespace-only lines</option></select></div>
+      </details>
+      <details class="opt"><summary>Remove duplicates</summary>
+        <label class="check"><input type="checkbox" id="oDedupe"> Remove duplicate lines</label>
+        <label class="check"><input type="checkbox" id="oDedupeCase" checked> Match case ("Apple" and "apple" are different)</label>
+        <label class="check"><input type="checkbox" id="oDedupeTrim" checked> Ignore spaces at the start and end when comparing</label>
+        <div class="field"><label for="oKeep">When a line repeats, keep</label><select class="in" id="oKeep"><option value="first" selected>the first copy</option><option value="last">the last copy</option></select></div>
+      </details>
+      <details class="opt" open><summary>Sort</summary>
+        <div class="field"><label for="oSort">Order</label><select class="in" id="oSort"><option value="none">Keep the original order</option><option value="az" selected>A to Z</option><option value="za">Z to A</option><option value="natural">Natural (2 before 10)</option><option value="natural-desc">Natural, descending</option><option value="length">Shortest first</option><option value="length-desc">Longest first</option><option value="reverse">Reverse the order</option></select></div>
+        <label class="check"><input type="checkbox" id="oSortCase"> Upper case before lower case when letters tie</label>
+      </details>
+      <details class="opt"><summary>Add text to each line</summary>
+        <div class="fields">
+          <div class="field"><label for="oPrefix">At the start</label><input class="in" id="oPrefix" type="text" maxlength="100" value=""></div>
+          <div class="field"><label for="oSuffix">At the end</label><input class="in" id="oSuffix" type="text" maxlength="100" value=""></div>
+        </div>
+        <label class="check"><input type="checkbox" id="oAffixBlank"> Add it to blank lines too</label>
+      </details>
+      <details class="opt"><summary>Split, join and line endings</summary>
+        <div class="fields">
+          <div class="field"><label for="oSplit">Split lines at</label><input class="in" id="oSplit" type="text" maxlength="10" placeholder="e.g. , or \t" value=""></div>
+          <div class="field"><label for="oJoin">Join all lines with</label><input class="in" id="oJoin" type="text" maxlength="10" placeholder="leave blank to keep lines" value=""></div>
+          <div class="field"><label for="oEol">Line endings</label><select class="in" id="oEol"><option value="lf" selected>LF (Mac, Linux, web)</option><option value="crlf">CRLF (Windows)</option></select></div>
+        </div>
+      </details>
+      <div class="actions no-print"><button type="button" class="btn btn-ghost btn-sm" id="ctReset"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-reset"/></svg>Clear</button><button type="button" class="btn btn-ghost btn-sm" id="ctSample"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Try an example</button></div>
+    </form>
+      <noscript><p class="noscript-msg">This calculator needs JavaScript to work out results. Everything below explains the method, so you can still follow it by hand.</p></noscript>
+    </div>
+    <div class="results-col">
+      <div class="results">
+        <div class="res key"><div class="k">Lines out<small id="rIn">0 lines in</small></div><div class="v" id="rOut">0</div></div>
+        <div class="res"><div class="k">Removed<small id="rRemovedK">blank and duplicate lines</small></div><div class="v" id="rRemoved">0</div></div>
+      </div>
+      <label class="field-label" for="ctOut">Result</label>
+      <textarea class="in ta" id="ctOut" rows="10" readonly spellcheck="false"></textarea>
+      <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="ctCopy"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>Copy result</button><button type="button" class="btn btn-ghost btn-sm" id="ctUse"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-sort"/></svg>Use result as input</button></div>
+      <p class="rounding" id="ctWorker" hidden></p>
+      <p class="sr-only" id="sr" role="status" aria-live="polite"></p>
+      
+    </div>
+  </section>
+  <div class="explain">
+    <article class="prose">
+      
+      
+        <h2>Why simple sorting goes wrong</h2>
+        <p>Many programs sort text by the code number of each character. That puts every capital letter before every lower-case one, sends letters with macrons or accents to the very end, and treats numbers as strings of characters. This tool uses proper language-aware ordering for New Zealand English instead, which compares letters the way a dictionary or phone book does.</p>
+
+        <h2>Numbers inside text: alphabetical versus natural</h2>
+        <p>Take these chapter names: <code>chapter 10</code>, <code>chapter 2</code>, <code>Chapter 3</code>, <code>chapter 21</code>, <code>chapter 1</code>. Sorting by character codes gives <code>Chapter 3</code>, <code>chapter 1</code>, <code>chapter 10</code>, <code>chapter 2</code>, <code>chapter 21</code>: capitals first, and "10" before "2" because the character "1" comes before "2". Alphabetical (A to Z) sorting fixes the capitals but still compares digits one at a time: <code>chapter 1</code>, <code>chapter 10</code>, <code>chapter 2</code>, <code>chapter 21</code>, <code>Chapter 3</code>. Natural sorting reads each run of digits as a number, giving <code>chapter 1</code>, <code>chapter 2</code>, <code>Chapter 3</code>, <code>chapter 10</code>, <code>chapter 21</code>. Use natural order for file names, versions, invoice numbers and anything numbered.</p>
+
+        <h2>Macrons and accents</h2>
+        <p>Place names in Aotearoa often carry macrons. A naive sort puts "Ōamaru" after "Wellington" because "Ō" has a higher character code than any plain letter. Sorting with language rules treats Ō as a form of O: <code>Arrowtown</code>, <code>Ōamaru</code>, <code>ōpōtiki</code>, <code>Otorohanga</code>, <code>Wellington</code>, <code>Whangārei</code>. Lower-case and capital letters are also compared as the same letter first, with case only used to break a tie when you tick "upper case before lower case".</p>
+        
+        <h2>Other orders</h2>
+        <ul>
+          <li><strong>Z to A</strong> and <strong>natural, descending</strong> give the same rules backwards.</li>
+          <li><strong>Shortest first</strong> and <strong>longest first</strong> count characters as you see them, so an emoji or an accented letter counts once. Lines of the same length keep their original order.</li>
+          <li><strong>Reverse the order</strong> doesn't compare anything; it flips the list upside down, which is handy for logs where the newest line is at the bottom.</li>
+        </ul>
+
+        <h2>Mistakes to avoid</h2>
+        <ul>
+          <li><strong>Leading spaces.</strong> A space sorts before letters, so " zebra" with a space jumps to the top. Turn on "Trim spaces" first.</li>
+          <li><strong>Numbers with different formats.</strong> "1,000" and "999" sort by their digits, and natural order reads "1,000" as 1 then 000. Remove thousands separators if exact numeric order matters.</li>
+          <li><strong>Expecting dates to sort.</strong> "2/10/2026" style dates don't sort chronologically as text. Year-month-day dates like 2026-10-02 do.</li>
+        </ul>
+        <p>Your list stays in your browser. To remove repeats before sorting, see <a href="/remove-duplicate-lines">remove duplicate lines</a>; for every option at once, use the <a href="/text-cleaner">text cleaner</a>.</p>
+      
+      <section class="faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Questions people ask</h2>
+        <details><summary>Why does 10 come before 2?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Alphabetical order compares one character at a time, and "1" comes before "2". Choose "Natural (2 before 10)" to compare whole numbers by value.</p></div></details>
+        <details><summary>Is the sort case-sensitive?<span aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span></summary><div><p>Not by default: "apple" and "Apple" are treated as the same word and keep their original order. Tick "upper case before lower case" to break ties by case.</p></div></details>
+      </section>
+      <p class="updated">Last reviewed: <time datetime="2026-10-02">2 October 2026</time></p>
+    </article>
+    <aside class="aside-card" aria-labelledby="rel-h">
+      <h2 id="rel-h">Related</h2>
+      <ul><li><a href="/text-cleaner">Text cleaner (all options) <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/remove-duplicate-lines">Remove duplicate lines <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li><li><a href="/add-text-to-start-and-end-of-lines">Add text to start and end of lines <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li></ul>
+    </aside>
+  </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Everyday Tools, home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2.6"/><rect x="13" y="3" width="8" height="8" rx="2.6" opacity=".55"/><rect x="3" y="13" width="8" height="8" rx="2.6" opacity=".55"/><rect x="13" y="13" width="8" height="8" rx="2.6"/></svg></span><span>Everyday <span class="tool">Tools</span></span></a>
+        <p>Free, private tools for everyday jobs, run by an independent publisher in New Zealand.</p>
+        <div class="trust-badges"><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>Stays in your browser</span><span class="chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"/></svg>Sourced and dated</span></div>
+      </div>
+      <nav class="foot-col" aria-labelledby="f-tools"><h2 id="f-tools">Tools</h2><ul><li><a href="/nz-calculators">NZ calculators</a></li><li><a href="/date-and-time-tools">Dates &amp; time</a></li><li><a href="/printables">Printables</a></li><li><a href="/text-tools">Text tools</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-learn"><h2 id="f-learn">Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/sitemap">All pages</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="f-trust"><h2 id="f-trust">Trust</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy policy</a></li><li><a href="/terms">Terms of use</a></li>
+        <!-- CMP: the consent platform re-opens its settings from this link. Remove "hidden" when a CMP is wired in (docs/OWNER-TODO.md). -->
+        <li><a href="#" id="privacy-settings-link" hidden>Privacy settings</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Everyday Tools. Calculators give estimates for general information, not financial or tax advice. Not affiliated with Inland Revenue, ACC, MBIE or any government agency.</p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

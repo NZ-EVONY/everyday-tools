@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://myaddr.app/about</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/add-subtract-days</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://myaddr.app/add-text-to-start-and-end-of-lines</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/age-calculator</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/contact</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/countdown-timer</loc><lastmod>2026-10-02</lastmod></url>
@@ -18,10 +19,16 @@
   <url><loc>https://myaddr.app/printable-checklist</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/printables</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/privacy-policy</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://myaddr.app/remove-blank-lines</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://myaddr.app/remove-duplicate-lines</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/sitemap</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://myaddr.app/sort-lines-alphabetically</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/terms</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://myaddr.app/text-cleaner</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://myaddr.app/text-tools</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/time-zone-converter</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/unit-converter</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/weekly-planner-and-timetable</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://myaddr.app/word-and-character-counter</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://myaddr.app/working-days-calculator</loc><lastmod>2026-10-02</lastmod></url>
 </urlset>

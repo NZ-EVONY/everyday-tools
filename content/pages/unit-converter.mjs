@@ -48,7 +48,7 @@ export default function page(ctx) {
     results: `<div class="results">
         <div class="res key"><div class="k">Result<small id="uResultK">metres</small></div><div class="v" id="uResult">–</div></div>
       </div>
-      <p class="rounding" id="uSentence"></p>
+      <p class="rounding reserve" id="uSentence"></p>
       <div class="breakdown"><table id="uAll"><caption id="uAllCap">Every unit</caption><thead class="sr-only"><tr><th scope="col">Unit</th><th scope="col">Amount</th></tr></thead><tbody></tbody></table></div>
       <div class="actions no-print"><button type="button" class="btn btn-primary btn-sm" id="uCopy">${ctx.icon("copy")}Copy result</button></div>
       <p class="sr-only" id="sr" role="status" aria-live="polite"></p>`,
