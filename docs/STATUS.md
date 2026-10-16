@@ -1,6 +1,6 @@
 # Status
 
-**Phases 1 to 7 done.** Phases 1 to 6 and the palette change were deployed by the owner on 3 October 2026 (see below). Phase 7 (fancy text and name styler) is built on the branch and **not deployed**; it waits for the owner's "continue". The owner deploys with `docs/DEPLOY.md`; results and open items are in `docs/FINAL-REPORT.md`.
+**Phases 1 to 7 done and live at https://myaddr.app** (deployed from `build/everyday-tools`; the live site served the Phase 7 build `ce794bb` when checked on 16 October 2026). Phases 1 to 6 and the palette change were deployed by the owner on 3 October 2026. The owner deploys with `docs/DEPLOY.md`; see `HANDOVER.md` for the current state and `docs/FINAL-REPORT.md` for results and open items.
 
 ## Built
 - Phase 1 foundation (build, data, expiry checks, trust pages, tests), restyled in Phase 2 to the

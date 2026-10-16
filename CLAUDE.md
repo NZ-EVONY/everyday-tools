@@ -1,6 +1,6 @@
 # Everyday Tools: notes for Claude Code
 
-Read `docs/STATUS.md` first: it says which phase the build is in and what is next.
+Read `HANDOVER.md` first (current state, live build, rules, gotchas), then `docs/STATUS.md`.
 
 ## Purpose
 A static, ad-supported hub of free single-purpose tools for New Zealand (NZ calculators, date and
