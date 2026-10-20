@@ -2,28 +2,33 @@
   "files": [
     {
       "path": "404.html",
-      "size": 7962,
-      "sha256": "2949ae65aa32a28eaf0b9a414eacf78a08298b6444259034ec2f6bcf9cdb9043"
+      "size": 8306,
+      "sha256": "a23a5bb8dcfa7248170869906437deff0aea6c3cd1d7a26ffc00fd35ee07a380"
     },
     {
       "path": "_headers",
-      "size": 1405,
-      "sha256": "d5ec91da5b470f06060dde3378732aa70d379cc1711b97d02e6707617618d02b"
+      "size": 1797,
+      "sha256": "61303798c5a492ba760d4f9fac586fc35ee70a12ec61357acfb429bcbd3e29c6"
+    },
+    {
+      "path": "_redirects",
+      "size": 91,
+      "sha256": "c414878984491dbe2924cf250e45fa27a6d652bfd9cb16db9f2866fb31bb4dc4"
     },
     {
       "path": "about.html",
-      "size": 10895,
-      "sha256": "76cd10953c317c3c217ab817c27f542a6f6b254228b227ec0947b93cd900c8c0"
+      "size": 11239,
+      "sha256": "0b6b5804f19a058732a8515e7c200652be2d2eb408356750c130ff4dd5ea0923"
     },
     {
       "path": "add-subtract-days.html",
-      "size": 17036,
-      "sha256": "c23160bd3b4a79c6720ec0799742845c1611041f1cfa720133ef2f906983d666"
+      "size": 17380,
+      "sha256": "6f43d33e2d69850dd2e6a265aa70d1a4a069b7bb1b62b0d7717ef6208db06600"
     },
     {
       "path": "add-text-to-start-and-end-of-lines.html",
-      "size": 21714,
-      "sha256": "98109dd225eca24f5d18950f4e619a50bf4fdf8899585bbbde88b59740bc2b11"
+      "size": 22058,
+      "sha256": "396c1a6cbacd10530dab3d6018d7a5f8d729c84997277208d51f01164fe876d3"
     },
     {
       "path": "ads.txt",
@@ -32,8 +37,8 @@
     },
     {
       "path": "age-calculator.html",
-      "size": 16974,
-      "sha256": "68252731575601aaca8f81fc6296d0d7a8274879869bf88c083321e43c4c3e66"
+      "size": 17318,
+      "sha256": "95e694aa7f3fe57079b7479815b6a36963f39e93cfc6566d4fc0ca59293251aa"
     },
     {
       "path": "assets/js/adddays.543cf4539a.js",
@@ -137,33 +142,33 @@
     },
     {
       "path": "contact.html",
-      "size": 10678,
-      "sha256": "a87dd24ec891696efdbe3fb626160f315652fbfb5a049aea7256fbc2c0e8f4f1"
+      "size": 11022,
+      "sha256": "4ac49ba41f4a0d46e0c2303cdeb7ee8f95dd90ac422ccdabf402e945b7a0c7bc"
     },
     {
       "path": "countdown-timer.html",
-      "size": 15811,
-      "sha256": "6f6e0c103d14a1eb822c7305b2446e040b59c3afefa4681e549ec260dac5b891"
+      "size": 16155,
+      "sha256": "d1ebdc9b6b1f4f1b0571fa190ba2eb189d5bab335262e0cfcaf0159fbb1a7d05"
     },
     {
       "path": "date-and-time-tools.html",
-      "size": 15928,
-      "sha256": "0ac28ad8021a04e404031199e08f85298dcfb8daf3411df4f892b6a33faf4b58"
+      "size": 16272,
+      "sha256": "73422b2ef0f9dad71d63e9cc580116d7a18e1b68a1fa6e4b736590b623c795c4"
     },
     {
       "path": "days-between-dates.html",
-      "size": 17767,
-      "sha256": "3f31754aa2a3737c1b87ea13b94dd960948b6a4d937bea14aeed7666e4dafc47"
+      "size": 18111,
+      "sha256": "3bc3cc33af9627322b76fb317279f892fdcc3db0f7d39af1e3457545335c39a8"
     },
     {
       "path": "fancy-text-for-bios.html",
-      "size": 50643,
-      "sha256": "fe1ac45126b86a9d19b6263e2a26a96927ae2135f54a04d311bfcea4713ddad0"
+      "size": 50987,
+      "sha256": "68c8e4955aef1bade8d064d1ce5b877e446383cae68c329f311360e4c8af6deb"
     },
     {
       "path": "fancy-text-generator.html",
-      "size": 52014,
-      "sha256": "e8e755cb254ccce832789c5f5f1989ade4e0eb9578609614e1d5dbdd494d719e"
+      "size": 52358,
+      "sha256": "29a49b27560f9e92a19c047a4f9528f9a34a73d3c88ecd444a3fe0689ae1a467"
     },
     {
       "path": "favicon.svg",
@@ -172,128 +177,133 @@
     },
     {
       "path": "flatmate-rent-splitter.html",
-      "size": 22533,
-      "sha256": "4f78ff8faed8b2f75d4e39c6c6859727ad62463aab99b3d730dbb829e9c7249c"
+      "size": 22877,
+      "sha256": "73b5606568c91b830f9d91ccef22220a0c440d0829c45eea0bcb75a9d1e93086"
     },
     {
       "path": "gst-calculator.html",
-      "size": 22810,
-      "sha256": "b5039ed64c381ca7ffc295339f3c6b35f05ff3bc42f33f247fd971974a6721c7"
+      "size": 23154,
+      "sha256": "78d929c12cb8fec53fb2d56365e57b2fe9cbb17fc3ca2d40e6c552abb05de7e8"
     },
     {
       "path": "guides.html",
-      "size": 13015,
-      "sha256": "a4be03483ac03de88659468e2f47ade062a9ef32fd1a272aae868cbf67d7b89e"
+      "size": 13359,
+      "sha256": "c39e8c0d634055cdbcbd259ad3a29173d255bb859172add698b858f9e5856ec2"
     },
     {
       "path": "guides/cleaning-messy-lists-of-text.html",
-      "size": 16320,
-      "sha256": "0f094a2e0f86c32f32d6e7dcd19cf87c5996a75788153e4c84dbb7e6b64fe75b"
+      "size": 16664,
+      "sha256": "1aa7f1079a5c139d48f9285ceecb9f6c0348c43a2fe18df78e2282a75e26b251"
     },
     {
       "path": "guides/gst-in-new-zealand-adding-and-removing-15-percent.html",
-      "size": 17847,
-      "sha256": "b26e95bc7871f27948533dd5926f839970318994347066df6df26cd5a7e53d6d"
+      "size": 18191,
+      "sha256": "26c7c065fbf0e2bf54cf434d7d795e549b0fa288e20c579d5a11d413eea242d8"
     },
     {
       "path": "guides/how-nz-paye-is-worked-out.html",
-      "size": 20402,
-      "sha256": "ca4e084824cb4eca5139ea56560c419c0c54acb0b7711b9896c92ed53c2f15b7"
+      "size": 20746,
+      "sha256": "1f2362275853974ee12c3dcd9e2aa240b4d1294927e2c57367d3f0ca181704de"
     },
     {
       "path": "guides/how-to-count-days-between-two-dates.html",
-      "size": 15772,
-      "sha256": "1130c81a3024a758f108742d1018bb52b19eac6e180b1b2e2179914b03fb5d77"
+      "size": 16116,
+      "sha256": "fa0ef762de413c2b1165a8780a2b46f40e1e6c0c9ecfab4ec69aeddc21f609d1"
     },
     {
       "path": "guides/kiwisaver-contributions-explained.html",
-      "size": 19159,
-      "sha256": "1d5e381c26725ad52604bb420f875f0f5d778b31eadbed9978624d6e25021e2c"
+      "size": 19503,
+      "sha256": "61f1a77c570df6b2b159580d68fb88551941ff8642f3d57078cf4c3cf7b2dc76"
     },
     {
       "path": "guides/new-zealand-time-zones-and-daylight-saving.html",
-      "size": 17826,
-      "sha256": "1330d329d272ad2d9ea2ff9ccbfc7e58f5b5df1876b69f13cc1ec8181e3135be"
+      "size": 18170,
+      "sha256": "bb2928332b7ce64b365e9146de520bb764c3390f280ccf5f0e8f4e35a24d6334"
     },
     {
       "path": "guides/nz-tax-codes-explained.html",
-      "size": 17939,
-      "sha256": "7992c15fb17068adae4dd7d3d8d9f894b96af028653dfb186a2d551065345b4e"
+      "size": 18283,
+      "sha256": "70e2335735f078f222fb0590c1f723ef57ce584b8eabacbb777cb6c69c206fb2"
     },
     {
       "path": "guides/printing-calendars-and-planners-at-home.html",
-      "size": 16886,
-      "sha256": "d6d5a275121b85ca0cb81bf7cb6527a3024964041c17da53170b052ec12abe26"
+      "size": 17230,
+      "sha256": "e8934aea44e21b7a659a9b572cd513b17faee4c602528b99cf5432336f4f3e86"
     },
     {
       "path": "guides/splitting-rent-and-bills-between-flatmates.html",
-      "size": 16081,
-      "sha256": "f920d9044ed0a9b776e5542b51ccd2ba713ea466e4919dc2362aefc8c9110f12"
+      "size": 16425,
+      "sha256": "0dea15b0447d1e204f112cd4fe7406300b300956c08ad80cbd6c5c60990f72e2"
     },
     {
       "path": "guides/unicode-fonts-and-fancy-text-explained.html",
-      "size": 16749,
-      "sha256": "5fa9f1c6c79af97c08d5469cf02d6dcf5afbc298f045d40db001394d6e185248"
+      "size": 17093,
+      "sha256": "89342a917eb45df3a3249b83618e4cdb8bb3cf5d1625c0eb8be34a55c0a0a8e1"
     },
     {
       "path": "guides/working-days-and-public-holidays-in-nz.html",
-      "size": 19668,
-      "sha256": "23f1e731145277d13d32739a0ba89740536fcb7a57ea1921ea7c1051a21d5ab3"
+      "size": 20012,
+      "sha256": "b7ec9911443acdf12b7a56fc8899b503c9cff860752d884d183f5782fd85eda0"
     },
     {
       "path": "index.html",
-      "size": 35840,
-      "sha256": "f4d16b44df6be3028d7e3da8e067412b7e25bce7be5e72840c89252ba562c6a8"
+      "size": 36184,
+      "sha256": "7ecc628ebb2751ab5a269cd28031e6aaa9552b24eabad8a313bd5533fb2eb0d6"
     },
     {
       "path": "kiwisaver-calculator.html",
-      "size": 23955,
-      "sha256": "c217909d82d67e0cd72b53a47049ed7e9eae4c9c56cbbec95665629227567d48"
+      "size": 24299,
+      "sha256": "31e6f246691e72f3e3caec420d2af0f4c9d062dbcc5f7794a4b368a75151d6ef"
     },
     {
       "path": "name-styler-for-games.html",
-      "size": 50379,
-      "sha256": "135b240800d8d043ab0b06e83dec696b3ed741f031d4d21ea39f82d65c28b838"
+      "size": 50723,
+      "sha256": "293e8d6bff3bbaa9ad7d0c5392fb2ff922ea2f8a69e64c0f278bc837c7153257"
     },
     {
       "path": "nz-calculators.html",
-      "size": 15652,
-      "sha256": "6a7abae0ee00e31ca3cab4c7dfe7979f001fcd34c6caa64af16abe2e1dfe1df4"
+      "size": 15996,
+      "sha256": "3f45a7d640d99b5c804ac9a62f32b781b91a25248498785ce450004625757b87"
     },
     {
       "path": "nz-paye-calculator.html",
-      "size": 29810,
-      "sha256": "ec7404cbcbbf827cbbe46088b3107a8ea669bf303e9efe9083e8e76cee0bec43"
+      "size": 30154,
+      "sha256": "8e0c98af5506490d6f38c4705cbf266095ba3f0b4e8b498dc61c9a1cecd7a2d9"
+    },
+    {
+      "path": "og/default.png",
+      "size": 83217,
+      "sha256": "a50d61115490645d8b9abad247a602cd9d5b3547bc645b7c2d1a42f513b8d87c"
     },
     {
       "path": "printable-calendar.html",
-      "size": 33779,
-      "sha256": "cb46604a4a8f672196ad7bb566a23afb3362474ad87ea83aa171ab5a379e4be3"
+      "size": 34123,
+      "sha256": "bf12b420ef275f0354dbe7135fa2f5f55ffc8cfaa2e38c7d3a96c6e9b2d7ae7f"
     },
     {
       "path": "printable-checklist.html",
-      "size": 16181,
-      "sha256": "335e0611bfc5fd8c0bd12436a06d0e7e38c2c83fb629f1a0300cdb743ebabf80"
+      "size": 16525,
+      "sha256": "fcbf1a3a1c04abe2892733f5076d6d484aa91dbb4043ae9c73c625af5f10f29d"
     },
     {
       "path": "printables.html",
-      "size": 13190,
-      "sha256": "d5eeaa14bc5ea6ad40eebd213b7f96069b7c5fba6e780b1275e75db83205a1df"
+      "size": 13534,
+      "sha256": "6a34d8a24043f747569050c52b0831f1d71b2fa549a78deb36e482e2263206f8"
     },
     {
       "path": "privacy-policy.html",
-      "size": 12969,
-      "sha256": "463b78de9550d17edf7b0e0c8f7021fe7b165f3f763b07d4339b37948264de33"
+      "size": 14225,
+      "sha256": "12e5fabdddb0db5d45feedc7c544228a610b46a176c940e9f65f45f57d1d93e5"
     },
     {
       "path": "remove-blank-lines.html",
-      "size": 21416,
-      "sha256": "908e75adb77e3fe007382d3f6344a52785b67bde7a7c506425ade8a0c9268f40"
+      "size": 21760,
+      "sha256": "89887c87c84ddd45744cd17e3f05615e79b1d4ad87c89c94d070766b04e00b91"
     },
     {
       "path": "remove-duplicate-lines.html",
-      "size": 21617,
-      "sha256": "95e7bd0945b73ad823d197a8825c219db61a14d799eeb1e4c66d37be1668dbfb"
+      "size": 21961,
+      "sha256": "7efdb9b0fe0a50285c3040989575d75dfdfb8456d9f4bd89a7c28122c9b55e8b"
     },
     {
       "path": "robots.txt",
@@ -302,8 +312,8 @@
     },
     {
       "path": "sitemap.html",
-      "size": 11314,
-      "sha256": "2005d18749e403df0bbf8a810c91af073593eeb31ecd275d811e4754b460c9c2"
+      "size": 11658,
+      "sha256": "a36a39cd837abf3df620dc68fe436d213b48afaf64d89b180febabe3317b32ad"
     },
     {
       "path": "sitemap.xml",
@@ -312,48 +322,48 @@
     },
     {
       "path": "sort-lines-alphabetically.html",
-      "size": 22897,
-      "sha256": "bdc4f6dd86b49213edfc04578a38ada2155dd298f013a13356f6d5a3560aeb52"
+      "size": 23241,
+      "sha256": "89464643ef2cda47907e680380cd8ebecd536c5c235aa524fb3357127f8bab3b"
     },
     {
       "path": "terms.html",
-      "size": 11087,
-      "sha256": "0483a9dcf2fb187685aea7b46b7a8314417d2fe1edc0e4182c915b6b64e1bcf5"
+      "size": 11431,
+      "sha256": "3d15463869c4b1a72972db1ff418830e371635616edc1f976948216d1a165bb8"
     },
     {
       "path": "text-cleaner.html",
-      "size": 22161,
-      "sha256": "ad25fc78a6786394d9e4c47dbba33714d4dfc6d9c9f0e4d42c31234290513437"
+      "size": 22505,
+      "sha256": "9138427e7ca73b337a645ee4de265178da40b51d0dc86ed929471259cfb8a554"
     },
     {
       "path": "text-tools.html",
-      "size": 18774,
-      "sha256": "3ada5ef9b966b5962f3231d029d2e99779ff62e123f8a1e72e5994356d2de355"
+      "size": 19118,
+      "sha256": "079b934c003dc0fc981e68e569217ee8a84cbae1bc56fc400d4fef65682074a0"
     },
     {
       "path": "time-zone-converter.html",
-      "size": 20385,
-      "sha256": "abd8b6daeb8e974a25527ec41d2fbae7a14411ceb4b7428d5b775e05d6b9aa36"
+      "size": 20729,
+      "sha256": "3dd3df97448424bf757eb9b203e166bc5ecb014f7c465b18059962e2a449a4bc"
     },
     {
       "path": "unit-converter.html",
-      "size": 28371,
-      "sha256": "9b4b8463c26bd25ef647e14e035e43ef56eb91a0a3e676c85ea5b8898fbe61de"
+      "size": 28715,
+      "sha256": "0bfd0fad301a80d369a76ec8b6699c75f06a21aa3c2b211c2bffe3d324586ecb"
     },
     {
       "path": "weekly-planner-and-timetable.html",
-      "size": 17626,
-      "sha256": "f5bcb7af2d948a8e434cd222524cbc57dd840faccaaeadac19923141bf352366"
+      "size": 17970,
+      "sha256": "1a196242e724053eaf84cadddf66788c07bb3561400cc182d20a99a97270a15c"
     },
     {
       "path": "word-and-character-counter.html",
-      "size": 17854,
-      "sha256": "1ae51128120d284129c4aedb031640d63d26ab7333d4aa8a5277444a182450d5"
+      "size": 18198,
+      "sha256": "02efa3dcfc53adfa7b077121256ab2bd7f43fe0b44f6746911a4cd755a1c6f6a"
     },
     {
       "path": "working-days-calculator.html",
-      "size": 32806,
-      "sha256": "9343301e760b0f359f6034716a0f3f28bc7fcaa5581909f2575faf352beaba1f"
+      "size": 33150,
+      "sha256": "d4a1ca73df1f9476f66423210a1df7ffcaf6d9251fade0347e01f0b09158a30a"
     }
   ]
 }

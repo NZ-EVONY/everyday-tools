@@ -55,7 +55,8 @@ test("copy puts the row on the clipboard and shows a copied state; copy all give
     await page.selectOption("#fxGroup", "script");
     await page.click("#fxAll");
     const visible = STYLES.filter(s => s.id === "plain" || s.group === "script").map(s => ({ name: s.name, text: decorate("Tama", s.id) }));
-    assert.equal(await page.evaluate(() => navigator.clipboard.readText()), listText(visible));
+    // Windows turns "\n" into "\r\n" on the clipboard; compare line endings normalised.
+    assert.equal((await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, "\n"), listText(visible));
   });
 });
 
