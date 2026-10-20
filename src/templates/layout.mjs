@@ -106,7 +106,12 @@ ${page.noindex ? `<meta name="robots" content="noindex">\n` : ""}<meta property=
 <meta property="og:title" content="${esc(page.title)}">
 <meta property="og:description" content="${esc(page.description)}">
 <meta property="og:url" content="${canonical}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="${site.siteUrl}/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Everyday Tools: free NZ calculators and handy tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${site.siteUrl}/og/default.png">
 <meta name="twitter:title" content="${esc(page.title)}">
 <meta name="twitter:description" content="${esc(page.description)}">
 <meta name="theme-color" content="${site.themeColorDark}">

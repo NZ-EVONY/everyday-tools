@@ -26,7 +26,8 @@ test("every page: one h1, lang, canonical, author meta, title and description li
     assert.ok(p.description.length <= quality.maxDescription, `${p.path} description ${p.description.length}`);
     assert.ok(!/\.html"|href="\/[^"]+\/"/.test(h.replace(/<link rel="canonical"[^>]+>/, "")), `${p.path} links with .html or trailing slash`);
     assert.match(h, /<meta property="og:title"/);
-    assert.match(h, /<meta name="twitter:card"/);
+    assert.match(h, /<meta name="twitter:card" content="summary_large_image">/);
+    assert.match(h, /<meta property="og:image" content="https:\/\/myaddr\.app\/og\/default\.png">/);
   }
 });
 
@@ -112,8 +113,21 @@ test("_headers: rule limits, security headers, CSP with the inline script's hash
   const csp = active.find(l => l.includes("Content-Security-Policy"));
   const hash = createHash("sha256").update(HEAD_SCRIPT).digest("base64");
   assert.ok(csp.includes(`'sha256-${hash}'`));
-  assert.ok(!/https?:\/\//.test(active.join("\n")), "third-party origin in an active rule");
+  // Only the CSP may name third-party origins (AdSense, Funding Choices, Cloudflare Web Analytics).
+  assert.ok(!/https?:\/\//.test(active.filter(l => !l.includes("Content-Security-Policy")).join("\n")), "third-party origin in an active rule");
   for (const d of ["default-src 'self'", "style-src 'self'", "connect-src 'self'", "frame-ancestors 'none'", "object-src 'none'", "base-uri 'none'"]) assert.ok(csp.includes(d), d);
+  const dir = n => (csp.match(new RegExp(`${n} [^;]+`)) || [""])[0];
+  for (const h of ["https://pagead2.googlesyndication.com", "https://adservice.google.com", "https://www.googletagservices.com", "https://fundingchoicesmessages.google.com", "https://static.cloudflareinsights.com"]) assert.ok(dir("script-src").includes(h), `script-src ${h}`);
+  for (const h of ["https://googleads.g.doubleclick.net", "https://tpc.googlesyndication.com", "https://*.google.com"]) assert.ok(dir("frame-src").includes(h), `frame-src ${h}`);
+  assert.ok(dir("connect-src").includes("https://cloudflareinsights.com"));
+  assert.ok(dir("img-src").includes("https://*.googlesyndication.com"));
+  assert.ok(!/'unsafe-eval'|script-src[^;]*'unsafe-inline'|\shttps:(\s|;|$)/.test(csp), "no blanket script or source wildcards");
+});
+
+test("share image and trailing-slash redirects", () => {
+  assert.ok(fs.existsSync(path.join(PUBLIC, "og/default.png")));
+  const r = read("_redirects");
+  for (const l of ["/:a/ /:a 301", "/:a/:b/ /:a/:b 301"]) assert.ok(r.includes(l), l);
 });
 
 test("no unrendered template placeholders or broken values in page text", () => {
